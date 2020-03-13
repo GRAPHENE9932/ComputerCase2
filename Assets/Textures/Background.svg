@@ -1,0 +1,20 @@
+<svg  version="1.1" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+	<line x1="60" x2="60" y1="0" y2="1080" stroke="#00FFFF" stroke-width="120"/>
+	<line x1="180" x2="180" y1="0" y2="1080" stroke="#00FFDD" stroke-width="120"/>
+	<line x1="300" x2="300" y1="0" y2="1080" stroke="#00FFBB" stroke-width="120"/>
+	<line x1="420" x2="420" y1="0" y2="1080" stroke="#00FF99" stroke-width="120"/>
+	<line x1="540" x2="540" y1="0" y2="1080" stroke="#00FF77" stroke-width="120"/>
+	<line x1="660" x2="660" y1="0" y2="1080" stroke="#00FF55" stroke-width="120"/>
+	<line x1="780" x2="780" y1="0" y2="1080" stroke="#00FF33" stroke-width="120"/>
+	<line x1="900" x2="900" y1="0" y2="1080" stroke="#00FF11" stroke-width="120"/>
+	<line x1="1020" x2="1020" y1="0" y2="1080" stroke="#00FF00" stroke-width="120"/>
+	<line x1="1140" x2="1140" y1="0" y2="1080" stroke="#11FF00" stroke-width="120"/>
+	<line x1="1260" x2="1260" y1="0" y2="1080" stroke="#33FF00" stroke-width="120"/>
+	<line x1="1380" x2="1380" y1="0" y2="1080" stroke="#55FF00" stroke-width="120"/>
+	<line x1="1500" x2="1500" y1="0" y2="1080" stroke="#77FF00" stroke-width="120"/>
+	<line x1="1620" x2="1620" y1="0" y2="1080" stroke="#99FF00" stroke-width="120"/>
+	<line x1="1740" x2="1740" y1="0" y2="1080" stroke="#BBFF00" stroke-width="120"/>
+	<line x1="1860" x2="1860" y1="0" y2="1080" stroke="#DDFF00" stroke-width="120"/>
+	<line x1="1980" x2="1980" y1="0" y2="1080" stroke="#FFFF00" stroke-width="120"/>
+	<rect x="30" y="30" width="1860" height="1020" fill="none" stroke="lime" stroke-width="60"/>
+</svg>
