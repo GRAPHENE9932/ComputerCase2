@@ -5,7 +5,13 @@ using UnityEngine.UI;
 
 public class ButtonAnimation : MonoBehaviour
 {
+    /// <summary>
+    ///     Зображення кнопки, яке буде зазнавати анімації.
+    /// </summary>
     public Image img;
+    /// <summary>
+    ///     Змінна, яка показує, чи утримується палець на кнопці.
+    /// </summary>
     bool down;
     /// <summary>
     ///     При натисненні на кнопку.
@@ -13,7 +19,6 @@ public class ButtonAnimation : MonoBehaviour
     public void OnDown()
     {
         down = true;
-        Debug.Log("Down");
     }
     /// <summary>
     ///     При відпусканні кнопки.
@@ -21,7 +26,6 @@ public class ButtonAnimation : MonoBehaviour
     public void OnUp()
     {
         down = false;
-        Debug.Log("Up");
     }
     /// <summary>
     ///     Кожного кадру.
