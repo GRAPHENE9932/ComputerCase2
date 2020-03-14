@@ -8,7 +8,7 @@ public class NavigationScript : MonoBehaviour
     /// <summary>
     ///     Основне заднє зобракження меню навігації, на ній маска.
     /// </summary>
-    public Image mainImage;
+    public RectTransform mainMenuTransform;
     /// <summary>
     ///     Змінна, що показує, чи відкрите зараз меню.
     /// </summary>
@@ -35,6 +35,8 @@ public class NavigationScript : MonoBehaviour
         menuOpened = !menuOpened;
         //Ініціалізація шляху.
         float fill = 1;
+        //Ширина зображення меню
+        float width;
         //Поки шлях більше нуля...
         while (fill > 0)
         {
@@ -46,7 +48,8 @@ public class NavigationScript : MonoBehaviour
                 //Перетворення перед зміненням заповнення.
                 //Оскільки fill підноситься до куба, анімація йде з прискоренням.
                 //Заповнення має коливатись від 0.1(6) до 1. Ось звідки взялось 0.8(3) і 0.1(6).
-                mainImage.fillAmount = (1 - fill * fill * fill) * .8333333F + .1666666F;
+                //600 - це ширина у відкритому режимі.
+                width = ((1 - fill * fill * fill) * .8333333F + .1666666F) * 600F;
             }
             //Якщо йде закриття меню...
             else
@@ -54,15 +57,20 @@ public class NavigationScript : MonoBehaviour
                 //Перетворення перед зміненням заповнення.
                 //Оскільки fill підноситься до куба, анімація йде з прискоренням.
                 //Заповнення має коливатись від 0.1(6) до 1. Ось звідки взялось 0.8(3) і 0.1(6).
-                mainImage.fillAmount = (fill * fill * fill) * .8333333F + .1666666F;
+                //600 - це ширина у відкритому режимі.
+                width = (fill * fill * fill * .8333333F + .1666666F) * 600F;
             }
+            //Встановлюється ширина, а висота не змінюється.
+            mainMenuTransform.sizeDelta = new Vector2(width, mainMenuTransform.sizeDelta.y);
             yield return null;
         }
         //Ліквідація похибки.
         if (menuOpened)
-            mainImage.fillAmount = 1;
+            width = 600F;
         else
-            mainImage.fillAmount = .1666666F;
+            width = 100F;
+        mainMenuTransform.sizeDelta = new Vector2(width, mainMenuTransform.sizeDelta.y);
+
         menuAnimating = false;
     }
 }
