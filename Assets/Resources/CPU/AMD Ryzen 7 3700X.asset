@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f6be8e8c6a5fd448aae9f73241abc6, type: 3}
+  m_Name: AMD Ryzen 7 3700X
+  m_EditorClassIdentifier: 
+  fullName: AMD Ryzen 7 3700X
+  price: 330
+  rarity: 3
+  image: {fileID: 21300000, guid: 9e1bcab931b64e8429b4c9d4f017a4ba, type: 3}
+  frequency: 3600
+  cores: 8
+  TDP: 65
+  power: 546
+  socket: AM4

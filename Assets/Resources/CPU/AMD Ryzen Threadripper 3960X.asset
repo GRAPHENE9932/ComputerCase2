@@ -20,4 +20,4 @@ MonoBehaviour:
   cores: 24
   TDP: 280
   power: 1601
-  socket: AMD Socket TR4
+  socket: TR4

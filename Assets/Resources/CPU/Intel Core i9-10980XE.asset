@@ -20,4 +20,4 @@ MonoBehaviour:
   cores: 18
   TDP: 165
   power: 875
-  socket: Intel Socket 2066
+  socket: LGA 2066

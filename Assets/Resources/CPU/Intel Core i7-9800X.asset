@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f6be8e8c6a5fd448aae9f73241abc6, type: 3}
+  m_Name: Intel Core i7-9800X
+  m_EditorClassIdentifier: 
+  fullName: Intel Core i7-9800X
+  price: 1000
+  rarity: 4
+  image: {fileID: 21300000, guid: d9b553f349ccee841aeca5d404c6e839, type: 3}
+  frequency: 3800
+  cores: 8
+  TDP: 165
+  power: 1290
+  socket: LGA 2066

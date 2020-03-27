@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f6be8e8c6a5fd448aae9f73241abc6, type: 3}
   m_Name: Intel Core i9-9940X
   m_EditorClassIdentifier: 
-  fullName: 
-  price: 0
-  rarity: 0
-  image: {fileID: 0}
-  frequency: 0
-  cores: 0
-  TDP: 0
-  power: 0
-  socket: 
+  fullName: Intel Core i9-9940X
+  price: 1400
+  rarity: 4
+  image: {fileID: 21300000, guid: 9a924f51726d32a409d08fa0ccbf46ad, type: 3}
+  frequency: 3300
+  cores: 14
+  TDP: 165
+  power: 1320
+  socket: LGA 2066

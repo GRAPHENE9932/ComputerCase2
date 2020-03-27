@@ -20,4 +20,4 @@ MonoBehaviour:
   cores: 8
   TDP: 95
   power: 588
-  socket: Intel Socket 1151
+  socket: LGA 1151

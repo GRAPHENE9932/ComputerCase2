@@ -20,4 +20,4 @@ MonoBehaviour:
   cores: 16
   TDP: 105
   power: 1038
-  socket: AMD Socket AM4
+  socket: AM4
