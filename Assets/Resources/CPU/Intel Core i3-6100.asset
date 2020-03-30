@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f6be8e8c6a5fd448aae9f73241abc6, type: 3}
+  m_Name: Intel Core i3-6100
+  m_EditorClassIdentifier: 
+  fullName: Intel Core i3-6100
+  price: 175
+  rarity: 1
+  image: {fileID: 21300000, guid: 028e3d93231bed44687429de9ccca1bf, type: 3}
+  frequency: 3700
+  cores: 2
+  TDP: 51
+  power: 131
+  socket: LGA 1151

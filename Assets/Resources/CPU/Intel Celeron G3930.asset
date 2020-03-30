@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f6be8e8c6a5fd448aae9f73241abc6, type: 3}
+  m_Name: Intel Celeron G3930
+  m_EditorClassIdentifier: 
+  fullName: Intel Celeron G3930
+  price: 50
+  rarity: 0
+  image: {fileID: 21300000, guid: 5045c0f2899b5ad4f80b75e50d8c3f4f, type: 3}
+  frequency: 2900
+  cores: 2
+  TDP: 51
+  power: 44
+  socket: LGA 1151

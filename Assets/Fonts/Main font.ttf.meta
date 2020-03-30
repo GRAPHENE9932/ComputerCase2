@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 62662a5d2aa360b42bd0dca6dbbb9258
+guid: 2214e4872c9469243af9998a95c639f3
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Furore
+  fontName: Aldrich [RUS by Daymarius]
   fontNames:
-  - Furore
+  - Aldrich
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
