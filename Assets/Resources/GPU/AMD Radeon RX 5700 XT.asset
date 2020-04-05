@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f515449632945564f9f1b717a0720ca3, type: 3}
-  m_Name: NVIDIA GeForce GTX 970
+  m_Name: AMD Radeon RX 5700 XT
   m_EditorClassIdentifier: 
-  fullName: NVIDIA GeForce GTX 970
-  price: 330
-  rarity: 2
-  image: {fileID: 21300000, guid: 77213e0e84b8b284e9fce2544676f01b, type: 3}
-  memory: 4096
-  TDP: 148
-  power: 3920
+  fullName: AMD Radeon RX 5700 XT
+  price: 400
+  rarity: 4
+  image: {fileID: 21300000, guid: 32aefd0bf4154004285acb7da16f0223, type: 3}
+  memory: 8192
+  TDP: 225
+  power: 9754
   motherboardInterface: 0

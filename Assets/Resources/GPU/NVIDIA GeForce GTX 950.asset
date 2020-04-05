@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f515449632945564f9f1b717a0720ca3, type: 3}
   m_Name: NVIDIA GeForce GTX 950
   m_EditorClassIdentifier: 
-  fullName: 
-  price: 0
-  rarity: 0
-  image: {fileID: 0}
-  memory: 0
-  TDP: 0
-  power: 0
+  fullName: NVIDIA GeForce GTX 950
+  price: 160
+  rarity: 1
+  image: {fileID: 21300000, guid: acb79ee488ac9a44c85ddcf47dc7d1fb, type: 3}
+  memory: 2048
+  TDP: 90
+  power: 1825
   motherboardInterface: 0

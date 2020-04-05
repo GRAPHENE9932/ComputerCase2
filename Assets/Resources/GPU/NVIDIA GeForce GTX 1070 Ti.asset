@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f515449632945564f9f1b717a0720ca3, type: 3}
   m_Name: NVIDIA GeForce GTX 1070 Ti
   m_EditorClassIdentifier: 
-  fullName: 
-  price: 0
-  rarity: 0
-  image: {fileID: 0}
-  memory: 0
-  TDP: 0
-  power: 0
+  fullName: NVIDIA GeForce GTX 1070 Ti
+  price: 400
+  rarity: 3
+  image: {fileID: 21300000, guid: 357c075a0f799014089d1ec1f4e5e7a8, type: 3}
+  memory: 8192
+  TDP: 180
+  power: 8186
   motherboardInterface: 0

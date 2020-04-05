@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f515449632945564f9f1b717a0720ca3, type: 3}
   m_Name: NVIDIA GeForce GTX 980
   m_EditorClassIdentifier: 
-  fullName: 
-  price: 0
-  rarity: 0
-  image: {fileID: 0}
-  memory: 0
-  TDP: 0
-  power: 0
+  fullName: NVIDIA GeForce GTX 980
+  price: 550
+  rarity: 2
+  image: {fileID: 21300000, guid: 9037e335990fbc74ea8457fa3ed3bfa0, type: 3}
+  memory: 4096
+  TDP: 165
+  power: 4981
   motherboardInterface: 0
