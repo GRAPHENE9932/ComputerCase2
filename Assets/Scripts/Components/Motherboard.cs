@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum Chipset
 {
-    Z390, Z370, Z270, Z170, X570
+    Z390, Z370, Z270, Z170, X570, X99
 }
 
 [CreateAssetMenu(menuName = "Components/Motherboard", fileName = "Motherboard")]

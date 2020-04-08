@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public enum MenuState
 {
-    CasesMenu, Inventory, Computer, Shop, Casino, Statistics, Settings, CasesMenu2
+    CasesMenu, Inventory, Computer, Shop, Casino, Statistics, Settings, CasesMenu2, Case
 }
 
 public class NavigationScript : MonoBehaviour
