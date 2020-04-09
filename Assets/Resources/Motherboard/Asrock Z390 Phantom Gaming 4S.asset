@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullName: Asrock Z390 Phantom Gaming 4S
   price: 140
-  rarity: 0
+  rarity: 1
   image: {fileID: 21300000, guid: 70ec795932554cf409813d01ae1bd590, type: 3}
   socket: LGA 1151
   RAMType: 4

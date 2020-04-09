@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullName: Asrock Fatal1ty Z270 Gaming K4
   price: 125
-  rarity: 0
+  rarity: 1
   image: {fileID: 21300000, guid: 6fab62d8063563d4bb20882698938254, type: 3}
   socket: LGA 1151
   RAMType: 4

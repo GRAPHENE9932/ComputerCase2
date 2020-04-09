@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d68555b57d1a140aa5ce4204757b08, type: 3}
+  m_Name: Asrock H110M-HDV
+  m_EditorClassIdentifier: 
+  fullName: Asrock H110M-HDV
+  price: 62
+  rarity: 0
+  image: {fileID: 21300000, guid: 2bf155ab49d521c459cc6bc32bbf13f1, type: 3}
+  socket: LGA 1151
+  RAMType: 4
+  RAMCount: 2
+  GPUInterfaces: 020000000600000006000000
+  SLI: 0
+  crossfire: 0
+  chipset: 7

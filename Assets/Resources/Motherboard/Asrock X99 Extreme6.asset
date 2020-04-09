@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullName: Asrock X99 Extreme6
   price: 650
-  rarity: 0
+  rarity: 4
   image: {fileID: 21300000, guid: 3b88109fbfe0bfe4c96b5272a68232db, type: 3}
   socket: LGA 2011-3
   RAMType: 4

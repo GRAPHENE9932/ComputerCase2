@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullName: Asrock Z390 Extreme4
   price: 222
-  rarity: 0
+  rarity: 2
   image: {fileID: 21300000, guid: 54453cce1a60e0c42b722113fa34df0d, type: 3}
   socket: LGA 1151
   RAMType: 4

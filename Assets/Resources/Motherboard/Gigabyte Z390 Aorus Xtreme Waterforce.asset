@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullName: Gigabyte Z390 Aorus Xtreme Waterforce
   price: 900
-  rarity: 0
+  rarity: 4
   image: {fileID: 21300000, guid: 7bcb8c493c126ab43b104b9c64ac62fe, type: 3}
   socket: LGA 1151
   RAMType: 4

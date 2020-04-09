@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d68555b57d1a140aa5ce4204757b08, type: 3}
+  m_Name: Gigabyte GA-990X-Gaming SLI
+  m_EditorClassIdentifier: 
+  fullName: Gigabyte GA-990X-Gaming SLI
+  price: 115
+  rarity: 0
+  image: {fileID: 21300000, guid: 062f8a2a287461b4a9700c48ca7c07ed, type: 3}
+  socket: AM3+
+  RAMType: 3
+  RAMCount: 4
+  GPUInterfaces: 0d0000000e0000000600000006000000
+  SLI: 1
+  crossfire: 1
+  chipset: 0

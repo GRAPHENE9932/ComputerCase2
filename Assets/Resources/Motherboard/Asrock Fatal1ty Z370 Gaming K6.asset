@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullName: 'Asrock Fatal1ty Z370 Gaming K6 '
   price: 240
-  rarity: 0
+  rarity: 2
   image: {fileID: 21300000, guid: e07ff5443efbf73498fb548fbf4de579, type: 3}
   socket: LGA 1151
   RAMType: 4

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullName: Asrock Fatal1ty Z170 Gaming K4
   price: 144
-  rarity: 0
+  rarity: 1
   image: {fileID: 21300000, guid: 5e00c44465f22fe498deff52dc1843ce, type: 3}
   socket: LGA 1151
   RAMType: 4

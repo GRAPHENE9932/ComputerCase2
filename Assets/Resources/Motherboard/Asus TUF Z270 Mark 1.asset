@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullName: Asus TUF Z270 Mark 1
   price: 360
-  rarity: 0
+  rarity: 3
   image: {fileID: 21300000, guid: fb91ce8c4f4adb94a9e720dfda35af12, type: 3}
   socket: LGA 1151
   RAMType: 4

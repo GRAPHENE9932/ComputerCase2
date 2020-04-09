@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullName: Asus ROG Maximus IX Code
   price: 200
-  rarity: 0
+  rarity: 1
   image: {fileID: 21300000, guid: f0b1acebaea0efc4c92528a8a4f3475b, type: 3}
   socket: LGA 1151
   RAMType: 4
