@@ -11,9 +11,12 @@ public class CaseScroller : MonoBehaviour
 {
     public float speed;
 
+    public PCComponent currentComponent;
     public RectTransform cellsGroup;
     public GameObject cellPrefab;
     public ComponentType caseType;
+
+    public CursorScript cursor;
     public void Casetype(int caseType)
     {
         this.caseType = (ComponentType)caseType;
@@ -73,17 +76,25 @@ public class CaseScroller : MonoBehaviour
             motherboards[(int)tmp[i].rarity].Add(tmp[i]);
         }
     }
-
+    /// <summary>
+    /// Spawn cell.
+    /// </summary>
+    /// <param name="type">
+    /// The type of component to spawn.
+    /// </param>
     private void SpawnCell(ComponentType type)
     {
         if (type != ComponentType.All)
         {
-
+            //Floating number, used for choossing rarity of spawning component.
             float randRarity = Random.Range(0F, 1F);
             Rarity rarity;
+            //Component to spawn.
             PCComponent component = null;
+            //Index of component in component array.
             int randComponent;
 
+            //Choose rarity.
             if (randRarity < .8F)
                 rarity = Rarity.Bad;
             else if (randRarity < .95F)
@@ -95,26 +106,33 @@ public class CaseScroller : MonoBehaviour
             else
                 rarity = Rarity.Top;
 
+            //Switch type.
             switch (type)
             {
                 case ComponentType.CPU:
+                    //Randomizing index.
                     randComponent = Random.Range(0, CPUs[(int)rarity].Count - 1);
+                    //Choosing component from array.
                     component = CPUs[(int)rarity][randComponent];
                     break;
                 case ComponentType.GPU:
+                    //Analogic to CPU.
                     randComponent = Random.Range(0, GPUs[(int)rarity].Count - 1);
                     component = GPUs[(int)rarity][randComponent];
                     break;
                 case ComponentType.RAM:
+                    //Analogic to CPU.
                     randComponent = Random.Range(0, RAMs[(int)rarity].Count - 1);
                     component = RAMs[(int)rarity][randComponent];
                     break;
                 case ComponentType.Motherboard:
+                    //Analogic to CPU.
                     randComponent = Random.Range(0, motherboards[(int)rarity].Count - 1);
                     component = motherboards[(int)rarity][randComponent];
                     break;
             }
 
+            //Cell instantiate.
             GameObject cell = Instantiate(cellPrefab, cellsGroup);
             cell.GetComponent<Cell>().component = component;
             cell.GetComponent<Cell>().rarityLine.color = rarityColors[(int)rarity];
@@ -122,6 +140,7 @@ public class CaseScroller : MonoBehaviour
         }
         else
         {
+            //If component type == all, spawn random component.
             SpawnCell((ComponentType)Random.Range(0, 3));
         }
     }
@@ -131,11 +150,14 @@ public class CaseScroller : MonoBehaviour
     /// </summary>
     public void StartCase()
     {
+        //Spawn 50 cells
         for (int i = 0; i < 50; i++)
         {
             SpawnCell(caseType);
         }
+        //Randomizing speed.
         speed = Random.Range(90F, 109.3F);
+        //Start coroutine of case scrolling.
         StartCoroutine(CaseScroll());
     }
 
@@ -143,9 +165,18 @@ public class CaseScroller : MonoBehaviour
     {
         while (speed > 0)
         {
+            //Move cells with speed.
             cellsGroup.Translate(speed * Time.deltaTime * -50, 0, 0);
+            //Speed decreasing.
             speed -= Time.deltaTime * 20;
+            //Waiting 1 frame.
             yield return null;
         }
+        CaseStopped();
+    }
+
+    private void CaseStopped()
+    {
+        currentComponent = cursor.currentComponent;
     }
 }
