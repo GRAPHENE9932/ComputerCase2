@@ -74,232 +74,66 @@ public class CaseScroller : MonoBehaviour
         }
     }
 
+    private void SpawnCell(ComponentType type)
+    {
+        if (type != ComponentType.All)
+        {
+
+            float randRarity = Random.Range(0F, 1F);
+            Rarity rarity;
+            PCComponent component = null;
+            int randComponent;
+
+            if (randRarity < .8F)
+                rarity = Rarity.Bad;
+            else if (randRarity < .95F)
+                rarity = Rarity.Middle;
+            else if (randRarity < .99F)
+                rarity = Rarity.Good;
+            else if (randRarity < .9975F)
+                rarity = Rarity.VeryGood;
+            else
+                rarity = Rarity.Top;
+
+            switch (type)
+            {
+                case ComponentType.CPU:
+                    randComponent = Random.Range(0, CPUs[(int)rarity].Count - 1);
+                    component = CPUs[(int)rarity][randComponent];
+                    break;
+                case ComponentType.GPU:
+                    randComponent = Random.Range(0, GPUs[(int)rarity].Count - 1);
+                    component = GPUs[(int)rarity][randComponent];
+                    break;
+                case ComponentType.RAM:
+                    randComponent = Random.Range(0, RAMs[(int)rarity].Count - 1);
+                    component = RAMs[(int)rarity][randComponent];
+                    break;
+                case ComponentType.Motherboard:
+                    randComponent = Random.Range(0, motherboards[(int)rarity].Count - 1);
+                    component = motherboards[(int)rarity][randComponent];
+                    break;
+            }
+
+            GameObject cell = Instantiate(cellPrefab, cellsGroup);
+            cell.GetComponent<Cell>().component = component;
+            cell.GetComponent<Cell>().rarityLine.color = rarityColors[(int)rarity];
+            cell.GetComponent<Cell>().image.sprite = component.image;
+        }
+        else
+        {
+            SpawnCell((ComponentType)Random.Range(0, 3));
+        }
+    }
+
     /// <summary>
     /// Starts case.
     /// </summary>
     public void StartCase()
     {
-        switch (caseType)
+        for (int i = 0; i < 50; i++)
         {
-            case ComponentType.CPU:
-                for (int i = 0; i < 50; i++)
-                {
-                    Rarity rarity;
-                    PCComponent componentToInstantiate;
-                    //Randomizing rarity.
-                    float rand = Random.Range(0F, 1F);
-                    //Bad.
-                    if (rand < .8)
-                    {
-                        int rand2 = Random.Range(0, CPUs[0].Count - 1);
-                        componentToInstantiate = CPUs[0][rand2];
-                        rarity = Rarity.Bad;
-                    }
-                    //Middle.
-                    else if (rand < .95)
-                    {
-                        int rand2 = Random.Range(0, CPUs[1].Count - 1);
-                        componentToInstantiate = CPUs[1][rand2];
-                        rarity = Rarity.Middle;
-                    }
-                    //Good.
-                    else if (rand < .99)
-                    {
-                        int rand2 = Random.Range(0, CPUs[2].Count - 1);
-                        componentToInstantiate = CPUs[2][rand2];
-                        rarity = Rarity.Good;
-                    }
-                    //Very good.
-                    else if (rand < .9975)
-                    {
-                        int rand2 = Random.Range(0, CPUs[3].Count - 1);
-                        componentToInstantiate = CPUs[3][rand2];
-                        rarity = Rarity.VeryGood;
-                    }
-                    //Top.
-                    else
-                    {
-                        int rand2 = Random.Range(0, CPUs[4].Count - 1);
-                        componentToInstantiate = CPUs[4][rand2];
-                        rarity = Rarity.Top;
-                    }
-                    //Instantiating case cell.
-                    GameObject cell = Instantiate(cellPrefab, cellsGroup);
-                    //Settings for cell.
-                    cell.GetComponent<Cell>().component = componentToInstantiate;
-                    cell.GetComponent<Cell>().rarityLine.color = rarityColors[(int)rarity];
-                    cell.GetComponent<Cell>().image.sprite = componentToInstantiate.image;
-                }
-                break;
-                //Analogic to CPU.
-            case ComponentType.GPU:
-                for (int i = 0; i < 50; i++)
-                {
-                    Rarity rarity;
-                    PCComponent componentToInstantiate;
-                    float rand = Random.Range(0F, 1F);
-                    if (rand < .8)
-                    {
-                        int rand2 = Random.Range(0, GPUs[0].Count);
-                        componentToInstantiate = GPUs[0][rand2];
-                        rarity = Rarity.Bad;
-                    }
-                    else if (rand < .95)
-                    {
-                        int rand2 = Random.Range(0, GPUs[1].Count - 1);
-                        componentToInstantiate = GPUs[1][rand2];
-                        rarity = Rarity.Middle;
-                    }
-                    else if (rand < .99)
-                    {
-                        int rand2 = Random.Range(0, GPUs[2].Count - 1);
-                        componentToInstantiate = GPUs[2][rand2];
-                        rarity = Rarity.Good;
-                    }
-                    else if (rand < .9975)
-                    {
-                        int rand2 = Random.Range(0, GPUs[3].Count - 1);
-                        componentToInstantiate = GPUs[3][rand2];
-                        rarity = Rarity.VeryGood;
-                    }
-                    else
-                    {
-                        int rand2 = Random.Range(0, GPUs[4].Count - 1);
-                        componentToInstantiate = GPUs[4][rand2];
-                        rarity = Rarity.Top;
-                    }
-                    GameObject cell = Instantiate(cellPrefab, cellsGroup);
-                    cell.GetComponent<Cell>().component = componentToInstantiate;
-                    cell.GetComponent<Cell>().rarityLine.color = rarityColors[(int)rarity];
-                    cell.GetComponent<Cell>().image.sprite = componentToInstantiate.image;
-                }
-                break;
-            case ComponentType.RAM:
-                for (int i = 0; i < 50; i++)
-                {
-                    Rarity rarity;
-                    PCComponent componentToInstantiate;
-                    float rand = Random.Range(0F, 1F);
-                    if (rand < .8)
-                    {
-                        int rand2 = Random.Range(0, RAMs[0].Count - 1);
-                        componentToInstantiate = RAMs[0][rand2];
-                        rarity = Rarity.Bad;
-                    }
-                    else if (rand < .95)
-                    {
-                        int rand2 = Random.Range(0, RAMs[1].Count - 1);
-                        componentToInstantiate = RAMs[1][rand2];
-                        rarity = Rarity.Middle;
-                    }
-                    else if (rand < .99)
-                    {
-                        int rand2 = Random.Range(0, RAMs[2].Count - 1);
-                        componentToInstantiate = RAMs[2][rand2];
-                        rarity = Rarity.Good;
-                    }
-                    else if (rand < .9975)
-                    {
-                        int rand2 = Random.Range(0, RAMs[3].Count - 1);
-                        componentToInstantiate = RAMs[3][rand2];
-                        rarity = Rarity.VeryGood;
-                    }
-                    else
-                    {
-                        int rand2 = Random.Range(0, RAMs[4].Count - 1);
-                        componentToInstantiate = RAMs[4][rand2];
-                        rarity = Rarity.Top;
-                    }
-                    GameObject cell = Instantiate(cellPrefab, cellsGroup);
-                    cell.GetComponent<Cell>().component = componentToInstantiate;
-                    cell.GetComponent<Cell>().rarityLine.color = rarityColors[(int)rarity];
-                    cell.GetComponent<Cell>().image.sprite = componentToInstantiate.image;
-                }
-                break;
-            case ComponentType.Motherboard:
-                for (int i = 0; i < 50; i++)
-                {
-                    Rarity rarity;
-                    PCComponent componentToInstantiate;
-                    float rand = Random.Range(0F, 1F);
-                    if (rand < .8)
-                    {
-                        int rand2 = Random.Range(0, motherboards[0].Count - 1);
-                        componentToInstantiate = motherboards[0][rand2];
-                        rarity = Rarity.Bad;
-                    }
-                    else if (rand < .95)
-                    {
-                        int rand2 = Random.Range(0, motherboards[1].Count - 1);
-                        componentToInstantiate = motherboards[1][rand2];
-                        rarity = Rarity.Middle;
-                    }
-                    else if (rand < .99)
-                    {
-                        int rand2 = Random.Range(0, motherboards[2].Count - 1);
-                        componentToInstantiate = motherboards[2][rand2];
-                        rarity = Rarity.Good;
-                    }
-                    else if (rand < .9975)
-                    {
-                        int rand2 = Random.Range(0, motherboards[3].Count - 1);
-                        componentToInstantiate = motherboards[3][rand2];
-                        rarity = Rarity.VeryGood;
-                    }
-                    else
-                    {
-                        int rand2 = Random.Range(0, motherboards[4].Count - 1);
-                        componentToInstantiate = motherboards[4][rand2];
-                        rarity = Rarity.Top;
-                    }
-                    GameObject cell = Instantiate(cellPrefab, cellsGroup);
-                    cell.GetComponent<Cell>().component = componentToInstantiate;
-                    cell.GetComponent<Cell>().rarityLine.color = rarityColors[(int)rarity];
-                    cell.GetComponent<Cell>().image.sprite = componentToInstantiate.image;
-                }
-                break;
-            case ComponentType.All:
-                for (int i = 0; i < 50; i++)
-                {
-                    Rarity rarity;
-                    PCComponent componentToInstantiate;
-                    float rand = Random.Range(0F, 1F);
-                    if (rand < .8)
-                    {
-                        int rand2 = Random.Range(0, CPUs[0].Count - 1);
-                        componentToInstantiate = CPUs[0][rand2];
-                        rarity = Rarity.Bad;
-                    }
-                    else if (rand < .95)
-                    {
-                        int rand2 = Random.Range(0, CPUs[1].Count - 1);
-                        componentToInstantiate = CPUs[1][rand2];
-                        rarity = Rarity.Middle;
-                    }
-                    else if (rand < .99)
-                    {
-                        int rand2 = Random.Range(0, CPUs[2].Count - 1);
-                        componentToInstantiate = CPUs[2][rand2];
-                        rarity = Rarity.Good;
-                    }
-                    else if (rand < .9975)
-                    {
-                        int rand2 = Random.Range(0, CPUs[3].Count - 1);
-                        componentToInstantiate = CPUs[3][rand2];
-                        rarity = Rarity.VeryGood;
-                    }
-                    else
-                    {
-                        int rand2 = Random.Range(0, CPUs[4].Count - 1);
-                        componentToInstantiate = CPUs[4][rand2];
-                        rarity = Rarity.Top;
-                    }
-                    GameObject cell = Instantiate(cellPrefab, cellsGroup);
-                    cell.GetComponent<Cell>().component = componentToInstantiate;
-                    cell.GetComponent<Cell>().rarityLine.color = rarityColors[(int)rarity];
-                    cell.GetComponent<Cell>().image.sprite = componentToInstantiate.image;
-                }
-                break;
+            SpawnCell(caseType);
         }
         speed = Random.Range(90F, 109.3F);
         StartCoroutine(CaseScroll());
