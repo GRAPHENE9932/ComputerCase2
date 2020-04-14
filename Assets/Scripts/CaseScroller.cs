@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum ComponentType
 {
@@ -17,6 +18,10 @@ public class CaseScroller : MonoBehaviour
     public ComponentType caseType;
 
     public CursorScript cursor;
+
+    public Animation dropAnim;
+    public Image dropImage;
+    public Text dropProperties, sellText;
     public void Casetype(int caseType)
     {
         this.caseType = (ComponentType)caseType;
@@ -141,7 +146,7 @@ public class CaseScroller : MonoBehaviour
         else
         {
             //If component type == all, spawn random component.
-            SpawnCell((ComponentType)Random.Range(0, 3));
+            SpawnCell((ComponentType)Random.Range(0, 4));
         }
     }
 
@@ -178,5 +183,10 @@ public class CaseScroller : MonoBehaviour
     private void CaseStopped()
     {
         currentComponent = cursor.currentComponent;
+        dropImage.sprite = currentComponent.image;
+        dropProperties.text = currentComponent.Properties;
+        sellText.text = "Sell (" + currentComponent.price / 20 + "$)";
+        dropAnim.gameObject.SetActive(true);
+        dropAnim.Play("OpenDroppedComponent");
     }
 }

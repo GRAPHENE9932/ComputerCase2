@@ -15,4 +15,12 @@ public class PCComponent : ScriptableObject
     public System.DateTime time;
     public Rarity rarity;
     public Sprite image;
+
+    public virtual string Properties
+    {
+        get
+        {
+            return "Error! Code 0.";
+        }
+    }
 }

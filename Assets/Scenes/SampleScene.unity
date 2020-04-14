@@ -2584,6 +2584,10 @@ MonoBehaviour:
     type: 3}
   caseType: 0
   cursor: {fileID: 1474554150}
+  dropAnim: {fileID: 185968937}
+  dropImage: {fileID: 832938626}
+  dropProperties: {fileID: 1407086140}
+  sellText: {fileID: 1699054599}
   rarityColors:
   - {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
   - {r: 0.5882353, g: 0.8392157, b: 1, a: 1}
@@ -12759,9 +12763,9 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 2214e4872c9469243af9998a95c639f3, type: 3}
     m_FontSize: 55
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 57
+    m_BestFit: 1
+    m_MinSize: 25
+    m_MaxSize: 100
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
