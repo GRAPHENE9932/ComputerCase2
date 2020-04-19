@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public enum MenuState
 {
@@ -35,6 +36,10 @@ public class NavigationScript : MonoBehaviour
     /// </summary>
     private MenuState currentState;
     /// <summary>
+    /// Подія зміни відділу меню.
+    /// </summary>
+    public UnityEvent onToggle;
+    /// <summary>
     ///     Подія натиснення на кнопку меню. Запускає корутину анімації, якщо зараз не програється анімація відкриття або закриття.
     /// </summary>
     public void MenuButtonClicked()
@@ -48,6 +53,8 @@ public class NavigationScript : MonoBehaviour
     /// </summary>
     private IEnumerator MenuChangeState()
     {
+        //Виклик події.
+        onToggle.Invoke();
         menuAnimating = true;
         //Змінення стану відкритості меню навігації.
         menuOpened = !menuOpened;

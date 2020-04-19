@@ -10,7 +10,8 @@ public enum ComponentType
 
 public class CaseScroller : MonoBehaviour
 {
-    public float speed;
+    private float speed;
+    private readonly Cell[] cells = new Cell[50];
 
     public PCComponent currentComponent;
     public RectTransform cellsGroup;
@@ -18,6 +19,7 @@ public class CaseScroller : MonoBehaviour
     public ComponentType caseType;
 
     public CursorScript cursor;
+    public Invertory invertory;
 
     public Animation dropAnim;
     public Image dropImage;
@@ -87,7 +89,7 @@ public class CaseScroller : MonoBehaviour
     /// <param name="type">
     /// The type of component to spawn.
     /// </param>
-    private void SpawnCell(ComponentType type)
+    private void SpawnCell(ComponentType type, int index)
     {
         if (type != ComponentType.All)
         {
@@ -137,16 +139,29 @@ public class CaseScroller : MonoBehaviour
                     break;
             }
 
-            //Cell instantiate.
-            GameObject cell = Instantiate(cellPrefab, cellsGroup);
-            cell.GetComponent<Cell>().component = component;
-            cell.GetComponent<Cell>().rarityLine.color = rarityColors[(int)rarity];
-            cell.GetComponent<Cell>().image.sprite = component.image;
+            GameObject cell;
+            if (cells[index] == null)
+            {
+                //Cell instantiate.
+                cell = Instantiate(cellPrefab, cellsGroup);
+                cell.GetComponent<Cell>().component = component;
+                cell.GetComponent<Cell>().rarityLine.color = rarityColors[(int)rarity];
+                cell.GetComponent<Cell>().image.sprite = component.image;
+                cells[index] = cell.GetComponent<Cell>();
+            }
+            else
+            {
+                //Use instantiated cell.
+                cell = cells[index].gameObject;
+                cell.GetComponent<Cell>().component = component;
+                cell.GetComponent<Cell>().rarityLine.color = rarityColors[(int)rarity];
+                cell.GetComponent<Cell>().image.sprite = component.image;
+            }
         }
         else
         {
             //If component type == all, spawn random component.
-            SpawnCell((ComponentType)Random.Range(0, 4));
+            SpawnCell((ComponentType)Random.Range(0, 4), index);
         }
     }
 
@@ -158,7 +173,7 @@ public class CaseScroller : MonoBehaviour
         //Spawn 50 cells
         for (int i = 0; i < 50; i++)
         {
-            SpawnCell(caseType);
+            SpawnCell(caseType, i);
         }
         //Randomizing speed.
         speed = Random.Range(90F, 109.3F);
@@ -168,6 +183,7 @@ public class CaseScroller : MonoBehaviour
 
     private IEnumerator CaseScroll()
     {
+        cellsGroup.localPosition = new Vector2(8375, 0);
         while (speed > 0)
         {
             //Move cells with speed.
@@ -186,6 +202,7 @@ public class CaseScroller : MonoBehaviour
         dropImage.sprite = currentComponent.image;
         dropProperties.text = currentComponent.Properties;
         sellText.text = "Sell (" + currentComponent.price / 20 + "$)";
+        invertory.components.Add(currentComponent);
         dropAnim.gameObject.SetActive(true);
         dropAnim.Play("OpenDroppedComponent");
     }
