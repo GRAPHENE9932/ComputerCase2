@@ -14,9 +14,9 @@ public class CPU : PCComponent
         {
             string result = null;
 
-            result += fullName + "\n";
-            result += "Socket " + socket + "\n";
-            result += frequency + "MHz\n";
+            result += fullName + ";\n";
+            result += "Socket " + socket + ";\n";
+            result += frequency + "MHz;\n";
            
             if (cores % 10 == 1 && cores % 100 != 11)
             {

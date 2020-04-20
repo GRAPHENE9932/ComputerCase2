@@ -1109,7 +1109,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 649775847}
-        m_MethodName: UpdateInvertory
+        m_MethodName: UpdateInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2079,22 +2079,12 @@ MonoBehaviour:
   - {fileID: 49827187}
   - {fileID: 153065491}
   - {fileID: 1590723757}
-  - {fileID: 185968935}
   mainMenuTransform: {fileID: 179957342}
   onToggle:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 185968935}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  dropObj: {fileID: 185968935}
+  blocked: 0
 --- !u!114 &179957346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2118,6 +2108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 185968936}
   - component: {fileID: 185968937}
+  - component: {fileID: 185968938}
   m_Layer: 0
   m_Name: DroppedComponent
   m_TagString: Untagged
@@ -2167,6 +2158,20 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &185968938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185968935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69b622ef1fc97c44a09d259c25fe518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caseScroller: {fileID: 266880530}
+  navigation: {fileID: 179957345}
 --- !u!1 &193484059
 GameObject:
   m_ObjectHideFlags: 0
@@ -2847,7 +2852,8 @@ MonoBehaviour:
     type: 3}
   caseType: 0
   cursor: {fileID: 1474554150}
-  invertory: {fileID: 649775847}
+  inventory: {fileID: 649775847}
+  navigation: {fileID: 179957345}
   dropAnim: {fileID: 185968937}
   dropImage: {fileID: 832938626}
   dropProperties: {fileID: 1407086140}
@@ -5875,7 +5881,7 @@ GameObject:
   - component: {fileID: 649775848}
   - component: {fileID: 649775847}
   m_Layer: 0
-  m_Name: Invertory
+  m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5899,6 +5905,9 @@ MonoBehaviour:
   cellsGroup: {fileID: 166745785}
   cellsGrid: {fileID: 166745786}
   scroller: {fileID: 266880530}
+  infoWindowObj: {fileID: 728048184}
+  infoText: {fileID: 1599250498}
+  infoWindow: {fileID: 728048189}
 --- !u!4 &649775848
 Transform:
   m_ObjectHideFlags: 0
@@ -6247,7 +6256,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 704354332}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 649775847}
+        m_MethodName: PagePrevious
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &704354332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6518,13 +6538,15 @@ GameObject:
   - component: {fileID: 728048185}
   - component: {fileID: 728048187}
   - component: {fileID: 728048186}
+  - component: {fileID: 728048188}
+  - component: {fileID: 728048189}
   m_Layer: 5
   m_Name: Info window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &728048185
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6563,7 +6585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.23529412}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -6586,6 +6608,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728048184}
   m_CullTransparentMesh: 0
+--- !u!225 &728048188
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728048184}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &728048189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728048184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a97f5a7db75de34bb4fb5ff1aeba850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  group: {fileID: 728048188}
 --- !u!1 &734625823
 GameObject:
   m_ObjectHideFlags: 0
@@ -11292,7 +11339,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1279117862}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 185968938}
+        m_MethodName: Back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1279117862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13717,7 +13775,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1399613988}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 649775847}
+        m_MethodName: PageNext
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1399613988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13814,7 +13883,7 @@ MonoBehaviour:
     m_FontSize: 55
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 25
+    m_MinSize: 20
     m_MaxSize: 100
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -14697,7 +14766,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1465488792}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 185968938}
+        m_MethodName: OneMore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1465488792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14900,7 +14980,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.05, y: 350}
+  m_Size: {x: 5, y: 350}
   m_EdgeRadius: 0
 --- !u!50 &1474554149
 Rigidbody2D:
@@ -15910,18 +15990,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2214e4872c9469243af9998a95c639f3, type: 3}
-    m_FontSize: 118
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 50
-    m_MaxSize: 120
+    m_MaxSize: 80
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -17657,7 +17737,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1853140579}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 728048189}
+        m_MethodName: Back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1853140579
 MonoBehaviour:
   m_ObjectHideFlags: 0

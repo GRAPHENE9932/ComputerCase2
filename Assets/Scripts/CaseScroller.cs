@@ -19,11 +19,14 @@ public class CaseScroller : MonoBehaviour
     public ComponentType caseType;
 
     public CursorScript cursor;
-    public Invertory invertory;
+    public Inventory inventory;
+    public NavigationScript navigation;
 
     public Animation dropAnim;
     public Image dropImage;
     public Text dropProperties, sellText;
+
+    public bool fastMode;
     public void Casetype(int caseType)
     {
         this.caseType = (ComponentType)caseType;
@@ -175,14 +178,21 @@ public class CaseScroller : MonoBehaviour
         {
             SpawnCell(caseType, i);
         }
-        //Randomizing speed.
-        speed = Random.Range(90F, 109.3F);
+        if (fastMode)
+            //0 speed.
+            speed = 10F;
+        else
+            //Randomizing speed.
+            speed = Random.Range(90F, 109.3F);
         //Start coroutine of case scrolling.
         StartCoroutine(CaseScroll());
     }
-
+    /// <summary>
+    /// Coroutine of case scrolling.
+    /// </summary>
     private IEnumerator CaseScroll()
     {
+        navigation.blocked = true;
         cellsGroup.localPosition = new Vector2(8375, 0);
         while (speed > 0)
         {
@@ -193,16 +203,19 @@ public class CaseScroller : MonoBehaviour
             //Waiting 1 frame.
             yield return null;
         }
-        CaseStopped();
+        CaseStop();
+        navigation.blocked = false;
     }
-
-    private void CaseStopped()
+    /// <summary>
+    /// Case stop event.
+    /// </summary>
+    private void CaseStop()
     {
         currentComponent = cursor.currentComponent;
         dropImage.sprite = currentComponent.image;
         dropProperties.text = currentComponent.Properties;
         sellText.text = "Sell (" + currentComponent.price / 20 + "$)";
-        invertory.components.Add(currentComponent);
+        inventory.components.Add(currentComponent);
         dropAnim.gameObject.SetActive(true);
         dropAnim.Play("OpenDroppedComponent");
     }

@@ -40,6 +40,14 @@ public class NavigationScript : MonoBehaviour
     /// </summary>
     public UnityEvent onToggle;
     /// <summary>
+    /// Object of drop in case page.
+    /// </summary>
+    public GameObject dropObj;
+    /// <summary>
+    /// While blocked cannot switch page.
+    /// </summary>
+    public bool blocked;
+    /// <summary>
     ///     Подія натиснення на кнопку меню. Запускає корутину анімації, якщо зараз не програється анімація відкриття або закриття.
     /// </summary>
     public void MenuButtonClicked()
@@ -106,8 +114,8 @@ public class NavigationScript : MonoBehaviour
     /// </param>
     public void MenuItemClicked(int state)
     {
-        //Якщо зараз не йде анімація зміни відділу меню.
-        if (!switchAnimating)
+        //Якщо зараз не йде анімація зміни відділу меню і навігація не заблокована.
+        if (!switchAnimating && !blocked)
             StartCoroutine(SwitchMenu((MenuState)state));
     }
     /// <summary>
@@ -116,7 +124,7 @@ public class NavigationScript : MonoBehaviour
     /// <param name="state">
     ///     Відділ, на який треба перемкнутися.
     /// </param>
-    private IEnumerator SwitchMenu(MenuState state)
+    public IEnumerator SwitchMenu(MenuState state)
     {
         //Якщо відділ, на який треба перейти, не увімкнений зараз...
         if (state != currentState)
@@ -146,6 +154,8 @@ public class NavigationScript : MonoBehaviour
             }
             //Вимкнення старого відділу.
             menus[(int)currentState].SetActive(false);
+            //Вимкнення дропу.
+            dropObj.SetActive(false);
             //Увімкнення нового.
             menus[(int)state].SetActive(true);
             //Шлях анімації входу нового відділу.

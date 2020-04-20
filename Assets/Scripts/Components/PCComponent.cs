@@ -15,7 +15,9 @@ public class PCComponent : ScriptableObject
     public System.DateTime time;
     public Rarity rarity;
     public Sprite image;
-
+    /// <summary>
+    /// All properties of component in one string.
+    /// </summary>
     public virtual string Properties
     {
         get

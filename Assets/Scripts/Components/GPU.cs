@@ -19,9 +19,9 @@ public class GPU : PCComponent
         {
             string result = null;
 
-            result += fullName + "\n";
-            result += "Memory: " + memory + " MB\n";
-            result += "TDP: " + TDP + " W\n";
+            result += fullName + ";\n";
+            result += "Memory: " + memory + " MB;\n";
+            result += "TDP: " + TDP + " W;\n";
 
             result += "Interface: " + GPUInterfaceToString(motherboardInterface);
 

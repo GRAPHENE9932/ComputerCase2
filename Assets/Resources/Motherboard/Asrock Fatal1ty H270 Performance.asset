@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d68555b57d1a140aa5ce4204757b08, type: 3}
   m_Name: Asrock Fatal1ty H270 Performance
   m_EditorClassIdentifier: 
-  fullName: 'Asrock Fatal1ty H270 Performance '
+  fullName: Asrock Fatal1ty H270 Performance
   price: 80
   rarity: 0
   image: {fileID: 21300000, guid: aef376f0fce42504bb94ee1f84df6e7b, type: 3}

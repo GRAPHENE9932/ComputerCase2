@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d68555b57d1a140aa5ce4204757b08, type: 3}
   m_Name: Asrock Fatal1ty Z370 Gaming K6
   m_EditorClassIdentifier: 
-  fullName: 'Asrock Fatal1ty Z370 Gaming K6 '
+  fullName: Asrock Fatal1ty Z370 Gaming K6
   price: 240
   rarity: 2
   image: {fileID: 21300000, guid: e07ff5443efbf73498fb548fbf4de579, type: 3}
