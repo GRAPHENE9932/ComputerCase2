@@ -13,6 +13,7 @@ public class ButtonAnimation : MonoBehaviour
     ///     Змінна, яка показує, чи утримується палець на кнопці.
     /// </summary>
     bool down;
+    public bool disabled;
     /// <summary>
     ///     При натисненні на кнопку.
     /// </summary>
@@ -32,7 +33,7 @@ public class ButtonAnimation : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if (down)
+        if (down && !disabled)
         {
             if (img.fillAmount < 1)
                 img.fillAmount += Time.deltaTime * 10;

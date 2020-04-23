@@ -1,0 +1,4 @@
+0: PCComponent, властивість "Властивості" не наслідується.
+1: GPU, GPUInterfaceToString, в операторі switch  не знайдено інтерфейсу.
+2: MainCanvas, Invertory, Info window, Text, текст вікна не змінився.
+3: HighCanvas, Navigation, MenuItems, Money, Money text, текст грошей не змінився.

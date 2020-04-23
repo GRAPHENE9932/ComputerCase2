@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Aldrich [RUS by Daymarius]
+  fontName: Montserrat
   fontNames:
-  - Aldrich
+  - Montserrat
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

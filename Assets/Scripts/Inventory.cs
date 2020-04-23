@@ -75,7 +75,7 @@ public class Inventory : MonoBehaviour
     {
         CalculateProperties(out int _, out int _, out int _, out int cellsInPage);
         //Properties text.
-        infoText.text = components[cellsInPage * page + index].Properties;
+        infoText.text = components[cellsInPage * page + index].Properties + "\nTime: " + components[cellsInPage * page + index].time.ToString("dd.MM.yyyy hh.mm.ss");
         //Opening window.
         StartCoroutine(infoWindow.WindowInAnimation());
         infoWindowObj.SetActive(true);

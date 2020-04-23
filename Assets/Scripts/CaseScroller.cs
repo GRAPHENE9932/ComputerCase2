@@ -11,6 +11,7 @@ public enum ComponentType
 public class CaseScroller : MonoBehaviour
 {
     private float speed;
+    private bool major;
     private readonly Cell[] cells = new Cell[50];
 
     public PCComponent currentComponent;
@@ -21,15 +22,23 @@ public class CaseScroller : MonoBehaviour
     public CursorScript cursor;
     public Inventory inventory;
     public NavigationScript navigation;
+    public MoneySystem moneySystem;
+    public MessageBoxManager messageBox;
 
     public Animation dropAnim;
     public Image dropImage;
     public Text dropProperties, sellText;
+    public DropScript drop;
 
     public bool fastMode;
+    
     public void Casetype(int caseType)
     {
         this.caseType = (ComponentType)caseType;
+    }
+    public void Major(bool major)
+    {
+        this.major = major;
     }
     public List<PCComponent>[] CPUs, GPUs, RAMs, motherboards;
     public Color[] rarityColors;
@@ -173,19 +182,29 @@ public class CaseScroller : MonoBehaviour
     /// </summary>
     public void StartCase()
     {
-        //Spawn 50 cells
-        for (int i = 0; i < 50; i++)
+        if (major && moneySystem.Money.Value < 50)
         {
-            SpawnCell(caseType, i);
+            messageBox.StartMessage("Not enought money.", 2);
         }
-        if (fastMode)
-            //0 speed.
-            speed = 10F;
         else
-            //Randomizing speed.
-            speed = Random.Range(90F, 109.3F);
-        //Start coroutine of case scrolling.
-        StartCoroutine(CaseScroll());
+        {
+            if (major)
+                moneySystem.Money -= 50;
+            //Spawn 50 cells
+            for (int i = 0; i < 50; i++)
+            {
+                SpawnCell(caseType, i);
+            }
+            if (fastMode)
+                //0 speed.
+                speed = 10F;
+            else
+                //Randomizing speed.
+                speed = Random.Range(90F, 109.3F);
+            navigation.MenuItemClicked(8);
+            //Start coroutine of case scrolling.
+            StartCoroutine(CaseScroll());
+        }
     }
     /// <summary>
     /// Coroutine of case scrolling.
@@ -212,10 +231,15 @@ public class CaseScroller : MonoBehaviour
     private void CaseStop()
     {
         currentComponent = cursor.currentComponent;
+        currentComponent.time = System.DateTime.Now;
         dropImage.sprite = currentComponent.image;
         dropProperties.text = currentComponent.Properties;
-        sellText.text = "Sell (" + currentComponent.price / 20 + "$)";
+        if (currentComponent.price / 20 > 0)
+            sellText.text = "Sell (" + currentComponent.price / 20 + "$)";
+        else
+            sellText.text = "Remove";
         inventory.components.Add(currentComponent);
+        drop.OnDrop();
         dropAnim.gameObject.SetActive(true);
         dropAnim.Play("OpenDroppedComponent");
     }
