@@ -31,7 +31,7 @@ public class CaseScroller : MonoBehaviour
     public DropScript drop;
 
     public bool fastMode;
-    
+
     public void Casetype(int caseType)
     {
         this.caseType = (ComponentType)caseType;
@@ -212,7 +212,7 @@ public class CaseScroller : MonoBehaviour
     private IEnumerator CaseScroll()
     {
         navigation.blocked = true;
-        cellsGroup.localPosition = new Vector2(8375, 0);
+        cellsGroup.localPosition = new Vector2(0, 0);
         while (speed > 0)
         {
             //Move cells with speed.

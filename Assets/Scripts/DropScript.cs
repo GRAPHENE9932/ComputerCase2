@@ -36,5 +36,6 @@ public class DropScript : MonoBehaviour
         equipButton.interactable = false;
         sellAnim.disabled = true;
         equipAnim.disabled = true;
+        inventory.components.Remove(caseScroller.currentComponent);
     }
 }
