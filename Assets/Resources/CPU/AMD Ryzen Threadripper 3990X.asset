@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AMD Ryzen Threadripper 3990X
   m_EditorClassIdentifier: 
   fullName: AMD Ryzen Threadripper 3990X
+  shortName: Threadripper 3990X
   price: 3900
   rarity: 4
   image: {fileID: 21300000, guid: 593be85d900e84142bfcb0c4667b45e6, type: 3}

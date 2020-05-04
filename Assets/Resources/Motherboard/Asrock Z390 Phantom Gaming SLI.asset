@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Asrock Z390 Phantom Gaming SLI
   m_EditorClassIdentifier: 
   fullName: Asrock Z390 Phantom Gaming SLI
+  shortName: Asrock Z390 Gaming SLI
   price: 200
   rarity: 1
   image: {fileID: 21300000, guid: 3908ab8936c83d948b1986957f2a36a8, type: 3}

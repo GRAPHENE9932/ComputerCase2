@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Intel Core i3-6100
   m_EditorClassIdentifier: 
   fullName: Intel Core i3-6100
+  shortName: i3-6100
   price: 175
   rarity: 1
   image: {fileID: 21300000, guid: 028e3d93231bed44687429de9ccca1bf, type: 3}

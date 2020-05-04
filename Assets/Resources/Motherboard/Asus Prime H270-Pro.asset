@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Asus Prime H270-Pro
   m_EditorClassIdentifier: 
   fullName: Asus Prime H270-Pro
+  shortName: Asus Prime H270-Pro
   price: 105
   rarity: 0
   image: {fileID: 21300000, guid: 19e8a8271b4ce354c867d80abb21d2c4, type: 3}

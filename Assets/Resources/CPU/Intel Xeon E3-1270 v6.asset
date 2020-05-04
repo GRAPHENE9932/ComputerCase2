@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Intel Xeon E3-1270 v6
   m_EditorClassIdentifier: 
   fullName: Intel Xeon E3-1270 v6
+  shortName: Xeon E3-1270 v6
   price: 400
   rarity: 2
   image: {fileID: 21300000, guid: 51c60da157f705646a726c99efefa5ca, type: 3}

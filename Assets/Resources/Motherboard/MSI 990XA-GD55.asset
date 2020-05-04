@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: MSI 990XA-GD55
   m_EditorClassIdentifier: 
   fullName: MSI 990XA-GD55
+  shortName: MSI 990XA-GD55
   price: 105
   rarity: 0
   image: {fileID: 21300000, guid: 8598744f9f7216140be353313a746fc3, type: 3}

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AMD Athlon 240GE
   m_EditorClassIdentifier: 
   fullName: AMD Athlon 240GE
+  shortName: Athlon 240GE
   price: 115
   rarity: 0
   image: {fileID: 21300000, guid: dc692ffe6e4ab5044a0a2d5729e23794, type: 3}

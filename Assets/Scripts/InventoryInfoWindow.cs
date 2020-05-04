@@ -25,7 +25,7 @@ public class InventoryInfoWindow : MonoBehaviour
     /// <summary>
     /// Animation of closing window.
     /// </summary>
-    private IEnumerator WindowOutAnimation()
+    public IEnumerator WindowOutAnimation()
     {
         //Duration: 0.5 s.
         float time = 0.25F;

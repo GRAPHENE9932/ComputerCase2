@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Intel Pentium G4560
   m_EditorClassIdentifier: 
   fullName: Intel Pentium G4560
+  shortName: Pentium G4560
   price: 80
   rarity: 0
   image: {fileID: 21300000, guid: 8cb261f57888ea04e9f0ae470cbf2be3, type: 3}

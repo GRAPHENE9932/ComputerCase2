@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Kingston 1 GB DDR2 800 MHz
   m_EditorClassIdentifier: 
   fullName: Kingston 1 GB DDR2 800 MHz
+  shortName: 1 GB DDR2 800 MHz
   price: 8
   rarity: 0
   image: {fileID: 21300000, guid: 5566d946991d19d439dc4283a6263f53, type: 3}

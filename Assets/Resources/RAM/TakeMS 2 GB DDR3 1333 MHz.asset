@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TakeMS 2 GB DDR3 1333 MHz
   m_EditorClassIdentifier: 
   fullName: TakeMS 2 GB DDR3 1333 MHz
+  shortName: 2 GB DDR3 1333 MHz
   price: 7
   rarity: 0
   image: {fileID: 21300000, guid: 0a53f557971a48f40bba833aad137b0d, type: 3}

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AMD Ryzen 3 3200G
   m_EditorClassIdentifier: 
   fullName: AMD Ryzen 3 3200G
+  shortName: Ryzen 3 3200G
   price: 130
   rarity: 1
   image: {fileID: 21300000, guid: ca92b79f0713c7c45a78b7ec911d6370, type: 3}

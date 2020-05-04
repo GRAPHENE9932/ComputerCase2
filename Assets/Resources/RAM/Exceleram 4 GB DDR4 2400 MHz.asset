@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Exceleram 4 GB DDR4 2400 MHz
   m_EditorClassIdentifier: 
   fullName: Exceleram 4 GB DDR4 2400 MHz
+  shortName: 4 GB DDR4 2400 MHz
   price: 22
   rarity: 1
   image: {fileID: 21300000, guid: af31b26b3e89b62429cd887918e40a38, type: 3}

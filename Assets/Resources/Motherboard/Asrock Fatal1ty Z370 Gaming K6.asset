@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Asrock Fatal1ty Z370 Gaming K6
   m_EditorClassIdentifier: 
   fullName: Asrock Fatal1ty Z370 Gaming K6
+  shortName: Asrock Fatal1ty Z370
   price: 240
   rarity: 2
   image: {fileID: 21300000, guid: e07ff5443efbf73498fb548fbf4de579, type: 3}

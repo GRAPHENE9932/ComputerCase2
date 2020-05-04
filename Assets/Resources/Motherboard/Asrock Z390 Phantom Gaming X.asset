@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Asrock Z390 Phantom Gaming X
   m_EditorClassIdentifier: 
   fullName: Asrock Z390 Phantom Gaming X
+  shortName: Asrock Z390 Gaming X
   price: 330
   rarity: 3
   image: {fileID: 21300000, guid: 7f7c343083f986a4cbc8056c5bf80190, type: 3}

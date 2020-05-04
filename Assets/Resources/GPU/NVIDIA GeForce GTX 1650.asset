@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: NVIDIA GeForce GTX 1650
   m_EditorClassIdentifier: 
   fullName: NVIDIA GeForce GTX 1650
+  shortName: GTX 1650
   price: 150
   rarity: 2
   image: {fileID: 21300000, guid: e27d725274af5b74c98cbbf1a6fb06d9, type: 3}
   memory: 4096
   TDP: 75
   power: 2984
+  busVersion: 3
+  busMultiplier: 16
   motherboardInterface: 0

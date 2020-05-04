@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AMD Ryzen 9 3900X
   m_EditorClassIdentifier: 
   fullName: AMD Ryzen 9 3900X
+  shortName: Ryzen 9 3900X
   price: 500
   rarity: 3
   image: {fileID: 21300000, guid: 719426d1327a5b047840700adb169f21, type: 3}

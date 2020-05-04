@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: HPE 16 GB DDR4 2666 MHz
   m_EditorClassIdentifier: 
   fullName: HPE 16 GB DDR4 2666 MHz
+  shortName: 16 GB DDR4 2666 MHz
   price: 470
   rarity: 3
   image: {fileID: 21300000, guid: de8528d48381a85408392436519f1b5f, type: 3}

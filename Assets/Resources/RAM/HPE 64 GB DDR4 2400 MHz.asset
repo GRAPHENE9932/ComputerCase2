@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: HPE 64 GB DDR4 2400 MHz
   m_EditorClassIdentifier: 
   fullName: HPE 64 GB DDR4 2400 MHz
+  shortName: 64 GB DDR4 2400 MHz
   price: 2340
   rarity: 4
   image: {fileID: 21300000, guid: 1c6fc5d15069b7f4dad416bf5b385b40, type: 3}

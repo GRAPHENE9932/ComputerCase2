@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Dual Intel Xeon E7-8895 v2
   m_EditorClassIdentifier: 
   fullName: Dual Intel Xeon E7-8895 v2
+  shortName: Dual Xeon E7-8895 v2
   price: 200
   rarity: 3
   image: {fileID: 21300000, guid: 80c84bf01313e3c48a8ac8c5f3e14edf, type: 3}

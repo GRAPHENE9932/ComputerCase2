@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Gigabyte GA-990X-Gaming SLI
   m_EditorClassIdentifier: 
   fullName: Gigabyte GA-990X-Gaming SLI
+  shortName: Gigabyte GA-990X SLI
   price: 115
   rarity: 0
   image: {fileID: 21300000, guid: 062f8a2a287461b4a9700c48ca7c07ed, type: 3}

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TEAM 4 GB DDR4 2400 MHz
   m_EditorClassIdentifier: 
   fullName: TEAM 4 GB DDR4 2400 MHz
+  shortName: 4 GB DDR4 2400 MHz
   price: 24
   rarity: 1
   image: {fileID: 21300000, guid: d0b0c158e8b2d0f47a09f439a0543227, type: 3}

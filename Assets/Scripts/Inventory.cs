@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     public List<PCComponent> components = new List<PCComponent>();
+
     public GameObject cellPrefab;
     public RectTransform cellsGroup;
     public GridLayoutGroup cellsGrid;
+    public Text inventoryInfoText;
 
     public Button pageNextButton, pagePreviousButton;
     public ButtonAnimation pageNextButtonAnim, pagePreviousButtonAnim;
@@ -22,9 +24,11 @@ public class Inventory : MonoBehaviour
     public Button sellInfoButton, removeInfoButton, equipInfoButton;
     public ButtonAnimation sellInfoButtonAnim, removeInfoButtonAnim, equipInfoButtonAnim;
     public InventoryInfoWindow infoWindow;
+    public Text sortText;
 
     private int page;
     private int selectedCell = -1;
+    private Sort sortType;
     readonly private List<InventoryCell> cells = new List<InventoryCell>();
 
     /// <summary>
@@ -33,6 +37,22 @@ public class Inventory : MonoBehaviour
 
     public void UpdateInventory()
     {
+        switch (sortType)
+        {
+            case Sort.Price:
+                components.Sort(new SortByPrice());
+                break;
+            case Sort.Time:
+                components.Sort(new SortByTime());
+                break;
+            case Sort.Rarity:
+                components.Sort(new SortByRarity());
+                break;
+            case Sort.Type:
+                components.Sort(new SortByType());
+                break;
+        }
+
         CalculateProperties(out int cellsInRow, out int cellsInColumn, out int cellsMax, out int cellsInPage);
         //Instantiate cells if they are not enough.
         while (cells.Count < cellsInPage)
@@ -55,6 +75,18 @@ public class Inventory : MonoBehaviour
             int eventIndex = i;
             cells[i].GetComponent<Button>().onClick.AddListener(delegate { CellClicked(eventIndex); });
         }
+
+        long totalPrice = 0;
+        for (int i = 0; i < components.Count; i++)
+        {
+            totalPrice += components[i].price;
+        }
+        int totalPages = components.Count / cellsMax;
+        if (components.Count > cellsMax * totalPages)
+            totalPages++;
+        if (totalPages == 0)
+            totalPages++;
+        inventoryInfoText.text = "Page " + (page + 1) + "/" + totalPages + ", items: " + components.Count + ", total price: " + totalPrice + "$";
     }
     /// <summary>
     /// Event of next page button.
@@ -88,18 +120,34 @@ public class Inventory : MonoBehaviour
 
         CalculateProperties(out int _, out int _, out int _, out int cellsInPage);
         //Properties text.
-        infoText.text = cells[index].component.Properties + "\nTime: " + components[cellsInPage * page + index].time.ToString("dd.MM.yyyy hh.mm.ss");
-        sellInfoText.text = "Sell (+" + components[cellsInPage * page + index].price / 20 + "$)";
+        infoText.text = cells[index].component.Properties + "\nTime: " + components[cellsInPage * page + index].time.ToString("dd.MM.yyyy hh:mm:ss");
+        
+        if (components[cellsInPage * page + index].price / 20 > 0)
+            sellInfoText.text = "Sell (+" + components[cellsInPage * page + index].price / 20 + "$)";
+        else
+            sellInfoText.text = "Remove";
         //Opening window.
         StartCoroutine(infoWindow.WindowInAnimation());
+        //Enable "Sell", "Remove" and "Equip" buttons.
+        sellInfoButton.interactable = true;
+        removeInfoButton.interactable = true;
+        equipInfoButton.interactable = true;
+
+        sellInfoButtonAnim.disabled = false;
+        removeInfoButtonAnim.disabled = false;
+        equipInfoButtonAnim.disabled = false;
+
         infoWindowObj.SetActive(true);
     }
 
     public void Sell()
     {
+        //Add money.
         moneySystem.Money += cells[selectedCell].component.price / 20;
+        //Remove component.
         components.Remove(cells[selectedCell].component);
 
+        //Disable "Sell", "Remove" and "Equip" buttons.
         sellInfoButton.interactable = false;
         removeInfoButton.interactable = false;
         equipInfoButton.interactable = false;
@@ -108,12 +156,17 @@ public class Inventory : MonoBehaviour
         removeInfoButtonAnim.disabled = true;
         equipInfoButtonAnim.disabled = true;
 
+        //Update inventory.
         UpdateInventory();
+        //Close window.
+        StartCoroutine(infoWindow.WindowOutAnimation());
     }
     public void Remove()
     {
+        //Remove component.
         components.Remove(cells[selectedCell].component);
 
+        //Disable "Sell", "Remove" and "Equip" buttons.
         sellInfoButton.interactable = false;
         removeInfoButton.interactable = false;
         equipInfoButton.interactable = false;
@@ -122,11 +175,38 @@ public class Inventory : MonoBehaviour
         removeInfoButtonAnim.disabled = true;
         equipInfoButtonAnim.disabled = true;
 
+        //Update inventory.
         UpdateInventory();
+        //Close window.
+        StartCoroutine(infoWindow.WindowOutAnimation());
     }
     public void Equip()
     {
         Debug.Log("Equip");
+    }
+
+    public void SortingChange()
+    {
+        if ((int)sortType < 3)
+            sortType++;
+        else
+            sortType = 0;
+        UpdateInventory();
+        switch (sortType)
+        {
+            case Sort.Price:
+                sortText.text = "Sort by price";
+                break;
+            case Sort.Rarity:
+                sortText.text = "Sort by rarity";
+                break;
+            case Sort.Time:
+                sortText.text = "Sort by time";
+                break;
+            case Sort.Type:
+                sortText.text = "Sort by type";
+                break;
+        }
     }
 
     private void CalculateProperties(out int cellsInRow, out int cellsInColumn, out int cellsMax, out int cellsInPage)
@@ -141,5 +221,127 @@ public class Inventory : MonoBehaviour
         cellsInPage = components.Count - cellsMax * page;
         if (cellsInPage > cellsMax)
             cellsInPage = cellsMax;
+    }
+}
+
+public enum Sort
+{
+    Time, Price, Rarity, Type
+}
+
+class SortByTime : IComparer<PCComponent>
+{
+    public int Compare(PCComponent p1, PCComponent p2)
+    {
+        if (p1.time > p2.time)
+            return -1;
+        else if (p1.time < p2.time)
+            return 1;
+        else
+            return 0;
+    }
+}
+class SortByPrice : IComparer<PCComponent>
+{
+    public int Compare(PCComponent p1, PCComponent p2)
+    {
+        if (p1.price > p2.price)
+            return -1;
+        else if (p1.price < p2.price)
+            return 1;
+        else
+            return 0;
+    }
+}
+class SortByRarity : IComparer<PCComponent>
+{
+    public int Compare(PCComponent p1, PCComponent p2)
+    {
+        if (p1.rarity > p2.rarity)
+            return -1;
+        else if (p1.rarity < p2.rarity)
+            return 1;
+        else
+        {
+            ComponentType type1, type2;
+
+            if (p1 is CPU)
+                type1 = ComponentType.CPU;
+            else if (p1 is GPU)
+                type1 = ComponentType.GPU;
+            else if (p1 is RAM)
+                type1 = ComponentType.RAM;
+            else
+                type1 = ComponentType.Motherboard;
+
+            if (p2 is CPU)
+                type2 = ComponentType.CPU;
+            else if (p2 is GPU)
+                type2 = ComponentType.GPU;
+            else if (p2 is RAM)
+                type2 = ComponentType.RAM;
+            else
+                type2 = ComponentType.Motherboard;
+
+            if (type1 > type2)
+                return 1;
+            else if (type1 < type2)
+                return -1;
+            else
+            {
+                if (p1.price > p2.price)
+                    return -1;
+                else if (p1.price > p2.price)
+                    return 1;
+                else
+                    return 0;
+            }
+        }
+    }
+}
+class SortByType : IComparer<PCComponent>
+{
+    public int Compare(PCComponent p1, PCComponent p2)
+    {
+        ComponentType type1, type2;
+
+        if (p1 is CPU)
+            type1 = ComponentType.CPU;
+        else if (p1 is GPU)
+            type1 = ComponentType.GPU;
+        else if (p1 is RAM)
+            type1 = ComponentType.RAM;
+        else
+            type1 = ComponentType.Motherboard;
+
+        if (p2 is CPU)
+            type2 = ComponentType.CPU;
+        else if (p2 is GPU)
+            type2 = ComponentType.GPU;
+        else if (p2 is RAM)
+            type2 = ComponentType.RAM;
+        else
+            type2 = ComponentType.Motherboard;
+
+        if (type1 > type2)
+            return 1;
+        if (type1 < type2)
+            return -1;
+        else
+        {
+            if (p1.rarity > p2.rarity)
+                return -1;
+            else if (p1.rarity < p2.rarity)
+                return 1;
+            else
+            {
+                if (p1.price > p2.price)
+                    return -1;
+                else if (p1.price < p2.price)
+                    return 1;
+                else
+                    return 0;
+            }
+        }
     }
 }

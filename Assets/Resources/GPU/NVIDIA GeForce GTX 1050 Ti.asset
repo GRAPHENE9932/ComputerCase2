@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: NVIDIA GeForce GTX 1050 Ti
   m_EditorClassIdentifier: 
   fullName: NVIDIA GeForce GTX 1050 Ti
+  shortName: GTX 1050 Ti
   price: 140
   rarity: 1
   image: {fileID: 21300000, guid: 093056c301214a048be66a5d0fa966b5, type: 3}
   memory: 4096
   TDP: 75
   power: 2138
+  busVersion: 3
+  busMultiplier: 16
   motherboardInterface: 0

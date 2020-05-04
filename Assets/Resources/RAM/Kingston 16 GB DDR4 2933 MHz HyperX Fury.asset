@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Kingston 16 GB DDR4 2933 MHz HyperX Fury
   m_EditorClassIdentifier: 
   fullName: Kingston 16 GB DDR4 2933 MHz HyperX Fury
+  shortName: 16 GB DDR4 2933 MHz
   price: 245
   rarity: 3
   image: {fileID: 21300000, guid: 288e8422092031c4a87c52cdd5446e12, type: 3}

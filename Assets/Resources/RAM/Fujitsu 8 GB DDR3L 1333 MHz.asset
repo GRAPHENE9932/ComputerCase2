@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Fujitsu 8 GB DDR3L 1333 MHz
   m_EditorClassIdentifier: 
   fullName: Fujitsu 8 GB DDR3L 1333 MHz
+  shortName: 8 GB DDR3L 1333 MHz
   price: 290
   rarity: 2
   image: {fileID: 21300000, guid: b08570abb19f108428d7669e66563fbb, type: 3}

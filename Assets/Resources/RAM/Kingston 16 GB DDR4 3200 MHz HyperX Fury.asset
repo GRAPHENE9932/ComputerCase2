@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Kingston 16 GB DDR4 3200 MHz HyperX Fury
   m_EditorClassIdentifier: 
   fullName: Kingston 16 GB DDR4 3200 MHz HyperX Fury
+  shortName: 16 GB DDR4 3200 MHz
   price: 300
   rarity: 3
   image: {fileID: 21300000, guid: d2972a22dc41bb34280dca529ce9b80e, type: 3}

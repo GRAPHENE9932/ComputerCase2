@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: NVIDIA GeForce RTX 2070
   m_EditorClassIdentifier: 
   fullName: NVIDIA GeForce RTX 2070
+  shortName: RTX 2070
   price: 500
   rarity: 3
   image: {fileID: 21300000, guid: 0526de33b61b9c046901d3d9d0f9e58d, type: 3}
   memory: 8192
   TDP: 175
   power: 7465
-  GPUInterface: PCIe 3.0 x16
+  busVersion: 3
+  busMultiplier: 16
+  motherboardInterface: 0

@@ -10,7 +10,8 @@ public enum GPUInterface
 [CreateAssetMenu(menuName = "Components/GPU", fileName = "GPU")]
 public class GPU : PCComponent
 {
-    public int memory, TDP, power;
+    public short memory, TDP, power;
+    public byte busVersion, busMultiplier;
     public GPUInterface motherboardInterface;
 
     public override string Properties

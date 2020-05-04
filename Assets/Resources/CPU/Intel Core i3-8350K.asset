@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Intel Core i3-8350K
   m_EditorClassIdentifier: 
   fullName: Intel Core i3-8350K
+  shortName: i3-8350K
   price: 205
   rarity: 2
   image: {fileID: 21300000, guid: e3eeab90c2cea9848a9d45f6f6cea708, type: 3}

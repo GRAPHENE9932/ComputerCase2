@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SK hynix 1 GB DDR 400 MHz
   m_EditorClassIdentifier: 
   fullName: SK hynix 1 GB DDR 400 MHz
+  shortName: 1 GB DDR 400 MHz
   price: 10
   rarity: 0
   image: {fileID: 21300000, guid: 82c1a8c39e84ab74a9bac17990cee2e0, type: 3}

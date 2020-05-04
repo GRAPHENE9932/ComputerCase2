@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: AMD Radeon RX 5700 XT
   m_EditorClassIdentifier: 
   fullName: AMD Radeon RX 5700 XT
+  shortName: RX 5700 XT
   price: 400
   rarity: 4
   image: {fileID: 21300000, guid: 32aefd0bf4154004285acb7da16f0223, type: 3}
   memory: 8192
   TDP: 225
   power: 9754
+  busVersion: 4
+  busMultiplier: 16
   motherboardInterface: 0

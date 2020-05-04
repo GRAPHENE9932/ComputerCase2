@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Quad Intel Xeon E7-8895 v2
   m_EditorClassIdentifier: 
   fullName: Quad Intel Xeon E7-8895 v2
+  shortName: Quad Xeon E7-8895 v2
   price: 350
   rarity: 3
   image: {fileID: 21300000, guid: b9ac8eb6214746946902280f5b028e95, type: 3}

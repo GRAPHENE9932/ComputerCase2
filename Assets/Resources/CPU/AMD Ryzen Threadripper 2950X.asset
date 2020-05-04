@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AMD Ryzen Threadripper 2950X
   m_EditorClassIdentifier: 
   fullName: AMD Ryzen Threadripper 2950X
+  shortName: Threadripper 2950X
   price: 900
   rarity: 3
   image: {fileID: 21300000, guid: 29963a995b5679e48b8b155435d2f04d, type: 3}

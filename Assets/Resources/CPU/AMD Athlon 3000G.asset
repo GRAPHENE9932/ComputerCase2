@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AMD Athlon 3000G
   m_EditorClassIdentifier: 
   fullName: AMD Athlon 3000G
+  shortName: Athlon 3000G
   price: 75
   rarity: 0
   image: {fileID: 21300000, guid: 1a5a4163e8965444d86f7908a1a94ae1, type: 3}

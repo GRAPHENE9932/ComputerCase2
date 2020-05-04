@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Intel Core i9-9920X
   m_EditorClassIdentifier: 
   fullName: Intel Core i9-9920X
+  shortName: i9-9920X
   price: 1500
   rarity: 4
   image: {fileID: 21300000, guid: 3af8b924c9b4ea54197c7b8c9d31c099, type: 3}

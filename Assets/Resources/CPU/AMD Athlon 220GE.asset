@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AMD Athlon 220GE
   m_EditorClassIdentifier: 
   fullName: AMD Athlon 220GE
+  shortName: Athlon 220GE
   price: 95
   rarity: 0
   image: {fileID: 21300000, guid: 128e84e870844fe4ab267bb1a959d8ec, type: 3}

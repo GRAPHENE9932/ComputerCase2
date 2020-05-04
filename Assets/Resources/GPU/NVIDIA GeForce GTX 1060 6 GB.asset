@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: NVIDIA GeForce GTX 1060 6 GB
   m_EditorClassIdentifier: 
   fullName: NVIDIA GeForce GTX 1060 6 GB
+  shortName: GTX 1060 6 GB
   price: 300
   rarity: 2
   image: {fileID: 21300000, guid: 33d1415ac325dbb42b5e1ff12b14f72b, type: 3}
   memory: 6144
   TDP: 120
   power: 4375
+  busVersion: 3
+  busMultiplier: 16
   motherboardInterface: 0

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Dell 8 GB DDR3 1600 MHz
   m_EditorClassIdentifier: 
   fullName: Dell 8 GB DDR3 1600 MHz
+  shortName: 8 GB DDR3 1600 MHz
   price: 320
   rarity: 1
   image: {fileID: 21300000, guid: 54a335c5a34ada7428d81161bfcea06f, type: 3}

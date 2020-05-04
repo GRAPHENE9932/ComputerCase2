@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Asrock Z390 Pro4
   m_EditorClassIdentifier: 
   fullName: Asrock Z390 Pro4
+  shortName: Asrock Z390 Pro4
   price: 130
   rarity: 0
   image: {fileID: 21300000, guid: d7f5ad557c68073408cd45b2cfd351c4, type: 3}

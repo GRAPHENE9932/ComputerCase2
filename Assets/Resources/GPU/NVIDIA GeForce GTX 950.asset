@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: NVIDIA GeForce GTX 950
   m_EditorClassIdentifier: 
   fullName: NVIDIA GeForce GTX 950
+  shortName: GTX 950
   price: 160
   rarity: 1
   image: {fileID: 21300000, guid: acb79ee488ac9a44c85ddcf47dc7d1fb, type: 3}
   memory: 2048
   TDP: 90
   power: 1825
+  busVersion: 3
+  busMultiplier: 16
   motherboardInterface: 0

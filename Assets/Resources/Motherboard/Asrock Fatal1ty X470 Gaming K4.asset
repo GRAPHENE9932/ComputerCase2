@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Asrock Fatal1ty X470 Gaming K4
   m_EditorClassIdentifier: 
   fullName: Asrock Fatal1ty X470 Gaming K4
+  shortName: Asrock Fatal1ty X470
   price: 205
   rarity: 1
   image: {fileID: 21300000, guid: e3c7a4264a8b79744b0da78e421f8285, type: 3}

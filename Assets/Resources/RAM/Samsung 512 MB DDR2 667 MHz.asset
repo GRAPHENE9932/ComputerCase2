@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Samsung 512 MB DDR2 667 MHz
   m_EditorClassIdentifier: 
   fullName: Samsung 512 MB DDR2 667 MHz
+  shortName: 512 MB DDR2 667 MHz
   price: 15
   rarity: 0
   image: {fileID: 21300000, guid: d73df55c2f947d449b545cc296eac7af, type: 3}

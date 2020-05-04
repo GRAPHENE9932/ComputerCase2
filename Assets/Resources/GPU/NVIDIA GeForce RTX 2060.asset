@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: NVIDIA GeForce RTX 2060
   m_EditorClassIdentifier: 
   fullName: NVIDIA GeForce RTX 2060
+  shortName: RTX 2060
   price: 350
   rarity: 3
   image: {fileID: 21300000, guid: 2adec18be8b1fbf4faa625f39dfaf64b, type: 3}
   memory: 6144
   TDP: 160
   power: 6451
+  busVersion: 3
+  busMultiplier: 16
   motherboardInterface: 0

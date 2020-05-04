@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Intel Xeon E5-1650
   m_EditorClassIdentifier: 
   fullName: Intel Xeon E5-1650
+  shortName: Xeon E5-1650
   price: 635
   rarity: 1
   image: {fileID: 21300000, guid: 143d9a18926a5274188aef6194b84280, type: 3}

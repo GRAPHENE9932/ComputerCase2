@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Intel Core i9-7940X
   m_EditorClassIdentifier: 
   fullName: Intel Core i9-7940X
+  shortName: i9-7940X
   price: 1400
   rarity: 4
   image: {fileID: 21300000, guid: 9521d6b8567366343b0540bab54add62, type: 3}

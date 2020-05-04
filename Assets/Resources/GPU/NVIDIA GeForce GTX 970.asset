@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: NVIDIA GeForce GTX 970
   m_EditorClassIdentifier: 
   fullName: NVIDIA GeForce GTX 970
+  shortName: GTX 970
   price: 330
   rarity: 2
   image: {fileID: 21300000, guid: 77213e0e84b8b284e9fce2544676f01b, type: 3}
   memory: 4096
   TDP: 148
   power: 3920
+  busVersion: 3
+  busMultiplier: 16
   motherboardInterface: 0

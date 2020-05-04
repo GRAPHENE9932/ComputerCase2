@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Samsung 32 GB DDR4 2133 MHz
   m_EditorClassIdentifier: 
   fullName: Samsung 32 GB DDR4 2133 MHz
+  shortName: 32 GB DDR4 2133 MHz
   price: 350
   rarity: 4
   image: {fileID: 21300000, guid: ef03d1fcd9a8a1741a28d6710914f099, type: 3}

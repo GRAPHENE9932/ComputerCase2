@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Asrock Fatal1ty Z270 Gaming K4
   m_EditorClassIdentifier: 
   fullName: Asrock Fatal1ty Z270 Gaming K4
+  shortName: Asrock Fatal1ty Z270
   price: 125
   rarity: 1
   image: {fileID: 21300000, guid: 6fab62d8063563d4bb20882698938254, type: 3}

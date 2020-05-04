@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Samsung 32 GB DDR3L 1600 MHz
   m_EditorClassIdentifier: 
   fullName: Samsung 32 GB DDR3L 1600 MHz
+  shortName: 32 GB DDR3L 1600 MHz
   price: 270
   rarity: 1
   image: {fileID: 21300000, guid: e8d1d13144a171443ba296bdef6c9df3, type: 3}

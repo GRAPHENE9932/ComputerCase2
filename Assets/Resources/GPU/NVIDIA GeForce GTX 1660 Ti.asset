@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: NVIDIA GeForce GTX 1660 Ti
   m_EditorClassIdentifier: 
   fullName: NVIDIA GeForce GTX 1660 Ti
-  price: 0
+  shortName: GTX 1660 Ti
+  price: 280
   rarity: 3
   image: {fileID: 21300000, guid: cd37e4ce12401564cb8132785708496f, type: 3}
   memory: 6144
   TDP: 120
   power: 5437
+  busVersion: 3
+  busMultiplier: 16
   motherboardInterface: 0

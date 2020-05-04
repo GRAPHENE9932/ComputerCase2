@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Kingston 32 GB DDR4 3333 MHz HyperX Predator
   m_EditorClassIdentifier: 
   fullName: Kingston 32 GB DDR4 3333 MHz HyperX Predator
+  shortName: 32 GB DDR4 3333 MHz
   price: 245
   rarity: 3
   image: {fileID: 21300000, guid: 44e732e4da12663439f7cc5a6fc95358, type: 3}

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AMD Ryzen 5 1600X
   m_EditorClassIdentifier: 
   fullName: AMD Ryzen 5 1600X
+  shortName: Ryzen 5 1600X
   price: 160
   rarity: 1
   image: {fileID: 21300000, guid: 33a56b4c893d86f4cac276f47a8a4e23, type: 3}

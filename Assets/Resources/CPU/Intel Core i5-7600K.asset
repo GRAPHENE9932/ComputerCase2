@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Intel Core i5-7600K
   m_EditorClassIdentifier: 
   fullName: Intel Core i5-7600K
+  shortName: i5-7600K
   price: 300
   rarity: 2
   image: {fileID: 21300000, guid: f4b928b720b00294ba594b8823a40312, type: 3}

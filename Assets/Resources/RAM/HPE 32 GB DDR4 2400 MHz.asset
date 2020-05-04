@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: HPE 32 GB DDR4 2400 MHz
   m_EditorClassIdentifier: 
   fullName: HPE 32 GB DDR4 2400 MHz
+  shortName: 32 GB DDR4 2400 MHz
   price: 720
   rarity: 4
   image: {fileID: 21300000, guid: 36381d88bad03ea4cbe878dd6838dd76, type: 3}

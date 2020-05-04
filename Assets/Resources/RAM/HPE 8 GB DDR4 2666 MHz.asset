@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: HPE 8 GB DDR4 2666 MHz
   m_EditorClassIdentifier: 
   fullName: HPE 8 GB DDR4 2666 MHz
+  shortName: 8 GB DDR4 2666 MHz
   price: 385
   rarity: 2
   image: {fileID: 21300000, guid: b2a021820573cc346b94f0b4add9b1e0, type: 3}

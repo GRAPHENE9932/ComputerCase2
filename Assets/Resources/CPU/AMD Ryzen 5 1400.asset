@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AMD Ryzen 5 1400
   m_EditorClassIdentifier: 
   fullName: AMD Ryzen 5 1400
+  shortName: Ryzen 5 1400
   price: 130
   rarity: 1
   image: {fileID: 21300000, guid: 0d8ac241b830ed64285c54f32f5ef280, type: 3}

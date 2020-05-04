@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: HPE 32 GB DDR4 2666 MHz
   m_EditorClassIdentifier: 
   fullName: HPE 32 GB DDR4 2666 MHz
+  shortName: 32 GB DDR4 2666 MHz
   price: 670
   rarity: 4
   image: {fileID: 21300000, guid: 62388f87b7d9fb641822e2198a5d3a21, type: 3}

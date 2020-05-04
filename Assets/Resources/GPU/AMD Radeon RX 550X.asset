@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: AMD Radeon RX 550X
   m_EditorClassIdentifier: 
   fullName: AMD Radeon RX 550X
+  shortName: RX 550X
   price: 120
   rarity: 1
   image: {fileID: 21300000, guid: eb83df72796ed2e41ab022cbb3e107bb, type: 3}
   memory: 3096
   TDP: 50
   power: 1211
+  busVersion: 3
+  busMultiplier: 8
   motherboardInterface: 3

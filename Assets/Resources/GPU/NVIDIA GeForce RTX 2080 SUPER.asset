@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: NVIDIA GeForce RTX 2080 SUPER
   m_EditorClassIdentifier: 
   fullName: NVIDIA GeForce RTX 2080 SUPER
+  shortName: RTX 2080 SUPER
   price: 700
   rarity: 4
   image: {fileID: 21300000, guid: c34e4c4e77ad83a499453e302e8e1f5a, type: 3}
   memory: 8192
   TDP: 250
   power: 11150
-  GPUInterface: PCIe 3.0 x16
+  busVersion: 3
+  busMultiplier: 16
+  motherboardInterface: 0

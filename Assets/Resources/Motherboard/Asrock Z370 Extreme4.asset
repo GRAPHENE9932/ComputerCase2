@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Asrock Z370 Extreme4
   m_EditorClassIdentifier: 
   fullName: Asrock Z370 Extreme4
+  shortName: Asrock Z370 Extreme4
   price: 300
   rarity: 2
   image: {fileID: 21300000, guid: 118e5a949b288db4cb0d85c965030630, type: 3}

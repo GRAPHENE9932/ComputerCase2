@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AMD Ryzen 7 3700X
   m_EditorClassIdentifier: 
   fullName: AMD Ryzen 7 3700X
+  shortName: Ryzen 7 3700X
   price: 330
   rarity: 3
   image: {fileID: 21300000, guid: 9e1bcab931b64e8429b4c9d4f017a4ba, type: 3}

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Dual Intel Xeon E5-2690
   m_EditorClassIdentifier: 
   fullName: Dual Intel Xeon E5-2690
+  shortName: Dual Xeon E5-2690
   price: 170
   rarity: 3
   image: {fileID: 21300000, guid: f4fbe7e08332322439d00300e631eea7, type: 3}

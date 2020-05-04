@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: HPE 128 GB DDR4 2400 MHz
   m_EditorClassIdentifier: 
   fullName: HPE 128 GB DDR4 2400 MHz
+  shortName: 128 GB DDR4 2400 MHz
   price: 6310
   rarity: 4
   image: {fileID: 21300000, guid: f8fa902a83d52924499f876c0a244652, type: 3}

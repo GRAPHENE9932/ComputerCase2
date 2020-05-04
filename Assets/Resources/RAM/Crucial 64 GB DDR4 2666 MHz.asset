@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Crucial 64 GB DDR4 2666 MHz
   m_EditorClassIdentifier: 
   fullName: Crucial 64 GB DDR4 2666 MHz
+  shortName: 64 GB DDR4 2666 MHz
   price: 395
   rarity: 4
   image: {fileID: 21300000, guid: 24b7b34a0514bd747acc417b7da3c74a, type: 3}

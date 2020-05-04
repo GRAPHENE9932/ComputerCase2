@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Asus Prime X570-Pro
   m_EditorClassIdentifier: 
   fullName: Asus Prime X570-Pro
+  shortName: Asus Prime X570-Pro
   price: 242
   rarity: 2
   image: {fileID: 21300000, guid: a13c67cb59db8534fae145708e83c109, type: 3}

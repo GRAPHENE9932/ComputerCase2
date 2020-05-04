@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Cisco 8 GB DDR3 1333 MHz
   m_EditorClassIdentifier: 
   fullName: Cisco 8 GB DDR3 1333 MHz
+  shortName: 8 GB DDR3 1333 MHz
   price: 360
   rarity: 1
   image: {fileID: 21300000, guid: 80e1ba514a17a794dbfc45e2ef18574b, type: 3}

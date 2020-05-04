@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Asus ROG Maximus VIII Extreme
   m_EditorClassIdentifier: 
   fullName: Asus ROG Maximus VIII Extreme
+  shortName: Asus ROG Maximus VIII
   price: 200
   rarity: 1
   image: {fileID: 21300000, guid: ef575392586cba049af1e4aaf57cd4e7, type: 3}

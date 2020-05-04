@@ -34,7 +34,8 @@ public class NavigationScript : MonoBehaviour
     /// <summary>
     ///     Відділ меню, на якому зараз знаходиться гравець.
     /// </summary>
-    private MenuState currentState;
+    [HideInInspector]
+    public MenuState currentState;
     /// <summary>
     /// Подія зміни відділу меню.
     /// </summary>

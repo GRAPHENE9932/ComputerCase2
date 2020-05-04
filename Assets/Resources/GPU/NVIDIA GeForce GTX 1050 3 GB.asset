@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: NVIDIA GeForce GTX 1050 3 GB
   m_EditorClassIdentifier: 
   fullName: NVIDIA GeForce GTX 1050 3 GB
+  shortName: GTX 1050 3 GB
   price: 125
   rarity: 1
   image: {fileID: 21300000, guid: 093056c301214a048be66a5d0fa966b5, type: 3}
   memory: 3072
   TDP: 75
   power: 2332
+  busVersion: 3
+  busMultiplier: 16
   motherboardInterface: 0

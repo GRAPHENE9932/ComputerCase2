@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Asrock Fatal1ty H270 Performance
   m_EditorClassIdentifier: 
   fullName: Asrock Fatal1ty H270 Performance
+  shortName: Asrock Fatal1ty H270
   price: 80
   rarity: 0
   image: {fileID: 21300000, guid: aef376f0fce42504bb94ee1f84df6e7b, type: 3}

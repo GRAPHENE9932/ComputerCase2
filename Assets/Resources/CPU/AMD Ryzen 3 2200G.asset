@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AMD Ryzen 3 2200G
   m_EditorClassIdentifier: 
   fullName: AMD Ryzen 3 2200G
+  shortName: Ryzen 3 2200G
   price: 130
   rarity: 1
   image: {fileID: 21300000, guid: c1c7a9a35fb0b21488defcb4a5ce6d96, type: 3}

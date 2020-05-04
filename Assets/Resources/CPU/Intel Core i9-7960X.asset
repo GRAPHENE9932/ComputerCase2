@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Intel Core i9-7960X
   m_EditorClassIdentifier: 
   fullName: Intel Core i9-7960X
+  shortName: i9-7960X
   price: 1700
   rarity: 4
   image: {fileID: 21300000, guid: d1110041c47ca0f4a88eb9827d0090e8, type: 3}

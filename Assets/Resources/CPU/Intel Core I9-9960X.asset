@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Intel Core I9-9960X
   m_EditorClassIdentifier: 
   fullName: Intel Core i9-9960X
+  shortName: i9-9960X
   price: 1700
   rarity: 4
   image: {fileID: 21300000, guid: fac43e0013e818246af3111c67fc2bd6, type: 3}

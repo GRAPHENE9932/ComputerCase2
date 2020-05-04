@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Kingston 32 GB DDR4 2133 MHz
   m_EditorClassIdentifier: 
   fullName: Kingston 32 GB DDR4 2133 MHz
+  shortName: 32 GB DDR4 2133 MHz
   price: 575
   rarity: 4
   image: {fileID: 21300000, guid: 83b9d43c3ed70bc4eac56be68dbd6b84, type: 3}

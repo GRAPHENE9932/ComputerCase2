@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Kingston 64 GB DDR4 2400 MHz
   m_EditorClassIdentifier: 
   fullName: Kingston 64 GB DDR4 2400 MHz
+  shortName: 64 GB DDR4 2400 MHz
   price: 1125
   rarity: 4
   image: {fileID: 21300000, guid: 530f70ccb1b68b1439ff628b4ad05de6, type: 3}

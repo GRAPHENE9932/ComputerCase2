@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Intel Pentium E5200
   m_EditorClassIdentifier: 
   fullName: Intel Pentium E5200
+  shortName: Pentium E5200
   price: 50
   rarity: 0
   image: {fileID: 21300000, guid: ee98132fc4ea71a489effeabdc74b31a, type: 3}

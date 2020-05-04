@@ -11,6 +11,7 @@ public enum Rarity
 public class PCComponent : ScriptableObject
 {
     public string fullName;
+    public string shortName;
     public int price;
     public System.DateTime time;
     public Rarity rarity;

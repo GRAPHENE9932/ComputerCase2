@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Asrock B150 Combo
   m_EditorClassIdentifier: 
   fullName: Asrock B150 Combo
+  shortName: Asrock B150 Combo
   price: 110
   rarity: 0
   image: {fileID: 21300000, guid: 5826c918b69395644b343f260c0408a2, type: 3}
