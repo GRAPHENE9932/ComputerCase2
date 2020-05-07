@@ -195,12 +195,13 @@ public class CaseScroller : MonoBehaviour
             {
                 SpawnCell(caseType, i);
             }
+            float screenSpeedMultiplier = ((float)Screen.width / Screen.height) / (16F / 9F);
             if (fastMode)
                 //0 speed.
                 speed = 10F;
             else
                 //Randomizing speed.
-                speed = Random.Range(90F, 109.3F);
+                speed = Random.Range(90F * screenSpeedMultiplier, 109.3F * screenSpeedMultiplier);
             navigation.MenuItemClicked(8);
             //Start coroutine of case scrolling.
             StartCoroutine(CaseScroll());

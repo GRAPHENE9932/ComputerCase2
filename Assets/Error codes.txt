@@ -4,3 +4,4 @@
 3: HighCanvas, Navigation, MenuItems, Money, Money text, текст грошей не змінився.
 4: MainCanvas, Inventory, BottomPanel, Text, текст інформації про інвертар не змінився.
 5: MainCanvas, Computer, текст імені компонентів не змінився.
+6: ComputerScript, EquipClicked.
