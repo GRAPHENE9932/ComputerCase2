@@ -11,8 +11,8 @@ public enum Chipset
 public class Motherboard : PCComponent
 {
     public string socket;
-    public int RAMType, RAMCount;
-    public GPUInterface[] GPUInterfaces;
+    public byte RAMType, RAMCount;
+    public byte[] busVersions, busMultipliers;
     public bool SLI, crossfire;
     public Chipset chipset;
 
@@ -22,8 +22,8 @@ public class Motherboard : PCComponent
         {
             string result = null;
 
-            result += fullName + ";\n";
-            result += "Socket: " + socket + ";\n";
+            result += $"{fullName};\n";
+            result += $"Socket: {socket};\n";
 
             if (RAMType == 1)
             {
@@ -31,23 +31,23 @@ public class Motherboard : PCComponent
             }
             else
             {
-                result += "RAM type: DDR" + RAMType + ";\n";
+                result += $"RAM type: DDR{RAMType};\n";
             }
 
-            result += "RAM count: " + RAMCount + ";\n";
+            result += $"RAM count: {RAMCount};\n";
 
             result += "GPU interfaces: \n";
             string interfaces = null;
             int countOfType = 1;
-            for (int i = GPUInterfaces.Length - 2; i >= -1; i--)
+            for (int i = busVersions.Length - 2; i >= -1; i--)
             {
-                if (i >= 0 && GPUInterfaces[i] == GPUInterfaces[i + 1])
+                if (i >= 0 && busVersions[i] == busVersions[i + 1] && busMultipliers[i] == busMultipliers[i + 1])
                 {
                     countOfType++;
                 }
                 else
                 {
-                    interfaces = countOfType + "x " + GPU.GPUInterfaceToString(GPUInterfaces[i + 1]) + interfaces;
+                    interfaces = countOfType + $"{countOfType}x PCIe {busVersions[i + 1]}.0 x{busMultipliers[i + 1]}" + interfaces;
                     countOfType = 1;
                 }
             }
@@ -55,8 +55,8 @@ public class Motherboard : PCComponent
 
             result += "SLI: " + (SLI ? "yes;\n" : "no;\n");
             result += "Crossfire: " + (crossfire ? "yes;\n" : "no;\n");
-            result += "Chipset: " + chipset.ToString().RemoveChar('_') + ";\n";
-            result += "Price: " + price + "$.";
+            result += $"Chipset: {chipset.ToString().RemoveChar('_')};\n";
+            result += $"Price: {price}$.";
 
             return result;
         }

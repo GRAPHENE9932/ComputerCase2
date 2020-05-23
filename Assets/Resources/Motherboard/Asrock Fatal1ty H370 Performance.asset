@@ -15,12 +15,13 @@ MonoBehaviour:
   fullName: Asrock Fatal1ty H370 Performance
   shortName: Asrock Fatal1ty H370
   price: 225
-  rarity: 2
+  rarity: 1
   image: {fileID: 21300000, guid: 4d65c270897ed354498738f39f21c78b, type: 3}
   socket: LGA 1151
   RAMType: 4
   RAMCount: 4
-  GPUInterfaces: 020000000400000005000000050000000500000005000000
+  busVersions: 030303030303
+  busMultipliers: 100401010101
   SLI: 0
   crossfire: 1
   chipset: 13

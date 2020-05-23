@@ -9337,7 +9337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &821797467
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11787,7 +11787,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1047048159}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1783270642}
+        m_MethodName: Back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1047048159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21690,7 +21701,19 @@ MonoBehaviour:
   equipText: {fileID: 824389861}
   caseScroller: {fileID: 266880530}
   inventory: {fileID: 649775847}
+  moneySystem: {fileID: 1571335822}
   emptyPixel: {fileID: 21300000, guid: aad6ed14551288042955aab2bd60e312, type: 3}
+  infoObject: {fileID: 821797466}
+  infoText: {fileID: 1526770516}
+  sellText: {fileID: 372702081}
+  unequipText: {fileID: 1222471798}
+  removeText: {fileID: 1115799546}
+  sellButton: {fileID: 2135950360}
+  unequipButton: {fileID: 400638486}
+  removeButton: {fileID: 113491440}
+  sellButtonAnimation: {fileID: 2135950358}
+  unequipButtonAnimation: {fileID: 400638484}
+  removeButtonAnimation: {fileID: 113491438}
 --- !u!4 &1783270643
 Transform:
   m_ObjectHideFlags: 0
@@ -24498,7 +24521,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2135950361}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1783270641}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2135950361
 MonoBehaviour:
   m_ObjectHideFlags: 0

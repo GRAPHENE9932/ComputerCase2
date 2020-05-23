@@ -15,12 +15,13 @@ MonoBehaviour:
   fullName: Asrock Z390 Phantom Gaming 4
   shortName: Asrock Z390 Gaming 4
   price: 130
-  rarity: 1
+  rarity: 2
   image: {fileID: 21300000, guid: d5411fb62917c744fa779809dbfb4772, type: 3}
   socket: LGA 1151
   RAMType: 4
   RAMCount: 4
-  GPUInterfaces: 0200000004000000050000000500000005000000
+  busVersions: 0303030303
+  busMultipliers: 1004010101
   SLI: 0
   crossfire: 1
   chipset: 0

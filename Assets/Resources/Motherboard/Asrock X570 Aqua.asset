@@ -20,7 +20,8 @@ MonoBehaviour:
   socket: AM4
   RAMType: 4
   RAMCount: 4
-  GPUInterfaces: 000000000000000000000000060000000600000006000000
+  busVersions: 040404020202
+  busMultipliers: 101010010101
   SLI: 1
   crossfire: 1
   chipset: 4

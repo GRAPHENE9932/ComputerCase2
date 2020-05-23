@@ -12,7 +12,6 @@ public class GPU : PCComponent
 {
     public short memory, TDP, power;
     public byte busVersion, busMultiplier;
-    public GPUInterface motherboardInterface;
 
     public override string Properties
     {
@@ -20,14 +19,14 @@ public class GPU : PCComponent
         {
             string result = null;
 
-            result += fullName + ";\n";
-            result += "Memory: " + memory + " MB;\n";
-            result += "TDP: " + TDP + " W;\n";
+            result += $"{fullName};\n";
+            result += $"Memory: {memory} MB;\n";
+            result += $"TDP: {TDP} W;\n";
 
-            result += "Interface: " + GPUInterfaceToString(motherboardInterface);
+            result += $"Interface: PCIe {busVersion}.0 x{busMultiplier};\n";
 
-            result += "Performance: " + power + " GFlops;\n";
-            result += "Price: " + price + "$.";
+            result += $"Performance: {power} GFlops;\n";
+            result += $"Price: {price}$.";
 
             return result;
         }

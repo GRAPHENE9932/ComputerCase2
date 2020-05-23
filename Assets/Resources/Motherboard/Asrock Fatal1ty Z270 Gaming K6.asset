@@ -15,12 +15,13 @@ MonoBehaviour:
   fullName: Asrock Fatal1ty Z270 Gaming K6
   shortName: Asrock Fatal1ty Z270
   price: 222
-  rarity: 1
+  rarity: 2
   image: {fileID: 21300000, guid: 9459ee3fccea16d489acf3f70293bffb, type: 3}
   socket: LGA 1151
   RAMType: 4
   RAMCount: 4
-  GPUInterfaces: 020000000200000002000000050000000500000005000000
+  busVersions: 030303030303
+  busMultipliers: 101010010101
   SLI: 1
   crossfire: 1
   chipset: 2

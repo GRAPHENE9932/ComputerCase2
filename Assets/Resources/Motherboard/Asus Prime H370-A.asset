@@ -20,7 +20,8 @@ MonoBehaviour:
   socket: LGA 1151
   RAMType: 4
   RAMCount: 4
-  GPUInterfaces: 020000000400000005000000050000000500000005000000
+  busVersions: 030303030303
+  busMultipliers: 100401010101
   SLI: 0
   crossfire: 1
   chipset: 13

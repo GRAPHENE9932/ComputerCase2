@@ -20,7 +20,8 @@ MonoBehaviour:
   socket: LGA 2011-3
   RAMType: 4
   RAMCount: 8
-  GPUInterfaces: 020000000200000003000000060000000600000006000000
+  busVersions: 030303020202
+  busMultipliers: 101008010101
   SLI: 1
   crossfire: 1
   chipset: 5

@@ -15,12 +15,13 @@ MonoBehaviour:
   fullName: Asrock X99 Taichi
   shortName: Asrock X99 Taichi
   price: 360
-  rarity: 3
+  rarity: 4
   image: {fileID: 21300000, guid: 9e6d58412efaae045a5f689feeca92a1, type: 3}
   socket: LGA 2011-3
   RAMType: 4
   RAMCount: 8
-  GPUInterfaces: 0200000002000000030000000600000006000000
+  busVersions: 0303030202
+  busMultipliers: 1010080101
   SLI: 1
   crossfire: 1
   chipset: 5

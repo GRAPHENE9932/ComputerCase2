@@ -15,12 +15,13 @@ MonoBehaviour:
   fullName: Asrock B360 Pro4
   shortName: Asrock B360 Pro4
   price: 105
-  rarity: 0
+  rarity: 1
   image: {fileID: 21300000, guid: 878b1d2a16937044883e437c00f9221a, type: 3}
   socket: LGA 1151
   RAMType: 4
   RAMCount: 4
-  GPUInterfaces: 0200000004000000050000000500000005000000
+  busVersions: 0303030303
+  busMultipliers: 1004010101
   SLI: 0
   crossfire: 1
   chipset: 11

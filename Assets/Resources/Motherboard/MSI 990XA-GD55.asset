@@ -15,12 +15,13 @@ MonoBehaviour:
   fullName: MSI 990XA-GD55
   shortName: MSI 990XA-GD55
   price: 105
-  rarity: 0
+  rarity: 1
   image: {fileID: 21300000, guid: 8598744f9f7216140be353313a746fc3, type: 3}
   socket: AM3+
   RAMType: 3
   RAMCount: 4
-  GPUInterfaces: 0d0000000d00000006000000060000000600000006000000
+  busVersions: 020202020202
+  busMultipliers: 101001010101
   SLI: 0
   crossfire: 0
   chipset: 14

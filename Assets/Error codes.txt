@@ -5,3 +5,6 @@
 4: MainCanvas, Inventory, BottomPanel, Text, текст інформації про інвертар не змінився.
 5: MainCanvas, Computer, текст імені компонентів не змінився.
 6: ComputerScript, EquipClicked.
+7: ComputerScript, Sell.
+8: ComputerScript, Remove.
+9: ComputerScript, Unequip.
