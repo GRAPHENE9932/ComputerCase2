@@ -21,4 +21,10 @@ MonoBehaviour:
   cores: 2
   TDP: 54
   power: 44
+  additionalRAMTypes: 
+  maxRAMChannels: 0
+  RAMType: 0
+  unlocked: 0
+  _64bit: 1
+  integratedGraphics: 1
   socket: LGA 1151

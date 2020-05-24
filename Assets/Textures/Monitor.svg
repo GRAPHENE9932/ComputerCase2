@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1200 920" style="enable-background:new 0 0 1200 920;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);stroke:#999999;stroke-width:10;stroke-miterlimit:10;}
+	.st2{fill:#FF0000;}
+	.st3{fill:#323232;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="600" y1="50" x2="600" y2="670">
+	<stop  offset="0" style="stop-color:#808080"/>
+	<stop  offset="1" style="stop-color:#000000"/>
+</linearGradient>
+<path class="st0" d="M1120,670H80c-16.6,0-30-13.4-30-30V80c0-16.6,13.4-30,30-30h1040c16.6,0,30,13.4,30,30v560
+	C1150,656.6,1136.6,670,1120,670z"/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="600" y1="100" x2="600" y2="620">
+	<stop  offset="0" style="stop-color:#000000"/>
+	<stop  offset="1" style="stop-color:#000000"/>
+</linearGradient>
+<rect x="100" y="100" class="st1" width="1000" height="520"/>
+<rect x="1025" y="670" class="st2" width="70" height="20"/>
+<rect x="995" y="670" class="st3" width="20" height="20"/>
+<rect x="965" y="670" class="st3" width="20" height="20"/>
+<rect x="935" y="670" class="st3" width="20" height="20"/>
+<rect x="905" y="670" class="st3" width="20" height="20"/>
+<rect x="537.5" y="670" width="125" height="200"/>
+<rect x="338" y="820" width="200" height="50"/>
+<rect x="662" y="820" width="200" height="50"/>
+</svg>

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f6be8e8c6a5fd448aae9f73241abc6, type: 3}
   m_Name: Intel Core i9-9900KS
   m_EditorClassIdentifier: 
-  fullName: Intel Core i9-9900KS
+  fullName: c
   shortName: i9-9900KS
   price: 525
   rarity: 3
@@ -21,4 +21,10 @@ MonoBehaviour:
   cores: 8
   TDP: 127
   power: 722
+  additionalRAMTypes: 
+  maxRAMChannels: 0
+  RAMType: 0
+  unlocked: 1
+  _64bit: 1
+  integratedGraphics: 0
   socket: LGA 1151

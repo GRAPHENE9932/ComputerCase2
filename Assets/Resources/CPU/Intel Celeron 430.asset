@@ -21,4 +21,10 @@ MonoBehaviour:
   cores: 1
   TDP: 66
   power: 7
+  additionalRAMTypes: 0102
+  maxRAMChannels: 2
+  RAMType: 3
+  unlocked: 0
+  _64bit: 1
+  integratedGraphics: 0
   socket: Socket 478

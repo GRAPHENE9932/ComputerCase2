@@ -21,4 +21,10 @@ MonoBehaviour:
   cores: 32
   TDP: 250
   power: 261
+  additionalRAMTypes: 
+  maxRAMChannels: 4
+  RAMType: 4
+  unlocked: 1
+  _64bit: 1
+  integratedGraphics: 0
   socket: TR4

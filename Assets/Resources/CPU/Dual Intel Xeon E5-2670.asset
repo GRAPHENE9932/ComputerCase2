@@ -21,4 +21,10 @@ MonoBehaviour:
   cores: 16
   TDP: 230
   power: 186
+  additionalRAMTypes: 
+  maxRAMChannels: 4
+  RAMType: 3
+  unlocked: 0
+  _64bit: 1
+  integratedGraphics: 0
   socket: LGA 2011

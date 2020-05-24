@@ -6,6 +6,9 @@ using UnityEngine;
 public class CPU : PCComponent
 {
     public int frequency, cores, TDP, power;
+    public byte[] additionalRAMTypes;
+    public byte maxRAMChannels, RAMType;
+    public bool unlocked, _64bit, integratedGraphics;
     public string socket;
 
     public override string Properties

@@ -21,4 +21,10 @@ MonoBehaviour:
   cores: 6
   TDP: 95
   power: 254
+  additionalRAMTypes: 
+  maxRAMChannels: 2
+  RAMType: 4
+  unlocked: 1
+  _64bit: 1
+  integratedGraphics: 0
   socket: AM4

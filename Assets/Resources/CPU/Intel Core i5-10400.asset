@@ -21,4 +21,10 @@ MonoBehaviour:
   cores: 6
   TDP: 65
   power: 423
+  additionalRAMTypes: 
+  maxRAMChannels: 0
+  RAMType: 0
+  unlocked: 0
+  _64bit: 1
+  integratedGraphics: 1
   socket: LGA 1200

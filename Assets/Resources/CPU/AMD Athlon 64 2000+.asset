@@ -21,4 +21,10 @@ MonoBehaviour:
   cores: 1
   TDP: 8
   power: 3
+  additionalRAMTypes: 
+  maxRAMChannels: 1
+  RAMType: 2
+  unlocked: 0
+  _64bit: 1
+  integratedGraphics: 0
   socket: AM2
