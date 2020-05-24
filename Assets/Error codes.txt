@@ -8,3 +8,4 @@
 7: ComputerScript, Sell.
 8: ComputerScript, Remove.
 9: ComputerScript, Unequip.
+10: MainCanvas, Computer, Monitor, text. Текст мініатюрного монітору не змінився.

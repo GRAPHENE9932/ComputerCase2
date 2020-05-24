@@ -27,6 +27,7 @@ public class ComputerScript : MonoBehaviour
     public CaseScroller caseScroller;
     public Inventory inventory;
     public MoneySystem moneySystem;
+    public NavigationScript navigation;
 
     public Sprite emptyPixel;
 
@@ -35,9 +36,128 @@ public class ComputerScript : MonoBehaviour
     public Button sellButton, unequipButton, removeButton;
     public ButtonAnimation sellButtonAnimation, unequipButtonAnimation, removeButtonAnimation;
 
+    /// <summary>
+    /// Text of the computer monitor with errors and recommendations (RichText required).
+    /// </summary>
+    public string MonitorText
+    {
+        get
+        {
+            string errors = null;
+            //Check of availability of CPU and messaging about it.
+            if (mainCPU == null)
+                errors += "<color=red>No CPU!</color>\n";
+            //Check of availability of motherboard and messaging about it.
+            if (mainMotherboard == null)
+                errors += "<color=red>No motherboard!</color>\n";
+
+            //Does computer contains graphics?
+            bool containsGPUs = false;
+            for (int i = 0; i < RAMs.Count; i++)
+            {
+                containsGPUs = containsGPUs || GPUs[i] != null;
+            }
+            //If CPU contains graphics, containsGPUs = true.
+            if (mainCPU != null)
+                containsGPUs = mainCPU.integratedGraphics;
+            if (containsGPUs)
+                //Message about unavailability of graphics.
+                errors += "<color=red>No graphics!</color>\n";
+
+            //Does computer contains RAM?
+            bool containsRAMs = false;
+            for (int i = 0; i < RAMs.Count; i++)
+            {
+                containsRAMs = containsRAMs || RAMs[i] != null;
+            }
+            if (containsRAMs)
+                //Message about unavailability of RAM.
+                errors += "<color=red>No RAM!</color>\n";
+
+            //If no errors, show default monitor.
+            if (errors == null)
+            {
+                //Result string.
+                string result = null;
+                //CPU part.
+                result += $"CPU: {mainCPU.shortName};\n";
+                //Getting not null GPUs.
+                GPU[] realGPUs = GPUs.Where(x => x != null).ToArray();
+                //If count of GPUs == 1, write "GPU: ...".
+                if (realGPUs.Length == 1)
+                {
+                    result += $"GPU: {realGPUs[0]};\n";
+                }
+                //If cout of GPUs > 1, write list of GPUs: 
+                //"GPUs:
+                //GPU 0: ...;
+                //GPU 1: ...;
+                else if (realGPUs.Length > 1)
+                {
+                    result += "GPUs:\n";
+                    for (int i = 0; i < realGPUs.Length; i++)
+                    {
+                        result += $"GPU {i}: {realGPUs[i].fullName};\n";
+                    }
+                }
+                //But if no GPUs, do not write anything about it.
+                //Search  for min frequency of RAM.
+                int minFrequency = int.MaxValue;
+                for (int i = 0; i < RAMs.Count; i++)
+                {
+                    if (RAMs[i].frequency < minFrequency)
+                        minFrequency = RAMs[i].frequency;
+                }
+                //Writing RAM`s title: "RAM (DDR4, 2666 MHz):"
+                result += $"RAM (DDR{(mainMotherboard.RAMType == 1 ? null : mainMotherboard.RAMType.ToString())}, {minFrequency} MHz):\n";
+                for (int i = 0; i < mainMotherboard.RAMCount; i++)
+                {
+                    result += $"Slot {i}: {RAMs[i].memory} MB;\n";
+                }
+                //Writing chipset.
+                result += $"Motherboard chipset: {mainMotherboard.chipset.ToString().Replace("_", "")}";
+
+                //Add recomendations.
+                string recommendations = null;
+
+                //Check for enabled multiple channel mode of RAM.
+                if (CheckMultipleChannels() && RAMs.Count(x => x != null) >= mainMotherboard.RAMCount / 2)
+                    recommendations += $"<color=green>You using single-channel mode of RAM, but can use {mainMotherboard.RAMCount / 2}-channel mode, just replace your RAM planks with \"Zebra-style\". It contributes to improvement of RAM performance.\n</color>";
+
+                return result + recommendations;
+            }
+            else
+            {
+                return errors;
+            }
+        }
+    }
     private void Start()
     {
         UpdateComputer();
+    }
+    /// <summary>
+    /// Check the using of multiple RAM channels.
+    /// </summary>
+    /// <returns>
+    /// True - using multiple channels, false - not using.
+    /// </returns>
+    public bool CheckMultipleChannels()
+    {
+        //usedDouble - is slots with indexes 0, 2, 4, 6, ... used? True - used, false - unused, null - different.
+        //usedNotDouble - is slots with indexes 1, 3, 5, 7, ... used? True - used, false - unused, null - different.
+        bool? usedDouble = RAMs[0] != null, usedNotDouble = RAMs[1] != null;
+        for (int i = 2; i < mainMotherboard.RAMCount; i += 2)
+        {
+            if (usedDouble != (RAMs[i] != null))
+                usedDouble = null;
+        }
+        for (int i = 3; i < mainMotherboard.RAMCount; i += 2)
+        {
+            if (usedNotDouble != (RAMs[i] != null))
+                usedNotDouble = null;
+        }
+        return usedDouble == null && usedNotDouble == null;
     }
 
     /// <summary>
@@ -144,6 +264,11 @@ public class ComputerScript : MonoBehaviour
                 Destroy(RAMSlots[i]);
             }
             RAMSlots.Clear();
+            //Fill in list of RAMs.
+            for (int i = RAMs.Count; i < mainMotherboard.RAMCount; i++)
+            {
+                RAMs.Add(null);
+            }
             for (int i = 0; i < mainMotherboard.RAMCount; i++)
             {
                 RAMSlots.Add(Instantiate(slotPrefab, RAMParent));
@@ -682,5 +807,10 @@ public class ComputerScript : MonoBehaviour
                 throw new System.Exception("Error! Code 6.");
         }
         UpdateComputer();
+    }
+
+    public void MonitorClicked()
+    {
+        navigation.MenuItemClicked(9);
     }
 }
