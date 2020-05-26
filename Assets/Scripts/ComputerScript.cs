@@ -36,6 +36,8 @@ public class ComputerScript : MonoBehaviour
     public Button sellButton, unequipButton, removeButton;
     public ButtonAnimation sellButtonAnimation, unequipButtonAnimation, removeButtonAnimation;
 
+    public Text monitorText;
+
     /// <summary>
     /// Text of the computer monitor with errors and recommendations (RichText required).
     /// </summary>
@@ -53,14 +55,14 @@ public class ComputerScript : MonoBehaviour
 
             //Does computer contains graphics?
             bool containsGPUs = false;
-            for (int i = 0; i < RAMs.Count; i++)
+            for (int i = 0; i < GPUs.Count; i++)
             {
                 containsGPUs = containsGPUs || GPUs[i] != null;
             }
             //If CPU contains graphics, containsGPUs = true.
             if (mainCPU != null)
-                containsGPUs = mainCPU.integratedGraphics;
-            if (containsGPUs)
+                containsGPUs |= mainCPU.integratedGraphics;
+            if (!containsGPUs)
                 //Message about unavailability of graphics.
                 errors += "<color=red>No graphics!</color>\n";
 
@@ -70,7 +72,7 @@ public class ComputerScript : MonoBehaviour
             {
                 containsRAMs = containsRAMs || RAMs[i] != null;
             }
-            if (containsRAMs)
+            if (!containsRAMs)
                 //Message about unavailability of RAM.
                 errors += "<color=red>No RAM!</color>\n";
 
@@ -105,14 +107,17 @@ public class ComputerScript : MonoBehaviour
                 int minFrequency = int.MaxValue;
                 for (int i = 0; i < RAMs.Count; i++)
                 {
-                    if (RAMs[i].frequency < minFrequency)
+                    if (RAMs[i] != null && RAMs[i].frequency < minFrequency)
                         minFrequency = RAMs[i].frequency;
                 }
                 //Writing RAM`s title: "RAM (DDR4, 2666 MHz):"
                 result += $"RAM (DDR{(mainMotherboard.RAMType == 1 ? null : mainMotherboard.RAMType.ToString())}, {minFrequency} MHz):\n";
                 for (int i = 0; i < mainMotherboard.RAMCount; i++)
                 {
-                    result += $"Slot {i}: {RAMs[i].memory} MB;\n";
+                    if (RAMs[i] != null)
+                        result += $"Slot {i}: {RAMs[i].memory} MB;\n";
+                    else
+                        result += $"Slot {i}: - ;\n";
                 }
                 //Writing chipset.
                 result += $"Motherboard chipset: {mainMotherboard.chipset.ToString().Replace("_", "")}";
@@ -264,15 +269,10 @@ public class ComputerScript : MonoBehaviour
                 Destroy(RAMSlots[i]);
             }
             RAMSlots.Clear();
-            //Fill in list of RAMs.
-            for (int i = RAMs.Count; i < mainMotherboard.RAMCount; i++)
-            {
-                RAMs.Add(null);
-            }
             for (int i = 0; i < mainMotherboard.RAMCount; i++)
             {
                 RAMSlots.Add(Instantiate(slotPrefab, RAMParent));
-                if (i < RAMs.Count)
+                if (i < RAMs.Count && RAMs[i] != null)
                 {
                     //Set image.
                     RAMSlots[i].transform.Find("Image").GetComponent<Image>().sprite = RAMs[i].image;
@@ -297,6 +297,11 @@ public class ComputerScript : MonoBehaviour
                 RAMSlots[i].GetComponent<Button>().onClick.AddListener(delegate { RAMClicked(index); });
                 RAMSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.RAM, index); });
                 RAMParent.transform.position = new Vector2(RAMParent.transform.position.x, RAMParent.localScale.y);
+            }
+            //Fill in list of RAMs.
+            for (int i = RAMs.Count; i < mainMotherboard.RAMCount; i++)
+            {
+                RAMs.Add(null);
             }
         }
         else
@@ -808,9 +813,19 @@ public class ComputerScript : MonoBehaviour
         }
         UpdateComputer();
     }
-
+    /// <summary>
+    /// Click on monitor event.
+    /// </summary>
     public void MonitorClicked()
     {
+        monitorText.text = MonitorText;
         navigation.MenuItemClicked(9);
+    }
+    /// <summary>
+    /// Click on "Go back" button on monitor page.
+    /// </summary>
+    public void MonitorBack()
+    {
+        navigation.MenuItemClicked(2);
     }
 }

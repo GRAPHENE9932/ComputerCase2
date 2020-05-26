@@ -8,10 +8,15 @@ public enum ComponentType
     CPU, GPU, RAM, Motherboard, All
 }
 
+public enum CaseType
+{
+    Common, Major, VeryGood, Top
+}
+
 public class CaseScroller : MonoBehaviour
 {
     private float speed;
-    private bool major;
+    private CaseType caseRarity;
     private readonly Cell[] cells = new Cell[50];
 
     public PCComponent currentComponent;
@@ -32,16 +37,17 @@ public class CaseScroller : MonoBehaviour
 
     public bool fastMode;
 
-    public void Casetype(int caseType)
+    public void ChangeCaseComponentType(int caseType)
     {
         this.caseType = (ComponentType)caseType;
     }
-    public void Major(bool major)
+    public void ChangeCaseRarity(int caseRarity)
     {
-        this.major = major;
+        this.caseRarity = (CaseType)caseRarity;
     }
     public List<PCComponent>[] CPUs, GPUs, RAMs, motherboards;
     public Color[] rarityColors;
+    public float[] commonRarity, majorRarity, veryGoodRarity, topRarity;
 
     //Chances:
     //Top: 0.25%;
@@ -113,14 +119,32 @@ public class CaseScroller : MonoBehaviour
             //Index of component in component array.
             int randComponent;
 
+            float[] currentRarity;
+            switch (caseRarity)
+            {
+                case CaseType.Common:
+                    currentRarity = commonRarity;
+                    break;
+                case CaseType.Major:
+                    currentRarity = majorRarity;
+                    break;
+                case CaseType.VeryGood:
+                    currentRarity = veryGoodRarity;
+                    break;
+                case CaseType.Top:
+                    currentRarity = topRarity;
+                    break;
+                default:
+                    throw new System.Exception("Error! Code 11.");
+            }
             //Choose rarity.
-            if (randRarity < .8F)
+            if (randRarity < currentRarity[0])
                 rarity = Rarity.Bad;
-            else if (randRarity < .95F)
+            else if (randRarity < currentRarity[1])
                 rarity = Rarity.Middle;
-            else if (randRarity < .99F)
+            else if (randRarity < currentRarity[2])
                 rarity = Rarity.Good;
-            else if (randRarity < .9975F)
+            else if (randRarity < currentRarity[3])
                 rarity = Rarity.VeryGood;
             else
                 rarity = Rarity.Top;
@@ -182,14 +206,20 @@ public class CaseScroller : MonoBehaviour
     /// </summary>
     public void StartCase()
     {
-        if (major && moneySystem.Money.Value < 50)
+        if ((caseRarity == CaseType.Major && moneySystem.Money.Value < 50) ||
+            (caseRarity == CaseType.VeryGood && moneySystem.Money.Value < 750) ||
+            (caseRarity == CaseType.Top && moneySystem.Money.Value < 1500))
         {
             messageBox.StartMessage("Not enought money.", 2);
         }
         else
         {
-            if (major)
+            if (caseRarity == CaseType.Major)
                 moneySystem.Money -= 50;
+            else if (caseRarity == CaseType.VeryGood)
+                moneySystem.Money -= 750;
+            else if (caseRarity == CaseType.Top)
+                moneySystem.Money -= 1500;
             //Spawn 50 cells
             for (int i = 0; i < 50; i++)
             {

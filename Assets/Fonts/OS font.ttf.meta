@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ef98a8e8ade841749b20d8d7ffed3497
+guid: 97786f9c3531b264d98814af162174f1
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Source Code Pro
+  fontName: progresspixel-bold
   fontNames:
-  - Source Code Pro
+  - progresspixel-bold
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
