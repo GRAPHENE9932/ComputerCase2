@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class CursorScript : MonoBehaviour
 {
-    //The component on cursor.
+    /// <summary>
+    /// The component on cursor.
+    /// </summary>
     public PCComponent currentComponent;
-    //New component collided.
+    /// <summary>
+    /// New component collided.
+    /// </summary>
+    /// <param name="collision">Collided collider.</param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
         currentComponent = collision.gameObject.GetComponent<Cell>().component;

@@ -17,7 +17,7 @@ public class Motherboard : PCComponent
     public bool SLI, crossfire;
     public Chipset chipset;
 
-    public override string Properties
+    public override string FullProperties
     {
         get
         {
@@ -48,11 +48,40 @@ public class Motherboard : PCComponent
                 }
                 else
                 {
-                    interfaces = countOfType + $"{countOfType}x PCIe {busVersions[i + 1]}.0 x{busMultipliers[i + 1]}" + interfaces;
+                    interfaces = $"{countOfType}x PCIe {busVersions[i + 1]}.0 x{busMultipliers[i + 1]};\n" + interfaces;
                     countOfType = 1;
                 }
             }
             result += interfaces;
+
+            result += "SLI: " + (SLI ? "yes;\n" : "no;\n");
+            result += "Crossfire: " + (crossfire ? "yes;\n" : "no;\n");
+            result += $"Chipset: {chipset.ToString().RemoveChar('_')};\n";
+            result += $"Price: {price}$.";
+
+            return result;
+        }
+    }
+
+    public override string ShortProperties
+    {
+        get
+        {
+            string result = null;
+
+            result += $"{fullName};\n";
+            result += $"Socket: {socket};\n";
+
+            if (RAMType == 1)
+            {
+                result += "RAM type: DDR;\n";
+            }
+            else
+            {
+                result += $"RAM type: DDR{RAMType};\n";
+            }
+
+            result += $"RAM count: {RAMCount};\n";
 
             result += "SLI: " + (SLI ? "yes;\n" : "no;\n");
             result += "Crossfire: " + (crossfire ? "yes;\n" : "no;\n");

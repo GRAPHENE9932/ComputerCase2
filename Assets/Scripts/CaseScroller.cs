@@ -2,12 +2,16 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// The type of component (CPU, GPU...).
+/// </summary>
 public enum ComponentType
 {
     CPU, GPU, RAM, Motherboard, All
 }
-
+/// <summary>
+/// The type of case (Common, Major...).
+/// </summary>
 public enum CaseType
 {
     Common, Major, VeryGood, Top
@@ -15,38 +19,123 @@ public enum CaseType
 
 public class CaseScroller : MonoBehaviour
 {
+    /// <summary>
+    /// Speed of scrolling case.
+    /// </summary>
     private float speed;
+    /// <summary>
+    /// Rarity of current case.
+    /// </summary>
     private CaseType caseRarity;
+    /// <summary>
+    /// Cells of case.
+    /// </summary>
     private readonly Cell[] cells = new Cell[50];
 
+    /// <summary>
+    /// Dropped component.
+    /// </summary>
     public PCComponent currentComponent;
+    /// <summary>
+    /// The parent of cells.
+    /// </summary>
     public RectTransform cellsGroup;
+    /// <summary>
+    /// The cell example.
+    /// </summary>
     public GameObject cellPrefab;
+    /// <summary>
+    /// Current case type.
+    /// </summary>
     public ComponentType caseType;
 
+    /// <summary>
+    /// Cursor script. Used for getting current cell.
+    /// </summary>
     public CursorScript cursor;
+    /// <summary>
+    /// Inventory script.
+    /// </summary>
     public Inventory inventory;
+    /// <summary>
+    /// Navigation script.
+    /// </summary>
     public NavigationScript navigation;
+    /// <summary>
+    /// MoneySystem script.
+    /// </summary>
     public MoneySystem moneySystem;
+    /// <summary>
+    /// MessageBox manager.
+    /// </summary>
     public MessageBoxManager messageBox;
 
+    /// <summary>
+    /// Animation of drop.
+    /// </summary>
     public Animation dropAnim;
+    /// <summary>
+    /// Image of drop.
+    /// </summary>
     public Image dropImage;
-    public Text dropProperties, sellText;
+    /// <summary>
+    /// Drop properties of dropped component.
+    /// </summary>
+    public Text dropProperties;
+    /// <summary>
+    /// Text of sell button of drop.
+    /// </summary>
+    public Text sellText;
+    /// <summary>
+    /// Drop script.
+    /// </summary>
     public DropScript drop;
 
+    /// <summary>
+    /// Is turned on debug fast mode?
+    /// </summary>
     public bool fastMode;
 
+    /// <summary>
+    /// Is player has enought money for case open.
+    /// </summary>
+    public bool EnoughtMoney
+    {
+        get
+        {
+            return (caseRarity == CaseType.Major && moneySystem.Money.Value >= 50) ||
+            (caseRarity == CaseType.VeryGood && moneySystem.Money.Value >= 750) ||
+            (caseRarity == CaseType.Top && moneySystem.Money.Value >= 1500);
+        }
+    }
+
+    /// <summary>
+    /// The method for case buttons.
+    /// </summary>
+    /// <param name="caseType">Type of case.</param>
     public void ChangeCaseComponentType(int caseType)
     {
         this.caseType = (ComponentType)caseType;
     }
+    /// <summary>
+    /// The method for case buttons.
+    /// </summary>
+    /// <param name="caseRarity">Rarity of case.</param>
     public void ChangeCaseRarity(int caseRarity)
     {
         this.caseRarity = (CaseType)caseRarity;
     }
+    /// <summary>
+    /// Full list of exciting components.
+    /// </summary>
     public List<PCComponent>[] CPUs, GPUs, RAMs, motherboards;
+    /// <summary>
+    /// Rarity colors.
+    /// </summary>
     public Color[] rarityColors;
+    /// <summary>
+    /// Chances of selected rarity of case.
+    /// </summary>
     public float[] commonRarity, majorRarity, veryGoodRarity, topRarity;
 
     //Chances:
@@ -56,6 +145,9 @@ public class CaseScroller : MonoBehaviour
     //Middle: 15%;
     //Bad: 80%;
 
+    /// <summary>
+    /// Initialize lists of components (CPUs, GPUs...).
+    /// </summary>
     private void Awake()
     {
         //Loading arrays of components from resourceds.
@@ -206,14 +298,15 @@ public class CaseScroller : MonoBehaviour
     /// </summary>
     public void StartCase()
     {
-        if ((caseRarity == CaseType.Major && moneySystem.Money.Value < 50) ||
-            (caseRarity == CaseType.VeryGood && moneySystem.Money.Value < 750) ||
-            (caseRarity == CaseType.Top && moneySystem.Money.Value < 1500))
+        //Check, player has enought money for this case type.
+        if (!EnoughtMoney)
         {
+            //Message player about not enought money.
             messageBox.StartMessage("Not enought money.", 2);
         }
         else
         {
+            //Decrease number of money.
             if (caseRarity == CaseType.Major)
                 moneySystem.Money -= 50;
             else if (caseRarity == CaseType.VeryGood)
@@ -261,17 +354,26 @@ public class CaseScroller : MonoBehaviour
     /// </summary>
     private void CaseStop()
     {
+        //Get dropped component.
         currentComponent = cursor.currentComponent;
+        //Set time of getting of component.
         currentComponent.time = System.DateTime.Now;
+        //Set sprite of drop image.
         dropImage.sprite = currentComponent.image;
-        dropProperties.text = currentComponent.Properties;
+        //Set text of drop.
+        dropProperties.text = currentComponent.ShortProperties;
+        //Set sell text.
         if (currentComponent.price / 20 > 0)
             sellText.text = "Sell (" + currentComponent.price / 20 + "$)";
         else
             sellText.text = "Remove";
+        //Add component to inventory.
         inventory.components.Add(currentComponent);
+        //Invoke OnDrop function.
         drop.OnDrop();
+        //Set active true of drop component.
         dropAnim.gameObject.SetActive(true);
+        //Play animation.
         dropAnim.Play("OpenDroppedComponent");
     }
 }

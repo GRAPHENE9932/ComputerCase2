@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ButtonAnimation : MonoBehaviour
 {
     /// <summary>
-    ///     Зображення кнопки, яке буде зазнавати анімації.
+    ///     Зображення кнопки, яка буде зазнавати анімації.
     /// </summary>
     public Image img;
     /// <summary>
@@ -33,6 +33,7 @@ public class ButtonAnimation : MonoBehaviour
     /// </summary>
     private void Update()
     {
+        //If button pushed down and not disabled.
         if (down && !disabled)
         {
             if (img.fillAmount < 1)

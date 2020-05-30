@@ -19,7 +19,17 @@ public class PCComponent : ScriptableObject
     /// <summary>
     /// All properties of component in one string.
     /// </summary>
-    public virtual string Properties
+    public virtual string FullProperties
+    {
+        get
+        {
+            return "Error! Code 0.";
+        }
+    }
+    /// <summary>
+    /// Not all properties of component in one string.
+    /// </summary>
+    public virtual string ShortProperties
     {
         get
         {

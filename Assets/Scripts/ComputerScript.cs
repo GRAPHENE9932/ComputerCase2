@@ -7,16 +7,46 @@ using UnityEngine.PlayerLoop;
 
 public class ComputerScript : MonoBehaviour
 {
+    /// <summary>
+    /// List of GPU slots (not components, game objects).
+    /// </summary>
     private readonly List<GameObject> GPUSlots = new List<GameObject>();
+    /// <summary>
+    /// List of RAM slots (not components, game objects).
+    /// </summary>
     private readonly List<GameObject> RAMSlots = new List<GameObject>();
+    /// <summary>
+    /// List of equip slots (not components, game objects).
+    /// </summary>
     private readonly List<GameObject> equipSlots = new List<GameObject>();
+    /// <summary>
+    /// List of components to equip.
+    /// </summary>
     private List<PCComponent> equipComponents = new List<PCComponent>();
+    /// <summary>
+    /// Selected component type.
+    /// </summary>
     private ComponentType selectedType;
+    /// <summary>
+    /// Index of selected component.
+    /// </summary>
     private int indexOfSelected;
+    /// <summary>
+    /// Slot of CPU or motherboard.
+    /// </summary>
     public GameObject CPUSlot, motherboardSlot;
+    /// <summary>
+    /// The example of slot.
+    /// </summary>
     public GameObject slotPrefab;
 
+    /// <summary>
+    /// Parent of GPUs, RAMs or equipComponents.
+    /// </summary>
     public Transform GPUParent, RAMParent, equipParent;
+    /// <summary>
+    /// Text of equip slots group. "No motherboard", for example.
+    /// </summary>
     public Text equipText;
 
     [HideInInspector]
@@ -29,20 +59,78 @@ public class ComputerScript : MonoBehaviour
     public readonly List<RAM> RAMs = new List<RAM>();
     public Sprite emptyPixel;
 
+    /// <summary>
+    /// Object of info window.
+    /// </summary>
     public GameObject infoObject;
+    /// <summary>
+    /// Canvas group of info window.
+    /// </summary>
     public CanvasGroup infoGroup;
+    /// <summary>
+    /// Button text of info window.
+    /// </summary>
     public Text infoText, sellText, unequipText, removeText;
+    /// <summary>
+    /// Button of info window.
+    /// </summary>
     public Button sellButton, unequipButton, removeButton;
+    /// <summary>
+    /// Button animation of button of info window.
+    /// </summary>
     public ButtonAnimation sellButtonAnimation, unequipButtonAnimation, removeButtonAnimation;
 
+    /// <summary>
+    /// Errors text of monitor.
+    /// </summary>
     public Text errorsText;
+    /// <summary>
+    /// Wallpaper or pages group of monitor
+    /// </summary>
     public GameObject wallpaper, pages;
+    /// <summary>
+    /// Case scroller script.
+    /// </summary>
     [Space]
     public CaseScroller caseScroller;
+    /// <summary>
+    /// Inventory script.
+    /// </summary>
     public Inventory inventory;
+    /// <summary>
+    /// Money system script.
+    /// </summary>
     public MoneySystem moneySystem;
+    /// <summary>
+    /// Navigation script.
+    /// </summary>
     public NavigationScript navigation;
+    /// <summary>
+    /// OS script (monitor).
+    /// </summary>
     public OSScript osscript;
+
+    /// <summary>
+    /// Does computer contains components except for motherboard?
+    /// </summary>
+    public bool ComputerHasComponents
+    {
+        get
+        {
+            //compHasComponents is "Does computer has components except for motherboard?".
+            bool compHasComponents = false;
+            //Check for CPU.
+            compHasComponents |= mainCPU != null;
+            //Check for GPUs.
+            for (int i = 0; i < GPUs.Count; i++)
+                compHasComponents |= GPUs[i] != null;
+            //Check for RAMs.
+            for (int i = 0; i < RAMs.Count; i++)
+                compHasComponents |= RAMs[i] != null;
+
+            return compHasComponents;
+        }
+    }
 
     /// <summary>
     /// Text of the computer monitor with errors (RichText required).
@@ -97,10 +185,11 @@ public class ComputerScript : MonoBehaviour
     }
     private void Start()
     {
+        //Update computer at start.
         UpdateComputer();
+        //AddListeners of info buttons of CPU slot and motherboard slot.
         CPUSlot.transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.CPU, -1); });
         motherboardSlot.transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.Motherboard, -1); });
-
     }
 
     /// <summary>
@@ -190,7 +279,7 @@ public class ComputerScript : MonoBehaviour
                     //Set name of videocard "No videocard!".
                     GPUSlots[i].transform.Find("Name").GetComponentInChildren<Text>().text = "Empty";
                 }
-                //Set button event.
+                //Set button events.
                 int index = i;
                 selectedType = ComponentType.GPU;
                 GPUSlots[i].GetComponent<Button>().onClick.RemoveAllListeners();
@@ -235,7 +324,9 @@ public class ComputerScript : MonoBehaviour
                 //Set button event.
                 int index = i;
                 selectedType = ComponentType.RAM;
+                RAMSlots[i].GetComponent<Button>().onClick.RemoveAllListeners();
                 RAMSlots[i].GetComponent<Button>().onClick.AddListener(delegate { RAMClicked(index); });
+                RAMSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.RemoveAllListeners();
                 RAMSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.RAM, index); });
                 RAMParent.transform.position = new Vector2(RAMParent.transform.position.x, RAMParent.localScale.y);
             }
@@ -260,11 +351,15 @@ public class ComputerScript : MonoBehaviour
             RAMSlots.Clear();
         }
     }
-
+    /// <summary>
+    /// Event of CPU slot click.
+    /// </summary>
     public void CPUClicked()
     {
+        //If computer contains motherboard.
         if (mainMotherboard != null)
         {
+            //Set equip components.
             equipComponents = inventory.components.Where(x => x is CPU CPU && CPU.socket == mainMotherboard.socket).ToList();
             //Destroying all equip slots.
             for (int i = 0; i < equipSlots.Count; i++)
@@ -317,7 +412,8 @@ public class ComputerScript : MonoBehaviour
 
     public void MotherboardClicked()
     {
-        if (mainCPU == null && RAMs.Count == 0 && GPUs.Count == 0)
+        //If no components on computer.
+        if (!ComputerHasComponents)
         {
             equipComponents = inventory.components.Where(x => x is Motherboard).ToList();
             //Destroying all equip slots.
@@ -476,19 +572,27 @@ public class ComputerScript : MonoBehaviour
             equipSlots.Clear();
         }
     }
-
+    /// <summary>
+    /// Event of clicked info button.
+    /// </summary>
+    /// <param name="type">Type of component (All - it is equip slot).</param>
+    /// <param name="index">Index of component.</param>
     public void InfoClicked(ComponentType type, int index)
     {
         void InfoOpen(PCComponent component)
         {
             if (component != null)
             {
-                infoText.text = component.Properties + "\nTime: " + component.time.ToString("dd.MM.yyyy hh:mm:ss");
+                //Write full properties with time in info text.
+                infoText.text = component.FullProperties + "\nTime: " + component.time.ToString("dd.MM.yyyy hh:mm:ss");
 
+                //Set text of sell button (real price / 20).
                 sellText.text = "Sell (+" + component.price / 20 + "$)";
+                //Set sell button interactable.
                 sellButton.interactable = true;
                 sellButtonAnimation.disabled = false;
 
+                //If it info of equip slot, disable unequip button.
                 if (type == ComponentType.All)
                 {
                     unequipText.text = null;
@@ -497,22 +601,12 @@ public class ComputerScript : MonoBehaviour
                 }
                 else
                 {
+                    //If component == motherboard, and if computer has components, except for motherboard, disable unequip button and set text of it "Disassemble computer first!".
                     if (type == ComponentType.Motherboard)
                     {
-                        //compHasComponents is "Does computer has components except for motherboard".
-                        bool compHasComponents = false;
-                        //Check for CPU.
-                        compHasComponents |= mainCPU != null;
-                        //Check for GPUs.
-                        for (int i = 0; i < GPUs.Count; i++)
-                            compHasComponents |= GPUs[i] != null;
-                        //Check for RAMs.
-                        for (int i = 0; i < RAMs.Count; i++)
-                            compHasComponents |= RAMs[i] != null;
-
-                        if (compHasComponents)
+                        if (ComputerHasComponents)
                         {
-                            unequipText.text = "Dissasemble computer first!";
+                            unequipText.text = "Disassemble computer first!";
                             unequipButton.interactable = false;
                             unequipButtonAnimation.disabled = true;
                         }
@@ -531,12 +625,14 @@ public class ComputerScript : MonoBehaviour
                     }
                 }
 
+                //Enable remove button.
                 removeText.text = "Remove";
                 removeButton.interactable = true;
                 removeButtonAnimation.disabled = false;
             }
             else
             {
+                //If component == null.
                 switch (type)
                 {
                     case ComponentType.CPU:
@@ -552,22 +648,28 @@ public class ComputerScript : MonoBehaviour
                         infoText.text = "No RAM!\n" + mainMotherboard == null ? null : "Type: DDR" + (mainMotherboard.RAMType == 1 ? null : mainMotherboard.RAMType.ToString()) + ".";
                         break;
                 }
+                //Disable sell button.
                 sellText.text = null;
                 sellButton.interactable = false;
                 sellButtonAnimation.disabled = true;
 
+                //Disable unequip button.
                 unequipText.text = null;
                 unequipButton.interactable = false;
                 unequipButtonAnimation.disabled = true;
 
+                //Disable remove button.
                 removeText.text = null;
                 removeButton.interactable = false;
                 removeButtonAnimation.disabled = true;
             }
             
+            //Enable info window.
             infoObject.SetActive(true);
+            //Start InfoInAnimation.
             StartCoroutine(InfoInAnimation());
         }
+        //Open info by component.
         switch (type)
         {
             case ComponentType.CPU:
@@ -592,14 +694,19 @@ public class ComputerScript : MonoBehaviour
                 InfoOpen(equipComponents[index]);
                 break;
         }
+        //Add listener for sell button.
         sellButton.onClick.RemoveAllListeners();
         sellButton.onClick.AddListener(delegate { Sell(type, index); });
+        //Add listener for remove button.
         removeButton.onClick.RemoveAllListeners();
         removeButton.onClick.AddListener(delegate { Remove(type, index); });
+        //Add listener for remove button.
         unequipButton.onClick.RemoveAllListeners();
         unequipButton.onClick.AddListener(delegate { Unequip(type, index); });
     }
-
+    /// <summary>
+    /// Animation of info window opening.
+    /// </summary>
     private IEnumerator InfoInAnimation()
     {
         //Duration: 0.5 s.
@@ -611,7 +718,10 @@ public class ComputerScript : MonoBehaviour
             yield return null;
         }
     }
-
+    /// <summary>
+    /// Animation of info window closing.
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator InfoOutAnimation()
     {
         // Duration: 0.5 s.
@@ -624,7 +734,11 @@ public class ComputerScript : MonoBehaviour
         }
         infoObject.SetActive(false);
     }
-
+    /// <summary>
+    /// Sell button clicked.
+    /// </summary>
+    /// <param name="type">Type of component.</param>
+    /// <param name="index">Index of component.</param>
     public void Sell(ComponentType type, int index)
     {
         switch (type)
@@ -632,7 +746,9 @@ public class ComputerScript : MonoBehaviour
             case ComponentType.CPU:
                 if (mainMotherboard != null)
                 {
+                    //Add money.
                     moneySystem.Money += mainCPU.price / 20;
+                    //Delete main CPU.
                     mainCPU = null;
                     CPUClicked();
                     Back();
@@ -641,7 +757,9 @@ public class ComputerScript : MonoBehaviour
             case ComponentType.Motherboard:
                 if (mainMotherboard != null)
                 {
+                    //Add money.
                     moneySystem.Money += mainMotherboard.price / 20;
+                    //Delete main motherboard.
                     mainMotherboard = null;
                     MotherboardClicked();
                     Back();
@@ -650,7 +768,9 @@ public class ComputerScript : MonoBehaviour
             case ComponentType.GPU:
                 if (GPUs.Count > index && GPUs[index] != null)
                 {
+                    //Add money.
                     moneySystem.Money += GPUs[index].price / 20;
+                    //Delete GPU[index].
                     GPUs[index] = null;
                     GPUClicked(index);
                     Back();
@@ -659,14 +779,18 @@ public class ComputerScript : MonoBehaviour
             case ComponentType.RAM:
                 if (RAMs.Count > index && RAMs[index] != null)
                 {
+                    //Add money.
                     moneySystem.Money += RAMs[index].price / 20;
+                    //Delete RAM[index].
                     RAMs[index] = null;
                     RAMClicked(index);
                     Back();
                 }
                 break;
             case ComponentType.All:
+                //Add money.
                 moneySystem.Money += equipComponents[index].price / 20;
+                //Remove component.
                 inventory.components.Remove(equipComponents[index]);
                 switch (selectedType)
                 {
@@ -690,7 +814,11 @@ public class ComputerScript : MonoBehaviour
         }
         UpdateComputer();
     }
-
+    /// <summary>
+    /// Remove button clicked.
+    /// </summary>
+    /// <param name="type">Type of component.</param>
+    /// <param name="index">Index of component.</param>
     public void Remove(ComponentType type, int index)
     {
         switch (type)
@@ -739,7 +867,11 @@ public class ComputerScript : MonoBehaviour
         }
         UpdateComputer();
     }
-
+    /// <summary>
+    /// Unequip button clicked.
+    /// </summary>
+    /// <param name="type">Type of component.</param>
+    /// <param name="index">Index of component.</param>
     public void Unequip(ComponentType type, int index)
     {
         switch (type)
@@ -773,15 +905,24 @@ public class ComputerScript : MonoBehaviour
         }
         UpdateComputer();
     }
-
+    /// <summary>
+    /// Back button clicked.
+    /// </summary>
     public void Back()
     {
         StartCoroutine(InfoOutAnimation());
     }
-
+    /// <summary>
+    /// Equip slot clicked.
+    /// </summary>
+    /// <param name="index">Index of clicked slot.</param>
     public void EquipClicked(int index)
     {
+        //Remove this component from inventory.
         inventory.components.Remove(equipComponents[index]);
+
+        //If component != null, add it to invertory.
+        //Then, set new component to computer.
         switch (selectedType)
         {
             case ComponentType.CPU:

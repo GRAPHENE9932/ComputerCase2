@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
@@ -16,7 +17,7 @@ public class OSScript : MonoBehaviour
     OSPage currentPage;
     public GameObject[] pages;
     public Text CPUModel, CPUFrequency, CPUBusWidth, RAMFrequency, RAMGeneration, RAMVolume, socket, chipset;
-    public Image integratedGraphics, multiplierUnlocked;
+    public Image integratedGraphics, multiplierUnlocked, SLI, crossfire;
     private readonly List<GameObject> GPUButtons = new List<GameObject>();
 
     public GameObject GPUWindow;
@@ -78,6 +79,8 @@ public class OSScript : MonoBehaviour
 
         integratedGraphics.sprite = comp.mainCPU.integratedGraphics ? checkChecked : checkUnchecked;
         multiplierUnlocked.sprite = comp.mainCPU.unlocked ? checkChecked : checkUnchecked;
+        SLI.sprite = comp.mainMotherboard.SLI ? checkChecked : checkUnchecked;
+        crossfire.sprite = comp.mainMotherboard.crossfire ? checkChecked : checkUnchecked;
 
         //GPU buttons.
         //Destroy old buttons.

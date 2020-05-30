@@ -13,7 +13,7 @@ public class GPU : PCComponent
     public short memory, TDP, power;
     public byte busVersion, busMultiplier;
 
-    public override string Properties
+    public override string FullProperties
     {
         get
         {
@@ -31,6 +31,8 @@ public class GPU : PCComponent
             return result;
         }
     }
+
+    public override string ShortProperties => FullProperties;
 
     /// <summary>
     /// Clones this object.

@@ -11,7 +11,7 @@ public class CPU : PCComponent
     public bool unlocked, _64bit, integratedGraphics;
     public string socket;
 
-    public override string Properties
+    public override string FullProperties
     {
         get
         {
@@ -44,7 +44,9 @@ public class CPU : PCComponent
             return result;
         }
     }
-    
+
+    public override string ShortProperties => FullProperties;
+
     /// <summary>
     /// Clones this object.
     /// </summary>

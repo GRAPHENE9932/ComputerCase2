@@ -27,7 +27,7 @@ public class MoneySystem : MonoBehaviour
 
     private void Start()
     {
-        Money += 900000000000;
+        Money += 2000;
         UpdateMoney();
     }
 

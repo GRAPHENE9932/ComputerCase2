@@ -7,7 +7,7 @@ public class RAM : PCComponent
 {
     public int memory, frequency, type;
 
-    public override string Properties
+    public override string FullProperties
     {
         get
         {
@@ -31,6 +31,8 @@ public class RAM : PCComponent
             return result;
         }
     }
+
+    public override string ShortProperties => FullProperties;
 
     /// <summary>
     /// Clones this object.
