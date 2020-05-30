@@ -63,4 +63,31 @@ public class Motherboard : PCComponent
         }
     }
 
+    /// <summary>
+    /// Clones this object.
+    /// </summary>
+    /// <returns>
+    /// Clonned object.
+    /// </returns>
+    public override PCComponent Clone()
+    {
+        PCComponent component = ScriptableObject.CreateInstance<Motherboard>();
+        component.fullName = this.fullName;
+        component.shortName = this.shortName;
+        component.price = this.price;
+        component.time = this.time;
+        component.rarity = this.rarity;
+        component.image = this.image;
+
+        ((Motherboard)component).socket = this.socket;
+        ((Motherboard)component).RAMType = this.RAMType;
+        ((Motherboard)component).RAMCount = this.RAMCount;
+        ((Motherboard)component).busVersions = this.busVersions;
+        ((Motherboard)component).busMultipliers = this.busMultipliers;
+        ((Motherboard)component).SLI = this.SLI;
+        ((Motherboard)component).crossfire = this.crossfire;
+        ((Motherboard)component).chipset = this.chipset;
+
+        return component;
+    }
 }

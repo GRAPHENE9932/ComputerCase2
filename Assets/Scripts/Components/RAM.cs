@@ -31,4 +31,27 @@ public class RAM : PCComponent
             return result;
         }
     }
+
+    /// <summary>
+    /// Clones this object.
+    /// </summary>
+    /// <returns>
+    /// Clonned object.
+    /// </returns>
+    public override PCComponent Clone()
+    {
+        PCComponent component = ScriptableObject.CreateInstance<RAM>();
+        component.fullName = this.fullName;
+        component.shortName = this.shortName;
+        component.price = this.price;
+        component.time = this.time;
+        component.rarity = this.rarity;
+        component.image = this.image;
+
+        ((RAM)component).memory = this.memory;
+        ((RAM)component).frequency = this.frequency;
+        ((RAM)component).type = this.type;
+
+        return component;
+    }
 }

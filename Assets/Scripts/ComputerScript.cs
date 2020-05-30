@@ -10,7 +10,7 @@ public class ComputerScript : MonoBehaviour
     private readonly List<GameObject> GPUSlots = new List<GameObject>();
     private readonly List<GameObject> RAMSlots = new List<GameObject>();
     private readonly List<GameObject> equipSlots = new List<GameObject>();
-    private List<PCComponent> equipComponents;
+    private List<PCComponent> equipComponents = new List<PCComponent>();
     private ComponentType selectedType;
     private int indexOfSelected;
     public GameObject CPUSlot, motherboardSlot;
@@ -19,150 +19,88 @@ public class ComputerScript : MonoBehaviour
     public Transform GPUParent, RAMParent, equipParent;
     public Text equipText;
 
-    private CPU mainCPU;
-    private Motherboard mainMotherboard;
-    private readonly List<GPU> GPUs = new List<GPU>();
-    private readonly List<RAM> RAMs = new List<RAM>();
-
-    public CaseScroller caseScroller;
-    public Inventory inventory;
-    public MoneySystem moneySystem;
-    public NavigationScript navigation;
-
+    [HideInInspector]
+    public CPU mainCPU;
+    [HideInInspector]
+    public Motherboard mainMotherboard;
+    [HideInInspector]
+    public readonly List<GPU> GPUs = new List<GPU>();
+    [HideInInspector]
+    public readonly List<RAM> RAMs = new List<RAM>();
     public Sprite emptyPixel;
 
     public GameObject infoObject;
+    public CanvasGroup infoGroup;
     public Text infoText, sellText, unequipText, removeText;
     public Button sellButton, unequipButton, removeButton;
     public ButtonAnimation sellButtonAnimation, unequipButtonAnimation, removeButtonAnimation;
 
-    public Text monitorText;
+    public Text errorsText;
+    public GameObject wallpaper, pages;
+    [Space]
+    public CaseScroller caseScroller;
+    public Inventory inventory;
+    public MoneySystem moneySystem;
+    public NavigationScript navigation;
+    public OSScript osscript;
 
     /// <summary>
-    /// Text of the computer monitor with errors and recommendations (RichText required).
+    /// Text of the computer monitor with errors (RichText required).
     /// </summary>
-    public string MonitorText
+    public void FindErrors()
     {
-        get
+        string errors = null;
+        //Check of availability of CPU and messaging about it.
+        if (mainCPU == null)
+            errors += "No CPU!\n";
+        //Check of availability of motherboard and messaging about it.
+        if (mainMotherboard == null)
+            errors += "No motherboard!\n";
+
+        //Does computer contains graphics?
+        bool containsGPUs = false;
+        for (int i = 0; i < GPUs.Count; i++)
         {
-            string errors = null;
-            //Check of availability of CPU and messaging about it.
-            if (mainCPU == null)
-                errors += "<color=red>No CPU!</color>\n";
-            //Check of availability of motherboard and messaging about it.
-            if (mainMotherboard == null)
-                errors += "<color=red>No motherboard!</color>\n";
+            containsGPUs = containsGPUs || GPUs[i] != null;
+        }
+        //If CPU contains graphics, containsGPUs = true.
+        if (mainCPU != null)
+            containsGPUs |= mainCPU.integratedGraphics;
+        if (!containsGPUs)
+            //Message about unavailability of graphics.
+            errors += "No graphics!\n";
 
-            //Does computer contains graphics?
-            bool containsGPUs = false;
-            for (int i = 0; i < GPUs.Count; i++)
-            {
-                containsGPUs = containsGPUs || GPUs[i] != null;
-            }
-            //If CPU contains graphics, containsGPUs = true.
-            if (mainCPU != null)
-                containsGPUs |= mainCPU.integratedGraphics;
-            if (!containsGPUs)
-                //Message about unavailability of graphics.
-                errors += "<color=red>No graphics!</color>\n";
+        //Does computer contains RAM?
+        bool containsRAMs = false;
+        for (int i = 0; i < RAMs.Count; i++)
+        {
+            containsRAMs = containsRAMs || RAMs[i] != null;
+        }
+        if (!containsRAMs)
+            //Message about unavailability of RAM.
+            errors += "No RAM!\n";
 
-            //Does computer contains RAM?
-            bool containsRAMs = false;
-            for (int i = 0; i < RAMs.Count; i++)
-            {
-                containsRAMs = containsRAMs || RAMs[i] != null;
-            }
-            if (!containsRAMs)
-                //Message about unavailability of RAM.
-                errors += "<color=red>No RAM!</color>\n";
-
-            //If no errors, show default monitor.
-            if (errors == null)
-            {
-                //Result string.
-                string result = null;
-                //CPU part.
-                result += $"CPU: {mainCPU.shortName};\n";
-                //Getting not null GPUs.
-                GPU[] realGPUs = GPUs.Where(x => x != null).ToArray();
-                //If count of GPUs == 1, write "GPU: ...".
-                if (realGPUs.Length == 1)
-                {
-                    result += $"GPU: {realGPUs[0]};\n";
-                }
-                //If cout of GPUs > 1, write list of GPUs: 
-                //"GPUs:
-                //GPU 0: ...;
-                //GPU 1: ...;
-                else if (realGPUs.Length > 1)
-                {
-                    result += "GPUs:\n";
-                    for (int i = 0; i < realGPUs.Length; i++)
-                    {
-                        result += $"GPU {i}: {realGPUs[i].fullName};\n";
-                    }
-                }
-                //But if no GPUs, do not write anything about it.
-                //Search  for min frequency of RAM.
-                int minFrequency = int.MaxValue;
-                for (int i = 0; i < RAMs.Count; i++)
-                {
-                    if (RAMs[i] != null && RAMs[i].frequency < minFrequency)
-                        minFrequency = RAMs[i].frequency;
-                }
-                //Writing RAM`s title: "RAM (DDR4, 2666 MHz):"
-                result += $"RAM (DDR{(mainMotherboard.RAMType == 1 ? null : mainMotherboard.RAMType.ToString())}, {minFrequency} MHz):\n";
-                for (int i = 0; i < mainMotherboard.RAMCount; i++)
-                {
-                    if (RAMs[i] != null)
-                        result += $"Slot {i}: {RAMs[i].memory} MB;\n";
-                    else
-                        result += $"Slot {i}: - ;\n";
-                }
-                //Writing chipset.
-                result += $"Motherboard chipset: {mainMotherboard.chipset.ToString().Replace("_", "")}";
-
-                //Add recomendations.
-                string recommendations = null;
-
-                //Check for enabled multiple channel mode of RAM.
-                if (CheckMultipleChannels() && RAMs.Count(x => x != null) >= mainMotherboard.RAMCount / 2)
-                    recommendations += $"<color=green>You using single-channel mode of RAM, but can use {mainMotherboard.RAMCount / 2}-channel mode, just replace your RAM planks with \"Zebra-style\". It contributes to improvement of RAM performance.\n</color>";
-
-                return result + recommendations;
-            }
-            else
-            {
-                return errors;
-            }
+        //If no errors, show default monitor.
+        if (errors == null)
+        {
+            wallpaper.SetActive(true);
+            pages.SetActive(true);
+            errorsText.gameObject.SetActive(false);
+        }
+        else
+        {
+            wallpaper.SetActive(false);
+            pages.SetActive(false);
+            errorsText.gameObject.SetActive(true);
+            errorsText.text = errors;
         }
     }
     private void Start()
     {
         UpdateComputer();
-    }
-    /// <summary>
-    /// Check the using of multiple RAM channels.
-    /// </summary>
-    /// <returns>
-    /// True - using multiple channels, false - not using.
-    /// </returns>
-    public bool CheckMultipleChannels()
-    {
-        //usedDouble - is slots with indexes 0, 2, 4, 6, ... used? True - used, false - unused, null - different.
-        //usedNotDouble - is slots with indexes 1, 3, 5, 7, ... used? True - used, false - unused, null - different.
-        bool? usedDouble = RAMs[0] != null, usedNotDouble = RAMs[1] != null;
-        for (int i = 2; i < mainMotherboard.RAMCount; i += 2)
-        {
-            if (usedDouble != (RAMs[i] != null))
-                usedDouble = null;
-        }
-        for (int i = 3; i < mainMotherboard.RAMCount; i += 2)
-        {
-            if (usedNotDouble != (RAMs[i] != null))
-                usedNotDouble = null;
-        }
-        return usedDouble == null && usedNotDouble == null;
+        CPUSlot.transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.CPU, -1); });
+        motherboardSlot.transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.Motherboard, -1); });
+
     }
 
     /// <summary>
@@ -201,7 +139,6 @@ public class ComputerScript : MonoBehaviour
             else
                 CPUSlot.transform.Find("Socket").GetComponentInChildren<Text>().text = "No socket!";
         }
-        CPUSlot.transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.CPU, -1); });
 
         //Motherboard updating.
         if (mainMotherboard != null)
@@ -222,8 +159,7 @@ public class ComputerScript : MonoBehaviour
             //Set name of motherboard "No motherboard!".
             motherboardSlot.transform.Find("Name").GetComponentInChildren<Text>().text = "No motherboard!";
         }
-        motherboardSlot.transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.Motherboard, -1); });
-
+        
         //GPUs and RAMs updating.
         if (mainMotherboard != null)
         {
@@ -236,7 +172,7 @@ public class ComputerScript : MonoBehaviour
             for (int i = 0; i < mainMotherboard.busVersions.Length; i++)
             {
                 GPUSlots.Add(Instantiate(slotPrefab, GPUParent));
-                if (i < GPUs.Count)
+                if (i < GPUs.Count && GPUs[i] != null)
                 {
                     //Set image.
                     GPUSlots[i].transform.Find("Image").GetComponent<Image>().sprite = GPUs[i].image;
@@ -256,11 +192,17 @@ public class ComputerScript : MonoBehaviour
                 }
                 //Set button event.
                 int index = i;
-                indexOfSelected = -1;
                 selectedType = ComponentType.GPU;
+                GPUSlots[i].GetComponent<Button>().onClick.RemoveAllListeners();
                 GPUSlots[i].GetComponent<Button>().onClick.AddListener(delegate { GPUClicked(index); });
+                GPUSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.RemoveAllListeners();
                 GPUSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.GPU, index); });
                 GPUParent.transform.position = new Vector2(GPUParent.transform.position.x, GPUParent.localScale.y);
+            }
+            //Fill in list of GPUs.
+            for (int i = GPUs.Count; i < mainMotherboard.busVersions.Length; i++)
+            {
+                GPUs.Add(null);
             }
 
             //RAM updating.
@@ -292,7 +234,6 @@ public class ComputerScript : MonoBehaviour
                 }
                 //Set button event.
                 int index = i;
-                indexOfSelected = -1;
                 selectedType = ComponentType.RAM;
                 RAMSlots[i].GetComponent<Button>().onClick.AddListener(delegate { RAMClicked(index); });
                 RAMSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.RAM, index); });
@@ -347,7 +288,9 @@ public class ComputerScript : MonoBehaviour
                     int index = i;
                     indexOfSelected = -1;
                     selectedType = ComponentType.CPU;
+                    equipSlots[i].GetComponent<Button>().onClick.RemoveAllListeners();
                     equipSlots[i].GetComponent<Button>().onClick.AddListener(delegate { EquipClicked(index); });
+                    equipSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.RemoveAllListeners();
                     equipSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.All, index); });
                     equipText.text = null;
                 }
@@ -399,7 +342,9 @@ public class ComputerScript : MonoBehaviour
                     int index = i;
                     indexOfSelected = -1;
                     selectedType = ComponentType.Motherboard;
+                    equipSlots[i].GetComponent<Button>().onClick.RemoveAllListeners();
                     equipSlots[i].GetComponent<Button>().onClick.AddListener(delegate { EquipClicked(index); });
+                    equipSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.RemoveAllListeners();
                     equipSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.All, index); });
                     equipText.text = null;
                 }
@@ -451,7 +396,9 @@ public class ComputerScript : MonoBehaviour
                     int eventIndex = i;
                     indexOfSelected = index;
                     selectedType = ComponentType.RAM;
+                    equipSlots[i].GetComponent<Button>().onClick.RemoveAllListeners();
                     equipSlots[i].GetComponent<Button>().onClick.AddListener(delegate { EquipClicked(eventIndex); });
+                    equipSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.RemoveAllListeners();
                     equipSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.All, index); });
                 }
                 equipText.text = null;
@@ -503,7 +450,9 @@ public class ComputerScript : MonoBehaviour
                     int eventIndex = i;
                     indexOfSelected = index;
                     selectedType = ComponentType.GPU;
+                    equipSlots[i].GetComponent<Button>().onClick.RemoveAllListeners();
                     equipSlots[i].GetComponent<Button>().onClick.AddListener(delegate { EquipClicked(eventIndex); });
+                    equipSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.RemoveAllListeners();
                     equipSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.All, index); });
                 }
                 equipText.text = null;
@@ -548,9 +497,38 @@ public class ComputerScript : MonoBehaviour
                 }
                 else
                 {
-                    unequipText.text = "Unequip";
-                    unequipButton.interactable = true;
-                    unequipButtonAnimation.disabled = false;
+                    if (type == ComponentType.Motherboard)
+                    {
+                        //compHasComponents is "Does computer has components except for motherboard".
+                        bool compHasComponents = false;
+                        //Check for CPU.
+                        compHasComponents |= mainCPU != null;
+                        //Check for GPUs.
+                        for (int i = 0; i < GPUs.Count; i++)
+                            compHasComponents |= GPUs[i] != null;
+                        //Check for RAMs.
+                        for (int i = 0; i < RAMs.Count; i++)
+                            compHasComponents |= RAMs[i] != null;
+
+                        if (compHasComponents)
+                        {
+                            unequipText.text = "Dissasemble computer first!";
+                            unequipButton.interactable = false;
+                            unequipButtonAnimation.disabled = true;
+                        }
+                        else
+                        {
+                            unequipText.text = "Unequip";
+                            unequipButton.interactable = true;
+                            unequipButtonAnimation.disabled = false;
+                        }
+                    }
+                    else
+                    {
+                        unequipText.text = "Unequip";
+                        unequipButton.interactable = true;
+                        unequipButtonAnimation.disabled = false;
+                    }
                 }
 
                 removeText.text = "Remove";
@@ -588,8 +566,8 @@ public class ComputerScript : MonoBehaviour
             }
             
             infoObject.SetActive(true);
+            StartCoroutine(InfoInAnimation());
         }
-        infoObject.SetActive(true);
         switch (type)
         {
             case ComponentType.CPU:
@@ -614,9 +592,37 @@ public class ComputerScript : MonoBehaviour
                 InfoOpen(equipComponents[index]);
                 break;
         }
+        sellButton.onClick.RemoveAllListeners();
         sellButton.onClick.AddListener(delegate { Sell(type, index); });
+        removeButton.onClick.RemoveAllListeners();
         removeButton.onClick.AddListener(delegate { Remove(type, index); });
+        unequipButton.onClick.RemoveAllListeners();
         unequipButton.onClick.AddListener(delegate { Unequip(type, index); });
+    }
+
+    private IEnumerator InfoInAnimation()
+    {
+        //Duration: 0.5 s.
+        float time = 0F;
+        while (time < 0.25F)
+        {
+            time += Time.deltaTime;
+            infoGroup.alpha = time * 4F;
+            yield return null;
+        }
+    }
+
+    private IEnumerator InfoOutAnimation()
+    {
+        // Duration: 0.5 s.
+        float time = 0.25F;
+        while (time > 0F)
+        {
+            time -= Time.deltaTime;
+            infoGroup.alpha = time * 4F;
+            yield return null;
+        }
+        infoObject.SetActive(false);
     }
 
     public void Sell(ComponentType type, int index)
@@ -739,25 +745,25 @@ public class ComputerScript : MonoBehaviour
         switch (type)
         {
             case ComponentType.CPU:
-                inventory.components.Add(mainCPU);
+                inventory.components.Add(mainCPU.Clone());
                 mainCPU = null;
                 CPUClicked();
                 Back();
                 break;
             case ComponentType.Motherboard:
-                inventory.components.Add(mainMotherboard);
+                inventory.components.Add(mainMotherboard.Clone());
                 mainMotherboard = null;
                 MotherboardClicked();
                 Back();
                 break;
             case ComponentType.GPU:
-                inventory.components.Add(GPUs[index]);
+                inventory.components.Add(GPUs[index].Clone());
                 GPUs[index] = null;
                 GPUClicked(index);
                 Back();
                 break;
             case ComponentType.RAM:
-                inventory.components.Add(RAMs[index]);
+                inventory.components.Add(RAMs[index].Clone());
                 RAMs[index] = null;
                 RAMClicked(index);
                 Back();
@@ -770,7 +776,7 @@ public class ComputerScript : MonoBehaviour
 
     public void Back()
     {
-        infoObject.SetActive(false);
+        StartCoroutine(InfoOutAnimation());
     }
 
     public void EquipClicked(int index)
@@ -791,21 +797,15 @@ public class ComputerScript : MonoBehaviour
                 MotherboardClicked();
                 break;
             case ComponentType.RAM:
-                if (RAMs[index] != null)
-                    inventory.components.Add(RAMs[index]);
-                if (RAMs.Count <= index)
-                    RAMs.Add((RAM)equipComponents[index]);
-                else
-                    RAMs[indexOfSelected] = (RAM)equipComponents[index];
+                if (RAMs.Count > indexOfSelected && RAMs[indexOfSelected] != null)
+                    inventory.components.Add(RAMs[indexOfSelected]);
+                RAMs[indexOfSelected] = (RAM)equipComponents[index];
                 RAMClicked(indexOfSelected);
                 break;
             case ComponentType.GPU:
-                if (GPUs[index] != null)
-                    inventory.components.Add(GPUs[index]);
-                if (GPUs.Count <= indexOfSelected)
-                    GPUs.Add((GPU)equipComponents[index]);
-                else
-                    GPUs[indexOfSelected] = (GPU)equipComponents[index];
+                if (GPUs.Count > index && GPUs[index] != null)
+                    inventory.components.Add(GPUs[indexOfSelected]);
+                GPUs[indexOfSelected] = (GPU)equipComponents[index];
                 GPUClicked(indexOfSelected);
                 break;
             default:
@@ -818,7 +818,8 @@ public class ComputerScript : MonoBehaviour
     /// </summary>
     public void MonitorClicked()
     {
-        monitorText.text = MonitorText;
+        FindErrors();
+        //monitorText.text = MonitorText;
         navigation.MenuItemClicked(9);
     }
     /// <summary>

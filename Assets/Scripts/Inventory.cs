@@ -21,8 +21,8 @@ public class Inventory : MonoBehaviour
     public GameObject infoWindowObj;
     public Text infoText;
     public Text sellInfoText;
-    public Button sellInfoButton, removeInfoButton, equipInfoButton;
-    public ButtonAnimation sellInfoButtonAnim, removeInfoButtonAnim, equipInfoButtonAnim;
+    public Button sellInfoButton, removeInfoButton;
+    public ButtonAnimation sellInfoButtonAnim, removeInfoButtonAnim;
     public InventoryInfoWindow infoWindow;
     public Text sortText;
 
@@ -131,11 +131,9 @@ public class Inventory : MonoBehaviour
         //Enable "Sell", "Remove" and "Equip" buttons.
         sellInfoButton.interactable = true;
         removeInfoButton.interactable = true;
-        equipInfoButton.interactable = true;
 
         sellInfoButtonAnim.disabled = false;
         removeInfoButtonAnim.disabled = false;
-        equipInfoButtonAnim.disabled = false;
 
         infoWindowObj.SetActive(true);
     }
@@ -150,11 +148,9 @@ public class Inventory : MonoBehaviour
         //Disable "Sell", "Remove" and "Equip" buttons.
         sellInfoButton.interactable = false;
         removeInfoButton.interactable = false;
-        equipInfoButton.interactable = false;
         
         sellInfoButtonAnim.disabled = true;
         removeInfoButtonAnim.disabled = true;
-        equipInfoButtonAnim.disabled = true;
 
         //Update inventory.
         UpdateInventory();
@@ -169,11 +165,9 @@ public class Inventory : MonoBehaviour
         //Disable "Sell", "Remove" and "Equip" buttons.
         sellInfoButton.interactable = false;
         removeInfoButton.interactable = false;
-        equipInfoButton.interactable = false;
 
         sellInfoButtonAnim.disabled = true;
         removeInfoButtonAnim.disabled = true;
-        equipInfoButtonAnim.disabled = true;
 
         //Update inventory.
         UpdateInventory();

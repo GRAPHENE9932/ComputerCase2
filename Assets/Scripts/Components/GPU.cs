@@ -32,42 +32,28 @@ public class GPU : PCComponent
         }
     }
 
-    public static string GPUInterfaceToString(GPUInterface i)
+    /// <summary>
+    /// Clones this object.
+    /// </summary>
+    /// <returns>
+    /// Clonned object.
+    /// </returns>
+    public override PCComponent Clone()
     {
-        switch (i)
-        {
-            case GPUInterface.PCIe_1_0_x1:
-                return "PCIe 1.0 x1;\n";
-            case GPUInterface.PCIe_1_0_x16:
-                return "PCIe 1.0 x16;\n";
-            case GPUInterface.PCIe_2_0_x1:
-                return "PCIe 2.0 x1;\n";
-            case GPUInterface.PCIe_2_0_x16:
-                return "PCIe 2.0 x16;\n";
-            case GPUInterface.PCIe_2_0_x4:
-                return "PCIe 2.0 x4;\n";
-            case GPUInterface.PCIe_2_0_x8:
-                return "PCIe 2.0 x8;\n";
-            case GPUInterface.PCIe_3_0_x1:
-                return "PCIe 3.0 x1;\n";
-            case GPUInterface.PCIe_3_0_x16:
-                return "PCIe 3.0 x16;\n";
-            case GPUInterface.PCIe_3_0_x2:
-                return "PCIe 3.0 x2;\n";
-            case GPUInterface.PCIe_3_0_x4:
-                return "PCIe 3.0 x4;\n";
-            case GPUInterface.PCIe_3_0_x8:
-                return "PCIe 3.0 x8;\n";
-            case GPUInterface.PCIe_4_0_x1:
-                return "PCIe 4.0 x1;\n";
-            case GPUInterface.PCIe_4_0_x16:
-                return "PCIe 4.0 x16;\n";
-            case GPUInterface.PCIe_4_0_x4:
-                return "PCIe 4.0 x4;\n";
-            case GPUInterface.PCIe_4_0_x8:
-                return "PCIe 4.0 x8;\n";
-            default:
-                return "Error! Code 1.";
-        }
+        PCComponent component = ScriptableObject.CreateInstance<GPU>();
+        component.fullName = this.fullName;
+        component.shortName = this.shortName;
+        component.price = this.price;
+        component.time = this.time;
+        component.rarity = this.rarity;
+        component.image = this.image;
+
+        ((GPU)component).memory = this.memory;
+        ((GPU)component).TDP = this.TDP;
+        ((GPU)component).power = this.power;
+        ((GPU)component).busVersion = this.busVersion;
+        ((GPU)component).busMultiplier = this.busMultiplier;
+
+        return component;
     }
 }

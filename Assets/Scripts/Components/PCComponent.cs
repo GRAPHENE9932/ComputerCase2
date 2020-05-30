@@ -26,4 +26,22 @@ public class PCComponent : ScriptableObject
             return "Error! Code 0.";
         }
     }
+    /// <summary>
+    /// Clones this object.
+    /// </summary>
+    /// <returns>
+    /// Clonned object.
+    /// </returns>
+    public virtual PCComponent Clone()
+    {
+        PCComponent component = ScriptableObject.CreateInstance<PCComponent>();
+        component.fullName = this.fullName;
+        component.shortName = this.shortName;
+        component.price = this.price;
+        component.time = this.time;
+        component.rarity = this.rarity;
+        component.image = this.image;
+
+        return component;
+    }
 }
