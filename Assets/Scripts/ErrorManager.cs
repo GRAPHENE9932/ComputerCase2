@@ -27,9 +27,12 @@ public class ErrorManager : MonoBehaviour
 
     private async void HandleLog(string logString, string stackTrace, LogType type)
     {
+        //If log type == error or exception.
         if (type == LogType.Error || type == LogType.Exception)
         {
+            //Start message to player.
             messageBox.StartMessage("An error occured! Sending email about it...", 5);
+            //Preparing text for email.
             string body = "Device name: " + SystemInfo.deviceName + "\n" +
                 "Device model: " + SystemInfo.deviceModel + "\n" +
                 "Operating system: " + SystemInfo.operatingSystem + "\n" +
@@ -43,15 +46,13 @@ public class ErrorManager : MonoBehaviour
                 "Navigation state: " + nav.currentState + "\n" +
                 "Log string: " + logString + "\n" +
                 "Stack trace: " + stackTrace;
+            //Send email.
             bool result = await Task.Run(() => SendEmail("Error in ComputerCase", body));
+            //Start message about success or fail.
             if (result)
-            {
                 messageBox.StartMessage("An error occured! Sending email about it...\nSuccess!", 5);
-            }
             else
-            {
                 messageBox.StartMessage("An error occured! Sending email about it...\nFailed!", 5);
-            }
         }
     }
 
@@ -59,6 +60,7 @@ public class ErrorManager : MonoBehaviour
     {
         try
         {
+            //Initialize key and initialization vector for AES.
             byte[] key = Convert.FromBase64String("AMalpiCC/umTuLIRjeGuZI6xQIIfqyaWMV3T6koSqWo=");
             byte[] IV = Convert.FromBase64String("bJL3nvsWLODhPEaRYDKUnA==");
             Aes aes = Aes.Create();
@@ -78,7 +80,9 @@ public class ErrorManager : MonoBehaviour
             string pass = Encoding.UTF8.GetString(dec.TransformFinalBlock(Convert.FromBase64String("/IcwTYcAxKIc/jiO528mTQ=="), 0, Convert.FromBase64String("/IcwTYcAxKIc/jiO528mTQ==").Length));
             string email = Encoding.UTF8.GetString(dec.TransformFinalBlock(Convert.FromBase64String("Y6pdr5Oqj9c5kuJtBAy2kLo7sgEFOIz3IP2l9072BOE="), 0, Convert.FromBase64String("Y6pdr5Oqj9c5kuJtBAy2kLo7sgEFOIz3IP2l9072BOE=").Length));
 
+            //Create mail message.
             MailMessage mail = new MailMessage(email, email, subject, body);
+            //Create smtp client.
             SmtpClient client = new SmtpClient("smtp.gmail.com")
             {
                 Port = 587,
@@ -86,11 +90,14 @@ public class ErrorManager : MonoBehaviour
                 EnableSsl = true,
                 Timeout = 5000
             };
+            //Send.
             await Task.Run(() => client.Send(mail));
+            //Return true (access operation).
             return true;
         }
         catch
         {
+            //Return false (failed operation).
             return false;
         }
     }

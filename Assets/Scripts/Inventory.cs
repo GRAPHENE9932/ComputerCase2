@@ -5,25 +5,73 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    /// <summary>
+    /// The list of components in the inventory.
+    /// </summary>
     public List<PCComponent> components = new List<PCComponent>();
 
+    /// <summary>
+    /// The prefab of inventory cell.
+    /// </summary>
     public GameObject cellPrefab;
+    /// <summary>
+    /// The group and parent of inventory cells.
+    /// </summary>
     public RectTransform cellsGroup;
+    /// <summary>
+    /// Grid layout group of cells.
+    /// </summary>
     public GridLayoutGroup cellsGrid;
+    /// <summary>
+    /// Text of main statistics of inventory on bottom panel.
+    /// </summary>
     public Text inventoryInfoText;
 
+    /// <summary>
+    /// Button for changing current page of inventory.
+    /// </summary>
     public Button pageNextButton, pagePreviousButton;
+    /// <summary>
+    /// Animation of button for changing current page of inventory.
+    /// </summary>
     public ButtonAnimation pageNextButtonAnim, pagePreviousButtonAnim;
 
+    /// <summary>
+    /// Case scroller script.
+    /// </summary>
     public CaseScroller scroller;
+    /// <summary>
+    /// Money system script.
+    /// </summary>
     public MoneySystem moneySystem;
 
+    /// <summary>
+    /// Game object of info window.
+    /// </summary>
     public GameObject infoWindowObj;
+    /// <summary>
+    /// Main text of info window.
+    /// </summary>
     public Text infoText;
+    /// <summary>
+    /// Text of sell button in info window.
+    /// </summary>
     public Text sellInfoText;
+    /// <summary>
+    /// Button of info window.
+    /// </summary>
     public Button sellInfoButton, removeInfoButton;
+    /// <summary>
+    /// Button animation of button of info window.
+    /// </summary>
     public ButtonAnimation sellInfoButtonAnim, removeInfoButtonAnim;
+    /// <summary>
+    /// Script of info window.
+    /// </summary>
     public InventoryInfoWindow infoWindow;
+    /// <summary>
+    /// Text of sorting. It is on bottom panel.
+    /// </summary>
     public Text sortText;
 
     private int page;

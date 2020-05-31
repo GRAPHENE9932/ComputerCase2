@@ -5,9 +5,18 @@ using UnityEngine.UI;
 
 public class MoneySystem : MonoBehaviour
 {
+    /// <summary>
+    /// Text shows money number.
+    /// </summary>
     public Text moneyText;
+    /// <summary>
+    /// Background of money text.
+    /// </summary>
     public Image moneyImage;
 
+    /// <summary>
+    /// Money value.
+    /// </summary>
     private SecureLong money;
     public SecureLong Money
     {
@@ -17,6 +26,7 @@ public class MoneySystem : MonoBehaviour
         }
         set
         {
+            //At changing number of money, start color animation.
             if (value > money)
                 StartCoroutine(MoneyColor(true));
             else if (value < money)
@@ -30,13 +40,17 @@ public class MoneySystem : MonoBehaviour
         Money += 2000;
         UpdateMoney();
     }
-
     public void UpdateMoney()
     {
         moneyText.text = "$" + money.Value;
     }
+    /// <summary>
+    /// Color animation of money.
+    /// </summary>
+    /// <param name="green">True - green color, false - red color.</param>
     private IEnumerator MoneyColor(bool green)
     {
+        //Total duration: 1 sec.
         float time = 0F;
         while (time < 1F)
         {
@@ -60,7 +74,9 @@ public class MoneySystem : MonoBehaviour
     }
 }
 
-
+/// <summary>
+/// Long type, secured from memory analysis.
+/// </summary>
 public struct SecureLong
 {
     private long value;
@@ -77,12 +93,16 @@ public struct SecureLong
     {
         get
         {
+            //Just subtract offset from value.
             return value - offset;
         }
         set
         {
+            //Temp is real value.
             long temp = this.value - offset;
+            //Create new offset.
             offset = Random.Range(int.MinValue, int.MaxValue);
+            //Set new value with new offset.
             this.value = temp + offset;
         }
     }

@@ -15,42 +15,91 @@ public enum OSPage
 public class OSScript : MonoBehaviour
 {
     OSPage currentPage;
+    /// <summary>
+    /// Parents of page objects.
+    /// </summary>
     public GameObject[] pages;
+    /// <summary>
+    /// Text in field of configuration page.
+    /// </summary>
     public Text CPUModel, CPUFrequency, CPUBusWidth, RAMFrequency, RAMGeneration, RAMVolume, socket, chipset;
+    /// <summary>
+    /// Checks of configuration page.
+    /// </summary>
     public Image integratedGraphics, multiplierUnlocked, SLI, crossfire;
+    /// <summary>
+    /// The buttons of GPUs configuration.
+    /// </summary>
     private readonly List<GameObject> GPUButtons = new List<GameObject>();
 
+    /// <summary>
+    /// GPU configuration window.
+    /// </summary>
     public GameObject GPUWindow;
+    /// <summary>
+    /// Text in field of GPU configuration window.
+    /// </summary>
     public Text GPUModel, GPUBusInterface, GPUMemoryVolume;
 
     public Sprite checkChecked, checkUnchecked;
     public ComputerScript comp;
+    /// <summary>
+    /// Prefab of GPU configuration label and button.
+    /// </summary>
     public GameObject gpuButtonPrefab;
+    /// <summary>
+    /// Parent of GPU buttons array.
+    /// </summary>
     public Transform gpuParent;
 
+    /// <summary>
+    /// Main text component in recommendations page.
+    /// </summary>
     public Text recommendationsText;
 
+    /// <summary>
+    /// Start OS, when monitor clicked.
+    /// </summary>
     public void StartOS()
     {
+        //Disable all pages.
         for (int i = 0; i < pages.Length; i++)
             pages[i].SetActive(false);
+
         currentPage = OSPage.None;
     }
-
+    /// <summary>
+    /// Change page.
+    /// </summary>
+    /// <param name="page">Index of page in OSPage enum.</param>
     public void Navigate(int page)
     {
+        //Disable previous page.
         pages[(int)currentPage].SetActive(false);
+        //Change page variable.
         currentPage = (OSPage)page;
+        //Enable new page.
         pages[page].SetActive(true);
+        //If current page == system configuration, update system configuration.
         if (currentPage == OSPage.SystemConfiguration)
             UpdateSystemConfiguration();
+        //If current page == recommendation, update recommendations.
+        else if (currentPage == OSPage.Recommendations)
+            UpdateRecommendations();
     }
 
+    /// <summary>
+    /// Close button clicked.
+    /// </summary>
     public void CloseClicked()
     {
+        //Disable current page.
         pages[(int)currentPage].SetActive(false);
     }
 
+    /// <summary>
+    /// Update configuration.
+    /// </summary>
     public void UpdateSystemConfiguration()
     {
         //Text of page of SystemConfiguration.
@@ -75,7 +124,7 @@ public class OSScript : MonoBehaviour
         RAMVolume.text = $"{ramVol} MB";
 
         socket.text = comp.mainMotherboard.socket;
-        chipset.text = comp.mainMotherboard.chipset.ToString().Replace("_", "");
+        chipset.text = comp.mainMotherboard.chipset.ToString().RemoveChar('_');
 
         integratedGraphics.sprite = comp.mainCPU.integratedGraphics ? checkChecked : checkUnchecked;
         multiplierUnlocked.sprite = comp.mainCPU.unlocked ? checkChecked : checkUnchecked;
@@ -111,10 +160,15 @@ public class OSScript : MonoBehaviour
             }
         }
     }
-
+    /// <summary>
+    /// Clicked button of GPU properties.
+    /// </summary>
+    /// <param name="index">Index of GPU.</param>
     private void GPUPropertiesButton(int index)
     {
+        //Enable GPU window.
         GPUWindow.SetActive(true);
+        //Set text of properties in this window.
         GPUModel.text = comp.GPUs[index].fullName;
         GPUBusInterface.text = $"PCIe {comp.GPUs[index].busVersion}.0 x{comp.GPUs[index].busMultiplier}";
         GPUMemoryVolume.text = $"{comp.GPUs[index].memory} MB";
