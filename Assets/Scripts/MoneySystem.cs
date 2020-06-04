@@ -10,14 +10,22 @@ public class MoneySystem : MonoBehaviour
     /// </summary>
     public Text moneyText;
     /// <summary>
+    /// Text shows Bitcoin money number.
+    /// </summary>
+    public Text btcMoneyText;
+    /// <summary>
     /// Background of money text.
     /// </summary>
-    public Image moneyImage;
+    public Image moneyImage, btcMoneyImage;
 
     /// <summary>
     /// Money value.
     /// </summary>
     private SecureLong money;
+    /// <summary>
+    /// Bitcoin money value.
+    /// </summary>
+    private SecureDecimal btcMoney;
     public SecureLong Money
     {
         get
@@ -28,36 +36,55 @@ public class MoneySystem : MonoBehaviour
         {
             //At changing number of money, start color animation.
             if (value > money)
-                StartCoroutine(MoneyColor(true));
+                StartCoroutine(MoneyColor(true, true));
             else if (value < money)
-                StartCoroutine(MoneyColor(false));
+                StartCoroutine(MoneyColor(false, true));
             money = value;
+        }
+    }
+    public SecureDecimal BTCMoney
+    {
+        get
+        {
+            return btcMoney;
+        }
+        set
+        {
+            //At changing number of money, start color animation.
+            if (value > btcMoney)
+                StartCoroutine(MoneyColor(true, false));
+            else if (value < btcMoney)
+                StartCoroutine(MoneyColor(false, false));
+            btcMoney = value;
         }
     }
 
     private void Start()
     {
-        Money += 2000;
+        Money += 200000;
         UpdateMoney();
     }
     public void UpdateMoney()
     {
-        moneyText.text = "$" + money.Value;
+        moneyText.text = $"${money.Value}";
+        btcMoneyText.text = $"₿{System.Math.Round(btcMoney.Value, 15)}";
     }
     /// <summary>
     /// Color animation of money.
     /// </summary>
     /// <param name="green">True - green color, false - red color.</param>
-    private IEnumerator MoneyColor(bool green)
+    /// <param name="dollars">True - dollars, false - Bitcoins.</param>
+    private IEnumerator MoneyColor(bool green, bool dollars)
     {
+        Image targetImage = dollars ? moneyImage : btcMoneyImage;
         //Total duration: 1 sec.
         float time = 0F;
         while (time < 1F)
         {
             if (green)
-                moneyImage.color = new Color(0F, time, 0F);
+                targetImage.color = new Color(0F, time, 0F);
             else
-                moneyImage.color = new Color(time, 0F, 0F);
+                targetImage.color = new Color(time, 0F, 0F);
             time += Time.deltaTime * 2F;
             yield return null;
         }
@@ -65,9 +92,9 @@ public class MoneySystem : MonoBehaviour
         while (time > 0F)
         {
             if (green)
-                moneyImage.color = new Color(0F, time, 0F);
+                targetImage.color = new Color(0F, time, 0F);
             else
-                moneyImage.color = new Color(time, 0F, 0F);
+                targetImage.color = new Color(time, 0F, 0F);
             time -= Time.deltaTime * 2F;
             yield return null;
         }
@@ -128,6 +155,70 @@ public struct SecureLong
         return (s1.value - s1.offset) > (s2.value - s2.offset);
     }
     public static bool operator <(SecureLong s1, SecureLong s2)
+    {
+        return (s1.value - s1.offset) < (s2.value - s2.offset);
+    }
+    public override bool Equals(object obj)
+    {
+        return base.Equals(obj);
+    }
+    public override int GetHashCode()
+    {
+        return base.GetHashCode();
+    }
+}
+
+public struct SecureDecimal
+{
+    private decimal value;
+    private int offset;
+
+    public SecureDecimal(decimal value)
+    {
+        offset = Random.Range(int.MinValue, int.MaxValue);
+        value += offset;
+        this.value = value;
+    }
+
+    public decimal Value
+    {
+        get
+        {
+            //Just subtract offset from value.
+            return value - offset;
+        }
+        set
+        {
+            //Temp is real value.
+            decimal temp = this.value - offset;
+            //Create new offset.
+            offset = Random.Range(int.MinValue, int.MaxValue);
+            //Set new value with new offset.
+            this.value = temp + offset;
+        }
+    }
+
+    public static SecureDecimal operator +(SecureDecimal s1, decimal u2)
+    {
+        return new SecureDecimal(s1.Value + u2);
+    }
+    public static SecureDecimal operator -(SecureDecimal s1, decimal u2)
+    {
+        return new SecureDecimal(s1.Value - u2);
+    }
+    public static bool operator ==(SecureDecimal s1, SecureDecimal s2)
+    {
+        return (s1.value - s1.offset) == (s2.value - s2.offset);
+    }
+    public static bool operator !=(SecureDecimal s1, SecureDecimal s2)
+    {
+        return !(s1 == s2);
+    }
+    public static bool operator >(SecureDecimal s1, SecureDecimal s2)
+    {
+        return (s1.value - s1.offset) > (s2.value - s2.offset);
+    }
+    public static bool operator <(SecureDecimal s1, SecureDecimal s2)
     {
         return (s1.value - s1.offset) < (s2.value - s2.offset);
     }

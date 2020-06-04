@@ -43,6 +43,7 @@ public class OSScript : MonoBehaviour
 
     public Sprite checkChecked, checkUnchecked;
     public ComputerScript comp;
+    public MoneySystem moneySystem;
     /// <summary>
     /// Prefab of GPU configuration label and button.
     /// </summary>
@@ -57,6 +58,81 @@ public class OSScript : MonoBehaviour
     /// </summary>
     public Text recommendationsText;
 
+    /// <summary>
+    /// Text in field of mining page.
+    /// </summary>
+    public Text earnedText, capacityText, performanceText0, performanceText1, performanceText2, memoryUsedText;
+    /// <summary>
+    /// Text in progressbar of mining page.
+    /// </summary>
+    public Text miningProgressbarText0, miningProgressbarText1;
+    /// <summary>
+    /// Mining progressbar bar. Used FillAmount.
+    /// </summary>
+    public Image miningProgressbar;
+
+    /// <summary>
+    /// Mined money in Bitcoins
+    /// </summary>
+    private decimal earned = 0;
+
+    /// <summary>
+    /// Performance of computer in BTC/day.
+    /// </summary>
+    private decimal Performance
+    {
+        get
+        {
+            try
+            {
+                decimal performance = 0;
+
+                //Add performance from GPUs.
+                for (int i = 0; i < comp.GPUs.Count; i++)
+                    if (comp.GPUs[i] != null)
+                        performance += 0.00005m * comp.GPUs[i].power;
+
+                //Add performance from CPU.
+                performance += comp.mainCPU.power * 0.0002m;
+
+                //Find minimum RAM frequency.
+                int minRAMFreq = int.MaxValue;
+                for (int i = 0; i < comp.RAMs.Count; i++)
+                    if (comp.RAMs[i] != null && comp.RAMs[i].frequency < minRAMFreq)
+                        minRAMFreq = comp.RAMs[i].frequency;
+
+                //Add performance from RAM.
+                performance += minRAMFreq * 0.0000125m;
+
+                return performance;
+            }
+            catch
+            {
+                return -1;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Capacity of RAM in Bitcoins.
+    /// </summary>
+    private decimal Capacity
+    {
+        get
+        {
+            //Total volume of RAM in computer.
+            int totalVolume = 0;
+            for (int i = 0; i < comp.RAMs.Count; i++)
+                if (comp.RAMs[i] != null)
+                    totalVolume += comp.RAMs[i].memory;
+
+            return totalVolume * 0.000005m;
+        }
+    }
+    private void Start()
+    {
+        StartCoroutine(MiningCoroutine());
+    }
     /// <summary>
     /// Start OS, when monitor clicked.
     /// </summary>
@@ -184,6 +260,49 @@ public class OSScript : MonoBehaviour
             recommendations += $"You using single-channel mode of RAM, but can use {comp.mainMotherboard.RAMCount / 2}-channel mode, just replace your RAM planks with alternate. It contributes to improvement of RAM performance.\n";
 
         recommendationsText.text = recommendations;
+    }
+
+    public void UpdateMining()
+    {
+        earnedText.text = $"{Math.Round(earned, 15)} BTC";
+        capacityText.text = $"{Math.Round(Capacity, 15)} BTC";
+        performanceText0.text = $"{Math.Round(Performance / 1440, 15)} BTC/min";
+        performanceText1.text = $"{Math.Round(Performance / 24, 15)} BTC/hour";
+        performanceText2.text = $"{Math.Round(Performance, 15)} BTC/day";
+        int totalRAM = 0;
+        for (int i = 0; i < comp.RAMs.Count; i++)
+            if (comp.RAMs[i] != null)
+                totalRAM += comp.RAMs[i].memory;
+        memoryUsedText.text = $"{Math.Round(earned / 0.00001m, 2)}/{totalRAM} MB";
+
+        float progress = (float)earned / 0.00001F / totalRAM;
+        miningProgressbar.fillAmount = progress;
+        miningProgressbarText0.text = $"{Math.Round(progress, 4) * 100}%";
+        miningProgressbarText1.text = $"{Math.Round(progress, 4) * 100}%";
+    }
+
+    public IEnumerator MiningCoroutine()
+    {
+        while (true)
+        {
+            decimal perf = Performance;
+            if (perf != -1)
+            {
+                //Add performance per second.
+                earned += perf / 86400;
+                if (earned > Capacity)
+                    earned = Capacity;
+                if (currentPage == OSPage.Mining)
+                    UpdateMining();
+            }
+            yield return new WaitForSeconds(1);
+        }
+    }
+
+    public void CollectClicked()
+    {
+        moneySystem.BTCMoney += earned;
+        earned = 0;
     }
     /// <summary>
     /// Check the using of multiple RAM channels.

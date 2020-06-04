@@ -7,14 +7,32 @@ using System.Security.Cryptography;
 using System.Text;
 using System.IO;
 using System.Threading.Tasks;
+using System.Linq;
 
 public class ErrorManager : MonoBehaviour
 {
     public MessageBoxManager messageBox;
     public NavigationScript nav;
 
+    public byte[] key, iv;
+    public byte[] pass, email;
+
     //Фіксація і відображення помилок та виключень
 #if !UNITY_EDITOR
+
+    private void Start()
+    {
+        //byte[] key = Convert.FromBase64String("AMalpiCC/umTuLIRjeGuZI6xQIIfqyaWMV3T6koSqWo=");
+        //byte[] IV = Convert.FromBase64String("bJL3nvsWLODhPEaRYDKUnA==");
+
+        byte[] bytes = Convert.FromBase64String(Resources.Load<TextAsset>("MailKey").text);
+
+        key = bytes.Take(32).ToArray();
+        iv = bytes.Skip(32).Take(16).ToArray();
+        pass = bytes.Skip(48).Take(16).ToArray();
+        email = bytes.Skip(64).Take(32).ToArray();
+    }
+
     void OnEnable()
     {
         Application.logMessageReceived += HandleLog;
@@ -61,15 +79,13 @@ public class ErrorManager : MonoBehaviour
         try
         {
             //Initialize key and initialization vector for AES.
-            byte[] key = Convert.FromBase64String("AMalpiCC/umTuLIRjeGuZI6xQIIfqyaWMV3T6koSqWo=");
-            byte[] IV = Convert.FromBase64String("bJL3nvsWLODhPEaRYDKUnA==");
             Aes aes = Aes.Create();
             //Встановлення розміру ключа.
             aes.KeySize = key.Length * 8;
             //Встановлення самого ключа.
             aes.Key = key;
             //Встановлення вектора ініціалізації.
-            aes.IV = IV;
+            aes.IV = iv;
             //Встановлення заповнення, якщо розмір даних не ділиться на розмір блока.
             aes.Padding = PaddingMode.PKCS7;
             //Встановлення режиму.
@@ -77,8 +93,11 @@ public class ErrorManager : MonoBehaviour
             //Створення екземпляра інтерфейсу ICryptoTransform, який зашифрує дані.
             ICryptoTransform dec = aes.CreateDecryptor();
             //Отримання розшифрованого паролю.
-            string pass = Encoding.UTF8.GetString(dec.TransformFinalBlock(Convert.FromBase64String("/IcwTYcAxKIc/jiO528mTQ=="), 0, Convert.FromBase64String("/IcwTYcAxKIc/jiO528mTQ==").Length));
-            string email = Encoding.UTF8.GetString(dec.TransformFinalBlock(Convert.FromBase64String("Y6pdr5Oqj9c5kuJtBAy2kLo7sgEFOIz3IP2l9072BOE="), 0, Convert.FromBase64String("Y6pdr5Oqj9c5kuJtBAy2kLo7sgEFOIz3IP2l9072BOE=").Length));
+            string pass = Encoding.UTF8.GetString(dec.TransformFinalBlock(/*Convert.FromBase64String("/IcwTYcAxKIc/jiO528mTQ==")*/this.pass, 0, this.pass.Length));
+            string email = Encoding.UTF8.GetString(dec.TransformFinalBlock(/*Convert.FromBase64String("Y6pdr5Oqj9c5kuJtBAy2kLo7sgEFOIz3IP2l9072BOE=")*/this.email, 0, this.email.Length));
+
+            Debug.Log(email);
+            Debug.Log(pass);
 
             //Create mail message.
             MailMessage mail = new MailMessage(email, email, subject, body);
@@ -95,8 +114,9 @@ public class ErrorManager : MonoBehaviour
             //Return true (access operation).
             return true;
         }
-        catch
+        catch (Exception e)
         {
+            Debug.Log(e.Message);
             //Return false (failed operation).
             return false;
         }
