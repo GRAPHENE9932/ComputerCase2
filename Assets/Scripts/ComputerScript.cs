@@ -281,7 +281,7 @@ public class ComputerScript : MonoBehaviour
                 }
                 //Set button events.
                 int index = i;
-                selectedType = ComponentType.GPU;
+                //selectedType = ComponentType.GPU;
                 GPUSlots[i].GetComponent<Button>().onClick.RemoveAllListeners();
                 GPUSlots[i].GetComponent<Button>().onClick.AddListener(delegate { GPUClicked(index); });
                 GPUSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.RemoveAllListeners();
@@ -323,7 +323,7 @@ public class ComputerScript : MonoBehaviour
                 }
                 //Set button event.
                 int index = i;
-                selectedType = ComponentType.RAM;
+                //selectedType = ComponentType.RAM;
                 RAMSlots[i].GetComponent<Button>().onClick.RemoveAllListeners();
                 RAMSlots[i].GetComponent<Button>().onClick.AddListener(delegate { RAMClicked(index); });
                 RAMSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.RemoveAllListeners();

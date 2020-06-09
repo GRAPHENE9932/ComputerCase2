@@ -13,7 +13,7 @@ public class InventoryInfoWindow : MonoBehaviour
     /// </summary>
     public IEnumerator WindowInAnimation()
     {
-        //Duration: 0.5 s.
+        //Duration: 0.25 s.
         float time = 0F;
         while (time < 0.25F)
         {
@@ -27,7 +27,7 @@ public class InventoryInfoWindow : MonoBehaviour
     /// </summary>
     public IEnumerator WindowOutAnimation()
     {
-        //Duration: 0.5 s.
+        //Duration: 0.25 s.
         float time = 0.25F;
         while (time > 0F)
         {

@@ -103,7 +103,8 @@ public class CaseScroller : MonoBehaviour
     {
         get
         {
-            return (caseRarity == CaseType.Major && moneySystem.Money.Value >= 50) ||
+            return caseRarity == CaseType.Common ||
+            (caseRarity == CaseType.Major && moneySystem.Money.Value >= 50) ||
             (caseRarity == CaseType.VeryGood && moneySystem.Money.Value >= 750) ||
             (caseRarity == CaseType.Top && moneySystem.Money.Value >= 1500);
         }

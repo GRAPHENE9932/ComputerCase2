@@ -104,9 +104,7 @@ public class Inventory : MonoBehaviour
         CalculateProperties(out int cellsInRow, out int cellsInColumn, out int cellsMax, out int cellsInPage);
         //Instantiate cells if they are not enough.
         while (cells.Count < cellsInPage)
-        {
             cells.Add(Instantiate(cellPrefab, cellsGroup).GetComponent<InventoryCell>());
-        }
         //Set active true to all needed cells in page. And false to unneeded.
         for (int i = 0; i < cells.Count; i++)
         {
