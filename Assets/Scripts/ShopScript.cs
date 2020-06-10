@@ -88,6 +88,8 @@ public class ShopScript : MonoBehaviour
                 currentList = motherboards.Select(x => (PCComponent)x).ToList();
                 break;
         }
+        //Clear search field.
+        searchField.text = null;
     }
 
     public void UpdateShop()
@@ -159,9 +161,9 @@ public class ShopScript : MonoBehaviour
     /// <param name="index">Index of cell.</param>
     private void CellClicked(int index)
     {
-        selectedComponent = currentList[index];
+        CalculateProperties(out int _, out int _, out int cellsMax, out int cellsInPage);
+        selectedComponent = currentList.Skip(cellsMax * page).Take(cellsInPage).ToArray()[index];
 
-        CalculateProperties(out int _, out int _, out int _, out int cellsInPage);
 
         //Properties text.
         infoText.text = currentList[cellsInPage * page + index].FullProperties;
