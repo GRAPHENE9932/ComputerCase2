@@ -98,7 +98,7 @@ public class Motherboard : PCComponent
     /// <returns>
     /// Clonned object.
     /// </returns>
-    public override PCComponent Clone()
+    public override object Clone()
     {
         PCComponent component = ScriptableObject.CreateInstance<Motherboard>();
         component.fullName = this.fullName;

@@ -40,7 +40,7 @@ public class GPU : PCComponent
     /// <returns>
     /// Clonned object.
     /// </returns>
-    public override PCComponent Clone()
+    public override object Clone()
     {
         PCComponent component = ScriptableObject.CreateInstance<GPU>();
         component.fullName = this.fullName;

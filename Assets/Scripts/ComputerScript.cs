@@ -877,25 +877,25 @@ public class ComputerScript : MonoBehaviour
         switch (type)
         {
             case ComponentType.CPU:
-                inventory.components.Add(mainCPU.Clone());
+                inventory.components.Add((PCComponent)mainCPU.Clone());
                 mainCPU = null;
                 CPUClicked();
                 Back();
                 break;
             case ComponentType.Motherboard:
-                inventory.components.Add(mainMotherboard.Clone());
+                inventory.components.Add((PCComponent)mainMotherboard.Clone());
                 mainMotherboard = null;
                 MotherboardClicked();
                 Back();
                 break;
             case ComponentType.GPU:
-                inventory.components.Add(GPUs[index].Clone());
+                inventory.components.Add((PCComponent)GPUs[index].Clone());
                 GPUs[index] = null;
                 GPUClicked(index);
                 Back();
                 break;
             case ComponentType.RAM:
-                inventory.components.Add(RAMs[index].Clone());
+                inventory.components.Add((PCComponent)RAMs[index].Clone());
                 RAMs[index] = null;
                 RAMClicked(index);
                 Back();

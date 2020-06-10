@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +9,7 @@ public enum Rarity
 }
 
 [CreateAssetMenu(menuName = "Components", fileName = "Default component")]
-public class PCComponent : ScriptableObject
+public class PCComponent : ScriptableObject, ICloneable
 {
     public string fullName;
     public string shortName;
@@ -42,7 +43,7 @@ public class PCComponent : ScriptableObject
     /// <returns>
     /// Clonned object.
     /// </returns>
-    public virtual PCComponent Clone()
+    public virtual object Clone()
     {
         PCComponent component = ScriptableObject.CreateInstance<PCComponent>();
         component.fullName = this.fullName;

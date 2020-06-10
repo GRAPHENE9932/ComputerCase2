@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -35,15 +36,24 @@ public class ShopScript : MonoBehaviour
     /// The object of info window.
     /// </summary>
     public GameObject infoObject;
+    public InputField searchField;
+    public MoneySystem moneySystem;
+    public Inventory inventory;
+    public MessageBoxManager messageBox;
 
 
-    private int page, selectedCell;
+    private int page;
     private ComponentType shopType;
     private readonly List<GameObject> cells = new List<GameObject>();
     private List<CPU> CPUs = new List<CPU>();
     private List<GPU> GPUs = new List<GPU>();
     private List<RAM> RAMs = new List<RAM>();
     private List<Motherboard> motherboards = new List<Motherboard>();
+    private List<PCComponent> currentList;
+    /// <summary>
+    /// The component cell clicked.
+    /// </summary>
+    private PCComponent selectedComponent;
 
     private void Awake()
     {
@@ -60,7 +70,24 @@ public class ShopScript : MonoBehaviour
 
     public void SetShopType(int type)
     {
+        //Set shop type.
         shopType = (ComponentType)type;
+        //Set currentList.
+        switch (shopType)
+        {
+            case ComponentType.CPU:
+                currentList = CPUs.Select(x => (PCComponent)x).ToList();
+                break;
+            case ComponentType.GPU:
+                currentList = GPUs.Select(x => (PCComponent)x).ToList();
+                break;
+            case ComponentType.RAM:
+                currentList = RAMs.Select(x => (PCComponent)x).ToList();
+                break;
+            case ComponentType.Motherboard:
+                currentList = motherboards.Select(x => (PCComponent)x).ToList();
+                break;
+        }
     }
 
     public void UpdateShop()
@@ -76,27 +103,11 @@ public class ShopScript : MonoBehaviour
             else
                 cells[i].SetActive(false);
         }
-        PCComponent[] listOfCurComponents = null;
-        switch (shopType)
-        {
-            case ComponentType.CPU:
-                listOfCurComponents = CPUs.ToArray();
-                break;
-            case ComponentType.GPU:
-                listOfCurComponents = GPUs.ToArray();
-                break;
-            case ComponentType.RAM:
-                listOfCurComponents = RAMs.ToArray();
-                break;
-            case ComponentType.Motherboard:
-                listOfCurComponents = motherboards.ToArray();
-                break;
-        }
         for (int i = 0; i < cellsInPage; i++)
         {
-            cells[i].transform.Find("Image").GetComponent<Image>().sprite = listOfCurComponents[cellsMax * page + i].image;
-            cells[i].transform.Find("RarityLine").GetComponent<Image>().color = caseScroller.rarityColors[(int)listOfCurComponents[cellsMax * page + i].rarity];
-            cells[i].transform.Find("PriceText").GetComponent<Text>().text = (listOfCurComponents[cellsMax * page + i].price).ToString() + "$";
+            cells[i].transform.Find("Image").GetComponent<Image>().sprite = currentList[cellsMax * page + i].image;
+            cells[i].transform.Find("RarityLine").GetComponent<Image>().color = caseScroller.rarityColors[(int)currentList[cellsMax * page + i].rarity];
+            cells[i].transform.Find("PriceText").GetComponent<Text>().text = (currentList[cellsMax * page + i].price).ToString() + "$";
             int eventIndex = i;
             cells[i].GetComponent<Button>().onClick.AddListener(delegate { CellClicked(eventIndex); });
         }
@@ -148,34 +159,42 @@ public class ShopScript : MonoBehaviour
     /// <param name="index">Index of cell.</param>
     private void CellClicked(int index)
     {
-        selectedCell = index;
+        selectedComponent = currentList[index];
 
         CalculateProperties(out int _, out int _, out int _, out int cellsInPage);
 
-        //Set list of current components.
-        PCComponent[] listOfCurComponents = null;
-        switch (shopType)
-        {
-            case ComponentType.CPU:
-                listOfCurComponents = CPUs.ToArray();
-                break;
-            case ComponentType.GPU:
-                listOfCurComponents = GPUs.ToArray();
-                break;
-            case ComponentType.RAM:
-                listOfCurComponents = RAMs.ToArray();
-                break;
-            case ComponentType.Motherboard:
-                listOfCurComponents = motherboards.ToArray();
-                break;
-        }
-
         //Properties text.
-        infoText.text = listOfCurComponents[cellsInPage * page + index].FullProperties;
+        infoText.text = currentList[cellsInPage * page + index].FullProperties;
         //Set text of buy button.
-        buyText.text = $"Buy (-{listOfCurComponents[cellsInPage * page + index].price}$)";
+        buyText.text = $"Buy (-{currentList[cellsInPage * page + index].price}$)";
 
         StartCoroutine(InfoAnimation(true));
+    }
+
+    /// <summary>
+    /// Event of back button in the info window.
+    /// </summary>
+    public void Back()
+    {
+        StartCoroutine(InfoAnimation(false));
+    }
+
+    /// <summary>
+    /// Event of buy button in the info window.
+    /// </summary>
+    public void Buy()
+    {
+        //If not enought money, start message about it and stop function.
+        if (selectedComponent.price > moneySystem.Money.Value)
+        {
+            messageBox.StartMessage("Not enought money!", 1);
+            return;
+        }
+
+        PCComponent compToBuy = selectedComponent;
+        compToBuy.time = DateTime.Now;
+        moneySystem.Money -= compToBuy.price;
+        inventory.components.Add(compToBuy);
     }
 
     /// <summary>
@@ -203,6 +222,38 @@ public class ShopScript : MonoBehaviour
             infoObject.SetActive(false);
     }
 
+    /// <summary>
+    /// Event of changed text in search input field.
+    /// </summary>
+    public void SearchChanged()
+    {
+        currentList.Clear();
+        PCComponent[] listOriginal = null;
+        switch (shopType)
+        {
+            case ComponentType.CPU:
+                listOriginal = CPUs.Select(x => (PCComponent)x).ToArray();
+                break;
+            case ComponentType.GPU:
+                listOriginal = GPUs.Select(x => (PCComponent)x).ToArray();
+                break;
+            case ComponentType.RAM:
+                listOriginal = RAMs.Select(x => (PCComponent)x).ToArray();
+                break;
+            case ComponentType.Motherboard:
+                listOriginal = motherboards.Select(x => (PCComponent)x).ToArray();
+                break;
+        }
+        //Filter the currentList with text in search field.
+        for (int i = 0; i < listOriginal.Length; i++)
+        {
+            if (listOriginal[i].fullName.ToLower().Contains(searchField.text.ToLower()))
+                currentList.Add(listOriginal[i]);
+        }
+        //Then, update shop.
+        UpdateShop();
+    }
+
     private void CalculateProperties(out int cellsInRow, out int cellsInColumn, out int cellsMax, out int cellsInPage)
     {
         //Cells in one row.
@@ -212,26 +263,8 @@ public class ShopScript : MonoBehaviour
         //Max cells in one page.
         cellsMax = cellsInRow * cellsInColumn;
 
-        //Count of components in the shop.
-        int count = 0;
-        switch (shopType)
-        {
-            case ComponentType.CPU:
-                count = CPUs.Count;
-                break;
-            case ComponentType.GPU:
-                count = GPUs.Count;
-                break;
-            case ComponentType.RAM:
-                count = RAMs.Count;
-                break;
-            case ComponentType.Motherboard:
-                count = motherboards.Count;
-                break;
-        }
-
         //Sells in page
-        cellsInPage = count - cellsMax * page;
+        cellsInPage = currentList.Count - cellsMax * page;
         if (cellsInPage > cellsMax)
             cellsInPage = cellsMax;
     }

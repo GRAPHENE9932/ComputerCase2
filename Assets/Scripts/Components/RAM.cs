@@ -40,7 +40,7 @@ public class RAM : PCComponent
     /// <returns>
     /// Clonned object.
     /// </returns>
-    public override PCComponent Clone()
+    public override object Clone()
     {
         PCComponent component = ScriptableObject.CreateInstance<RAM>();
         component.fullName = this.fullName;

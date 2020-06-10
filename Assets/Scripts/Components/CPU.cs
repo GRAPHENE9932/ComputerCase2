@@ -88,7 +88,7 @@ public class CPU : PCComponent
     /// <returns>
     /// Clonned object.
     /// </returns>
-    public override PCComponent Clone()
+    public override object Clone()
     {
         PCComponent component = ScriptableObject.CreateInstance<CPU>();
         component.fullName = this.fullName;
