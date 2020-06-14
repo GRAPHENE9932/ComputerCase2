@@ -168,6 +168,9 @@ public struct SecureLong
     }
 }
 
+/// <summary>
+/// Decimal type, secured from memory analysis.
+/// </summary>
 public struct SecureDecimal
 {
     private decimal value;
