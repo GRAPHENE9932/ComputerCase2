@@ -36,6 +36,8 @@ public class ExchangeScript : MonoBehaviour
     public Text toText;
     public Text fromFieldPlaceholder;
     public MoneySystem moneySystem;
+    public HorizontalLayoutGroup columnsGroup;
+    public GameObject columnPrefab;
 
     private decimal BTC = -1;
     /// <summary>
@@ -46,9 +48,21 @@ public class ExchangeScript : MonoBehaviour
     private bool exchangeBTCToUSD = true;
     private string previousFromField;
 
+    private Image[] graphColumns;
+    private decimal[] BTCHistory;
+
     private void Start()
     {
-        StartCoroutine(UpdateBTC());
+        //Calculate columns count by formula: count = (W+s/w+s), where W is width of culumns group, w is width of one column and s is spacing.
+        int columnCount = Mathf.FloorToInt((((RectTransform)columnsGroup.transform).rect.width + columnsGroup.spacing) / (100 + columnsGroup.spacing));
+        //Initialize columns collection.
+        graphColumns = new Image[columnCount];
+        BTCHistory = new decimal[columnCount];
+        //Instantiate columns.
+        for (int i = 0; i < columnCount; i++)
+            graphColumns[i] = Instantiate(columnPrefab, columnsGroup.transform).GetComponent<Image>();
+
+        StartCoroutine(AutoUpdate());
     }
     /// <summary>
     /// Event of clicked update button.
@@ -162,6 +176,21 @@ public class ExchangeScript : MonoBehaviour
         }
     }
 
+    private void UpdateGraph()
+    {
+        //Offset the BTCHistory.
+        for (int i = BTCHistory.Length - 1; i > 0; i--)
+            BTCHistory[i] = BTCHistory[i - 1];
+        BTCHistory[0] = BTC;
+
+        //Find max and min.
+        float maxInHistory = (float)MaxExcept(ref BTCHistory, 0);
+        float minInHistory = (float)MinExcept(ref BTCHistory, 0);
+
+        for (int i = 0; i < graphColumns.Length; i++)
+            graphColumns[i].fillAmount = ((float)BTCHistory[i] - minInHistory) / (maxInHistory - minInHistory) * 0.98F + 0.02F;
+    }
+
     /// <summary>
     /// Update currency icon text and price text.
     /// </summary>
@@ -186,6 +215,15 @@ public class ExchangeScript : MonoBehaviour
         }
     }
 
+    private IEnumerator AutoUpdate()
+    {
+        while (true)
+        {
+            StartCoroutine(UpdateBTC());
+            yield return new WaitForSeconds(15);
+        }
+    }
+
     /// <summary>
     /// Coroutine of updating progress. Rotates the update icon.
     /// </summary>
@@ -204,11 +242,12 @@ public class ExchangeScript : MonoBehaviour
             //Download price of 1E12 USD in bitcoins. This method gives max precision.
             client.DownloadStringAsync(new Uri("https://blockchain.info/tobtc?currency=USD&value=1000000000000"));
         }
-        catch
+        catch (Exception e)
         {
             updating = false;
             //If error, start red indicator on update button.
             StartCoroutine(ErrorUpdateAnim());
+            Debug.Log("Exc: " + e.Message);
         }
         while (updating)
         {
@@ -229,11 +268,14 @@ public class ExchangeScript : MonoBehaviour
             //Set bitcoin price in USD.
             BTC = 1E12m / decimal.Parse(e.Result);
             CurrencyTextUpdate();
+            if (BTC != BTCHistory[0])
+                UpdateGraph();
         }
-        catch
+        catch (Exception exc)
         {
             //If error, start red indicator on update button.
             StartCoroutine(ErrorUpdateAnim());
+            Debug.Log("Exc: " + exc.Message);
         }
         updating = false;
     }
@@ -265,5 +307,23 @@ public class ExchangeScript : MonoBehaviour
                 yield return null;
             }
         }
+    }
+
+    public static decimal MaxExcept(ref decimal[] array, decimal exception)
+    {
+        decimal max = decimal.MinValue;
+        for (int i = 0; i < array.Length; i++)
+            if (array[i] != exception && array[i] > max)
+                max = array[i];
+        return max;
+    }
+
+    public static decimal MinExcept(ref decimal[] array, decimal exception)
+    {
+        decimal min = decimal.MaxValue;
+        for (int i = 0; i < array.Length; i++)
+            if (array[i] != exception && array[i] < min)
+                min = array[i];
+        return min;
     }
 }

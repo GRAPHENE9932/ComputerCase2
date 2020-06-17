@@ -303,7 +303,7 @@ public class CaseScroller : MonoBehaviour
         if (!EnoughtMoney)
         {
             //Message player about not enought money.
-            messageBox.StartMessage("Not enought money.", 2);
+            messageBox.StartMessage(LangManager.GetString("not_enough_money"), 2);
         }
         else
         {
@@ -365,9 +365,9 @@ public class CaseScroller : MonoBehaviour
         dropProperties.text = currentComponent.ShortProperties;
         //Set sell text.
         if (currentComponent.price / 20 > 0)
-            sellText.text = "Sell (" + currentComponent.price / 20 + "$)";
+            sellText.text = $"{LangManager.GetString("sell")} ({currentComponent.price / 20}$)";
         else
-            sellText.text = "Remove";
+            sellText.text = LangManager.GetString("remove");
         //Add component to inventory.
         inventory.components.Add(currentComponent);
         //Invoke OnDrop function.

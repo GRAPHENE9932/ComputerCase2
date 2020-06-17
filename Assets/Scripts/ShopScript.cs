@@ -168,7 +168,7 @@ public class ShopScript : MonoBehaviour
         //Properties text.
         infoText.text = currentList[cellsInPage * page + index].FullProperties;
         //Set text of buy button.
-        buyText.text = $"Buy (-{currentList[cellsInPage * page + index].price}$)";
+        buyText.text = $"{LangManager.GetString("buy")} (-{currentList[cellsInPage * page + index].price}$)";
 
         StartCoroutine(InfoAnimation(true));
     }
@@ -189,7 +189,7 @@ public class ShopScript : MonoBehaviour
         //If not enought money, start message about it and stop function.
         if (selectedComponent.price > moneySystem.Money.Value)
         {
-            messageBox.StartMessage("Not enought money!", 1);
+            messageBox.StartMessage(LangManager.GetString("not_enough_money"), 1);
             return;
         }
 

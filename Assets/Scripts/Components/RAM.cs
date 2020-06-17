@@ -19,11 +19,11 @@ public class RAM : PCComponent
 
             if (type == 1)
             {
-                result += "Type: DDR;\n";
+                result += $"{LangManager.GetString("gen:")} DDR;\n";
             }
             else
             {
-                result += "Type: DDR" + type + ";\n";
+                result += $"{LangManager.GetString("gen:")} DDR{type};\n";
             }
 
             result += price + "$.";

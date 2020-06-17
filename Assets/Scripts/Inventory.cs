@@ -132,7 +132,7 @@ public class Inventory : MonoBehaviour
             totalPages++;
         if (totalPages == 0)
             totalPages++;
-        inventoryInfoText.text = "Page " + (page + 1) + "/" + totalPages + ", items: " + components.Count + ", total price: " + totalPrice + "$";
+        inventoryInfoText.text = $"{LangManager.GetString("page")} {page + 1}/{totalPages}, {LangManager.GetString("items:")} {components.Count}, {LangManager.GetString("total_price:")} {totalPrice}$";
     }
     /// <summary>
     /// Event of next page button.
@@ -166,12 +166,12 @@ public class Inventory : MonoBehaviour
 
         CalculateProperties(out int _, out int _, out int _, out int cellsInPage);
         //Properties text.
-        infoText.text = cells[index].component.FullProperties + "\nTime: " + components[cellsInPage * page + index].time.ToString("dd.MM.yyyy hh:mm:ss");
+        infoText.text = cells[index].component.FullProperties + $"\n{LangManager.GetString("time:")} " + components[cellsInPage * page + index].time.ToString("dd.MM.yyyy hh:mm:ss");
         
         if (components[cellsInPage * page + index].price / 20 > 0)
-            sellInfoText.text = "Sell (+" + components[cellsInPage * page + index].price / 20 + "$)";
+            sellInfoText.text = $"{LangManager.GetString("sell")} (+" + components[cellsInPage * page + index].price / 20 + "$)";
         else
-            sellInfoText.text = "Remove";
+            sellInfoText.text = LangManager.GetString("remove");
         //Opening window.
         StartCoroutine(infoWindow.WindowInAnimation());
         //Enable "Sell", "Remove" and "Equip" buttons.
@@ -220,10 +220,6 @@ public class Inventory : MonoBehaviour
         //Close window.
         StartCoroutine(infoWindow.WindowOutAnimation());
     }
-    public void Equip()
-    {
-        Debug.Log("Equip");
-    }
 
     public void SortingChange()
     {
@@ -235,16 +231,16 @@ public class Inventory : MonoBehaviour
         switch (sortType)
         {
             case Sort.Price:
-                sortText.text = "Sort by price";
+                sortText.text = $"{LangManager.GetString("sort_by")} {LangManager.GetString("by_price")}";
                 break;
             case Sort.Rarity:
-                sortText.text = "Sort by rarity";
+                sortText.text = $"{LangManager.GetString("sort_by")} {LangManager.GetString("rarity")}";
                 break;
             case Sort.Time:
-                sortText.text = "Sort by time";
+                sortText.text = $"{LangManager.GetString("sort_by")} {LangManager.GetString("time")}";
                 break;
             case Sort.Type:
-                sortText.text = "Sort by type";
+                sortText.text = $"{LangManager.GetString("sort_by")} {LangManager.GetString("type")}";
                 break;
         }
     }

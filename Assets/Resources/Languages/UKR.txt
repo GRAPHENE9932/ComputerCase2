@@ -1,0 +1,169 @@
+open<val>Відкрити
+<pair>
+open_50<val>Відкрити (50$)
+<pair>
+open_750<val>Відкрити (750$)
+<pair>
+open_1500<val>Відкрити (1500$)
+<pair>
+back<val>Назад
+<pair>
+one_more<val>Ще один
+<pair>
+components_to_equip<val>Для спорядження
+<pair>
+remove<val>Видалити
+<pair>
+system_config<val>Конфігурація системи
+<pair>
+recommendations<val>Рекомендації
+<pair>
+mining_menu<val>Меню майнінга
+<pair>
+cpu_model:<val>Модель процесора:
+<pair>
+cpu_freq:<val>Частота процесора:
+<pair>
+multiplier_unlocked:<val>Розблокований множник:
+<pair>
+integrated_graphics:<val>Інтегрована графіка:
+<pair>
+ram_freq:<val>Частота ОЗП:
+<pair>
+ram_gen:<val>Покоління ОЗП:
+<pair>
+ram_vol:<val>Об'єм ОЗУ:
+<pair>
+socket:<val>Сокет:
+<pair>
+chipset:<val>Чіпсет:
+<pair>
+earned:<val>Зароблено:
+<pair>
+capacity:<val>Ємкість:
+<pair>
+performance:<val>Продуктивність:
+<pair>
+memory_used:<val>Використано пам'яті:
+<pair>
+collect<val>Зібрати
+<pair>
+cpus<val>Процесори
+<pair>
+gpus<val>Відеокарти
+<pair>
+rams<val>Плашки ОЗП
+<pair>
+motherboards<val>Материнські плати
+<pair>
+exchange<val>Обмін валют
+<pair>
+exchange_now<val>Обміняти
+<pair>
+sound<val>Звук
+<pair>
+vibration<val>Вібрація
+<pair>
+apply<val>Застосувати
+<pair>
+cases<val>Кейси
+<pair>
+inventory<val>Інвертар
+<pair>
+computer<val>Комп'ютер
+<pair>
+shop<val>Магазин
+<pair>
+casino<val>Казино
+<pair>
+statistics<val>Статистика
+<pair>
+settings<val>Налаштувати
+<pair>
+exit<val>Вихід
+<pair>
+mining<val>Майнінг
+<pair>
+not_enough_money<val>Не вистачає грошей.
+<pair>
+sell<val>Продати
+<pair>
+frequency:<val>Частота:
+<pair>
+core_0<val>ядро
+<pair>
+core_1<val>ядра
+<pair>
+core_2<val>ядер
+<pair>
+unlocked:<val>Розблокований:
+<pair>
+instruction_set:<val>Набор інструкцій:
+<pair>
+price:<val>Ціна:
+<pair>
+memory:<val>Пам'ять:
+<pair>
+interface:<val>Інтерфейс:
+<pair>
+ram_count:<val>Кількість плашок ОЗП:
+<pair>
+gpu_interfaces:<val>Інтерфейси відеокарт:
+<pair>
+gen:<val>Покоління:
+<pair>
+no_cpu<val>Немає процесора!
+<pair>
+no_motherboard<val>Немає мат. плати!
+<pair>
+no_graphics<val>Немає графіки!
+<pair>
+no_ram<val>Немає оперативної пам'яті!
+<pair>
+no_equippable_cpu<val>Немає відповідного процесора!
+<pair>
+no_equippable_ram<val>Немає відповідних ОЗП!
+<pair>
+no_equippable_gpu<val>Немає відповідних відеокарт!
+<pair>
+time:<val>Час:
+<pair>
+dis_comp_first<val>Спочатку розберіть комп'ютер!
+<pair>
+unequip<val>Вийняти
+<pair>
+send_email<val>Виникла помилка! Надсилання повідомлення про це...
+<pair>
+send_email_success<val>Виникла помилка! Надсилання повідомлення про це...
+Успішно!
+<pair>
+send_email_failed<val>Виникла помилка! Надсилання повідомлення про це...
+Не вийшло!
+<pair>
+page<val>Сторінка
+<pair>
+items:<val>предметів:
+<pair>
+total_price:<val>ціна за все:
+<pair>
+sort_by<val>Сортувати за
+<pair>
+by_price<val>ціною
+<pair>
+rarity<val>рідкісністю
+<pair>
+time<val>часом
+<pair>
+type<val>типом
+<pair>
+buy<val>Купити
+<pair>
+sort_by_time<val>Сортувати за часом
+<pair>
+overclock_coming_soon<val>Розгін (Скоро...)
+<pair>
+coming_soon<val>Скоро...
+<pair>
+no_socket<val>Немає сокета!
+<pair>
+empty<val>Пусто

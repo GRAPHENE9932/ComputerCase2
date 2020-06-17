@@ -1,0 +1,169 @@
+open<val>Открыть
+<pair>
+open_50<val>Открыть (50$)
+<pair>
+open_750<val>Открыть (750$)
+<pair>
+open_1500<val>Открыть (1500$)
+<pair>
+back<val>Назад
+<pair>
+one_more<val>Ещё один
+<pair>
+components_to_equip<val>К снаряжению
+<pair>
+remove<val>Удалить
+<pair>
+system_config<val>Конфигурация системы
+<pair>
+recommendations<val>Рекомендации
+<pair>
+mining_menu<val>Меню майнинга
+<pair>
+cpu_model:<val>Модель процессора:
+<pair>
+cpu_freq:<val>Частота процессора:
+<pair>
+multiplier_unlocked:<val>Разблокированный множитель:
+<pair>
+integrated_graphics:<val>Интегрированная графика:
+<pair>
+ram_freq:<val>Частота ОЗУ:
+<pair>
+ram_gen:<val>Поколение ОЗУ:
+<pair>
+ram_vol:<val>Объём ОЗУ:
+<pair>
+socket:<val>Сокет:
+<pair>
+chipset:<val>Чипсет:
+<pair>
+earned:<val>Заработано:
+<pair>
+capacity:<val>Вместимость:
+<pair>
+performance:<val>Производительность:
+<pair>
+memory_used:<val>Использовано памяти:
+<pair>
+collect<val>Собрать
+<pair>
+cpus<val>Процессоры
+<pair>
+gpus<val>Видеокарты
+<pair>
+rams<val>Плашки ОЗУ
+<pair>
+motherboards<val>Материнские платы
+<pair>
+exchange<val>Обмен валют
+<pair>
+exchange_now<val>Обменять
+<pair>
+sound<val>Звук
+<pair>
+vibration<val>Вибрация
+<pair>
+apply<val>Применить
+<pair>
+cases<val>Кейсы
+<pair>
+inventory<val>Инвертарь
+<pair>
+computer<val>Компьютер
+<pair>
+shop<val>Магазин
+<pair>
+casino<val>Казино
+<pair>
+statistics<val>Статистика
+<pair>
+settings<val>Настройки
+<pair>
+exit<val>Выход
+<pair>
+mining<val>Майнинг
+<pair>
+not_enough_money<val>Не хватает денег.
+<pair>
+sell<val>Продать
+<pair>
+frequency:<val>Частота:
+<pair>
+core_0<val>ядро
+<pair>
+core_1<val>ядра
+<pair>
+core_2<val>ядер
+<pair>
+unlocked:<val>Разблокирован:
+<pair>
+instruction_set:<val>Набор инструкций:
+<pair>
+price:<val>Цена:
+<pair>
+memory:<val>Память:
+<pair>
+interface:<val>Интерфейс:
+<pair>
+ram_count:<val>Количество плашек ОЗУ:
+<pair>
+gpu_interfaces:<val>Интерфейсы видеокарт:
+<pair>
+gen:<val>Поколение:
+<pair>
+no_cpu<val>Нет процессора!
+<pair>
+no_motherboard<val>Нет мат. платы!
+<pair>
+no_graphics<val>Нет графики!
+<pair>
+no_ram<val>Нет оперативной памяти!
+<pair>
+no_equippable_cpu<val>Нет подходящего процессора!
+<pair>
+no_equippable_ram<val>Нет подходящих ОЗУ!
+<pair>
+no_equippable_gpu<val>Нет подходящих видеокарт!
+<pair>
+time:<val>Время:
+<pair>
+dis_comp_first<val>Сначала разберите компьютер!
+<pair>
+unequip<val>Вынуть
+<pair>
+send_email<val>Произошла ошибка! Отправка сообщения об этом...
+<pair>
+send_email_success<val>Произошла ошибка! Отправка сообщения об этом...
+Успешно!
+<pair>
+send_email_failed<val>Произошла ошибка! Отправка сообщения об этом...
+Не получилось!
+<pair>
+page<val>Страница
+<pair>
+items:<val>предметов:
+<pair>
+total_price:<val>цена за всё:
+<pair>
+sort_by<val>Сортировать за
+<pair>
+by_price<val>ценой
+<pair>
+rarity<val>редкостью
+<pair>
+time<val>временем
+<pair>
+type<val>типом
+<pair>
+buy<val>Купить
+<pair>
+sort_by_time<val>Сортировать за временем
+<pair>
+overclock_coming_soon<val>Разгон (Скоро...)
+<pair>
+coming_soon<val>Скоро...
+<pair>
+no_socket<val>Нет сокета!
+<pair>
+empty<val>Пусто

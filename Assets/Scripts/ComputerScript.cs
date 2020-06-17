@@ -140,33 +140,29 @@ public class ComputerScript : MonoBehaviour
         string errors = null;
         //Check of availability of CPU and messaging about it.
         if (mainCPU == null)
-            errors += "No CPU!\n";
+            errors += $"{LangManager.GetString("no_cpu")}\n";
         //Check of availability of motherboard and messaging about it.
         if (mainMotherboard == null)
-            errors += "No motherboard!\n";
+            errors += $"{LangManager.GetString("no_motherboard")}\n";
 
         //Does computer contains graphics?
         bool containsGPUs = false;
         for (int i = 0; i < GPUs.Count; i++)
-        {
             containsGPUs = containsGPUs || GPUs[i] != null;
-        }
         //If CPU contains graphics, containsGPUs = true.
         if (mainCPU != null)
             containsGPUs |= mainCPU.integratedGraphics;
         if (!containsGPUs)
             //Message about unavailability of graphics.
-            errors += "No graphics!\n";
+            errors += $"{LangManager.GetString("no_graphics")}\n";
 
         //Does computer contains RAM?
         bool containsRAMs = false;
         for (int i = 0; i < RAMs.Count; i++)
-        {
             containsRAMs = containsRAMs || RAMs[i] != null;
-        }
         if (!containsRAMs)
             //Message about unavailability of RAM.
-            errors += "No RAM!\n";
+            errors += $"{LangManager.GetString("no_ram")}\n";
 
         //If no errors, show default monitor.
         if (errors == null)
@@ -211,7 +207,7 @@ public class ComputerScript : MonoBehaviour
             if (mainMotherboard != null)
                 CPUSlot.transform.Find("Socket").GetComponentInChildren<Text>().text = mainMotherboard.socket;
             else
-                CPUSlot.transform.Find("Socket").GetComponentInChildren<Text>().text = "No socket!";
+                CPUSlot.transform.Find("Socket").GetComponentInChildren<Text>().text = LangManager.GetString("no_socket");
         }
         else
         {
@@ -220,13 +216,13 @@ public class ComputerScript : MonoBehaviour
             //Set white rarity line.
             CPUSlot.transform.Find("RarityLine").GetComponent<Image>().color = Color.white;
             //Set name of processor "No processor!".
-            CPUSlot.transform.Find("Name").GetComponentInChildren<Text>().text = "No processor!";
+            CPUSlot.transform.Find("Name").GetComponentInChildren<Text>().text = LangManager.GetString("no_cpu");
 
             //Set text of socket.
             if (mainMotherboard != null)
                 CPUSlot.transform.Find("Socket").GetComponentInChildren<Text>().text = mainMotherboard.socket;
             else
-                CPUSlot.transform.Find("Socket").GetComponentInChildren<Text>().text = "No socket!";
+                CPUSlot.transform.Find("Socket").GetComponentInChildren<Text>().text = LangManager.GetString("no_socket");
         }
 
         //Motherboard updating.
@@ -246,7 +242,7 @@ public class ComputerScript : MonoBehaviour
             //Set white rarity line.
             motherboardSlot.transform.Find("RarityLine").GetComponent<Image>().color = Color.white;
             //Set name of motherboard "No motherboard!".
-            motherboardSlot.transform.Find("Name").GetComponentInChildren<Text>().text = "No motherboard!";
+            motherboardSlot.transform.Find("Name").GetComponentInChildren<Text>().text = LangManager.GetString("no_motherboard");
         }
         
         //GPUs and RAMs updating.
@@ -277,7 +273,7 @@ public class ComputerScript : MonoBehaviour
                     //Set white rarity line.
                     GPUSlots[i].transform.Find("RarityLine").GetComponent<Image>().color = Color.white;
                     //Set name of videocard "No videocard!".
-                    GPUSlots[i].transform.Find("Name").GetComponentInChildren<Text>().text = "Empty";
+                    GPUSlots[i].transform.Find("Name").GetComponentInChildren<Text>().text = LangManager.GetString("empty");
                 }
                 //Set button events.
                 int index = i;
@@ -319,7 +315,7 @@ public class ComputerScript : MonoBehaviour
                     //Set white rarity line.
                     RAMSlots[i].transform.Find("RarityLine").GetComponent<Image>().color = Color.white;
                     //Set name of videocard "No videocard!".
-                    RAMSlots[i].transform.Find("Name").GetComponentInChildren<Text>().text = "Empty";
+                    RAMSlots[i].transform.Find("Name").GetComponentInChildren<Text>().text = LangManager.GetString("empty");
                 }
                 //Set button event.
                 int index = i;
@@ -392,20 +388,18 @@ public class ComputerScript : MonoBehaviour
             }
             else
             {
-                equipText.text = "No equippable CPU!";
+                equipText.text = LangManager.GetString("no_equippable_cpu");
             }
         }
         else
         {
             //Set message "No motherboard" and clear equip components.
-            equipText.text = "No motherboard!";
+            equipText.text = LangManager.GetString("no_motherboard");
             //Clear components to equip.
             equipComponents.Clear();
             //Destroying all equip slots.
             for (int i = 0; i < equipSlots.Count; i++)
-            {
                 Destroy(equipSlots[i]);
-            }
             equipSlots.Clear();
         }
     }
@@ -501,13 +495,13 @@ public class ComputerScript : MonoBehaviour
             }
             else
             {
-                equipText.text = "No equippable RAM!";
+                equipText.text = LangManager.GetString("no_equippable_ram");
             }
         }
         else
         {
             //Set message "No motherboard" and clear equip components.
-            equipText.text = "No motherboard!";
+            equipText.text = LangManager.GetString("no_motherboard");
             //Clear components to equip.
             equipComponents.Clear();
             //Destroying all equip slots.
@@ -555,13 +549,13 @@ public class ComputerScript : MonoBehaviour
             }
             else
             {
-                equipText.text = "No equippable GPUs!";
+                equipText.text = LangManager.GetString("no_equippable_gpu");
             }
         }
         else
         {
             //Set message "No motherboard" and clear equip components.
-            equipText.text = "No motherboard!";
+            equipText.text = LangManager.GetString("no_motherboard");
             //Clear components to equip.
             equipComponents.Clear();
             //Destroying all equip slots.
@@ -584,10 +578,10 @@ public class ComputerScript : MonoBehaviour
             if (component != null)
             {
                 //Write full properties with time in info text.
-                infoText.text = component.FullProperties + "\nTime: " + component.time.ToString("dd.MM.yyyy hh:mm:ss");
+                infoText.text = component.FullProperties + $"\n{LangManager.GetString("time:")} " + component.time.ToString("dd.MM.yyyy hh:mm:ss");
 
                 //Set text of sell button (real price / 20).
-                sellText.text = "Sell (+" + component.price / 20 + "$)";
+                sellText.text = $"{LangManager.GetString("sell")} (+{component.price / 20}$)";
                 //Set sell button interactable.
                 sellButton.interactable = true;
                 sellButtonAnimation.disabled = false;
@@ -606,27 +600,27 @@ public class ComputerScript : MonoBehaviour
                     {
                         if (ComputerHasComponents)
                         {
-                            unequipText.text = "Disassemble computer first!";
+                            unequipText.text = LangManager.GetString("dis_comp_first");
                             unequipButton.interactable = false;
                             unequipButtonAnimation.disabled = true;
                         }
                         else
                         {
-                            unequipText.text = "Unequip";
+                            unequipText.text = LangManager.GetString("unequip");
                             unequipButton.interactable = true;
                             unequipButtonAnimation.disabled = false;
                         }
                     }
                     else
                     {
-                        unequipText.text = "Unequip";
+                        unequipText.text = LangManager.GetString("unequip");
                         unequipButton.interactable = true;
                         unequipButtonAnimation.disabled = false;
                     }
                 }
 
                 //Enable remove button.
-                removeText.text = "Remove";
+                removeText.text = LangManager.GetString("remove");
                 removeButton.interactable = true;
                 removeButtonAnimation.disabled = false;
             }
@@ -636,16 +630,16 @@ public class ComputerScript : MonoBehaviour
                 switch (type)
                 {
                     case ComponentType.CPU:
-                        infoText.text = "No processor!\n" + (mainMotherboard == null ? null : ("Socket: " + mainMotherboard.socket));
+                        infoText.text = $"{LangManager.GetString("no_cpu")}\n" + (mainMotherboard == null ? null : ("Socket: " + mainMotherboard.socket));
                         break;
                     case ComponentType.Motherboard:
-                        infoText.text = "No motherboard!";
+                        infoText.text = LangManager.GetString("no_motherboard");
                         break;
                     case ComponentType.GPU:
-                        infoText.text = "No GPU!\n" + mainMotherboard == null ? null : $"Interface: PCIe {mainMotherboard.busVersions[index]}.0 x{mainMotherboard.busMultipliers[index]}.";
+                        infoText.text = $"{LangManager.GetString("no_gpu")}\n" + mainMotherboard == null ? null : $"Interface: PCIe {mainMotherboard.busVersions[index]}.0 x{mainMotherboard.busMultipliers[index]}.";
                         break;
                     case ComponentType.RAM:
-                        infoText.text = "No RAM!\n" + mainMotherboard == null ? null : "Type: DDR" + (mainMotherboard.RAMType == 1 ? null : mainMotherboard.RAMType.ToString()) + ".";
+                        infoText.text = $"{LangManager.GetString("no_ram")}\n" + mainMotherboard == null ? null : "Type: DDR" + (mainMotherboard.RAMType == 1 ? null : mainMotherboard.RAMType.ToString()) + ".";
                         break;
                 }
                 //Disable sell button.

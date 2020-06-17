@@ -18,31 +18,31 @@ public class CPU : PCComponent
             string result = null;
 
             result += fullName + ";\n";
-            result += "Socket " + socket + ";\n";
-            result += frequency + "MHz;\n";
+            result += $"{LangManager.GetString("socket:")} {socket};\n";
+            result += $"{LangManager.GetString("frequency:")} {frequency} MHz;\n";
            
             if (cores % 10 == 1 && cores % 100 != 11)
             {
                 //Ядро
-                result += cores + " core;\n";
+                result += cores + $" {LangManager.GetString("core_0")};\n";
             }
             else if ((cores % 10 >= 2 && cores % 10 <= 4) && (cores % 100 - cores % 10) / 10 != 1)
             {
                 //Ядра
-                result += cores + " cores;\n";
+                result += cores + $" {LangManager.GetString("core_1")};\n";
             }
             else
             {
                 //Ядер
-                result += cores + " cores;\n";
+                result += cores + $" {LangManager.GetString("core_2")};\n";
             }
 
-            result += "TDP: " + TDP + " W;\n";
-            result += "Performance: " + power + " GFlops;\n";
-            result += "Unlocked: " + (unlocked ? "yes" : "no") + ";\n";
-            result += "Instruction set: " + (_64bit ? "64 bit" : "32 bit") + ";\n";
-            result += "Integrated graphics: " + (integratedGraphics ? "yes" : "no") + ";\n";
-            result += "Price: " + price + "$.";
+            result += $"TDP: {TDP} W;\n";
+            result += $"{LangManager.GetString("performance:")} {power} GFlops;\n";
+            result += $"{LangManager.GetString("unlocked:")} {(unlocked ? "yes" : "no")};\n";
+            result += $"{LangManager.GetString("instruction_set:")} {(_64bit ? "64 bit" : "32 bit")};\n";
+            result += $"{LangManager.GetString("integrated_graphics:")} {(integratedGraphics ? "yes" : "no")};\n";
+            result += $"{LangManager.GetString("price:")} {price}$.";
 
             return result;
         }
@@ -55,28 +55,28 @@ public class CPU : PCComponent
             string result = null;
 
             result += fullName + ";\n";
-            result += "Socket " + socket + ";\n";
-            result += frequency + "MHz;\n";
+            result += $"{LangManager.GetString("socket:")} {socket};\n";
+            result += $"{LangManager.GetString("frequency:")} {frequency} MHz;\n";
 
             if (cores % 10 == 1 && cores % 100 != 11)
             {
                 //Ядро
-                result += cores + " core;\n";
+                result += cores + $" {LangManager.GetString("core_0")};\n";
             }
             else if ((cores % 10 >= 2 && cores % 10 <= 4) && (cores % 100 - cores % 10) / 10 != 1)
             {
                 //Ядра
-                result += cores + " cores;\n";
+                result += cores + $" {LangManager.GetString("core_1")};\n";
             }
             else
             {
                 //Ядер
-                result += cores + " cores;\n";
+                result += cores + $" {LangManager.GetString("core_2")};\n";
             }
 
-            result += "TDP: " + TDP + " W;\n";
-            result += "Performance: " + power + " GFlops;\n";
-            result += "Price: " + price + "$.";
+            result += $"TDP: {TDP} W;\n";
+            result += $"{LangManager.GetString("performance:")} {power} GFlops;\n";
+            result += $"{LangManager.GetString("price:")} {price}$.";
 
             return result;
         }

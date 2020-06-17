@@ -24,20 +24,16 @@ public class Motherboard : PCComponent
             string result = null;
 
             result += $"{fullName};\n";
-            result += $"Socket: {socket};\n";
+            result += $"{LangManager.GetString("socket:")} {socket};\n";
 
             if (RAMType == 1)
-            {
-                result += "RAM type: DDR;\n";
-            }
+                result += $"{LangManager.GetString("ram_gen:")} DDR;\n";
             else
-            {
-                result += $"RAM type: DDR{RAMType};\n";
-            }
+                result += $"{LangManager.GetString("ram_gen:")} DDR{RAMType};\n";
 
-            result += $"RAM count: {RAMCount};\n";
+            result += $"{LangManager.GetString("ram_count:")} {RAMCount};\n";
 
-            result += "GPU interfaces: \n";
+            result += $"{LangManager.GetString("gpu_interfaces")} \n";
             string interfaces = null;
             int countOfType = 1;
             for (int i = busVersions.Length - 2; i >= -1; i--)
@@ -56,8 +52,8 @@ public class Motherboard : PCComponent
 
             result += "SLI: " + (SLI ? "yes;\n" : "no;\n");
             result += "Crossfire: " + (crossfire ? "yes;\n" : "no;\n");
-            result += $"Chipset: {chipset.ToString().RemoveChar('_')};\n";
-            result += $"Price: {price}$.";
+            result += $"{LangManager.GetString("chipset:")} {chipset.ToString().RemoveChar('_')};\n";
+            result += $"{LangManager.GetString("price:")} {price}$.";
 
             return result;
         }
@@ -70,23 +66,19 @@ public class Motherboard : PCComponent
             string result = null;
 
             result += $"{fullName};\n";
-            result += $"Socket: {socket};\n";
+            result += $"{LangManager.GetString("socket:")} {socket};\n";
 
             if (RAMType == 1)
-            {
-                result += "RAM type: DDR;\n";
-            }
+                result += $"{LangManager.GetString("ram_gen:")} DDR;\n";
             else
-            {
-                result += $"RAM type: DDR{RAMType};\n";
-            }
+                result += $"{LangManager.GetString("ram_gen:")} DDR{RAMType};\n";
 
-            result += $"RAM count: {RAMCount};\n";
+            result += $"{LangManager.GetString("ram_count:")} {RAMCount};\n";
 
             result += "SLI: " + (SLI ? "yes;\n" : "no;\n");
             result += "Crossfire: " + (crossfire ? "yes;\n" : "no;\n");
-            result += $"Chipset: {chipset.ToString().RemoveChar('_')};\n";
-            result += $"Price: {price}$.";
+            result += $"{LangManager.GetString("chipset:")} {chipset.ToString().RemoveChar('_')};\n";
+            result += $"{LangManager.GetString("price:")} {price}$.";
 
             return result;
         }

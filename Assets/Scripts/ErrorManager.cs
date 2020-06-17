@@ -49,7 +49,7 @@ public class ErrorManager : MonoBehaviour
         if (type == LogType.Error || type == LogType.Exception)
         {
             //Start message to player.
-            messageBox.StartMessage("An error occured! Sending email about it...", 5);
+            messageBox.StartMessage(LangManager.GetString("send_email"), 5);
             //Preparing text for email.
             string body = "Device name: " + SystemInfo.deviceName + "\n" +
                 "Device model: " + SystemInfo.deviceModel + "\n" +
@@ -68,9 +68,9 @@ public class ErrorManager : MonoBehaviour
             bool result = await Task.Run(() => SendEmail("Error in ComputerCase", body));
             //Start message about success or fail.
             if (result)
-                messageBox.StartMessage("An error occured! Sending email about it...\nSuccess!", 5);
+                messageBox.StartMessage(LangManager.GetString("send_email_success"), 5);
             else
-                messageBox.StartMessage("An error occured! Sending email about it...\nFailed!", 5);
+                messageBox.StartMessage(LangManager.GetString("send_email_failed"), 5);
         }
     }
 

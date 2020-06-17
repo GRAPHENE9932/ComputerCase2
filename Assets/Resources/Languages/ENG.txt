@@ -1,0 +1,169 @@
+open<val>Open
+<pair>
+open_50<val>Open (50$)
+<pair>
+open_750<val>Open (750$)
+<pair>
+open_1500<val>Open (1500$)
+<pair>
+back<val>Back
+<pair>
+one_more<val>One more
+<pair>
+components_to_equip<val>To equip
+<pair>
+remove<val>Remove
+<pair>
+system_config<val>System configuration
+<pair>
+recommendations<val>Recommendations
+<pair>
+mining_menu<val>Mining menu
+<pair>
+cpu_model:<val>CPU model:
+<pair>
+cpu_freq:<val>CPU frequency:
+<pair>
+multiplier_unlocked:<val>Multiplier unlocked:
+<pair>
+integrated_graphics:<val>Integrated graphics:
+<pair>
+ram_freq:<val>RAM frequency:
+<pair>
+ram_gen:<val>RAM generation:
+<pair>
+ram_vol:<val>RAM volume:
+<pair>
+socket:<val>Socket:
+<pair>
+chipset:<val>Chipset:
+<pair>
+earned:<val>Earned:
+<pair>
+capacity:<val>Capacity:
+<pair>
+performance:<val>Performance:
+<pair>
+memory_used:<val>Memory used:
+<pair>
+collect<val>Collect
+<pair>
+cpus<val>CPUs
+<pair>
+gpus<val>GPUs
+<pair>
+rams<val>RAMs
+<pair>
+motherboards<val>Motherboards
+<pair>
+exchange<val>Exchange
+<pair>
+exchange_now<val>Exchange
+<pair>
+sound<val>Sound
+<pair>
+vibration<val>Vibration
+<pair>
+apply<val>Apply
+<pair>
+cases<val>Cases
+<pair>
+inventory<val>Inventory
+<pair>
+computer<val>Computer
+<pair>
+shop<val>Shop
+<pair>
+casino<val>Casino
+<pair>
+statistics<val>Statistics
+<pair>
+settings<val>Settings
+<pair>
+exit<val>Exit
+<pair>
+mining<val>Mining
+<pair>
+not_enough_money<val>Not enough money.
+<pair>
+sell<val>Sell
+<pair>
+frequency:<val>Frequency:
+<pair>
+core_0<val>core
+<pair>
+core_1<val>cores
+<pair>
+core_2<val>cores
+<pair>
+unlocked:<val>Unlocked:
+<pair>
+instruction_set:<val>Instruction set:
+<pair>
+price:<val>Price:
+<pair>
+memory:<val>Memory:
+<pair>
+interface:<val>Interface:
+<pair>
+ram_count:<val>RAM count:
+<pair>
+gpu_interfaces:<val>GPU interfaces:
+<pair>
+gen:<val>Generation:
+<pair>
+no_cpu<val>No CPU!
+<pair>
+no_motherboard<val>No motherboard!
+<pair>
+no_graphics<val>No graphics!
+<pair>
+no_ram<val>No RAM!
+<pair>
+no_equippable_cpu<val>No equippable CPU!
+<pair>
+no_equippable_ram<val>No equippable RAM!
+<pair>
+no_equippable_gpu<val>No equippable GPU!
+<pair>
+time:<val>Time:
+<pair>
+dis_comp_first<val>Disassemble computer first!
+<pair>
+unequip<val>Unequip
+<pair>
+send_email<val>An error occured! Sending email about it...
+<pair>
+send_email_success<val>An error occured! Sending email about it...
+Success!
+<pair>
+send_email_failed<val>An error occured! Sending email about it...
+Failed!
+<pair>
+page<val>Page
+<pair>
+items:<val>items:
+<pair>
+total_price:<val>total price:
+<pair>
+sort_by<val>Sort by
+<pair>
+by_price<val>price
+<pair>
+rarity<val>rarity
+<pair>
+time<val>time
+<pair>
+type<val>type
+<pair>
+buy<val>Buy
+<pair>
+sort_by_time<val>Sort by time
+<pair>
+overclock_coming_soon<val>Overclock (Coming soon...)
+<pair>
+coming_soon<val>Coming soon...
+<pair>
+no_socket<val>No socket!
+<pair>
+empty<val>Empty

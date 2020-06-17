@@ -22,19 +22,17 @@ public class DropScript : MonoBehaviour
     /// </summary>
     public MoneySystem money;
 
-    public Button sellButton, equipButton;
-    public ButtonAnimation sellAnim, equipAnim;
+    public Button sellButton;
+    public ButtonAnimation sellAnim;
 
     /// <summary>
     /// This function invoked at drop of component in case scroller script.
     /// </summary>
     public void OnDrop()
     {
-        //Enable sell and equip button.
+        //Enable sell button.
         sellButton.interactable = true;
-        equipButton.interactable = true;
         sellAnim.disabled = false;
-        equipAnim.disabled = false;
     }
     /// <summary>
     /// "One more" button clicked.
@@ -62,11 +60,9 @@ public class DropScript : MonoBehaviour
     {
         //Add money.
         money.Money += inventory.components[inventory.components.Count - 1].price / 20;
-        //Disable sell and equip button.
+        //Disable sell button.
         sellButton.interactable = false;
-        equipButton.interactable = false;
         sellAnim.disabled = true;
-        equipAnim.disabled = true;
         //Remove dropped component.
         inventory.components.Remove(caseScroller.currentComponent);
     }
