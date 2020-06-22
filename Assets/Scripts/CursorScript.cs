@@ -14,6 +14,7 @@ public class CursorScript : MonoBehaviour
     /// <param name="collision">Collided collider.</param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        StatisticsScript.itemsScrolled++;
         currentComponent = collision.gameObject.GetComponent<Cell>().component;
     }
 }

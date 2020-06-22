@@ -99,7 +99,7 @@ public class CaseScroller : MonoBehaviour
     /// <summary>
     /// Is player has enought money for case open.
     /// </summary>
-    public bool EnoughtMoney
+    public bool EnoughMoney
     {
         get
         {
@@ -300,13 +300,33 @@ public class CaseScroller : MonoBehaviour
     public void StartCase()
     {
         //Check, player has enought money for this case type.
-        if (!EnoughtMoney)
+        if (!EnoughMoney)
         {
             //Message player about not enought money.
             messageBox.StartMessage(LangManager.GetString("not_enough_money"), 2);
         }
         else
         {
+            //Stats.
+            switch (caseType)
+            {
+                case ComponentType.CPU:
+                    StatisticsScript.CPUsDroppedByCases[(int)caseRarity]++;
+                    break;
+                case ComponentType.GPU:
+                    StatisticsScript.GPUsDroppedByCases[(int)caseRarity]++;
+                    break;
+                case ComponentType.RAM:
+                    StatisticsScript.RAMsDroppedByCases[(int)caseRarity]++;
+                    break;
+                case ComponentType.Motherboard:
+                    StatisticsScript.motherboardsDroppedByCases[(int)caseRarity]++;
+                    break;
+                case ComponentType.All:
+                    StatisticsScript.generalDroppedByCases[(int)caseRarity]++;
+                    break;
+            }
+
             //Decrease number of money.
             if (caseRarity == CaseType.Major)
                 moneySystem.Money -= 50;
@@ -357,8 +377,21 @@ public class CaseScroller : MonoBehaviour
     {
         //Get dropped component.
         currentComponent = cursor.currentComponent;
-        //Set time of getting of component.
-        currentComponent.time = System.DateTime.Now;
+
+        //Stats.
+        StatisticsScript.casesOpened++;
+        if (currentComponent is CPU)
+            StatisticsScript.CPUsDropped++;
+        else if (currentComponent is GPU)
+            StatisticsScript.GPUsDropped++;
+        else if (currentComponent is RAM)
+            StatisticsScript.RAMsDropped++;
+        else if (currentComponent is Motherboard)
+            StatisticsScript.motherboardsDropped++;
+        StatisticsScript.droppedByRarities[(int)currentComponent.rarity]++;
+
+            //Set time of getting of component.
+            currentComponent.time = System.DateTime.Now;
         //Set sprite of drop image.
         dropImage.sprite = currentComponent.image;
         //Set text of drop.

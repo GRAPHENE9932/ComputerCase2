@@ -39,7 +39,7 @@ public class DropScript : MonoBehaviour
     /// </summary>
     public void OneMore()
     {
-        if (caseScroller.EnoughtMoney)
+        if (caseScroller.EnoughMoney)
             //Play animation of close if enought money.
             caseScroller.dropAnim.Play("CloseDroppedComponent");
         //Start case.
@@ -58,6 +58,9 @@ public class DropScript : MonoBehaviour
     /// </summary>
     public void Sell()
     {
+        //Stats.
+        StatisticsScript.componentsSold++;
+        StatisticsScript.moneyEarnedBySale += (uint)(inventory.components[inventory.components.Count - 1].price / 20);
         //Add money.
         money.Money += inventory.components[inventory.components.Count - 1].price / 20;
         //Disable sell button.

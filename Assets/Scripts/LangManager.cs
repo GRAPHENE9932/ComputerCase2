@@ -42,7 +42,6 @@ public class LangManager : MonoBehaviour
         for (int i = 0; i < valPairs.Length; i++)
         {
             string[] pair = Regex.Split(valPairs[i], "<val>");
-            Debug.Log(pair[0] + "=" + pair[1]);
             currentDictionary.Add(pair[0], pair[1]);
         }
         UpdateLabels();

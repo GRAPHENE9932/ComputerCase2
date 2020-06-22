@@ -167,3 +167,41 @@ coming_soon<val>Скоро...
 no_socket<val>Немає сокета!
 <pair>
 empty<val>Пусто
+<pair>
+cases_opened:<val>Відкрито кейсів:
+<pair>
+items_scrolled:<val>Прокручено предметів:
+<pair>
+cpus_dropped:<val>Випало процесорів:
+<pair>
+gpus_dropped:<val>Випало відеокарт:
+<pair>
+rams_dropped:<val>Випало ОЗП:
+<pair>
+motherboards_dropped:<val>Випало материнських плат:
+<pair>
+components_sold:<val>Продано компонентів:
+<pair>
+money_earned_by_sale:<val>Зароблено на продажі:
+<pair>
+money_won_in_casino:<val>Грошей виграно в казино:
+<pair>
+money_lost_in_casino:<val>Грошей програно в казино:
+<pair>
+game_launches:<val>Запусків гри:
+<pair>
+gameplay_time:<val>Час геймплею:
+<pair>
+items_rarity<val>Рідкісність предметів
+<pair>
+cases_statistics<val>Статистика кейсів
+<pair>
+cpu_cases:<val>Кейсів з процесором:
+<pair>
+gpu_cases:<val>Кейсів з відеокартою:
+<pair>
+ram_cases:<val>Кейсів з ОЗУ:
+<pair>
+motherboard_cases:<val>Кейсів з мат. платами:
+<pair>
+general_cases:<val>Кейсів зі всім:

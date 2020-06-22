@@ -145,6 +145,7 @@ public class ShopScript : MonoBehaviour
             UpdateShop();
         }
     }
+    
     /// <summary>
     /// Event of previous button.
     /// </summary>

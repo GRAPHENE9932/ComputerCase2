@@ -186,6 +186,10 @@ public class Inventory : MonoBehaviour
 
     public void Sell()
     {
+        //Stats.
+        StatisticsScript.componentsSold++;
+        StatisticsScript.moneyEarnedBySale += (uint)(cells[selectedCell].component.price / 20);
+
         //Add money.
         moneySystem.Money += cells[selectedCell].component.price / 20;
         //Remove component.
