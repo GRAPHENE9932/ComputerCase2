@@ -86,10 +86,11 @@ public class CaseScroller : MonoBehaviour
     /// Text of sell button of drop.
     /// </summary>
     public Text sellText;
-    /// <summary>
-    /// Drop script.
-    /// </summary>
     public DropScript drop;
+    public Toggle soundToggle, vibrationToggle;
+
+    private AndroidJavaObject vibrator;
+
 
     /// <summary>
     /// Is turned on debug fast mode?
@@ -194,6 +195,7 @@ public class CaseScroller : MonoBehaviour
             motherboards[(int)tmp[i].rarity].Add(tmp[i]);
         }
     }
+
     /// <summary>
     /// Spawn cell.
     /// </summary>
@@ -350,7 +352,44 @@ public class CaseScroller : MonoBehaviour
             //Start coroutine of case scrolling.
             StartCoroutine(CaseScroll());
         }
+        //vibroClass.Call("vibrate", new object[] { (long)1000 });
+        Vibrate(5000);
+        Debug.Log("GG");
     }
+
+    private void Vibrate(long milliseconds)
+    {
+        if (vibrator == null)
+        {
+            AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+            AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+            AndroidJavaObject context = activity.Call<AndroidJavaObject>("getApplicationContext");
+            vibrator = context.Call<AndroidJavaObject>("getSystemService", new object[] { "vibrator" });
+        }
+        if (ApiLevel >= 26)
+        {
+            AndroidJavaObject effect = new AndroidJavaClass("android.os.VibrationEffect").CallStatic<AndroidJavaObject>("createOneShot", new object[] { milliseconds, -1 });
+            vibrator.Call("vibrate", new object[] { effect });
+        }
+        else
+        {
+            vibrator.Call("vibrate", new object[] { milliseconds });
+        }
+        vibrator.Call("vibrate", new object[] { milliseconds });
+    }
+
+    /// <summary>
+    /// Get current Android API level.
+    /// </summary>
+    private int ApiLevel
+    {
+        get
+        {
+            using (var version = new AndroidJavaClass("android.os.Build$VERSION"))
+                return version.GetStatic<int>("SDK_INT");
+        }
+    }
+
     /// <summary>
     /// Coroutine of case scrolling.
     /// </summary>
