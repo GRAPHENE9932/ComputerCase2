@@ -89,8 +89,17 @@ public class CaseScroller : MonoBehaviour
     public DropScript drop;
     public Toggle soundToggle, vibrationToggle;
 
-    private AndroidJavaObject vibrator;
+    /// <summary>
+    /// Vibration intervals for drop.
+    /// </summary>
+    public long[] badVibration, middleVibration, goodVibration, veryGoodVibration, topVibration;
+    /// <summary>
+    /// Audio clip for drop.
+    /// </summary>
+    public AudioClip badClip, middleClip, goodClip, veryGoodClip, topClip;
+    public AudioClip[] caseOpenClips;
 
+    public AudioSource mainSource;
 
     /// <summary>
     /// Is turned on debug fast mode?
@@ -351,42 +360,8 @@ public class CaseScroller : MonoBehaviour
             navigation.MenuItemClicked(8);
             //Start coroutine of case scrolling.
             StartCoroutine(CaseScroll());
-        }
-        //vibroClass.Call("vibrate", new object[] { (long)1000 });
-        Vibrate(5000);
-        Debug.Log("GG");
-    }
-
-    private void Vibrate(long milliseconds)
-    {
-        if (vibrator == null)
-        {
-            AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-            AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-            AndroidJavaObject context = activity.Call<AndroidJavaObject>("getApplicationContext");
-            vibrator = context.Call<AndroidJavaObject>("getSystemService", new object[] { "vibrator" });
-        }
-        if (ApiLevel >= 26)
-        {
-            AndroidJavaObject effect = new AndroidJavaClass("android.os.VibrationEffect").CallStatic<AndroidJavaObject>("createOneShot", new object[] { milliseconds, -1 });
-            vibrator.Call("vibrate", new object[] { effect });
-        }
-        else
-        {
-            vibrator.Call("vibrate", new object[] { milliseconds });
-        }
-        vibrator.Call("vibrate", new object[] { milliseconds });
-    }
-
-    /// <summary>
-    /// Get current Android API level.
-    /// </summary>
-    private int ApiLevel
-    {
-        get
-        {
-            using (var version = new AndroidJavaClass("android.os.Build$VERSION"))
-                return version.GetStatic<int>("SDK_INT");
+            //Random sound.
+            mainSource.PlayOneShot(caseOpenClips[Random.Range(0, caseOpenClips.Length)]);
         }
     }
 
@@ -429,8 +404,8 @@ public class CaseScroller : MonoBehaviour
             StatisticsScript.motherboardsDropped++;
         StatisticsScript.droppedByRarities[(int)currentComponent.rarity]++;
 
-            //Set time of getting of component.
-            currentComponent.time = System.DateTime.Now;
+        //Set time of getting of component.
+        currentComponent.time = System.DateTime.Now;
         //Set sprite of drop image.
         dropImage.sprite = currentComponent.image;
         //Set text of drop.
@@ -448,5 +423,30 @@ public class CaseScroller : MonoBehaviour
         dropAnim.gameObject.SetActive(true);
         //Play animation.
         dropAnim.Play("OpenDroppedComponent");
+
+        //Sound and vibration.
+        switch (currentComponent.rarity)
+        {
+            case Rarity.Bad:
+                mainSource.PlayOneShot(badClip);
+                Vibrator.Vibrate(badVibration);
+                break;
+            case Rarity.Middle:
+                mainSource.PlayOneShot(middleClip);
+                Vibrator.Vibrate(middleVibration);
+                break;
+            case Rarity.Good:
+                mainSource.PlayOneShot(goodClip);
+                Vibrator.Vibrate(goodVibration);
+                break;
+            case Rarity.VeryGood:
+                mainSource.PlayOneShot(veryGoodClip);
+                Vibrator.Vibrate(veryGoodVibration);
+                break;
+            case Rarity.Top:
+                mainSource.PlayOneShot(topClip);
+                Vibrator.Vibrate(topVibration);
+                break;
+        }
     }
 }

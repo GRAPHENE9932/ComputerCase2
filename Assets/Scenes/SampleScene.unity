@@ -4928,6 +4928,11 @@ MonoBehaviour:
   money: {fileID: 1571335822}
   sellButton: {fileID: 1423218631}
   sellAnim: {fileID: 1423218629}
+  mainSource: {fileID: 519420030}
+  sellClips:
+  - {fileID: 8300000, guid: 9dc5176bad2440642a4824297b7cc29c, type: 3}
+  - {fileID: 8300000, guid: 10a50c0a72526f54cb519f7b28176f69, type: 3}
+  - {fileID: 8300000, guid: 4fc9ca83e1fa94d47b40f79327eeb5d9, type: 3}
 --- !u!1 &192263050
 GameObject:
   m_ObjectHideFlags: 0
@@ -7088,6 +7093,23 @@ MonoBehaviour:
   dropProperties: {fileID: 1407086140}
   sellText: {fileID: 1699054599}
   drop: {fileID: 185968938}
+  soundToggle: {fileID: 0}
+  vibrationToggle: {fileID: 0}
+  badVibration: 060000000000000032000000000000005a000000000000003601000000000000
+  middleVibration: 060000000000000032000000000000005a000000000000009001000000000000
+  goodVibration: 64000000000000000a000000000000000a000000000000004e02000000000000
+  veryGoodVibration: 64000000000000000a000000000000000a000000000000004e02000000000000
+  topVibration: 28000000000000003200000000000000a00000000000000046000000000000002c01000000000000e001000000000000
+  badClip: {fileID: 8300000, guid: 7b46b152dbbd9be4bac4f6e2d01447ca, type: 3}
+  middleClip: {fileID: 8300000, guid: 9886aba9701ca2142a3078558e51c601, type: 3}
+  goodClip: {fileID: 8300000, guid: 3baec46bacf1dce4abdeaf05685c3550, type: 3}
+  veryGoodClip: {fileID: 8300000, guid: 92e22bdfa0728954680532898aa88b63, type: 3}
+  topClip: {fileID: 8300000, guid: fab4f93baf17bb14ea4339403b4378c2, type: 3}
+  caseOpenClips:
+  - {fileID: 8300000, guid: 6c1ce350d05ca6b4a8a4321688c32f0e, type: 3}
+  - {fileID: 8300000, guid: 24aaf00cd50ec8a42b67e5865baec09b, type: 3}
+  - {fileID: 8300000, guid: ff6c24d5c1f3ba243a49d1cea5af8371, type: 3}
+  mainSource: {fileID: 519420030}
   fastMode: 0
   rarityColors:
   - {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
@@ -12281,6 +12303,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -12296,6 +12319,102 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!82 &519420030
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -38022,6 +38141,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentComponent: {fileID: 0}
+  mainSource: {fileID: 519420030}
+  scrollClips:
+  - {fileID: 8300000, guid: 06f0ec6b0ce196e45b2d62b94b77b3f1, type: 3}
+  - {fileID: 8300000, guid: bf7a598464ea9da4b83c930781856dcf, type: 3}
+  - {fileID: 8300000, guid: 604348c73b7f4a64ebe976af72ab97fe, type: 3}
 --- !u!1 &1478336727
 GameObject:
   m_ObjectHideFlags: 0
@@ -51275,24 +51399,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 722d6a239ec14f24ebedb04c4ed1a780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  casesOpened: 0
-  itemsScrolled: 0
-  CPUsDropped: 0
-  GPUsDropped: 0
-  RAMsDropped: 0
-  motherboardsDropped: 0
-  componentsSold: 0
-  moneyEarnedBySale: 0
-  moneyWonInCasino: 0
-  moneyLostInCasino: 0
-  gameLaunches: 0
-  gameplayTime: 0
-  droppedByRarities: 
-  CPUsDroppedByCases: 
-  GPUsDroppedByCases: 
-  RAMsDroppedByCases: 
-  motherboardsDroppedByCases: 
-  generalDroppedByCases: 
   casesOpenedText: {fileID: 824060556}
   itemsScrolledText: {fileID: 640712171}
   CPUsDroppedText: {fileID: 1191579183}

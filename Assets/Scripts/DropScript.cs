@@ -25,6 +25,9 @@ public class DropScript : MonoBehaviour
     public Button sellButton;
     public ButtonAnimation sellAnim;
 
+    public AudioSource mainSource;
+    public AudioClip[] sellClips;
+
     /// <summary>
     /// This function invoked at drop of component in case scroller script.
     /// </summary>
@@ -68,5 +71,8 @@ public class DropScript : MonoBehaviour
         sellAnim.disabled = true;
         //Remove dropped component.
         inventory.components.Remove(caseScroller.currentComponent);
+        //Play random sound.
+        if (inventory.components[inventory.components.Count - 1].price / 20 > 0)
+            mainSource.PlayOneShot(sellClips[Random.Range(0, sellClips.Length)]);
     }
 }
