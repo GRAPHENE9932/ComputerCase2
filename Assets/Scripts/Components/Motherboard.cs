@@ -33,7 +33,7 @@ public class Motherboard : PCComponent
 
             result += $"{LangManager.GetString("ram_count:")} {RAMCount};\n";
 
-            result += $"{LangManager.GetString("gpu_interfaces")} \n";
+            result += $"{LangManager.GetString("gpu_interfaces:")}\n";
             string interfaces = null;
             int countOfType = 1;
             for (int i = busVersions.Length - 2; i >= -1; i--)

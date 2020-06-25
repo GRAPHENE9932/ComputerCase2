@@ -246,7 +246,7 @@ public class ExchangeScript : MonoBehaviour
             updating = false;
             //If error, start red indicator on update button.
             StartCoroutine(ErrorUpdateAnim());
-            Debug.Log("Exc: " + e.Message);
+            Debug.LogError("Exc: " + e.Message + " (Corut)");
         }
         while (updating)
         {
@@ -265,7 +265,7 @@ public class ExchangeScript : MonoBehaviour
         try
         {
             //Set bitcoin price in USD.
-            BTC = 1E12m / decimal.Parse(e.Result);
+            BTC = 1E12m / decimal.Parse(e.Result.RemoveChar(',').Replace('.', ','));
             CurrencyTextUpdate();
             if (BTC != BTCHistory[0])
                 UpdateGraph();
@@ -274,7 +274,7 @@ public class ExchangeScript : MonoBehaviour
         {
             //If error, start red indicator on update button.
             StartCoroutine(ErrorUpdateAnim());
-            Debug.Log("Exc: " + exc.Message);
+            Debug.LogError("Exc: " + exc.Message + " (Completed)");
         }
         updating = false;
     }

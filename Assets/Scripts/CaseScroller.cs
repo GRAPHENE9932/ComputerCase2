@@ -347,10 +347,8 @@ public class CaseScroller : MonoBehaviour
                 moneySystem.Money -= 1500;
             //Spawn 50 cells
             for (int i = 0; i < 50; i++)
-            {
                 SpawnCell(caseType, i);
-            }
-            float screenSpeedMultiplier = ((float)Screen.width / Screen.height) / (16F / 9F);
+            float screenSpeedMultiplier = (16F / 9F) / ((float)Screen.width / Screen.height);
             if (fastMode)
                 //0 speed.
                 speed = 10F;
