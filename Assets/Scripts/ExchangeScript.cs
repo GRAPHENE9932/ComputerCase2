@@ -246,7 +246,7 @@ public class ExchangeScript : MonoBehaviour
             updating = false;
             //If error, start red indicator on update button.
             StartCoroutine(ErrorUpdateAnim());
-            Debug.LogError("Exc: " + e.Message + " (Corut)");
+            Debug.Log("Exc: " + e.Message);
         }
         while (updating)
         {
@@ -274,7 +274,7 @@ public class ExchangeScript : MonoBehaviour
         {
             //If error, start red indicator on update button.
             StartCoroutine(ErrorUpdateAnim());
-            Debug.LogError("Exc: " + exc.Message + " (Completed)");
+            Debug.Log("Exc: " + exc.Message);
         }
         updating = false;
     }

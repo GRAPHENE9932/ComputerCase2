@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using System.Linq;
+using System;
 
 public enum MenuState
 {
-    CasesMenu, Inventory, Computer, ShopMenu, Casino, Statistics, Settings, CasesMenu2, Case, Shop, ComponentsShop, Exchange, CasesStatistics
+    CasesMenu, Inventory, Computer, ShopMenu, Casino, Statistics, Settings, CasesMenu2, Case, Monitor, ComponentsShop, Exchange, CasesStatistics
 }
 
 public class NavigationScript : MonoBehaviour
@@ -48,6 +50,14 @@ public class NavigationScript : MonoBehaviour
     /// While blocked cannot switch page.
     /// </summary>
     public bool blocked;
+
+    public AudioSource mainSource;
+    public AudioClip audioClip;
+    /// <summary>
+    /// Винятки, при яких звук не буде відтворюватись.
+    /// </summary>
+    public MenuState[] soundExceptions;
+
     /// <summary>
     ///     Подія натиснення на кнопку меню. Запускає корутину анімації, якщо зараз не програється анімація відкриття або закриття.
     /// </summary>
@@ -130,6 +140,9 @@ public class NavigationScript : MonoBehaviour
         //Якщо відділ, на який треба перейти, не увімкнений зараз...
         if (state != currentState)
         {
+            //Play sound if it is not in exceptions.
+            if (!IsInExceptions(state, currentState))
+                mainSource.PlayOneShot(audioClip);
             //Зараз програється анімація.
             switchAnimating = true;
             //Шлях анімації виходу старого відділу.
@@ -180,5 +193,16 @@ public class NavigationScript : MonoBehaviour
             //Анімація закінчилась.
             switchAnimating = false;
         }
+    }
+
+    private bool IsInExceptions(MenuState s1, MenuState s2)
+    {
+        for (int i = 0; i < soundExceptions.Length / 2; i++)
+        {
+            if (soundExceptions[i * 2] == s1 && soundExceptions[i * 2 + 1] == s2 ||
+                soundExceptions[i * 2] == s2 && soundExceptions[i * 2 + 1] == s1)
+                return true;
+        }
+        return false;
     }
 }

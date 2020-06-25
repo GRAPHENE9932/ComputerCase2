@@ -50,8 +50,8 @@ public class Motherboard : PCComponent
             }
             result += interfaces;
 
-            result += "SLI: " + (SLI ? "yes;\n" : "no;\n");
-            result += "Crossfire: " + (crossfire ? "yes;\n" : "no;\n");
+            result += "SLI: " + LangManager.GetString(SLI ? "yes" : "no") + ";\n";
+            result += "Crossfire: " + LangManager.GetString(crossfire ? "yes" : "no") + ";\n";
             result += $"{LangManager.GetString("chipset:")} {chipset.ToString().RemoveChar('_')};\n";
             result += $"{LangManager.GetString("price:")} {price}$.";
 
@@ -75,8 +75,8 @@ public class Motherboard : PCComponent
 
             result += $"{LangManager.GetString("ram_count:")} {RAMCount};\n";
 
-            result += "SLI: " + (SLI ? "yes;\n" : "no;\n");
-            result += "Crossfire: " + (crossfire ? "yes;\n" : "no;\n");
+            result += "SLI: " + LangManager.GetString(SLI ? "yes" : "no") + ";\n";
+            result += "Crossfire: " + LangManager.GetString(crossfire ? "yes" : "no") + ";\n";
             result += $"{LangManager.GetString("chipset:")} {chipset.ToString().RemoveChar('_')};\n";
             result += $"{LangManager.GetString("price:")} {price}$.";
 

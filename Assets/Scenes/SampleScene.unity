@@ -1570,10 +1570,10 @@ RectTransform:
   m_Father: {fileID: 1961111575}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 324}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 511, y: -328}
+  m_SizeDelta: {x: 324, y: 324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &76084284
 MonoBehaviour:
@@ -4455,6 +4455,9 @@ MonoBehaviour:
       m_Calls: []
   dropObj: {fileID: 185968935}
   blocked: 0
+  mainSource: {fileID: 519420030}
+  audioClip: {fileID: 8300000, guid: b99d1375f3d4b0d4b88a478978647dcc, type: 3}
+  soundExceptions: 0000000008000000070000000800000009000000020000000000000007000000030000000a000000
 --- !u!1 &182852468
 GameObject:
   m_ObjectHideFlags: 0
@@ -4551,7 +4554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &185968936
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6770,15 +6773,14 @@ MonoBehaviour:
   dropProperties: {fileID: 1407086140}
   sellText: {fileID: 1699054599}
   drop: {fileID: 185968938}
-  soundToggle: {fileID: 0}
-  vibrationToggle: {fileID: 0}
+  vibrationToggle: {fileID: 765009843}
   badVibration: 060000000000000032000000000000005a000000000000003601000000000000
-  middleVibration: 060000000000000032000000000000005a000000000000009001000000000000
+  commonVibration: 060000000000000032000000000000005a000000000000009001000000000000
   goodVibration: 64000000000000000a000000000000000a000000000000004e02000000000000
   veryGoodVibration: 64000000000000000a000000000000000a000000000000004e02000000000000
   topVibration: 28000000000000003200000000000000a00000000000000046000000000000002c01000000000000e001000000000000
   badClip: {fileID: 8300000, guid: 7b46b152dbbd9be4bac4f6e2d01447ca, type: 3}
-  middleClip: {fileID: 8300000, guid: 9886aba9701ca2142a3078558e51c601, type: 3}
+  commonClip: {fileID: 8300000, guid: 9886aba9701ca2142a3078558e51c601, type: 3}
   goodClip: {fileID: 8300000, guid: 3baec46bacf1dce4abdeaf05685c3550, type: 3}
   veryGoodClip: {fileID: 8300000, guid: 92e22bdfa0728954680532898aa88b63, type: 3}
   topClip: {fileID: 8300000, guid: fab4f93baf17bb14ea4339403b4378c2, type: 3}
@@ -8131,7 +8133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &339912710
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12052,6 +12054,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -12220,6 +12223,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4cfb96e1d350004a95d03066dba234f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainSource: {fileID: 519420030}
+  toggle: {fileID: 1900343980}
+  buttonClips:
+  - {fileID: 8300000, guid: 0de7ca365987a56488bbff8ae3967639, type: 3}
+  - {fileID: 8300000, guid: 23e240162dade5544922ccb9f5c12f2a, type: 3}
+  - {fileID: 8300000, guid: 00ebabc3d6e3ec943aacba9ec4a274ff, type: 3}
+  - {fileID: 8300000, guid: 3c1dbd45dc7b8604aba6041ef515d30f, type: 3}
+  - {fileID: 8300000, guid: 634b6815693336d46a594f7f0e4ac31b, type: 3}
+  - {fileID: 8300000, guid: 2940337e0b8e32049a99c122a976dd6c, type: 3}
 --- !u!1 &519487253
 GameObject:
   m_ObjectHideFlags: 0
@@ -16790,6 +16814,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 519420033}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayRandomButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &704354332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18445,6 +18481,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 765009844}
+  toggledEvent:
+    m_PersistentCalls:
+      m_Calls: []
   toggled: 1
 --- !u!111 &765009844
 Animation:
@@ -26702,10 +26741,10 @@ RectTransform:
   m_Father: {fileID: 1228624784}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 324}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 162, y: -162}
+  m_SizeDelta: {x: 324, y: 324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1105136002
 MonoBehaviour:
@@ -26921,10 +26960,10 @@ RectTransform:
   m_Father: {fileID: 1961111575}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 324}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 162, y: -328}
+  m_SizeDelta: {x: 324, y: 324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1107424229
 MonoBehaviour:
@@ -27857,6 +27896,18 @@ MonoBehaviour:
       - m_Target: {fileID: 649775847}
         m_TargetAssemblyTypeName: 
         m_MethodName: SortingChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 519420033}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayRandomButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29465,10 +29516,10 @@ RectTransform:
   m_Father: {fileID: 1228624784}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 324}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 860, y: -162}
+  m_SizeDelta: {x: 324, y: 324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1197508320
 MonoBehaviour:
@@ -31609,6 +31660,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 519420033}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayRandomButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1279117862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32028,7 +32091,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1289426097
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32946,10 +33009,10 @@ RectTransform:
   m_Father: {fileID: 1228624784}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 324}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 511, y: -162}
+  m_SizeDelta: {x: 324, y: 324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1323817411
 MonoBehaviour:
@@ -33314,7 +33377,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -380.5, y: 70}
+  m_AnchoredPosition: {x: -381, y: 70}
   m_SizeDelta: {x: -801, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1335208877
@@ -33870,10 +33933,10 @@ RectTransform:
   m_Father: {fileID: 1228624784}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 324}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1209, y: -162}
+  m_SizeDelta: {x: 324, y: 324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1344084264
 MonoBehaviour:
@@ -36076,6 +36139,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 519420033}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayRandomButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1399044503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36261,6 +36336,18 @@ MonoBehaviour:
       - m_Target: {fileID: 649775847}
         m_TargetAssemblyTypeName: 
         m_MethodName: PageNext
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 519420033}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayRandomButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -37920,6 +38007,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 519420033}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayRandomButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1465488792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38337,6 +38436,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 06f0ec6b0ce196e45b2d62b94b77b3f1, type: 3}
   - {fileID: 8300000, guid: bf7a598464ea9da4b83c930781856dcf, type: 3}
   - {fileID: 8300000, guid: 604348c73b7f4a64ebe976af72ab97fe, type: 3}
+  vibrationToggle: {fileID: 765009843}
 --- !u!1 &1478336727
 GameObject:
   m_ObjectHideFlags: 0
@@ -38425,6 +38525,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1783270642}
         m_TargetAssemblyTypeName: 
         m_MethodName: MotherboardClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 519420033}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayRandomButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -41332,7 +41444,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 187.5, y: 0}
+  m_AnchoredPosition: {x: 188, y: 0}
   m_SizeDelta: {x: 75, y: -790}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1585070473
@@ -41441,6 +41553,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: 
         m_MethodName: MenuItemClicked
         m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 519420033}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayRandomButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -44324,10 +44448,10 @@ RectTransform:
   m_Father: {fileID: 1961111575}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 324}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1558, y: -328}
+  m_SizeDelta: {x: 324, y: 324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1718384622
 MonoBehaviour:
@@ -45131,10 +45255,10 @@ RectTransform:
   m_Father: {fileID: 1961111575}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 324}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1209, y: -328}
+  m_SizeDelta: {x: 324, y: 324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1760085822
 MonoBehaviour:
@@ -45676,6 +45800,17 @@ MonoBehaviour:
   moneySystem: {fileID: 1571335822}
   navigation: {fileID: 179957345}
   osscript: {fileID: 1195588801}
+  soundManager: {fileID: 519420033}
+  mainSource: {fileID: 519420030}
+  equipClips:
+  - {fileID: 8300000, guid: 064b222da76be044cbd6e54ccc8a7a84, type: 3}
+  - {fileID: 8300000, guid: 2dd58af434b4eca4bb89b6cce713c405, type: 3}
+  - {fileID: 8300000, guid: d183058b046604f4baf9d2b2ac3e03f7, type: 3}
+  - {fileID: 8300000, guid: bf5335d3d51e92e4188bd4ccab8f682c, type: 3}
+  sellClips:
+  - {fileID: 8300000, guid: 9dc5176bad2440642a4824297b7cc29c, type: 3}
+  - {fileID: 8300000, guid: 10a50c0a72526f54cb519f7b28176f69, type: 3}
+  - {fileID: 8300000, guid: 4fc9ca83e1fa94d47b40f79327eeb5d9, type: 3}
 --- !u!4 &1783270643
 Transform:
   m_ObjectHideFlags: 0
@@ -47044,6 +47179,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 519420033}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayRandomButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1864362026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47690,6 +47837,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1900343981}
+  toggledEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 519420033}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: ToggleChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   toggled: 1
 --- !u!111 &1900343981
 Animation:
@@ -50203,10 +50365,10 @@ RectTransform:
   m_Father: {fileID: 1228624784}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 324}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1558, y: -162}
+  m_SizeDelta: {x: 324, y: 324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1998431646
 MonoBehaviour:
@@ -51235,27 +51397,27 @@ MonoBehaviour:
   componentsSoldText: {fileID: 694717935}
   moneyEarnedBySaleText: {fileID: 1200692322}
   moneyWonInCasinoText: {fileID: 586603541}
-  moneyLostInCasinoText: {fileID: 0}
-  gameLaunchesText: {fileID: 0}
-  gameplayTimeText: {fileID: 0}
+  moneyLostInCasinoText: {fileID: 1500776090}
+  gameLaunchesText: {fileID: 1127347662}
+  gameplayTimeText: {fileID: 875471888}
   itemsRarityText:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 677668626}
+  - {fileID: 1385598382}
+  - {fileID: 1809249967}
+  - {fileID: 725880224}
+  - {fileID: 1158385109}
   itemsRarityColumns:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 235336435}
+  - {fileID: 1250663443}
+  - {fileID: 957808833}
+  - {fileID: 1473647316}
+  - {fileID: 1557223088}
   itemsRarityLegend:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1939945283}
+  - {fileID: 653323539}
+  - {fileID: 282826210}
+  - {fileID: 513890891}
+  - {fileID: 1033952970}
   casesOpenedText1: {fileID: 610321244}
   CPUsDroppedByCasesText:
   - {fileID: 1171576047}
@@ -52287,10 +52449,10 @@ RectTransform:
   m_Father: {fileID: 1961111575}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 324}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 860, y: -328}
+  m_SizeDelta: {x: 324, y: 324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2087217196
 MonoBehaviour:

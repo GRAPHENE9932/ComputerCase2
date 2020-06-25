@@ -205,3 +205,7 @@ ram_cases:<val>RAM cases:
 motherboard_cases:<val>Motherboard cases:
 <pair>
 general_cases:<val>General cases:
+<pair>
+yes<val>yes
+<pair>
+no<val>no

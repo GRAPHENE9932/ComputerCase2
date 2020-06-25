@@ -39,9 +39,9 @@ public class CPU : PCComponent
 
             result += $"TDP: {TDP} W;\n";
             result += $"{LangManager.GetString("performance:")} {power} GFlops;\n";
-            result += $"{LangManager.GetString("unlocked:")} {(unlocked ? "yes" : "no")};\n";
+            result += $"{LangManager.GetString("unlocked:")} {(LangManager.GetString(unlocked ? "yes" : "no"))};\n";
             result += $"{LangManager.GetString("instruction_set:")} {(_64bit ? "64 bit" : "32 bit")};\n";
-            result += $"{LangManager.GetString("integrated_graphics:")} {(integratedGraphics ? "yes" : "no")};\n";
+            result += $"{LangManager.GetString("integrated_graphics:")} {(LangManager.GetString(integratedGraphics ? "yes" : "no"))};\n";
             result += $"{LangManager.GetString("price:")} {price}$.";
 
             return result;

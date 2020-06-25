@@ -5,7 +5,7 @@ using UnityEngine;
 
 public enum Rarity
 {
-    Bad, Middle, Good, VeryGood, Top
+    Bad, Common, Good, VeryGood, Top
 }
 
 [CreateAssetMenu(menuName = "Components", fileName = "Default component")]

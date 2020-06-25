@@ -87,16 +87,16 @@ public class CaseScroller : MonoBehaviour
     /// </summary>
     public Text sellText;
     public DropScript drop;
-    public Toggle soundToggle, vibrationToggle;
+    public Toggle vibrationToggle;
 
     /// <summary>
     /// Vibration intervals for drop.
     /// </summary>
-    public long[] badVibration, middleVibration, goodVibration, veryGoodVibration, topVibration;
+    public long[] badVibration, commonVibration, goodVibration, veryGoodVibration, topVibration;
     /// <summary>
     /// Audio clip for drop.
     /// </summary>
-    public AudioClip badClip, middleClip, goodClip, veryGoodClip, topClip;
+    public AudioClip badClip, commonClip, goodClip, veryGoodClip, topClip;
     public AudioClip[] caseOpenClips;
 
     public AudioSource mainSource;
@@ -153,7 +153,7 @@ public class CaseScroller : MonoBehaviour
     //Top: 0.25%;
     //VeryGood: 0.75%;
     //Good: 4%;
-    //Middle: 15%;
+    //common: 15%;
     //Bad: 80%;
 
     /// <summary>
@@ -245,7 +245,7 @@ public class CaseScroller : MonoBehaviour
             if (randRarity < currentRarity[0])
                 rarity = Rarity.Bad;
             else if (randRarity < currentRarity[1])
-                rarity = Rarity.Middle;
+                rarity = Rarity.Common;
             else if (randRarity < currentRarity[2])
                 rarity = Rarity.Good;
             else if (randRarity < currentRarity[3])
@@ -427,23 +427,28 @@ public class CaseScroller : MonoBehaviour
         {
             case Rarity.Bad:
                 mainSource.PlayOneShot(badClip);
-                Vibrator.Vibrate(badVibration);
+                if (vibrationToggle.toggled)
+                    Vibrator.Vibrate(badVibration);
                 break;
-            case Rarity.Middle:
-                mainSource.PlayOneShot(middleClip);
-                Vibrator.Vibrate(middleVibration);
+            case Rarity.Common:
+                mainSource.PlayOneShot(commonClip);
+                if (vibrationToggle.toggled)
+                    Vibrator.Vibrate(commonVibration);
                 break;
             case Rarity.Good:
                 mainSource.PlayOneShot(goodClip);
-                Vibrator.Vibrate(goodVibration);
+                if (vibrationToggle.toggled)
+                    Vibrator.Vibrate(goodVibration);
                 break;
             case Rarity.VeryGood:
                 mainSource.PlayOneShot(veryGoodClip);
-                Vibrator.Vibrate(veryGoodVibration);
+                if (vibrationToggle.toggled)
+                    Vibrator.Vibrate(veryGoodVibration);
                 break;
             case Rarity.Top:
                 mainSource.PlayOneShot(topClip);
-                Vibrator.Vibrate(topVibration);
+                if (vibrationToggle.toggled)
+                    Vibrator.Vibrate(topVibration);
                 break;
         }
     }

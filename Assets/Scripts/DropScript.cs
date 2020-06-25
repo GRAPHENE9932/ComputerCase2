@@ -66,13 +66,13 @@ public class DropScript : MonoBehaviour
         StatisticsScript.moneyEarnedBySale += (uint)(inventory.components[inventory.components.Count - 1].price / 20);
         //Add money.
         money.Money += inventory.components[inventory.components.Count - 1].price / 20;
+        //Play random sound.
+        if (inventory.components[inventory.components.Count - 1].price / 20 > 0)
+            mainSource.PlayOneShot(sellClips[Random.Range(0, sellClips.Length)]);
         //Disable sell button.
         sellButton.interactable = false;
         sellAnim.disabled = true;
         //Remove dropped component.
         inventory.components.Remove(caseScroller.currentComponent);
-        //Play random sound.
-        if (inventory.components[inventory.components.Count - 1].price / 20 > 0)
-            mainSource.PlayOneShot(sellClips[Random.Range(0, sellClips.Length)]);
     }
 }
