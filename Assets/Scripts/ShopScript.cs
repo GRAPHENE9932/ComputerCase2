@@ -109,7 +109,6 @@ public class ShopScript : MonoBehaviour
             else
                 cells[i].SetActive(false);
         }
-        Debug.Log($"cellsInPage{cellsInPage}  cellsMax{cellsMax} page{page}");
         for (int i = 0; i < cellsInPage; i++)
         {
             cells[i].transform.Find("Image").GetComponent<Image>().sprite = currentList[cellsMax * page + i].image;

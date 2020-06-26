@@ -5,6 +5,7 @@ using System.ComponentModel.Design;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public enum OSPage
@@ -44,6 +45,7 @@ public class OSScript : MonoBehaviour
     public Sprite checkChecked, checkUnchecked;
     public ComputerScript comp;
     public MoneySystem moneySystem;
+    public List<EventTrigger.Entry> triggersForButton;
     /// <summary>
     /// Prefab of GPU configuration label and button.
     /// </summary>
@@ -151,7 +153,8 @@ public class OSScript : MonoBehaviour
     public void Navigate(int page)
     {
         //Disable previous page.
-        pages[(int)currentPage].SetActive(false);
+        if (currentPage != OSPage.None)
+            pages[(int)currentPage].SetActive(false);
         //Change page variable.
         currentPage = (OSPage)page;
         //Enable new page.
@@ -226,6 +229,7 @@ public class OSScript : MonoBehaviour
                 //Add event of clicked button.
                 int index = i;
                 GPUButtons[i].GetComponentInChildren<Button>().onClick.AddListener(delegate { GPUPropertiesButton(index); });
+                GPUButtons[i].GetComponentInChildren<EventTrigger>().triggers = triggersForButton;
             }
             else
             {
@@ -257,7 +261,7 @@ public class OSScript : MonoBehaviour
 
         //Check for enabled multiple channel mode of RAM.
         if (CheckMultipleChannels() && comp.RAMs.Count(x => x != null) >= comp.mainMotherboard.RAMCount / 2)
-            recommendations += $"You using single-channel mode of RAM, but can use {comp.mainMotherboard.RAMCount / 2}-channel mode, just replace your RAM planks with alternate. It contributes to improvement of RAM performance.\n";
+            recommendations += string.Format(LangManager.GetString("ram_channel_recom"), comp.mainMotherboard.RAMCount / 2);
 
         recommendationsText.text = recommendations;
     }
@@ -325,6 +329,7 @@ public class OSScript : MonoBehaviour
             if (usedNotDouble != (comp.RAMs[i] != null))
                 usedNotDouble = null;
         }
+        Debug.Log(usedDouble == null && usedNotDouble == null);
         return usedDouble == null && usedNotDouble == null;
     }
 }

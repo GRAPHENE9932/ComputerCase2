@@ -209,3 +209,5 @@ general_cases:<val>General cases:
 yes<val>yes
 <pair>
 no<val>no
+<pair>
+ram_channel_recom<val>You are using single-channel mode of RAM, but can use {0}-channel mode, just replace your RAM planks with alternate. It contributes to improvement of RAM performance.

@@ -182,7 +182,8 @@ public class Inventory : MonoBehaviour
         StatisticsScript.moneyEarnedBySale += (uint)(cells[selectedCell].component.price / 20);
 
         //Play random sound.
-        soundManager.PlayRandomSell();
+        if (cells[selectedCell].component.price / 20 > 0)
+            soundManager.PlayRandomSell();
         //Add money.
         moneySystem.Money += cells[selectedCell].component.price / 20;
         //Remove component.

@@ -449,7 +449,7 @@ public class ComputerScript : MonoBehaviour
         }
         else
         {
-            //Set message "Dissasemble computer first!" and clear equip components.
+            //Set message "No motherboard!" and clear equip components.
             equipText.text = "No motherboard!";
             //Clear components to equip.
             equipComponents.Clear();
@@ -610,12 +610,28 @@ public class ComputerScript : MonoBehaviour
                             unequipText.text = LangManager.GetString("dis_comp_first");
                             unequipButton.interactable = false;
                             unequipButtonAnimation.disabled = true;
+
+                            sellButton.interactable = false;
+                            sellButtonAnimation.disabled = true;
+                            sellText.text = null;
+
+                            removeButton.interactable = false;
+                            removeButtonAnimation.disabled = true;
+                            removeText.text = null;
                         }
                         else
                         {
                             unequipText.text = LangManager.GetString("unequip");
                             unequipButton.interactable = true;
                             unequipButtonAnimation.disabled = false;
+
+                            sellButton.interactable = true;
+                            sellButtonAnimation.disabled = false;
+                            sellText.text = $"{LangManager.GetString("sell")} (+{component.price / 20}$)";
+
+                            removeButton.interactable = true;
+                            removeButtonAnimation.disabled = false;
+                            removeText.text = LangManager.GetString("remove");
                         }
                     }
                     else
@@ -625,11 +641,6 @@ public class ComputerScript : MonoBehaviour
                         unequipButtonAnimation.disabled = false;
                     }
                 }
-
-                //Enable remove button.
-                removeText.text = LangManager.GetString("remove");
-                removeButton.interactable = true;
-                removeButtonAnimation.disabled = false;
             }
             else
             {

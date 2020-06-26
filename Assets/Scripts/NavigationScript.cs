@@ -140,6 +140,9 @@ public class NavigationScript : MonoBehaviour
         //Якщо відділ, на який треба перейти, не увімкнений зараз...
         if (state != currentState)
         {
+            //Make both canvases uninteractable.
+            menus[(int)currentState].GetComponent<CanvasGroup>().interactable = false;
+            menus[(int)state].GetComponent<CanvasGroup>().interactable = false;
             //Play sound if it is not in exceptions.
             if (!IsInExceptions(state, currentState))
                 mainSource.PlayOneShot(audioClip);
@@ -166,6 +169,8 @@ public class NavigationScript : MonoBehaviour
                 //Очікування кадру.
                 yield return null;
             }
+            //Remove imprecision.
+            newGroup.alpha = 0F;
             //Вимкнення старого відділу.
             menus[(int)currentState].SetActive(false);
             //Вимкнення дропу.
@@ -188,10 +193,15 @@ public class NavigationScript : MonoBehaviour
                 //Очікування кадру.
                 yield return null;
             }
+            //Remove imprecision.
+            newGroup.alpha = 1F;
             //Фінальна заміна старого відділу на новий
             currentState = state;
             //Анімація закінчилась.
             switchAnimating = false;
+            //Make both canvases interactable.
+            menus[(int)currentState].GetComponent<CanvasGroup>().interactable = true;
+            menus[(int)state].GetComponent<CanvasGroup>().interactable = true;
         }
     }
 
