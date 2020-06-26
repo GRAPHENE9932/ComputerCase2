@@ -41,6 +41,8 @@ public class ShopScript : MonoBehaviour
     public Inventory inventory;
     public MessageBoxManager messageBox;
 
+    public SoundManager soundManager;
+    public AudioClip buyClip;
 
     private int page;
     private ComponentType shopType;
@@ -90,11 +92,13 @@ public class ShopScript : MonoBehaviour
         }
         //Clear search field.
         searchField.text = null;
+        //Zero page.
+        page = 0;
     }
 
     public void UpdateShop()
     {
-        CalculateProperties(out int cellsInRow, out int cellsInColumn, out int cellsMax, out int cellsInPage);
+        CalculateProperties(out int cellsInRow, out int cellsInColumn, out int cellsMax, out int cellsInPage, out int _);
         while (cells.Count < cellsInPage)
             cells.Add(Instantiate(cellPrefab, cellsGroup));
 
@@ -105,6 +109,7 @@ public class ShopScript : MonoBehaviour
             else
                 cells[i].SetActive(false);
         }
+        Debug.Log($"cellsInPage{cellsInPage}  cellsMax{cellsMax} page{page}");
         for (int i = 0; i < cellsInPage; i++)
         {
             cells[i].transform.Find("Image").GetComponent<Image>().sprite = currentList[cellsMax * page + i].image;
@@ -120,26 +125,9 @@ public class ShopScript : MonoBehaviour
     /// </summary>
     public void PageNext()
     {
-        CalculateProperties(out int _, out int _, out int cellsMax, out int _);
+        CalculateProperties(out int _, out int _, out int _, out int _, out int maxPage);
 
-        int count = 0;
-        switch (shopType)
-        {
-            case ComponentType.CPU:
-                count = CPUs.Count;
-                break;
-            case ComponentType.GPU:
-                count = GPUs.Count;
-                break;
-            case ComponentType.RAM:
-                count = RAMs.Count;
-                break;
-            case ComponentType.Motherboard:
-                count = motherboards.Count;
-                break;
-        }
-
-        if (cellsMax * (page + 1) < count)
+        if (page < maxPage)
         {
             page++;
             UpdateShop();
@@ -162,7 +150,7 @@ public class ShopScript : MonoBehaviour
     /// <param name="index">Index of cell.</param>
     private void CellClicked(int index)
     {
-        CalculateProperties(out int _, out int _, out int cellsMax, out int cellsInPage);
+        CalculateProperties(out int _, out int _, out int cellsMax, out int cellsInPage, out int _);
         selectedComponent = currentList.Skip(cellsMax * page).Take(cellsInPage).ToArray()[index];
 
 
@@ -194,10 +182,16 @@ public class ShopScript : MonoBehaviour
             return;
         }
 
+        //Component to buy;
         PCComponent compToBuy = selectedComponent;
+        //Set time of component.
         compToBuy.time = DateTime.Now;
+        //Decrease money.
         moneySystem.Money -= compToBuy.price;
+        //Add to inventory.
         inventory.components.Add(compToBuy);
+        //Play sound.
+        soundManager.PlaySound(buyClip);
     }
 
     /// <summary>
@@ -253,11 +247,15 @@ public class ShopScript : MonoBehaviour
             if (listOriginal[i].fullName.ToLower().Contains(searchField.text.ToLower()))
                 currentList.Add(listOriginal[i]);
         }
+        //Set page in bounds.
+        CalculateProperties(out int _, out int _, out int _, out int _, out int maxPage);
+        if (page > maxPage)
+            page = maxPage;
         //Then, update shop.
         UpdateShop();
     }
 
-    private void CalculateProperties(out int cellsInRow, out int cellsInColumn, out int cellsMax, out int cellsInPage)
+    private void CalculateProperties(out int cellsInRow, out int cellsInColumn, out int cellsMax, out int cellsInPage, out int maxPage)
     {
         //Cells in one row.
         cellsInRow = ((int)cellsGroup.rect.width + (int)cellsGrid.spacing.x) / ((int)cellsGrid.cellSize.x + (int)cellsGrid.spacing.x);
@@ -270,5 +268,11 @@ public class ShopScript : MonoBehaviour
         cellsInPage = currentList.Count - cellsMax * page;
         if (cellsInPage > cellsMax)
             cellsInPage = cellsMax;
+
+        maxPage = currentList.Count / cellsMax;
+        if (maxPage * cellsMax < currentList.Count)
+            maxPage++;
+        if (maxPage > 0)
+            maxPage--;
     }
 }

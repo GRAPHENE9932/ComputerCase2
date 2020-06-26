@@ -111,7 +111,7 @@ public class ComputerScript : MonoBehaviour
     public OSScript osscript;
     public SoundManager soundManager;
     public AudioSource mainSource;
-    public AudioClip[] equipClips, sellClips;
+    public AudioClip[] equipClips;
 
     /// <summary>
     /// Does computer contains components except for motherboard?
@@ -751,7 +751,7 @@ public class ComputerScript : MonoBehaviour
                     moneySystem.Money += mainCPU.price / 20;
                     //Play sound.
                     if (mainCPU.price / 20 > 0)
-                        mainSource.PlayOneShot(sellClips[Random.Range(0, sellClips.Length)]);
+                        soundManager.PlayRandomSell();
                     //Delete main CPU.
                     mainCPU = null;
                     CPUClicked();
@@ -765,7 +765,7 @@ public class ComputerScript : MonoBehaviour
                     moneySystem.Money += mainMotherboard.price / 20;
                     //Play sound.
                     if (mainMotherboard.price / 20 > 0)
-                        mainSource.PlayOneShot(sellClips[Random.Range(0, sellClips.Length)]);
+                        soundManager.PlayRandomSell();
                     //Delete main motherboard.
                     mainMotherboard = null;
                     MotherboardClicked();
@@ -779,7 +779,7 @@ public class ComputerScript : MonoBehaviour
                     moneySystem.Money += GPUs[index].price / 20;
                     //Play sound.
                     if (GPUs[index].price / 20 > 0)
-                        mainSource.PlayOneShot(sellClips[Random.Range(0, sellClips.Length)]);
+                        soundManager.PlayRandomSell();
                     //Delete GPU[index].
                     GPUs[index] = null;
                     GPUClicked(index);
@@ -793,7 +793,7 @@ public class ComputerScript : MonoBehaviour
                     moneySystem.Money += RAMs[index].price / 20;
                     //Play sound.
                     if (RAMs[index].price / 20 > 0)
-                        mainSource.PlayOneShot(sellClips[Random.Range(0, sellClips.Length)]);
+                        soundManager.PlayRandomSell();
                     //Delete RAM[index].
                     RAMs[index] = null;
                     RAMClicked(index);
@@ -805,7 +805,7 @@ public class ComputerScript : MonoBehaviour
                 moneySystem.Money += equipComponents[index].price / 20;
                 //Play sound.
                 if (equipComponents[index].price / 20 > 0)
-                    mainSource.PlayOneShot(sellClips[Random.Range(0, sellClips.Length)]);
+                    soundManager.PlayRandomSell();
                 //Remove component.
                 inventory.components.Remove(equipComponents[index]);
                 switch (selectedType)

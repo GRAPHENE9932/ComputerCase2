@@ -28,15 +28,6 @@ public class Inventory : MonoBehaviour
     public Text inventoryInfoText;
 
     /// <summary>
-    /// Button for changing current page of inventory.
-    /// </summary>
-    public Button pageNextButton, pagePreviousButton;
-    /// <summary>
-    /// Animation of button for changing current page of inventory.
-    /// </summary>
-    public ButtonAnimation pageNextButtonAnim, pagePreviousButtonAnim;
-
-    /// <summary>
     /// Case scroller script.
     /// </summary>
     public CaseScroller scroller;
@@ -73,6 +64,7 @@ public class Inventory : MonoBehaviour
     /// Text of sorting. It is on bottom panel.
     /// </summary>
     public Text sortText;
+    public SoundManager soundManager;
 
     private int page;
     private int selectedCell = -1;
@@ -82,7 +74,6 @@ public class Inventory : MonoBehaviour
     /// <summary>
     /// Update inventory cells.
     /// </summary>
-
     public void UpdateInventory()
     {
         switch (sortType)
@@ -190,6 +181,8 @@ public class Inventory : MonoBehaviour
         StatisticsScript.componentsSold++;
         StatisticsScript.moneyEarnedBySale += (uint)(cells[selectedCell].component.price / 20);
 
+        //Play random sound.
+        soundManager.PlayRandomSell();
         //Add money.
         moneySystem.Money += cells[selectedCell].component.price / 20;
         //Remove component.

@@ -69,6 +69,8 @@ public class CaseScroller : MonoBehaviour
     /// MessageBox manager.
     /// </summary>
     public MessageBoxManager messageBox;
+    public SoundManager soundManager;
+    public AudioClip buyClip;
 
     /// <summary>
     /// Animation of drop.
@@ -86,6 +88,10 @@ public class CaseScroller : MonoBehaviour
     /// Text of sell button of drop.
     /// </summary>
     public Text sellText;
+    /// <summary>
+    /// Text of one more button of drop.
+    /// </summary>
+    public Text oneMoreText;
     public DropScript drop;
     public Toggle vibrationToggle;
 
@@ -345,6 +351,9 @@ public class CaseScroller : MonoBehaviour
                 moneySystem.Money -= 750;
             else if (caseRarity == CaseType.Top)
                 moneySystem.Money -= 1500;
+            //Play bought sound.
+            if (caseRarity != CaseType.Common)
+                soundManager.PlaySound(buyClip);
             //Spawn 50 cells
             for (int i = 0; i < 50; i++)
                 SpawnCell(caseType, i);
@@ -413,6 +422,22 @@ public class CaseScroller : MonoBehaviour
             sellText.text = $"{LangManager.GetString("sell")} ({currentComponent.price / 20}$)";
         else
             sellText.text = LangManager.GetString("remove");
+        //Set one more text.
+        switch (caseRarity)
+        {
+            case CaseType.Common:
+                oneMoreText.text = LangManager.GetString("one_more");
+                break;
+            case CaseType.Major:
+                oneMoreText.text = $"{LangManager.GetString("one_more")} (50$)";
+                break;
+            case CaseType.VeryGood:
+                oneMoreText.text = $"{LangManager.GetString("one_more")} (750$)";
+                break;
+            case CaseType.Top:
+                oneMoreText.text = $"{LangManager.GetString("one_more")} (1500$)";
+                break;
+        }
         //Add component to inventory.
         inventory.components.Add(currentComponent);
         //Invoke OnDrop function.
