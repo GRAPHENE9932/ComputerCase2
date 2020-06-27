@@ -78,7 +78,7 @@ casino<val>Казино
 <pair>
 statistics<val>Статистика
 <pair>
-settings<val>Налаштувати
+settings<val>Налаштування
 <pair>
 exit<val>Вихід
 <pair>

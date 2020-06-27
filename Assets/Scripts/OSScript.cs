@@ -270,9 +270,9 @@ public class OSScript : MonoBehaviour
     {
         earnedText.text = $"{Math.Round(earned, 15)} BTC";
         capacityText.text = $"{Math.Round(Capacity, 15)} BTC";
-        performanceText0.text = $"{Math.Round(Performance / 1440, 15)} BTC/min";
-        performanceText1.text = $"{Math.Round(Performance / 24, 15)} BTC/hour";
-        performanceText2.text = $"{Math.Round(Performance, 15)} BTC/day";
+        performanceText0.text = $"{Math.Round(Performance / 1440, 15)} BTC/{LangManager.GetString("min")}";
+        performanceText1.text = $"{Math.Round(Performance / 24, 15)} BTC/{LangManager.GetString("hour")}";
+        performanceText2.text = $"{Math.Round(Performance, 15)} BTC/{LangManager.GetString("day")}";
         int totalRAM = 0;
         for (int i = 0; i < comp.RAMs.Count; i++)
             if (comp.RAMs[i] != null)

@@ -7,6 +7,7 @@ public class FPSIndicator : MonoBehaviour
 {
     public Toggle FPSToggle;
     public Text currentText;
+    public Image currentImage;
 
     private short count;
 
@@ -25,9 +26,15 @@ public class FPSIndicator : MonoBehaviour
             if (waitTime >= 1F)
             {
                 if (FPSToggle.toggled)
+                {
                     currentText.text = count + "FPS";
+                    currentImage.enabled = true;
+                }
                 else
+                {
                     currentText.text = null;
+                    currentImage.enabled = false;
+                }
                 count = 0;
                 waitTime = 0F;
             }
