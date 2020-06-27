@@ -111,6 +111,7 @@ public class CaseScroller : MonoBehaviour
     /// Is turned on debug fast mode?
     /// </summary>
     public bool fastMode;
+    public float maxSpeed, minSpeed;
 
     /// <summary>
     /// Is player has enought money for case open.
@@ -357,13 +358,17 @@ public class CaseScroller : MonoBehaviour
             //Spawn 50 cells
             for (int i = 0; i < 50; i++)
                 SpawnCell(caseType, i);
-            float screenSpeedMultiplier = (16F / 9F) / ((float)Screen.width / Screen.height);
+            float screenSpeedMultiplier;
+            if (Screen.width / Screen.height > 16F / 9F)
+                screenSpeedMultiplier = 1 - (Screen.width / Screen.height * 1080F - 1080F) * 0.00001F;
+            else
+                screenSpeedMultiplier = 1F;
             if (fastMode)
                 //0 speed.
                 speed = 10F;
             else
                 //Randomizing speed.
-                speed = Random.Range(90F * screenSpeedMultiplier, 109.3F * screenSpeedMultiplier);
+                speed = Random.Range(minSpeed * screenSpeedMultiplier, maxSpeed * screenSpeedMultiplier);
             navigation.MenuItemClicked(8);
             //Start coroutine of case scrolling.
             StartCoroutine(CaseScroll());
@@ -382,7 +387,8 @@ public class CaseScroller : MonoBehaviour
         while (speed > 0)
         {
             //Move cells with speed.
-            cellsGroup.Translate(speed * Time.deltaTime * -50, 0, 0);
+            cellsGroup.anchoredPosition = new Vector2(cellsGroup.anchoredPosition.x + speed * Time.deltaTime * -50, cellsGroup.anchoredPosition.y);
+            //cellsGroup.Translate(speed * Time.deltaTime * -50, 0, 0);
             //Speed decreasing.
             speed -= Time.deltaTime * 20;
             //Waiting 1 frame.

@@ -98,7 +98,7 @@ core_2<val>ядер
 <pair>
 unlocked:<val>Розблокований:
 <pair>
-instruction_set:<val>Набор інструкцій:
+instruction_set:<val>Набір інструкцій:
 <pair>
 price:<val>Ціна:
 <pair>
@@ -211,3 +211,18 @@ yes<val>так
 no<val>ні
 <pair>
 ram_channel_recom<val>Ви використовуєте одноканальний режим оперативної пам'яті, хоча можете використовувати {0}-канальний, просто переставте плашки ОЗП так, щоб вони чергувалися. Це посприятиме покращенню продуктивності ОЗП.
+
+<pair>
+gpu_model:<val>Модель відеокарти:
+<pair>
+gpu_bus_interface:<val>Інтерфейс шини відеокарти:
+<pair>
+gpu_memory_vol:<val>Об'єм відеопам'яті:
+<pair>
+min<val>хв.
+<pair>
+hour<val>год.
+<pair>
+day<val>день
+<pair>
+show_fps<val>Показувати FPS

@@ -37,6 +37,9 @@ public class ExchangeScript : MonoBehaviour
     public MoneySystem moneySystem;
     public HorizontalLayoutGroup columnsGroup;
     public GameObject columnPrefab;
+    public Button exchangeButton;
+    public ButtonAnimation exchangeButtonAnimation;
+    public SoundManager soundManager;
 
     private decimal BTC = -1;
     /// <summary>
@@ -49,6 +52,7 @@ public class ExchangeScript : MonoBehaviour
 
     private Image[] graphColumns;
     private decimal[] BTCHistory;
+    private WebClient client;
 
     private void Start()
     {
@@ -61,6 +65,13 @@ public class ExchangeScript : MonoBehaviour
         for (int i = 0; i < columnCount; i++)
             graphColumns[i] = Instantiate(columnPrefab, columnsGroup.transform).GetComponent<Image>();
 
+        //Create the web client.
+        client = new WebClient
+        {
+            UseDefaultCredentials = true
+        };
+        //Add function to download event.
+        client.DownloadStringCompleted += DownloadCompleted;
         StartCoroutine(AutoUpdate());
     }
     /// <summary>
@@ -123,7 +134,7 @@ public class ExchangeScript : MonoBehaviour
     /// </summary>
     public void FromFieldChanged()
     {
-        if (fromField.text != null && fromField.text != "")
+        if (!string.IsNullOrEmpty(fromField.text) && BTC != -1)
         {
             if (exchangeBTCToUSD)
             {
@@ -154,7 +165,7 @@ public class ExchangeScript : MonoBehaviour
     /// </summary>
     public void ExchangeClicked()
     {
-        if (fromField.text != null && fromField.text != "")
+        if (string.IsNullOrEmpty(fromField.text) && BTC != -1)
         {
             if (exchangeBTCToUSD)
             {
@@ -172,6 +183,7 @@ public class ExchangeScript : MonoBehaviour
                     moneySystem.BTCMoney += num * (1m / BTC);
                 }
             }
+            soundManager.PlayRandomSell();
         }
     }
 
@@ -231,15 +243,9 @@ public class ExchangeScript : MonoBehaviour
         updating = true;
         try
         {
-            //Create the web client.
-            WebClient client = new WebClient
-            {
-                UseDefaultCredentials = true
-            };
-            //Add function to download event.
-            client.DownloadStringCompleted += DownloadCompleted;
             //Download price of 1E12 USD in bitcoins. This method gives max precision.
             client.DownloadStringAsync(new Uri("https://blockchain.info/tobtc?currency=USD&value=1000000000000"));
+            FromFieldChanged();
         }
         catch (Exception e)
         {

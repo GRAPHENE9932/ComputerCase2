@@ -211,3 +211,18 @@ yes<val>yes
 no<val>no
 <pair>
 ram_channel_recom<val>You are using single-channel mode of RAM, but can use {0}-channel mode, just replace your RAM planks with alternate. It contributes to improvement of RAM performance.
+
+<pair>
+gpu_model:<val>GPU model:
+<pair>
+gpu_bus_interface:<val>GPU bus interface:
+<pair>
+gpu_memory_vol:<val>GPU memory volume:
+<pair>
+min<val>min
+<pair>
+hour<val>hour
+<pair>
+day<val>day
+<pair>
+show_fps<val>Show FPS
