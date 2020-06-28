@@ -226,3 +226,5 @@ hour<val>hour
 day<val>day
 <pair>
 show_fps<val>Show FPS
+<pair>
+no_gpu<val>No GPU!

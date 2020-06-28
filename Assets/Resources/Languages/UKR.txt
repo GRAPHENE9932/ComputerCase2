@@ -226,3 +226,5 @@ hour<val>год.
 day<val>день
 <pair>
 show_fps<val>Показувати FPS
+<pair>
+no_gpu<val>Немає відеокарти!
