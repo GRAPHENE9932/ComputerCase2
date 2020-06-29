@@ -48,6 +48,7 @@ public class ExchangeScript : MonoBehaviour
     private bool updating;
     private bool showCurrencyOfBTC = true;
     private bool exchangeBTCToUSD = true;
+    private bool updateClickedByPlayer = false;
     private string previousFromField;
 
     private Image[] graphColumns;
@@ -72,6 +73,8 @@ public class ExchangeScript : MonoBehaviour
         };
         //Add function to download event.
         client.DownloadStringCompleted += DownloadCompleted;
+
+        CurrencyTextUpdate();
         StartCoroutine(AutoUpdate());
     }
     /// <summary>
@@ -79,6 +82,7 @@ public class ExchangeScript : MonoBehaviour
     /// </summary>
     public void UpdateClicked()
     {
+        updateClickedByPlayer = true;
         StartCoroutine(UpdateBTC());
     }
 
@@ -165,7 +169,7 @@ public class ExchangeScript : MonoBehaviour
     /// </summary>
     public void ExchangeClicked()
     {
-        if (string.IsNullOrEmpty(fromField.text) && BTC != -1)
+        if (!string.IsNullOrEmpty(fromField.text) && BTC != -1)
         {
             if (exchangeBTCToUSD)
             {
@@ -173,6 +177,14 @@ public class ExchangeScript : MonoBehaviour
                 {
                     moneySystem.BTCMoney -= num;
                     moneySystem.Money += Convert.ToInt64(Math.Floor(num * BTC));
+
+                    //Set text in field in bounds of balance.
+                    if (num > moneySystem.BTCMoney.Value)
+                        fromField.text = moneySystem.BTCMoney.ToString();
+
+                    //Play sound if exchange > 0.
+                    if (num > 0)
+                        soundManager.PlayRandomSell();
                 }
             }
             else
@@ -181,9 +193,16 @@ public class ExchangeScript : MonoBehaviour
                 {
                     moneySystem.Money -= num;
                     moneySystem.BTCMoney += num * (1m / BTC);
+
+                    //Set text in field in bounds of balance.
+                    if (num > moneySystem.Money.Value)
+                        fromField.text = moneySystem.Money.Value.ToString();
+
+                    //Play sound if exchange > 0.
+                    if (num > 0)
+                        soundManager.PlayRandomSell();
                 }
             }
-            soundManager.PlayRandomSell();
         }
     }
 
@@ -210,7 +229,7 @@ public class ExchangeScript : MonoBehaviour
         if (showCurrencyOfBTC)
         {
             if (BTC == -1)
-                priceText.text = "no data";
+                priceText.text = LangManager.GetString("no_data");
             else
                 priceText.text = $"{Math.Round(BTC, 2)}$";
             currencyIconText.text = "₿=";
@@ -218,7 +237,7 @@ public class ExchangeScript : MonoBehaviour
         else
         {
             if (BTC == -1)
-                priceText.text = "no data";
+                priceText.text = LangManager.GetString("no_data");
             else
                 //Take only first 31 chars of this number to fit it in the text component.
                 priceText.text = (1 / BTC).ToString().TakeChars(31) + "₿";
@@ -230,6 +249,7 @@ public class ExchangeScript : MonoBehaviour
     {
         while (true)
         {
+            updateClickedByPlayer = false;
             StartCoroutine(UpdateBTC());
             yield return new WaitForSeconds(15);
         }
@@ -240,9 +260,17 @@ public class ExchangeScript : MonoBehaviour
     /// </summary>
     private IEnumerator UpdateBTC()
     {
-        updating = true;
-        //Download price of 1E12 USD in bitcoins. This method gives max precision.
-        client.DownloadStringAsync(new Uri("https://blockchain.info/tobtc?currency=USD&value=1000000000000"));
+        try { 
+            updating = true;
+            //Download price of 1E12 USD in bitcoins. This method gives max precision.
+            client.DownloadStringAsync(new Uri("https://blockchain.info/tobtc?currency=USD&value=1000000000000"));
+        }
+        catch (Exception exc)
+        {
+            //If error, start red indicator on update button.
+            StartCoroutine(ErrorUpdateAnim());
+            Debug.Log("Exc: " + exc.Message);
+        }
         FromFieldChanged();
         while (updating)
         {
@@ -261,7 +289,7 @@ public class ExchangeScript : MonoBehaviour
         try
         {
             //Set bitcoin price in USD.
-            BTC = 1E12m / decimal.Parse(e.Result.RemoveChar(',').Replace('.', ','));
+            BTC = decimal.Parse(e.Result.RemoveChar(',').Replace('.', ',')) / 1E12m;
             CurrencyTextUpdate();
             if (BTC != BTCHistory[0])
                 UpdateGraph();
@@ -270,6 +298,8 @@ public class ExchangeScript : MonoBehaviour
         {
             //If error, start red indicator on update button.
             StartCoroutine(ErrorUpdateAnim());
+            if (updateClickedByPlayer)
+                JavaTools.MakeToast("No internet!");
             Debug.Log("Exc: " + exc.Message);
         }
         updating = false;

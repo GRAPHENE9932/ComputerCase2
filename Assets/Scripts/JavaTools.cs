@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class Vibrator
+public static class JavaTools
 {
     private static AndroidJavaObject vibrator;
+    private static AndroidJavaObject context;
 
     /// <summary>
     /// Simple vibrate with selected time.
@@ -16,9 +17,12 @@ public static class Vibrator
         {
             if (vibrator == null)
             {
-                AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-                AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-                AndroidJavaObject context = activity.Call<AndroidJavaObject>("getApplicationContext");
+                if (context == null)
+                {
+                    AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+                    AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+                    context = activity.Call<AndroidJavaObject>("getApplicationContext");
+                }
                 vibrator = context.Call<AndroidJavaObject>("getSystemService", new object[] { "vibrator" });
             }
             if (ApiLevel >= 26)
@@ -45,9 +49,12 @@ public static class Vibrator
         {
             if (vibrator == null)
             {
-                AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-                AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-                AndroidJavaObject context = activity.Call<AndroidJavaObject>("getApplicationContext");
+                if (context == null)
+                {
+                    AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+                    AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+                    context = activity.Call<AndroidJavaObject>("getApplicationContext");
+                }
                 vibrator = context.Call<AndroidJavaObject>("getSystemService", new object[] { "vibrator" });
             }
             if (ApiLevel >= 26)
@@ -60,6 +67,21 @@ public static class Vibrator
             {
                 vibrator.Call("vibrate", new object[] { intervals, repeat });
             }
+        }
+        catch { }
+    }
+
+    public static void MakeToast(string text, int length = 0)
+    {
+        try
+        {
+            if (context == null)
+            {
+                AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+                AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+                context = activity.Call<AndroidJavaObject>("getApplicationContext");
+            }
+            new AndroidJavaClass("android.widget.Toast").CallStatic<AndroidJavaObject>("makeText", context, text, length).Call("show");
         }
         catch { }
     }

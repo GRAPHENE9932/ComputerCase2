@@ -232,3 +232,7 @@ no_gpu<val>No GPU!
 gpu_properties<val>GPU {0} properties
 <pair>
 properties...<val>Properties...
+<pair>
+no_internet<val>No internet!
+<pair>
+no_data<val>No data

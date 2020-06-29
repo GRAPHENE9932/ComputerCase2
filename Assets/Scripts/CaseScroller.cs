@@ -459,27 +459,27 @@ public class CaseScroller : MonoBehaviour
             case Rarity.Bad:
                 mainSource.PlayOneShot(badClip);
                 if (vibrationToggle.toggled)
-                    Vibrator.Vibrate(badVibration);
+                    JavaTools.Vibrate(badVibration);
                 break;
             case Rarity.Common:
                 mainSource.PlayOneShot(commonClip);
                 if (vibrationToggle.toggled)
-                    Vibrator.Vibrate(commonVibration);
+                    JavaTools.Vibrate(commonVibration);
                 break;
             case Rarity.Good:
                 mainSource.PlayOneShot(goodClip);
                 if (vibrationToggle.toggled)
-                    Vibrator.Vibrate(goodVibration);
+                    JavaTools.Vibrate(goodVibration);
                 break;
             case Rarity.VeryGood:
                 mainSource.PlayOneShot(veryGoodClip);
                 if (vibrationToggle.toggled)
-                    Vibrator.Vibrate(veryGoodVibration);
+                    JavaTools.Vibrate(veryGoodVibration);
                 break;
             case Rarity.Top:
                 mainSource.PlayOneShot(topClip);
                 if (vibrationToggle.toggled)
-                    Vibrator.Vibrate(topVibration);
+                    JavaTools.Vibrate(topVibration);
                 break;
         }
     }

@@ -68,9 +68,9 @@ public class ErrorManager : MonoBehaviour
             bool result = await Task.Run(() => SendEmail("Error in ComputerCase", body));
             //Start message about success or fail.
             if (result)
-                messageBox.StartMessage(LangManager.GetString("send_email_success"), 5);
+                JavaTools.MakeToast(LangManager.GetString("send_email_success"));
             else
-                messageBox.StartMessage(LangManager.GetString("send_email_failed"), 5);
+                JavaTools.MakeToast(LangManager.GetString("send_email_failed"));
         }
     }
 

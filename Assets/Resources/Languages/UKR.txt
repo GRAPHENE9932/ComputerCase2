@@ -232,3 +232,7 @@ no_gpu<val>Немає відеокарти!
 gpu_properties<val>Властивості відеокарти {0}
 <pair>
 properties...<val>Властивості...
+<pair>
+no_internet<val>Немає інтернету!
+<pair>
+no_data<val>Немає даних
