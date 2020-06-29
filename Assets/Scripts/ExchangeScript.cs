@@ -241,19 +241,9 @@ public class ExchangeScript : MonoBehaviour
     private IEnumerator UpdateBTC()
     {
         updating = true;
-        try
-        {
-            //Download price of 1E12 USD in bitcoins. This method gives max precision.
-            client.DownloadStringAsync(new Uri("https://blockchain.info/tobtc?currency=USD&value=1000000000000"));
-            FromFieldChanged();
-        }
-        catch (Exception e)
-        {
-            updating = false;
-            //If error, start red indicator on update button.
-            StartCoroutine(ErrorUpdateAnim());
-            Debug.Log("Exc: " + e.Message);
-        }
+        //Download price of 1E12 USD in bitcoins. This method gives max precision.
+        client.DownloadStringAsync(new Uri("https://blockchain.info/tobtc?currency=USD&value=1000000000000"));
+        FromFieldChanged();
         while (updating)
         {
             //Rotate update icon while updating.

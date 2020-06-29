@@ -228,3 +228,5 @@ day<val>day
 show_fps<val>Show FPS
 <pair>
 no_gpu<val>No GPU!
+<pair>
+gpu_properties<val>GPU {0} properties

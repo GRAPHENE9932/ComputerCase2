@@ -157,7 +157,7 @@ public class Inventory : MonoBehaviour
 
         CalculateProperties(out int _, out int _, out int _, out int cellsInPage);
         //Properties text.
-        infoText.text = cells[index].component.FullProperties + $"\n{LangManager.GetString("time:")} " + components[cellsInPage * page + index].time.ToString("dd.MM.yyyy hh:mm:ss");
+        infoText.text = cells[index].component.FullProperties + $"\n{LangManager.GetString("time:")} " + components[cellsInPage * page + index].time.ToString("dd.MM.yyyy HH:mm:ss");
         
         if (components[cellsInPage * page + index].price / 20 > 0)
             sellInfoText.text = $"{LangManager.GetString("sell")} (+" + components[cellsInPage * page + index].price / 20 + "$)";

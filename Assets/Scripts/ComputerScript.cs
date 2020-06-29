@@ -70,7 +70,8 @@ public class ComputerScript : MonoBehaviour
     /// <summary>
     /// Button text of info window.
     /// </summary>
-    public Text infoText, sellText, unequipText, removeText;
+    public Text infoText, sellText, unequipText;
+    public SVGImage removeImage;
     /// <summary>
     /// Button of info window.
     /// </summary>
@@ -282,7 +283,10 @@ public class ComputerScript : MonoBehaviour
                 int index = i;
                 //selectedType = ComponentType.GPU;
                 GPUSlots[i].GetComponent<Button>().onClick.RemoveAllListeners();
+                //GPU clicked event.
                 GPUSlots[i].GetComponent<Button>().onClick.AddListener(delegate { GPUClicked(index); });
+                //Sound play event.
+                GPUSlots[i].GetComponent<Button>().onClick.AddListener(delegate { soundManager.PlayRandomButton(); });
                 GPUSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.RemoveAllListeners();
                 GPUSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.GPU, index); });
                 GPUParent.transform.position = new Vector2(GPUParent.transform.position.x, GPUParent.localScale.y);
@@ -324,7 +328,10 @@ public class ComputerScript : MonoBehaviour
                 int index = i;
                 //selectedType = ComponentType.RAM;
                 RAMSlots[i].GetComponent<Button>().onClick.RemoveAllListeners();
+                //RAM clicked event.
                 RAMSlots[i].GetComponent<Button>().onClick.AddListener(delegate { RAMClicked(index); });
+                //Play sound event.
+                RAMSlots[i].GetComponent<Button>().onClick.AddListener(delegate { soundManager.PlayRandomButton(); });
                 RAMSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.RemoveAllListeners();
                 RAMSlots[i].transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.RAM, index); });
                 RAMParent.transform.position = new Vector2(RAMParent.transform.position.x, RAMParent.localScale.y);
@@ -464,8 +471,6 @@ public class ComputerScript : MonoBehaviour
 
     public void RAMClicked(int index)
     {
-        //Play sound.
-        soundManager.PlayRandomButton();
         if (mainMotherboard != null)
         {
             equipComponents = inventory.components.Where(x => x is RAM RAM && RAM.type == mainMotherboard.RAMType).ToList();
@@ -520,8 +525,6 @@ public class ComputerScript : MonoBehaviour
 
     public void GPUClicked(int index)
     {
-        //Play sound.
-        soundManager.PlayRandomButton();
         if (mainMotherboard != null)
         {
             equipComponents = inventory.components.Where(x => x is GPU GPU && GPU.busVersion == mainMotherboard.busVersions[index] && GPU.busMultiplier == mainMotherboard.busMultipliers[index]).ToList();
@@ -585,7 +588,7 @@ public class ComputerScript : MonoBehaviour
             if (component != null)
             {
                 //Write full properties with time in info text.
-                infoText.text = component.FullProperties + $"\n{LangManager.GetString("time:")} " + component.time.ToString("dd.MM.yyyy hh:mm:ss");
+                infoText.text = component.FullProperties + $"\n{LangManager.GetString("time:")} " + component.time.ToString("dd.MM.yyyy HH:mm:ss");
 
                 //Set text of sell button (real price / 20).
                 sellText.text = $"{LangManager.GetString("sell")} (+{component.price / 20}$)";
@@ -611,13 +614,15 @@ public class ComputerScript : MonoBehaviour
                             unequipButton.interactable = false;
                             unequipButtonAnimation.disabled = true;
 
+                            //Disable sell button.
                             sellButton.interactable = false;
                             sellButtonAnimation.disabled = true;
                             sellText.text = null;
 
+                            //Disable remove button.
                             removeButton.interactable = false;
                             removeButtonAnimation.disabled = true;
-                            removeText.text = null;
+                            removeImage.enabled = false;
                         }
                         else
                         {
@@ -631,7 +636,7 @@ public class ComputerScript : MonoBehaviour
 
                             removeButton.interactable = true;
                             removeButtonAnimation.disabled = false;
-                            removeText.text = LangManager.GetString("remove");
+                            removeImage.enabled = true;
                         }
                     }
                     else
@@ -639,6 +644,16 @@ public class ComputerScript : MonoBehaviour
                         unequipText.text = LangManager.GetString("unequip");
                         unequipButton.interactable = true;
                         unequipButtonAnimation.disabled = false;
+
+                        //Enable sell button.
+                        removeButton.interactable = true;
+                        removeButtonAnimation.disabled = false;
+                        removeImage.enabled = true;
+
+                        //Enable remove button.
+                        removeButton.interactable = true;
+                        removeButtonAnimation.disabled = false;
+                        removeImage.enabled = true;
                     }
                 }
             }
@@ -671,7 +686,7 @@ public class ComputerScript : MonoBehaviour
                 unequipButtonAnimation.disabled = true;
 
                 //Disable remove button.
-                removeText.text = null;
+                removeImage.enabled = false;
                 removeButton.interactable = false;
                 removeButtonAnimation.disabled = true;
             }
@@ -901,6 +916,8 @@ public class ComputerScript : MonoBehaviour
     /// <param name="index">Index of component.</param>
     public void Unequip(ComponentType type, int index)
     {
+        //Play sound.
+        mainSource.PlayOneShot(equipClips[Random.Range(0, equipClips.Length)]);
         switch (type)
         {
             case ComponentType.CPU:

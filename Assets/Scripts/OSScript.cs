@@ -40,7 +40,7 @@ public class OSScript : MonoBehaviour
     /// <summary>
     /// Text in field of GPU configuration window.
     /// </summary>
-    public Text GPUModel, GPUBusInterface, GPUMemoryVolume;
+    public Text GPUModel, GPUBusInterface, GPUMemoryVolume, GPUHeader;
 
     public Sprite checkChecked, checkUnchecked;
     public ComputerScript comp;
@@ -249,6 +249,7 @@ public class OSScript : MonoBehaviour
         //Enable GPU window.
         GPUWindow.SetActive(true);
         //Set text of properties in this window.
+        GPUHeader.text = string.Format(LangManager.GetString("gpu_properties"), index);
         GPUModel.text = comp.GPUs[index].fullName;
         GPUBusInterface.text = $"PCIe {comp.GPUs[index].busVersion}.0 x{comp.GPUs[index].busMultiplier}";
         GPUMemoryVolume.text = $"{comp.GPUs[index].memory} MB";

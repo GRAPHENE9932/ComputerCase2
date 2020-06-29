@@ -228,3 +228,5 @@ day<val>день
 show_fps<val>Показувати FPS
 <pair>
 no_gpu<val>Немає відеокарти!
+<pair>
+gpu_properties<val>Властивості відеокарти {0}

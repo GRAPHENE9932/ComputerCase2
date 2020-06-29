@@ -102,9 +102,9 @@ public class StatisticsScript : MonoBehaviour
         motherboardsDroppedText.text = $"{LangManager.GetString("motherboards_dropped:")}\n{motherboardsDropped} ({percentStr})";
 
         componentsSoldText.text = $"{LangManager.GetString("components_sold:")}\n{componentsSold}";
-        moneyEarnedBySaleText.text = $"{LangManager.GetString("money_earned_by_sale:")}\n{moneyEarnedBySale}";
-        moneyWonInCasinoText.text = $"{LangManager.GetString("money_won_in_casino:")}\n{moneyWonInCasino}";
-        moneyLostInCasinoText.text = $"{LangManager.GetString("money_lost_in_casino:")}\n{moneyLostInCasino}";
+        moneyEarnedBySaleText.text = $"{LangManager.GetString("money_earned_by_sale:")}\n{moneyEarnedBySale}$";
+        moneyWonInCasinoText.text = $"{LangManager.GetString("money_won_in_casino:")}\n{moneyWonInCasino}$";
+        moneyLostInCasinoText.text = $"{LangManager.GetString("money_lost_in_casino:")}\n{moneyLostInCasino}$";
         gameLaunchesText.text = $"{LangManager.GetString("game_launches:")}\n{gameLaunches}";
         gameplayTimeText.text = $"{LangManager.GetString("gameplay_time:")}\n{FormatSeconds(gameplayTime)}";
 
