@@ -222,6 +222,8 @@ public class OSScript : MonoBehaviour
             GPUButtons.Add(Instantiate(gpuButtonPrefab, gpuParent));
             //Change text of label.
             GPUButtons[i].transform.Find("Label").GetComponent<Text>().text = $"GPU {i}:";
+            //Change button text.
+            GPUButtons[i].transform.Find("Button").GetComponentInChildren<Text>().text = LangManager.GetString("properties...");
             //If GPU with index i != null, button.interactable = true.
             if (comp.GPUs[i] != null)
             {

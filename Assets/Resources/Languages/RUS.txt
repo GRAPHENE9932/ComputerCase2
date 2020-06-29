@@ -230,3 +230,5 @@ show_fps<val>Показывать FPS
 no_gpu<val>Нет видеокарты!
 <pair>
 gpu_properties<val>Свойства видеокарты {0}
+<pair>
+properties...<val>Свойства...

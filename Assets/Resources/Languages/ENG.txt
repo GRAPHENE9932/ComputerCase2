@@ -230,3 +230,5 @@ show_fps<val>Show FPS
 no_gpu<val>No GPU!
 <pair>
 gpu_properties<val>GPU {0} properties
+<pair>
+properties...<val>Properties...

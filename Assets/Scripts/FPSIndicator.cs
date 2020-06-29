@@ -27,7 +27,7 @@ public class FPSIndicator : MonoBehaviour
             {
                 if (FPSToggle.toggled)
                 {
-                    currentText.text = count + "FPS";
+                    currentText.text = $"{count} FPS";
                     currentImage.enabled = true;
                 }
                 else

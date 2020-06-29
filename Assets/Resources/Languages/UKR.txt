@@ -32,7 +32,7 @@ ram_freq:<val>Частота ОЗП:
 <pair>
 ram_gen:<val>Покоління ОЗП:
 <pair>
-ram_vol:<val>Об'єм ОЗУ:
+ram_vol:<val>Об'єм ОЗП:
 <pair>
 socket:<val>Сокет:
 <pair>
@@ -230,3 +230,5 @@ show_fps<val>Показувати FPS
 no_gpu<val>Немає відеокарти!
 <pair>
 gpu_properties<val>Властивості відеокарти {0}
+<pair>
+properties...<val>Властивості...

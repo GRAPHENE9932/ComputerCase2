@@ -663,16 +663,21 @@ public class ComputerScript : MonoBehaviour
                 switch (type)
                 {
                     case ComponentType.CPU:
-                        infoText.text = $"{LangManager.GetString("no_cpu")}\n" + (mainMotherboard == null ? null : ("Socket: " + mainMotherboard.socket));
+                        if (mainMotherboard == null)
+                            infoText.text = string.Format("{0}\n{1}", LangManager.GetString("no_cpu"), LangManager.GetString("no_socket"));
+                        else
+                            infoText.text = string.Format("{0}\n{1} {2}", LangManager.GetString("no_cpu"), LangManager.GetString("socket:"), mainMotherboard.socket);
                         break;
                     case ComponentType.Motherboard:
                         infoText.text = LangManager.GetString("no_motherboard");
                         break;
                     case ComponentType.GPU:
-                        infoText.text = $"{LangManager.GetString("no_gpu")}\n" + mainMotherboard == null ? null : $"Interface: PCIe {mainMotherboard.busVersions[index]}.0 x{mainMotherboard.busMultipliers[index]}.";
+                        infoText.text = string.Format("{0}\n{1} PCIe {2}.0 x{3}.",
+                            LangManager.GetString("no_gpu"), LangManager.GetString("interface:"), mainMotherboard.busVersions[index], mainMotherboard.busMultipliers[index]);
                         break;
                     case ComponentType.RAM:
-                        infoText.text = $"{LangManager.GetString("no_ram")}\n" + mainMotherboard == null ? null : "Type: DDR" + (mainMotherboard.RAMType == 1 ? null : mainMotherboard.RAMType.ToString()) + ".";
+                        infoText.text = string.Format("{0} DDR{1}.", 
+                            LangManager.GetString("gen:"), mainMotherboard.RAMType == 1 ? null : mainMotherboard.RAMType.ToString());
                         break;
                 }
                 //Disable sell button.
