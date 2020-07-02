@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using System.Reflection;
 using UnityEngine;
 
 //Chipsets supported overclock: X370, B350, X300, A300 (AMD) and ... (Intel)
@@ -9,6 +9,7 @@ public enum Chipset
 }
 
 [CreateAssetMenu(menuName = "Components/Motherboard", fileName = "Motherboard")]
+[Serializable]
 public class Motherboard : PCComponent
 {
     public string socket;
@@ -82,33 +83,5 @@ public class Motherboard : PCComponent
 
             return result;
         }
-    }
-
-    /// <summary>
-    /// Clones this object.
-    /// </summary>
-    /// <returns>
-    /// Clonned object.
-    /// </returns>
-    public override object Clone()
-    {
-        PCComponent component = ScriptableObject.CreateInstance<Motherboard>();
-        component.fullName = this.fullName;
-        component.shortName = this.shortName;
-        component.price = this.price;
-        component.time = this.time;
-        component.rarity = this.rarity;
-        component.image = this.image;
-
-        ((Motherboard)component).socket = this.socket;
-        ((Motherboard)component).RAMType = this.RAMType;
-        ((Motherboard)component).RAMCount = this.RAMCount;
-        ((Motherboard)component).busVersions = this.busVersions;
-        ((Motherboard)component).busMultipliers = this.busMultipliers;
-        ((Motherboard)component).SLI = this.SLI;
-        ((Motherboard)component).crossfire = this.crossfire;
-        ((Motherboard)component).chipset = this.chipset;
-
-        return component;
     }
 }

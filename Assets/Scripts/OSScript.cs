@@ -76,12 +76,12 @@ public class OSScript : MonoBehaviour
     /// <summary>
     /// Mined money in Bitcoins
     /// </summary>
-    private decimal earned = 0;
+    public decimal earned = 0;
 
     /// <summary>
     /// Performance of computer in BTC/day.
     /// </summary>
-    private decimal Performance
+    public decimal Performance
     {
         get
         {
@@ -118,7 +118,7 @@ public class OSScript : MonoBehaviour
     /// <summary>
     /// Capacity of RAM in Bitcoins.
     /// </summary>
-    private decimal Capacity
+    public decimal Capacity
     {
         get
         {

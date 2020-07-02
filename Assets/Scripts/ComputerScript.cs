@@ -54,9 +54,9 @@ public class ComputerScript : MonoBehaviour
     [HideInInspector]
     public Motherboard mainMotherboard;
     [HideInInspector]
-    public readonly List<GPU> GPUs = new List<GPU>();
+    public List<GPU> GPUs = new List<GPU>();
     [HideInInspector]
-    public readonly List<RAM> RAMs = new List<RAM>();
+    public List<RAM> RAMs = new List<RAM>();
     public Sprite emptyPixel;
 
     /// <summary>

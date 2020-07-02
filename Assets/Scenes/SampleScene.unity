@@ -32978,7 +32978,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -67.5, y: 30}
+  m_AnchoredPosition: {x: -68, y: 30}
   m_SizeDelta: {x: 115, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1286312667
@@ -47086,6 +47086,8 @@ MonoBehaviour:
   equipText: {fileID: 824389861}
   mainCPU: {fileID: 0}
   mainMotherboard: {fileID: 0}
+  GPUs: []
+  RAMs: []
   emptyPixel: {fileID: 21300000, guid: aad6ed14551288042955aab2bd60e312, type: 3}
   infoObject: {fileID: 821797466}
   infoGroup: {fileID: 821797469}
@@ -52436,6 +52438,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2018163853}
   m_CullTransparentMesh: 0
+--- !u!1 &2028677591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2028677593}
+  - component: {fileID: 2028677592}
+  m_Layer: 0
+  m_Name: GameSaver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2028677592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028677591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6f8287d190fc2a4b8a73c37b1a86c04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 649775847}
+  comp: {fileID: 1783270642}
+  osScript: {fileID: 1195588801}
+  soundToggle: {fileID: 1900343980}
+  vibroToggle: {fileID: 765009843}
+  FPSToggle: {fileID: 1390494884}
+  langSetting: {fileID: 2119324983}
+  moneySys: {fileID: 1571335822}
+--- !u!4 &2028677593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028677591}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2029339552
 GameObject:
   m_ObjectHideFlags: 0
@@ -54756,6 +54809,7 @@ MonoBehaviour:
   - {fileID: 3286163911610860551, guid: 94b70e24954919646afca7b8ac992c16, type: 3}
   image: {fileID: 287573990}
   text: {fileID: 1732624623}
+  index: 0
 --- !u!1 &2127574548
 GameObject:
   m_ObjectHideFlags: 0

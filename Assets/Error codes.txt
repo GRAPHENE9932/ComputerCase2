@@ -10,3 +10,4 @@
 9: ComputerScript, Unequip.
 10: MainCanvas, Computer, Monitor, text. Текст мініатюрного монітору не змінився.
 11: CaseScroller, SpawnCell, default в конструкції switch для типу кейсу.
+12: PCComponent, constructor, Tried to instantiate clear PCComponent.

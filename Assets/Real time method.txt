@@ -1,1 +1,0 @@
-public static long ElapsedTime(){if (Application.platform != RuntimePlatform.Android) return 0; AndroidJavaClass systemClock = new AndroidJavaClass("android.os.SystemClock"); return systemClock.CallStatic<long>("elapsedRealtime"); }

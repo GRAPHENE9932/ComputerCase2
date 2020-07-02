@@ -12,7 +12,7 @@ public class EnumerationSetting : MonoBehaviour
     public SVGImage image;
     public Text text;
 
-    private int index;
+    public int index;
 
     private void Start()
     {
