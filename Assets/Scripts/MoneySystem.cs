@@ -18,15 +18,17 @@ public class MoneySystem : MonoBehaviour
     /// </summary>
     public Image moneyImage, btcMoneyImage;
 
+    public static MoneySystem singletone;
+
     /// <summary>
     /// Money value.
     /// </summary>
-    private SecureLong money;
+    private static SecureLong money;
     /// <summary>
     /// Bitcoin money value.
     /// </summary>
-    private SecureDecimal btcMoney;
-    public SecureLong Money
+    private static SecureDecimal btcMoney;
+    public static SecureLong Money
     {
         get
         {
@@ -36,13 +38,13 @@ public class MoneySystem : MonoBehaviour
         {
             //At changing number of money, start color animation.
             if (value > money)
-                StartCoroutine(MoneyColor(true, true));
+                singletone.StartCoroutine(singletone.MoneyColor(true, true));
             else if (value < money)
-                StartCoroutine(MoneyColor(false, true));
+                singletone.StartCoroutine(singletone.MoneyColor(false, true));
             money = value;
         }
     }
-    public SecureDecimal BTCMoney
+    public static SecureDecimal BTCMoney
     {
         get
         {
@@ -52,11 +54,23 @@ public class MoneySystem : MonoBehaviour
         {
             //At changing number of money, start color animation.
             if (value > btcMoney)
-                StartCoroutine(MoneyColor(true, false));
+                singletone.StartCoroutine(singletone.MoneyColor(true, false));
             else if (value < btcMoney)
-                StartCoroutine(MoneyColor(false, false));
+                singletone.StartCoroutine(singletone.MoneyColor(false, false));
             btcMoney = value;
         }
+    }
+
+    private void Awake()
+    {
+        singletone = this;
+        ApplySaves();
+    }
+
+    public static void ApplySaves()
+    {
+        Money = new SecureLong(GameSaver.savesPack.money);
+        BTCMoney = new SecureDecimal(GameSaver.savesPack.BTCMoney);
     }
 
     private void Start()
@@ -64,6 +78,7 @@ public class MoneySystem : MonoBehaviour
         Money += 200000;
         UpdateMoney();
     }
+
     public void UpdateMoney()
     {
         moneyText.text = $"${money.Value}";

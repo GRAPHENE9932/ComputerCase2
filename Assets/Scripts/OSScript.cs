@@ -76,12 +76,12 @@ public class OSScript : MonoBehaviour
     /// <summary>
     /// Mined money in Bitcoins
     /// </summary>
-    public decimal earned = 0;
+    public static decimal earned = 0;
 
     /// <summary>
     /// Performance of computer in BTC/day.
     /// </summary>
-    public decimal Performance
+    public static decimal Performance
     {
         get
         {
@@ -90,18 +90,18 @@ public class OSScript : MonoBehaviour
                 decimal performance = 0;
 
                 //Add performance from GPUs.
-                for (int i = 0; i < comp.GPUs.Count; i++)
-                    if (comp.GPUs[i] != null)
-                        performance += 0.00005m * comp.GPUs[i].power;
+                for (int i = 0; i < ComputerScript.GPUs.Count; i++)
+                    if (ComputerScript.GPUs[i] != null)
+                        performance += 0.00005m * ComputerScript.GPUs[i].power;
 
                 //Add performance from CPU.
-                performance += comp.mainCPU.power * 0.0002m;
+                performance += ComputerScript.mainCPU.power * 0.0002m;
 
                 //Find minimum RAM frequency.
                 int minRAMFreq = int.MaxValue;
-                for (int i = 0; i < comp.RAMs.Count; i++)
-                    if (comp.RAMs[i] != null && comp.RAMs[i].frequency < minRAMFreq)
-                        minRAMFreq = comp.RAMs[i].frequency;
+                for (int i = 0; i < ComputerScript.RAMs.Count; i++)
+                    if (ComputerScript.RAMs[i] != null && ComputerScript.RAMs[i].frequency < minRAMFreq)
+                        minRAMFreq = ComputerScript.RAMs[i].frequency;
 
                 //Add performance from RAM.
                 performance += minRAMFreq * 0.0000125m;
@@ -118,22 +118,34 @@ public class OSScript : MonoBehaviour
     /// <summary>
     /// Capacity of RAM in Bitcoins.
     /// </summary>
-    public decimal Capacity
+    public static decimal Capacity
     {
         get
         {
             //Total volume of RAM in computer.
             int totalVolume = 0;
-            for (int i = 0; i < comp.RAMs.Count; i++)
-                if (comp.RAMs[i] != null)
-                    totalVolume += comp.RAMs[i].memory;
+            for (int i = 0; i < ComputerScript.RAMs.Count; i++)
+                if (ComputerScript.RAMs[i] != null)
+                    totalVolume += ComputerScript.RAMs[i].memory;
 
             return totalVolume * 0.000005m;
         }
     }
+
     private void Start()
     {
+        //Set saves in start instead of awake because mining need begin with mining coroutine and saves of computer in awake.
+        ApplySaves();
         StartCoroutine(MiningCoroutine());
+    }
+
+    public static void ApplySaves()
+    {
+        earned = GameSaver.savesPack.mined;
+        if (GameSaver.savesPack.lastSession != DateTime.MinValue && Performance != -1)
+            earned += (decimal)(DateTime.Now - GameSaver.savesPack.lastSession).TotalDays * Performance;
+        if (earned > Capacity)
+            earned = Capacity;
     }
     /// <summary>
     /// Start OS, when monitor clicked.
@@ -182,33 +194,33 @@ public class OSScript : MonoBehaviour
     public void UpdateSystemConfiguration()
     {
         //Text of page of SystemConfiguration.
-        CPUModel.text = comp.mainCPU.fullName;
-        CPUFrequency.text = $"{comp.mainCPU.frequency} MHz";
-        CPUBusWidth.text = comp.mainCPU._64bit ? "64 bit" : "32 bit";
+        CPUModel.text = ComputerScript.mainCPU.fullName;
+        CPUFrequency.text = $"{ComputerScript.mainCPU.frequency} MHz";
+        CPUBusWidth.text = ComputerScript.mainCPU._64bit ? "64 bit" : "32 bit";
 
         int minFreq = int.MaxValue;
 
-        for (int i = 0; i < comp.RAMs.Count; i++)
-            if (comp.RAMs[i] != null && comp.RAMs[i].frequency < minFreq)
-                minFreq = comp.RAMs[i].frequency;
+        for (int i = 0; i < ComputerScript.RAMs.Count; i++)
+            if (ComputerScript.RAMs[i] != null && ComputerScript.RAMs[i].frequency < minFreq)
+                minFreq = ComputerScript.RAMs[i].frequency;
 
         RAMFrequency.text = $"{minFreq} MHz";
-        RAMGeneration.text = "DDR" + (comp.mainMotherboard.RAMType == 1 ? null : comp.mainMotherboard.RAMType.ToString());
+        RAMGeneration.text = "DDR" + (ComputerScript.mainMotherboard.RAMType == 1 ? null : ComputerScript.mainMotherboard.RAMType.ToString());
 
         int ramVol = 0;
-        for (int i = 0; i < comp.RAMs.Count; i++)
-            if (comp.RAMs[i] != null)
-                ramVol += comp.RAMs[i].memory;
+        for (int i = 0; i < ComputerScript.RAMs.Count; i++)
+            if (ComputerScript.RAMs[i] != null)
+                ramVol += ComputerScript.RAMs[i].memory;
 
         RAMVolume.text = $"{ramVol} MB";
 
-        socket.text = comp.mainMotherboard.socket;
-        chipset.text = comp.mainMotherboard.chipset.ToString().RemoveChar('_');
+        socket.text = ComputerScript.mainMotherboard.socket;
+        chipset.text = ComputerScript.mainMotherboard.chipset.ToString().RemoveChar('_');
 
-        integratedGraphics.sprite = comp.mainCPU.integratedGraphics ? checkChecked : checkUnchecked;
-        multiplierUnlocked.sprite = comp.mainCPU.unlocked ? checkChecked : checkUnchecked;
-        SLI.sprite = comp.mainMotherboard.SLI ? checkChecked : checkUnchecked;
-        crossfire.sprite = comp.mainMotherboard.crossfire ? checkChecked : checkUnchecked;
+        integratedGraphics.sprite = ComputerScript.mainCPU.integratedGraphics ? checkChecked : checkUnchecked;
+        multiplierUnlocked.sprite = ComputerScript.mainCPU.unlocked ? checkChecked : checkUnchecked;
+        SLI.sprite = ComputerScript.mainMotherboard.SLI ? checkChecked : checkUnchecked;
+        crossfire.sprite = ComputerScript.mainMotherboard.crossfire ? checkChecked : checkUnchecked;
 
         //GPU buttons.
         //Destroy old buttons.
@@ -217,7 +229,7 @@ public class OSScript : MonoBehaviour
         GPUButtons.Clear();
 
         //Instantiate buttons.
-        for (int i = 0; i < comp.mainMotherboard.busVersions.Length; i++)
+        for (int i = 0; i < ComputerScript.mainMotherboard.busVersions.Length; i++)
         {
             GPUButtons.Add(Instantiate(gpuButtonPrefab, gpuParent));
             //Change text of label.
@@ -225,7 +237,7 @@ public class OSScript : MonoBehaviour
             //Change button text.
             GPUButtons[i].transform.Find("Button").GetComponentInChildren<Text>().text = LangManager.GetString("properties...");
             //If GPU with index i != null, button.interactable = true.
-            if (comp.GPUs[i] != null)
+            if (ComputerScript.GPUs[i] != null)
             {
                 GPUButtons[i].GetComponentInChildren<Button>().interactable = true;
                 //Add event of clicked button.
@@ -252,9 +264,9 @@ public class OSScript : MonoBehaviour
         GPUWindow.SetActive(true);
         //Set text of properties in this window.
         GPUHeader.text = string.Format(LangManager.GetString("gpu_properties"), index);
-        GPUModel.text = comp.GPUs[index].fullName;
-        GPUBusInterface.text = $"PCIe {comp.GPUs[index].busVersion}.0 x{comp.GPUs[index].busMultiplier}";
-        GPUMemoryVolume.text = $"{comp.GPUs[index].memory} MB";
+        GPUModel.text = ComputerScript.GPUs[index].fullName;
+        GPUBusInterface.text = $"PCIe {ComputerScript.GPUs[index].busVersion}.0 x{ComputerScript.GPUs[index].busMultiplier}";
+        GPUMemoryVolume.text = $"{ComputerScript.GPUs[index].memory} MB";
     }
 
     public void UpdateRecommendations()
@@ -263,8 +275,8 @@ public class OSScript : MonoBehaviour
         string recommendations = null;
 
         //Check for enabled multiple channel mode of RAM.
-        if (CheckMultipleChannels() && comp.RAMs.Count(x => x != null) >= comp.mainMotherboard.RAMCount / 2)
-            recommendations += string.Format(LangManager.GetString("ram_channel_recom"), comp.mainMotherboard.RAMCount / 2);
+        if (CheckMultipleChannels() && ComputerScript.RAMs.Count(x => x != null) >= ComputerScript.mainMotherboard.RAMCount / 2)
+            recommendations += string.Format(LangManager.GetString("ram_channel_recom"), ComputerScript.mainMotherboard.RAMCount / 2);
 
         recommendationsText.text = recommendations;
     }
@@ -277,9 +289,9 @@ public class OSScript : MonoBehaviour
         performanceText1.text = $"{Math.Round(Performance / 24, 15)} BTC/{LangManager.GetString("hour")}";
         performanceText2.text = $"{Math.Round(Performance, 15)} BTC/{LangManager.GetString("day")}";
         int totalRAM = 0;
-        for (int i = 0; i < comp.RAMs.Count; i++)
-            if (comp.RAMs[i] != null)
-                totalRAM += comp.RAMs[i].memory;
+        for (int i = 0; i < ComputerScript.RAMs.Count; i++)
+            if (ComputerScript.RAMs[i] != null)
+                totalRAM += ComputerScript.RAMs[i].memory;
         memoryUsedText.text = $"{Math.Round(earned / 0.00001m, 2)}/{totalRAM} MB";
 
         float progress = (float)earned / 0.00001F / totalRAM;
@@ -308,7 +320,7 @@ public class OSScript : MonoBehaviour
 
     public void CollectClicked()
     {
-        moneySystem.BTCMoney += earned;
+        MoneySystem.BTCMoney += earned;
         earned = 0;
     }
     /// <summary>
@@ -321,15 +333,15 @@ public class OSScript : MonoBehaviour
     {
         //usedDouble - is slots with indexes 0, 2, 4, 6, ... used? True - used, false - unused, null - different.
         //usedNotDouble - is slots with indexes 1, 3, 5, 7, ... used? True - used, false - unused, null - different.
-        bool? usedDouble = comp.RAMs[0] != null, usedNotDouble = comp.RAMs[1] != null;
-        for (int i = 2; i < comp.mainMotherboard.RAMCount; i += 2)
+        bool? usedDouble = ComputerScript.RAMs[0] != null, usedNotDouble = ComputerScript.RAMs[1] != null;
+        for (int i = 2; i < ComputerScript.mainMotherboard.RAMCount; i += 2)
         {
-            if (usedDouble != (comp.RAMs[i] != null))
+            if (usedDouble != (ComputerScript.RAMs[i] != null))
                 usedDouble = null;
         }
-        for (int i = 3; i < comp.mainMotherboard.RAMCount; i += 2)
+        for (int i = 3; i < ComputerScript.mainMotherboard.RAMCount; i += 2)
         {
-            if (usedNotDouble != (comp.RAMs[i] != null))
+            if (usedNotDouble != (ComputerScript.RAMs[i] != null))
                 usedNotDouble = null;
         }
         Debug.Log(usedDouble == null && usedNotDouble == null);

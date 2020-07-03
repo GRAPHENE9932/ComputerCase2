@@ -54,17 +54,9 @@ public class CaseScroller : MonoBehaviour
     /// </summary>
     public CursorScript cursor;
     /// <summary>
-    /// Inventory script.
-    /// </summary>
-    public Inventory inventory;
-    /// <summary>
     /// Navigation script.
     /// </summary>
     public NavigationScript navigation;
-    /// <summary>
-    /// MoneySystem script.
-    /// </summary>
-    public MoneySystem moneySystem;
     /// <summary>
     /// MessageBox manager.
     /// </summary>
@@ -121,9 +113,9 @@ public class CaseScroller : MonoBehaviour
         get
         {
             return caseRarity == CaseType.Common ||
-            (caseRarity == CaseType.Major && moneySystem.Money.Value >= 50) ||
-            (caseRarity == CaseType.VeryGood && moneySystem.Money.Value >= 750) ||
-            (caseRarity == CaseType.Top && moneySystem.Money.Value >= 1500);
+            (caseRarity == CaseType.Major && MoneySystem.Money.Value >= 50) ||
+            (caseRarity == CaseType.VeryGood && MoneySystem.Money.Value >= 750) ||
+            (caseRarity == CaseType.Top && MoneySystem.Money.Value >= 1500);
         }
     }
 
@@ -347,11 +339,11 @@ public class CaseScroller : MonoBehaviour
 
             //Decrease number of money.
             if (caseRarity == CaseType.Major)
-                moneySystem.Money -= 50;
+                MoneySystem.Money -= 50;
             else if (caseRarity == CaseType.VeryGood)
-                moneySystem.Money -= 750;
+                MoneySystem.Money -= 750;
             else if (caseRarity == CaseType.Top)
-                moneySystem.Money -= 1500;
+                MoneySystem.Money -= 1500;
             //Play bought sound.
             if (caseRarity != CaseType.Common)
                 soundManager.PlaySound(buyClip);
@@ -445,7 +437,7 @@ public class CaseScroller : MonoBehaviour
                 break;
         }
         //Add component to inventory.
-        inventory.components.Add(currentComponent);
+        Inventory.components.Add(currentComponent);
         //Invoke OnDrop function.
         drop.OnDrop();
         //Set active true of drop component.

@@ -8,7 +8,7 @@ public class Inventory : MonoBehaviour
     /// <summary>
     /// The list of components in the inventory.
     /// </summary>
-    public List<PCComponent> components = new List<PCComponent>();
+    public static List<PCComponent> components = new List<PCComponent>();
 
     /// <summary>
     /// The prefab of inventory cell.
@@ -70,6 +70,21 @@ public class Inventory : MonoBehaviour
     private int selectedCell = -1;
     private Sort sortType;
     readonly private List<InventoryCell> cells = new List<InventoryCell>();
+
+    private void Awake()
+    {
+        ApplySaves();
+    }
+
+    public static void ApplySaves()
+    {
+        components.Clear();
+        components.AddRange(GameSaver.savesPack.inventoryCPUs);
+        components.AddRange(GameSaver.savesPack.inventoryGPUs);
+        components.AddRange(GameSaver.savesPack.inventoryRAMs);
+        components.AddRange(GameSaver.savesPack.inventoryMotherboards);
+        components.ForEach(x => x.RegenerateImage());
+    }
 
     /// <summary>
     /// Update inventory cells.
@@ -185,7 +200,7 @@ public class Inventory : MonoBehaviour
         if (cells[selectedCell].component.price / 20 > 0)
             soundManager.PlayRandomSell();
         //Add money.
-        moneySystem.Money += cells[selectedCell].component.price / 20;
+        MoneySystem.Money += cells[selectedCell].component.price / 20;
         //Remove component.
         components.Remove(cells[selectedCell].component);
 

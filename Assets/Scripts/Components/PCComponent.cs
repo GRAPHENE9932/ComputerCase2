@@ -56,7 +56,6 @@ public class PCComponent : ScriptableObject, ICloneable
     {
         get
         {
-            
             return "Error! Code 0.";
         }
     }

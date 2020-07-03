@@ -37,8 +37,6 @@ public class ShopScript : MonoBehaviour
     /// </summary>
     public GameObject infoObject;
     public InputField searchField;
-    public MoneySystem moneySystem;
-    public Inventory inventory;
     public MessageBoxManager messageBox;
 
     public SoundManager soundManager;
@@ -175,7 +173,7 @@ public class ShopScript : MonoBehaviour
     public void Buy()
     {
         //If not enought money, start message about it and stop function.
-        if (selectedComponent.price > moneySystem.Money.Value)
+        if (selectedComponent.price > MoneySystem.Money.Value)
         {
             messageBox.StartMessage(LangManager.GetString("not_enough_money"), 1);
             return;
@@ -186,9 +184,9 @@ public class ShopScript : MonoBehaviour
         //Set time of component.
         compToBuy.time = DateTime.Now;
         //Decrease money.
-        moneySystem.Money -= compToBuy.price;
+        MoneySystem.Money -= compToBuy.price;
         //Add to inventory.
-        inventory.components.Add(compToBuy);
+        Inventory.components.Add(compToBuy);
         //Play sound.
         soundManager.PlaySound(buyClip);
     }

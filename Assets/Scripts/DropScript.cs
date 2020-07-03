@@ -13,14 +13,6 @@ public class DropScript : MonoBehaviour
     /// Navigation script.
     /// </summary>
     public NavigationScript navigation;
-    /// <summary>
-    /// Inventory script.
-    /// </summary>
-    public Inventory inventory;
-    /// <summary>
-    /// Money system script.
-    /// </summary>
-    public MoneySystem money;
 
     public Button sellButton;
     public ButtonAnimation sellAnim;
@@ -62,16 +54,16 @@ public class DropScript : MonoBehaviour
     {
         //Stats.
         StatisticsScript.componentsSold++;
-        StatisticsScript.moneyEarnedBySale += (uint)(inventory.components[inventory.components.Count - 1].price / 20);
+        StatisticsScript.moneyEarnedBySale += (uint)(Inventory.components[Inventory.components.Count - 1].price / 20);
         //Add money.
-        money.Money += inventory.components[inventory.components.Count - 1].price / 20;
+        MoneySystem.Money += Inventory.components[Inventory.components.Count - 1].price / 20;
         //Play random sound.
-        if (inventory.components[inventory.components.Count - 1].price / 20 > 0)
+        if (Inventory.components[Inventory.components.Count - 1].price / 20 > 0)
             soundManager.PlayRandomSell();
         //Disable sell button.
         sellButton.interactable = false;
         sellAnim.disabled = true;
         //Remove dropped component.
-        inventory.components.Remove(caseScroller.currentComponent);
+        Inventory.components.Remove(caseScroller.currentComponent);
     }
 }

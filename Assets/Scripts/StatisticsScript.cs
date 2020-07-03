@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using static GameSaver;
 
 public class StatisticsScript : MonoBehaviour
 {
-    [HideInInspector]
     public static ulong casesOpened, itemsScrolled, CPUsDropped, GPUsDropped, RAMsDropped, motherboardsDropped, componentsSold, moneyEarnedBySale,
         moneyWonInCasino, moneyLostInCasino, gameLaunches;
     //[HideInInspector]
-    public static ulong gameplayTime;
+    public static long gameplayTime;
     [HideInInspector]
     public static ulong[] droppedByRarities;
     [HideInInspector]
@@ -27,17 +27,13 @@ public class StatisticsScript : MonoBehaviour
 
     public CaseScroller caseScroller;
 
+    private void Awake()
+    {
+        ApplySaves();
+    }
+
     private void Start()
     {
-        //TODO: remove it when saves script will finished
-        CPUsDroppedByCases = new ulong[4];
-        GPUsDroppedByCases = new ulong[4];
-        RAMsDroppedByCases = new ulong[4];
-        motherboardsDroppedByCases = new ulong[4];
-        generalDroppedByCases = new ulong[4];
-        droppedByRarities = new ulong[5];
-        //
-
         //Set graph colors.
         for (int i = 0; i < 5; i++)
         {
@@ -49,6 +45,28 @@ public class StatisticsScript : MonoBehaviour
 
         StartCoroutine(Timer());
         UpdateStatistics();
+    }
+
+    public static void ApplySaves()
+    {
+        casesOpened = savesPack.casesOpened;
+        itemsScrolled = savesPack.itemsScrolled;
+        CPUsDropped = savesPack.CPUsDropped;
+        GPUsDropped = savesPack.GPUsDropped;
+        RAMsDropped = savesPack.RAMsDropped;
+        motherboardsDropped = savesPack.motherboardsDropped;
+        componentsSold = savesPack.componentsSold;
+        moneyEarnedBySale = savesPack.moneyEarnedBySale;
+        moneyWonInCasino = savesPack.moneyWonInCasino;
+        moneyLostInCasino = savesPack.moneyLostInCasino;
+        gameLaunches = savesPack.gameLaunches;
+        gameplayTime = savesPack.gameplayTime;
+        droppedByRarities = savesPack.droppedByRarities;
+        CPUsDroppedByCases = savesPack.CPUsDroppedByCases;
+        GPUsDroppedByCases = savesPack.GPUsDroppedByCases;
+        RAMsDroppedByCases = savesPack.RAMsDroppedByCases;
+        motherboardsDroppedByCases = savesPack.motherboardsDroppedByCases;
+        generalDroppedByCases = savesPack.generalDroppedByCases;
     }
 
     private IEnumerator Timer()
@@ -140,7 +158,7 @@ public class StatisticsScript : MonoBehaviour
     /// Converts seconds to days, hours, minutes and seconds.
     /// </summary>
     /// <param name="total">Total seconds - input.</param>
-    public string FormatSeconds(ulong total)
+    public string FormatSeconds(long total)
     {
         byte seconds = (byte)(total % 60);
         byte minutes = (byte)(total % 3600 / 60);

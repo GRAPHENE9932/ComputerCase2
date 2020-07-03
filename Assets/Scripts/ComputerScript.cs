@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using UnityEngine.PlayerLoop;
+using System.Data;
 
 public class ComputerScript : MonoBehaviour
 {
@@ -50,13 +51,13 @@ public class ComputerScript : MonoBehaviour
     public Text equipText;
 
     [HideInInspector]
-    public CPU mainCPU;
+    public static CPU mainCPU;
     [HideInInspector]
-    public Motherboard mainMotherboard;
+    public static Motherboard mainMotherboard;
     [HideInInspector]
-    public List<GPU> GPUs = new List<GPU>();
+    public static List<GPU> GPUs = new List<GPU>();
     [HideInInspector]
-    public List<RAM> RAMs = new List<RAM>();
+    public static List<RAM> RAMs = new List<RAM>();
     public Sprite emptyPixel;
 
     /// <summary>
@@ -136,6 +137,39 @@ public class ComputerScript : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        ApplySaves();
+    }
+    private void Start()
+    {
+        //AddListeners of info buttons of CPU slot and motherboard slot.
+        CPUSlot.transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.CPU, -1); });
+        motherboardSlot.transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.Motherboard, -1); });
+        //Update computer at start.
+        UpdateComputer();
+    }
+    public static void ApplySaves()
+    {
+        mainCPU = GameSaver.savesPack.cpu;
+        if (mainCPU != null)
+            mainCPU.RegenerateImage();
+
+        mainMotherboard = GameSaver.savesPack.motherboard;
+        if (mainMotherboard != null)
+            mainMotherboard.RegenerateImage();
+
+        GPUs = GameSaver.savesPack.gpus.ToList();
+        foreach (GPU gpu in GPUs)
+            if (gpu != null)
+                gpu.RegenerateImage();
+
+        RAMs = GameSaver.savesPack.rams.ToList();
+        foreach (RAM ram in RAMs)
+            if (ram != null)
+                ram.RegenerateImage();
+    }
+
     /// <summary>
     /// Text of the computer monitor with errors (RichText required).
     /// </summary>
@@ -182,14 +216,6 @@ public class ComputerScript : MonoBehaviour
             errorsText.gameObject.SetActive(true);
             errorsText.text = errors;
         }
-    }
-    private void Start()
-    {
-        //Update computer at start.
-        UpdateComputer();
-        //AddListeners of info buttons of CPU slot and motherboard slot.
-        CPUSlot.transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.CPU, -1); });
-        motherboardSlot.transform.Find("InfoButton").GetComponent<Button>().onClick.AddListener(delegate { InfoClicked(ComponentType.Motherboard, -1); });
     }
 
     /// <summary>
@@ -366,7 +392,7 @@ public class ComputerScript : MonoBehaviour
         if (mainMotherboard != null)
         {
             //Set equip components.
-            equipComponents = inventory.components.Where(x => x is CPU CPU && CPU.socket == mainMotherboard.socket).ToList();
+            equipComponents = Inventory.components.Where(x => x is CPU CPU && CPU.socket == mainMotherboard.socket).ToList();
             //Destroying all equip slots.
             for (int i = 0; i < equipSlots.Count; i++)
             {
@@ -419,7 +445,7 @@ public class ComputerScript : MonoBehaviour
         //If no components on computer.
         if (!ComputerHasComponents)
         {
-            equipComponents = inventory.components.Where(x => x is Motherboard).ToList();
+            equipComponents = Inventory.components.Where(x => x is Motherboard).ToList();
             //Destroying all equip slots.
             for (int i = 0; i < equipSlots.Count; i++)
             {
@@ -473,7 +499,7 @@ public class ComputerScript : MonoBehaviour
     {
         if (mainMotherboard != null)
         {
-            equipComponents = inventory.components.Where(x => x is RAM RAM && RAM.type == mainMotherboard.RAMType).ToList();
+            equipComponents = Inventory.components.Where(x => x is RAM RAM && RAM.type == mainMotherboard.RAMType).ToList();
             //Destroying all equip slots.
             for (int i = 0; i < equipSlots.Count; i++)
             {
@@ -527,7 +553,7 @@ public class ComputerScript : MonoBehaviour
     {
         if (mainMotherboard != null)
         {
-            equipComponents = inventory.components.Where(x => x is GPU GPU && GPU.busVersion == mainMotherboard.busVersions[index] && GPU.busMultiplier == mainMotherboard.busMultipliers[index]).ToList();
+            equipComponents = Inventory.components.Where(x => x is GPU GPU && GPU.busVersion == mainMotherboard.busVersions[index] && GPU.busMultiplier == mainMotherboard.busMultipliers[index]).ToList();
             //Destroying all equip slots.
             for (int i = 0; i < equipSlots.Count; i++)
             {
@@ -779,7 +805,7 @@ public class ComputerScript : MonoBehaviour
                 if (mainMotherboard != null)
                 {
                     //Add money.
-                    moneySystem.Money += mainCPU.price / 20;
+                    MoneySystem.Money += mainCPU.price / 20;
                     //Play sound.
                     if (mainCPU.price / 20 > 0)
                         soundManager.PlayRandomSell();
@@ -793,7 +819,7 @@ public class ComputerScript : MonoBehaviour
                 if (mainMotherboard != null)
                 {
                     //Add money.
-                    moneySystem.Money += mainMotherboard.price / 20;
+                    MoneySystem.Money += mainMotherboard.price / 20;
                     //Play sound.
                     if (mainMotherboard.price / 20 > 0)
                         soundManager.PlayRandomSell();
@@ -807,7 +833,7 @@ public class ComputerScript : MonoBehaviour
                 if (GPUs.Count > index && GPUs[index] != null)
                 {
                     //Add money.
-                    moneySystem.Money += GPUs[index].price / 20;
+                    MoneySystem.Money += GPUs[index].price / 20;
                     //Play sound.
                     if (GPUs[index].price / 20 > 0)
                         soundManager.PlayRandomSell();
@@ -821,7 +847,7 @@ public class ComputerScript : MonoBehaviour
                 if (RAMs.Count > index && RAMs[index] != null)
                 {
                     //Add money.
-                    moneySystem.Money += RAMs[index].price / 20;
+                    MoneySystem.Money += RAMs[index].price / 20;
                     //Play sound.
                     if (RAMs[index].price / 20 > 0)
                         soundManager.PlayRandomSell();
@@ -833,12 +859,12 @@ public class ComputerScript : MonoBehaviour
                 break;
             case ComponentType.All:
                 //Add money.
-                moneySystem.Money += equipComponents[index].price / 20;
+                MoneySystem.Money += equipComponents[index].price / 20;
                 //Play sound.
                 if (equipComponents[index].price / 20 > 0)
                     soundManager.PlayRandomSell();
                 //Remove component.
-                inventory.components.Remove(equipComponents[index]);
+                Inventory.components.Remove(equipComponents[index]);
                 switch (selectedType)
                 {
                     case ComponentType.CPU:
@@ -891,7 +917,7 @@ public class ComputerScript : MonoBehaviour
                 Back();
                 break;
             case ComponentType.All:
-                inventory.components.Remove(equipComponents[index]);
+                Inventory.components.Remove(equipComponents[index]);
                 switch (selectedType)
                 {
                     case ComponentType.CPU:
@@ -926,25 +952,25 @@ public class ComputerScript : MonoBehaviour
         switch (type)
         {
             case ComponentType.CPU:
-                inventory.components.Add((PCComponent)mainCPU.Clone());
+                Inventory.components.Add((PCComponent)mainCPU.Clone());
                 mainCPU = null;
                 CPUClicked();
                 Back();
                 break;
             case ComponentType.Motherboard:
-                inventory.components.Add((PCComponent)mainMotherboard.Clone());
+                Inventory.components.Add((PCComponent)mainMotherboard.Clone());
                 mainMotherboard = null;
                 MotherboardClicked();
                 Back();
                 break;
             case ComponentType.GPU:
-                inventory.components.Add((PCComponent)GPUs[index].Clone());
+                Inventory.components.Add((PCComponent)GPUs[index].Clone());
                 GPUs[index] = null;
                 GPUClicked(index);
                 Back();
                 break;
             case ComponentType.RAM:
-                inventory.components.Add((PCComponent)RAMs[index].Clone());
+                Inventory.components.Add((PCComponent)RAMs[index].Clone());
                 RAMs[index] = null;
                 RAMClicked(index);
                 Back();
@@ -971,7 +997,7 @@ public class ComputerScript : MonoBehaviour
         mainSource.PlayOneShot(equipClips[Random.Range(0, equipClips.Length)]);
 
         //Remove this component from inventory.
-        inventory.components.Remove(equipComponents[index]);
+        Inventory.components.Remove(equipComponents[index]);
 
         //If component != null, add it to invertory.
         //Then, set new component to computer.
@@ -979,25 +1005,25 @@ public class ComputerScript : MonoBehaviour
         {
             case ComponentType.CPU:
                 if (mainCPU != null)
-                    inventory.components.Add(mainCPU);
+                    Inventory.components.Add(mainCPU);
                 mainCPU = (CPU)equipComponents[index];
                 CPUClicked();
                 break;
             case ComponentType.Motherboard:
                 if (mainMotherboard != null)
-                    inventory.components.Add(mainMotherboard);
+                    Inventory.components.Add(mainMotherboard);
                 mainMotherboard = (Motherboard)equipComponents[index];
                 MotherboardClicked();
                 break;
             case ComponentType.RAM:
                 if (RAMs.Count > indexOfSelected && RAMs[indexOfSelected] != null)
-                    inventory.components.Add(RAMs[indexOfSelected]);
+                    Inventory.components.Add(RAMs[indexOfSelected]);
                 RAMs[indexOfSelected] = (RAM)equipComponents[index];
                 RAMClicked(indexOfSelected);
                 break;
             case ComponentType.GPU:
                 if (GPUs.Count > index && GPUs[index] != null)
-                    inventory.components.Add(GPUs[indexOfSelected]);
+                    Inventory.components.Add(GPUs[indexOfSelected]);
                 GPUs[indexOfSelected] = (GPU)equipComponents[index];
                 GPUClicked(indexOfSelected);
                 break;

@@ -34,7 +34,6 @@ public class ExchangeScript : MonoBehaviour
     /// </summary>
     public Text toText;
     public Text fromFieldPlaceholder;
-    public MoneySystem moneySystem;
     public HorizontalLayoutGroup columnsGroup;
     public GameObject columnPrefab;
     public Button exchangeButton;
@@ -77,6 +76,11 @@ public class ExchangeScript : MonoBehaviour
         CurrencyTextUpdate();
         StartCoroutine(AutoUpdate());
     }
+    private void OnDestroy()
+    {
+        //Because exception can occur at quit.
+        client.DownloadStringCompleted -= DownloadCompleted;
+    }
     /// <summary>
     /// Event of clicked update button.
     /// </summary>
@@ -102,11 +106,11 @@ public class ExchangeScript : MonoBehaviour
     {
         if (exchangeBTCToUSD)
         {
-            fromField.text = moneySystem.BTCMoney.Value.ToString().TakeChars(20) + "₿";
+            fromField.text = MoneySystem.BTCMoney.Value.ToString().TakeChars(20) + "₿";
         }
         else
         {
-            fromField.text = $"{moneySystem.Money.Value}$";
+            fromField.text = $"{MoneySystem.Money.Value}$";
         }
     }
 
@@ -142,7 +146,7 @@ public class ExchangeScript : MonoBehaviour
         {
             if (exchangeBTCToUSD)
             {
-                if (decimal.TryParse(fromField.text, out decimal num) && num <= moneySystem.BTCMoney.Value)
+                if (decimal.TryParse(fromField.text, out decimal num) && num <= MoneySystem.BTCMoney.Value)
                     //Floor the value of dollars.
                     toText.text = $"{Math.Floor(num * BTC)}$";
                 else
@@ -150,7 +154,7 @@ public class ExchangeScript : MonoBehaviour
             }
             else
             {
-                if (long.TryParse(fromField.text, out long num) && num <= moneySystem.Money.Value)
+                if (long.TryParse(fromField.text, out long num) && num <= MoneySystem.Money.Value)
                     //Take only 20 first symbols in the number of bitcoins to fit in the text component.
                     toText.text = (num * (1m / BTC)).ToString().TakeChars(20) + "₿";
                 else
@@ -173,14 +177,14 @@ public class ExchangeScript : MonoBehaviour
         {
             if (exchangeBTCToUSD)
             {
-                if (decimal.TryParse(fromField.text, out decimal num) && num <= moneySystem.BTCMoney.Value)
+                if (decimal.TryParse(fromField.text, out decimal num) && num <= MoneySystem.BTCMoney.Value)
                 {
-                    moneySystem.BTCMoney -= num;
-                    moneySystem.Money += Convert.ToInt64(Math.Floor(num * BTC));
+                    MoneySystem.BTCMoney -= num;
+                    MoneySystem.Money += Convert.ToInt64(Math.Floor(num * BTC));
 
                     //Set text in field in bounds of balance.
-                    if (num > moneySystem.BTCMoney.Value)
-                        fromField.text = moneySystem.BTCMoney.ToString();
+                    if (num > MoneySystem.BTCMoney.Value)
+                        fromField.text = MoneySystem.BTCMoney.ToString();
 
                     //Play sound if exchange > 0.
                     if (num > 0)
@@ -189,14 +193,14 @@ public class ExchangeScript : MonoBehaviour
             }
             else
             {
-                if (long.TryParse(fromField.text, out long num) && num <= moneySystem.Money.Value)
+                if (long.TryParse(fromField.text, out long num) && num <= MoneySystem.Money.Value)
                 {
-                    moneySystem.Money -= num;
-                    moneySystem.BTCMoney += num * (1m / BTC);
+                    MoneySystem.Money -= num;
+                    MoneySystem.BTCMoney += num * (1m / BTC);
 
                     //Set text in field in bounds of balance.
-                    if (num > moneySystem.Money.Value)
-                        fromField.text = moneySystem.Money.Value.ToString();
+                    if (num > MoneySystem.Money.Value)
+                        fromField.text = MoneySystem.Money.Value.ToString();
 
                     //Play sound if exchange > 0.
                     if (num > 0)

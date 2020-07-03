@@ -1110,12 +1110,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1900343979}
   - {fileID: 919244871}
-  - {fileID: 765009842}
+  - {fileID: 1900343979}
   - {fileID: 2029339553}
-  - {fileID: 1390494883}
+  - {fileID: 765009842}
   - {fileID: 241333226}
+  - {fileID: 1390494883}
   - {fileID: 2119324980}
   m_Father: {fileID: 169974598}
   m_RootOrder: 12
@@ -4658,8 +4658,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   caseScroller: {fileID: 266880530}
   navigation: {fileID: 179957345}
-  inventory: {fileID: 649775847}
-  money: {fileID: 1571335822}
   sellButton: {fileID: 1423218631}
   sellAnim: {fileID: 1423218629}
   soundManager: {fileID: 519420033}
@@ -6371,7 +6369,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 49827188}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -6971,9 +6969,7 @@ MonoBehaviour:
     type: 3}
   caseType: 0
   cursor: {fileID: 1474554150}
-  inventory: {fileID: 649775847}
   navigation: {fileID: 179957345}
-  moneySystem: {fileID: 1571335822}
   messageBox: {fileID: 825257258}
   soundManager: {fileID: 519420033}
   buyClip: {fileID: 8300000, guid: 488d302bac6cbbf48ac7d1c72ed36e07, type: 3}
@@ -12214,7 +12210,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Open
+  m_Text: Open_
 --- !u!222 &512396264
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13097,8 +13093,6 @@ MonoBehaviour:
   infoGroup: {fileID: 2001973236}
   infoObject: {fileID: 2001973231}
   searchField: {fileID: 672298824}
-  moneySystem: {fileID: 1571335822}
-  inventory: {fileID: 649775847}
   messageBox: {fileID: 825257258}
   soundManager: {fileID: 519420033}
   buyClip: {fileID: 8300000, guid: 488d302bac6cbbf48ac7d1c72ed36e07, type: 3}
@@ -14199,7 +14193,6 @@ MonoBehaviour:
   fromField: {fileID: 1067564302}
   toText: {fileID: 1482960481}
   fromFieldPlaceholder: {fileID: 550790299}
-  moneySystem: {fileID: 1571335822}
   columnsGroup: {fileID: 1396188959}
   columnPrefab: {fileID: 2257839998816092461, guid: 7cb37a3f6879e944f92fa2364b2b8631,
     type: 3}
@@ -15788,7 +15781,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ff4b2030cc15d42923abc47c9c90dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  components: []
   cellPrefab: {fileID: 998649246726244641, guid: 6e9286e70c9af894e82ef640c5f7529f,
     type: 3}
   cellsGroup: {fileID: 166745785}
@@ -18910,7 +18902,7 @@ RectTransform:
   m_Children:
   - {fileID: 789658422}
   m_Father: {fileID: 49827188}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -18933,6 +18925,11 @@ MonoBehaviour:
   toggledEvent:
     m_PersistentCalls:
       m_Calls: []
+  point: {fileID: 789658422}
+  xPosON: -50
+  xPosOFF: -150
+  colorON: {r: 0, g: 1, b: 0, a: 1}
+  colorOFF: {r: 1, g: 0, b: 0, a: 1}
   toggled: 1
 --- !u!111 &765009844
 Animation:
@@ -18948,7 +18945,7 @@ Animation:
   - {fileID: 7400000, guid: 88fdfac74df1ec44e907f4f93976bfc6, type: 2}
   - {fileID: 7400000, guid: b1057fdd66cfa0b4d9ecfe3680e22732, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!114 &765009845
@@ -22091,7 +22088,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 49827188}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -24424,6 +24421,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2119324983}
+        m_TargetAssemblyTypeName: EnumerationSetting, Assembly-CSharp
+        m_MethodName: Apply
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1891149504}
         m_TargetAssemblyTypeName: LangManager, Assembly-CSharp
         m_MethodName: Apply
@@ -36519,7 +36528,7 @@ RectTransform:
   m_Children:
   - {fileID: 374719285}
   m_Father: {fileID: 49827188}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -36542,6 +36551,11 @@ MonoBehaviour:
   toggledEvent:
     m_PersistentCalls:
       m_Calls: []
+  point: {fileID: 374719285}
+  xPosON: -50
+  xPosOFF: -150
+  colorON: {r: 0, g: 1, b: 0, a: 1}
+  colorOFF: {r: 1, g: 0, b: 0, a: 1}
   toggled: 0
 --- !u!111 &1390494885
 Animation:
@@ -36557,7 +36571,7 @@ Animation:
   - {fileID: 7400000, guid: 88fdfac74df1ec44e907f4f93976bfc6, type: 2}
   - {fileID: 7400000, guid: b1057fdd66cfa0b4d9ecfe3680e22732, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!114 &1390494886
@@ -47084,10 +47098,6 @@ MonoBehaviour:
   RAMParent: {fileID: 192263051}
   equipParent: {fileID: 1228556470}
   equipText: {fileID: 824389861}
-  mainCPU: {fileID: 0}
-  mainMotherboard: {fileID: 0}
-  GPUs: []
-  RAMs: []
   emptyPixel: {fileID: 21300000, guid: aad6ed14551288042955aab2bd60e312, type: 3}
   infoObject: {fileID: 821797466}
   infoGroup: {fileID: 821797469}
@@ -49047,7 +49057,7 @@ RectTransform:
   m_Children:
   - {fileID: 593294856}
   m_Father: {fileID: 49827188}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -49082,6 +49092,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  point: {fileID: 593294856}
+  xPosON: -50
+  xPosOFF: -150
+  colorON: {r: 0, g: 1, b: 0, a: 1}
+  colorOFF: {r: 1, g: 0, b: 0, a: 1}
   toggled: 1
 --- !u!111 &1900343981
 Animation:
@@ -49097,7 +49112,7 @@ Animation:
   - {fileID: 7400000, guid: 88fdfac74df1ec44e907f4f93976bfc6, type: 2}
   - {fileID: 7400000, guid: b1057fdd66cfa0b4d9ecfe3680e22732, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!114 &1900343982
@@ -52520,7 +52535,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 49827188}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -54809,7 +54824,6 @@ MonoBehaviour:
   - {fileID: 3286163911610860551, guid: 94b70e24954919646afca7b8ac992c16, type: 3}
   image: {fileID: 287573990}
   text: {fileID: 1732624623}
-  index: 0
 --- !u!1 &2127574548
 GameObject:
   m_ObjectHideFlags: 0

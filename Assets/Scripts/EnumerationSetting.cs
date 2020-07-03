@@ -12,7 +12,9 @@ public class EnumerationSetting : MonoBehaviour
     public SVGImage image;
     public Text text;
 
-    public int index;
+    private int appliedIndex;
+
+    private int index;
 
     private void Start()
     {
@@ -23,10 +25,11 @@ public class EnumerationSetting : MonoBehaviour
     {
         get
         {
-            return index;
+            return appliedIndex;
         }
         set
         {
+            appliedIndex = value;
             index = value;
             UpdateUI();
         }
@@ -43,6 +46,10 @@ public class EnumerationSetting : MonoBehaviour
         if (index > 0)
             index--;
         UpdateUI();
+    }
+    public void Apply()
+    {
+        appliedIndex = index;
     }
     private void UpdateUI()
     {

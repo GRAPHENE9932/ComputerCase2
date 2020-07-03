@@ -32,4 +32,6 @@ public class RAM : PCComponent
             return result;
         }
     }
+
+    public override string ShortProperties => FullProperties;
 }
