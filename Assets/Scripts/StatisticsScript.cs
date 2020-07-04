@@ -9,7 +9,7 @@ using static GameSaver;
 public class StatisticsScript : MonoBehaviour
 {
     public static ulong casesOpened, itemsScrolled, CPUsDropped, GPUsDropped, RAMsDropped, motherboardsDropped, componentsSold, moneyEarnedBySale,
-        moneyWonInCasino, moneyLostInCasino, gameLaunches;
+        moneyWonInMinigames, moneyLostInMinigames, gameLaunches;
     //[HideInInspector]
     public static long gameplayTime;
     [HideInInspector]
@@ -18,7 +18,7 @@ public class StatisticsScript : MonoBehaviour
     public static ulong[] CPUsDroppedByCases, GPUsDroppedByCases, RAMsDroppedByCases, motherboardsDroppedByCases, generalDroppedByCases;
 
     public Text casesOpenedText, itemsScrolledText, CPUsDroppedText, GPUsDroppedText, RAMsDroppedText, motherboardsDroppedText, componentsSoldText,
-        moneyEarnedBySaleText, moneyWonInCasinoText, moneyLostInCasinoText, gameLaunchesText, gameplayTimeText;
+        moneyEarnedBySaleText, moneyWonInMinigamesText, moneyLostInMinigamesText, gameLaunchesText, gameplayTimeText;
     public Text[] itemsRarityText;
     public Image[] itemsRarityColumns, itemsRarityLegend;
 
@@ -57,8 +57,8 @@ public class StatisticsScript : MonoBehaviour
         motherboardsDropped = savesPack.motherboardsDropped;
         componentsSold = savesPack.componentsSold;
         moneyEarnedBySale = savesPack.moneyEarnedBySale;
-        moneyWonInCasino = savesPack.moneyWonInCasino;
-        moneyLostInCasino = savesPack.moneyLostInCasino;
+        moneyWonInMinigames = savesPack.moneyWonInMinigames;
+        moneyLostInMinigames = savesPack.moneyLostInMinigames;
         gameLaunches = savesPack.gameLaunches;
         gameplayTime = savesPack.gameplayTime;
         droppedByRarities = savesPack.droppedByRarities;
@@ -121,8 +121,8 @@ public class StatisticsScript : MonoBehaviour
 
         componentsSoldText.text = $"{LangManager.GetString("components_sold:")}\n{componentsSold}";
         moneyEarnedBySaleText.text = $"{LangManager.GetString("money_earned_by_sale:")}\n{moneyEarnedBySale}$";
-        moneyWonInCasinoText.text = $"{LangManager.GetString("money_won_in_casino:")}\n{moneyWonInCasino}$";
-        moneyLostInCasinoText.text = $"{LangManager.GetString("money_lost_in_casino:")}\n{moneyLostInCasino}$";
+        moneyWonInMinigamesText.text = $"{LangManager.GetString("money_won_in_minigames:")}\n{moneyWonInMinigames}$";
+        moneyLostInMinigamesText.text = $"{LangManager.GetString("money_lost_in_minigames:")}\n{moneyLostInMinigames}$";
         gameLaunchesText.text = $"{LangManager.GetString("game_launches:")}\n{gameLaunches}";
         gameplayTimeText.text = $"{LangManager.GetString("gameplay_time:")}\n{FormatSeconds(gameplayTime)}";
 

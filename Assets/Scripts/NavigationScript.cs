@@ -8,7 +8,7 @@ using System;
 
 public enum MenuState
 {
-    CasesMenu, Inventory, Computer, ShopMenu, Casino, Statistics, Settings, CasesMenu2, Case, Monitor, ComponentsShop, Exchange, CasesStatistics
+    CasesMenu, Inventory, Computer, ShopMenu, Minigames, Statistics, Settings, CasesMenu2, Case, Monitor, ComponentsShop, Exchange, CasesStatistics
 }
 
 public class NavigationScript : MonoBehaviour

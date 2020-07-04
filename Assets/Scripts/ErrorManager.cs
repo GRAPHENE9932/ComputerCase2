@@ -14,23 +14,27 @@ public class ErrorManager : MonoBehaviour
     public MessageBoxManager messageBox;
     public NavigationScript nav;
 
-    public byte[] key, iv;
-    public byte[] pass, email;
+    /*private static byte[] key, iv;
+    private static byte[] pass, email;*/
+
+    private static string path;
 
     //Фіксація і відображення помилок та виключень
-#if !UNITY_EDITOR
+//#if !UNITY_EDITOR
 
     private void Start()
     {
-        //byte[] key = Convert.FromBase64String("AMalpiCC/umTuLIRjeGuZI6xQIIfqyaWMV3T6koSqWo=");
-        //byte[] IV = Convert.FromBase64String("bJL3nvsWLODhPEaRYDKUnA==");
+#if !UNITY_EDITOR && UNITY_ANDROID
+        path = Path.Combine(Application.persistentDataPath, "Errors and warnings.log");
+#else
+        path = Path.Combine(Application.dataPath, "Errors and warnings.log");
+#endif
+        //byte[] bytes = Convert.FromBase64String(Resources.Load<TextAsset>("MailKey").text);
 
-        byte[] bytes = Convert.FromBase64String(Resources.Load<TextAsset>("MailKey").text);
-
-        key = bytes.Take(32).ToArray();
+        /*key = bytes.Take(32).ToArray();
         iv = bytes.Skip(32).Take(16).ToArray();
         pass = bytes.Skip(48).Take(16).ToArray();
-        email = bytes.Skip(64).Take(32).ToArray();
+        email = bytes.Skip(64).Take(32).ToArray();*/
     }
 
     void OnEnable()
@@ -43,15 +47,22 @@ public class ErrorManager : MonoBehaviour
         Application.logMessageReceived -= HandleLog;
     }
 
-    private async void HandleLog(string logString, string stackTrace, LogType type)
+    private void HandleLog(string logString, string stackTrace, LogType type)
     {
         //If log type == error or exception.
         if (type == LogType.Error || type == LogType.Exception)
         {
-            //Start message to player.
-            messageBox.StartMessage(LangManager.GetString("send_email"), 5);
-            //Preparing text for email.
-            string body = "Device name: " + SystemInfo.deviceName + "\n" +
+            
+            //Start message about error.
+            JavaTools.MakeToast(string.Format(LangManager.GetString("error_occured"), path));
+        }
+
+        if (type == LogType.Error || type == LogType.Exception || type == LogType.Warning)
+        {
+            //Preparing text for log.
+            string body = "Log type: " + type + "\n" +
+                "Time: " + DateTime.Now + "\n" +
+                "Device name: " + SystemInfo.deviceName + "\n" +
                 "Device model: " + SystemInfo.deviceModel + "\n" +
                 "Operating system: " + SystemInfo.operatingSystem + "\n" +
                 "System memory size: " + SystemInfo.systemMemorySize + "\n" +
@@ -63,18 +74,13 @@ public class ErrorManager : MonoBehaviour
                 "Processor frequency: " + SystemInfo.processorFrequency + "\n" +
                 "Navigation state: " + nav.currentState + "\n" +
                 "Log string: " + logString + "\n" +
-                "Stack trace: " + stackTrace;
-            //Send email.
-            bool result = await Task.Run(() => SendEmail("Error in ComputerCase", body));
-            //Start message about success or fail.
-            if (result)
-                JavaTools.MakeToast(LangManager.GetString("send_email_success"));
-            else
-                JavaTools.MakeToast(LangManager.GetString("send_email_failed"));
+                "Stack trace: " + stackTrace + "\n";
+
+            File.AppendAllText(path, body);
         }
     }
 
-    private async Task<bool> SendEmail(string subject, string body)
+    /*private async Task<bool> SendEmail(string subject, string body)
     {
         try
         {
@@ -93,8 +99,8 @@ public class ErrorManager : MonoBehaviour
             //Створення екземпляра інтерфейсу ICryptoTransform, який зашифрує дані.
             ICryptoTransform dec = aes.CreateDecryptor();
             //Отримання розшифрованого паролю.
-            string pass = Encoding.UTF8.GetString(dec.TransformFinalBlock(/*Convert.FromBase64String("/IcwTYcAxKIc/jiO528mTQ==")*/this.pass, 0, this.pass.Length));
-            string email = Encoding.UTF8.GetString(dec.TransformFinalBlock(/*Convert.FromBase64String("Y6pdr5Oqj9c5kuJtBAy2kLo7sgEFOIz3IP2l9072BOE=")*/this.email, 0, this.email.Length));
+            string pass = Encoding.UTF8.GetString(dec.TransformFinalBlock(ErrorManager.pass, 0, ErrorManager.pass.Length));
+            string email = Encoding.UTF8.GetString(dec.TransformFinalBlock(ErrorManager.email, 0, ErrorManager.email.Length));
 
             Debug.Log(email);
             Debug.Log(pass);
@@ -120,6 +126,6 @@ public class ErrorManager : MonoBehaviour
             //Return false (failed operation).
             return false;
         }
-    }
-#endif
+    }*/
+//#endif
 }

@@ -9,6 +9,8 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 using UnityEngine;
+using System.Net.NetworkInformation;
+using System.Runtime.Remoting.Channels;
 
 public class GameSaver : MonoBehaviour
 {
@@ -26,9 +28,52 @@ public class GameSaver : MonoBehaviour
     public static List<SavesPack.TimeLog> timeLogs = new List<SavesPack.TimeLog>();
     private static string path;
 
+    public static long? NetworkTime
+    {
+        get
+        {
+            try
+            {
+                string server = "1.ua.pool.ntp.org";
+                byte[] data = new byte[48];
+                //                   |er|ver|mod|
+                //Set first data byte 00 011 011 = 1B (hex).
+                data[0] = 0x1B;
+                IPAddress[] addresses = Dns.GetHostEntry(server).AddressList;
+                IPEndPoint ipEndPoint = new IPEndPoint(addresses[0], 123);
+                using (Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp))
+                {
+                    socket.Connect(ipEndPoint);
+                    socket.ReceiveTimeout = 3000;
+
+                    socket.Send(data);
+                    socket.Receive(data);
+                    socket.Close();
+                }
+                uint seconds = BitConverter.ToUInt32(data, 40);
+                seconds = SwapEndian(seconds);
+
+                return new DateTime(1900, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(seconds).Ticks / 10000000;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+    }
+
+    private static uint SwapEndian(uint input)
+    {
+        return ((input & 0x000000ff) << 24) +  // First byte
+            ((input & 0x0000ff00) << 8) +   // Second byte
+            ((input & 0x00ff0000) >> 8) +   // Third byte
+            ((input & 0xff000000) >> 24);   // Fourth byte
+    }
+
     private void Awake()
     {
         SetData();
+        timeLogs.Add(new SavesPack.TimeLog(true));
     }
 
     private void OnApplicationQuit()
@@ -64,9 +109,9 @@ public class GameSaver : MonoBehaviour
     {
         //Save file in dataPath if this game in editor, else save file in persistentDataPath.
 #if UNITY_ANDROID && !UNITY_EDITOR
-        path = Path.Combine(Application.persistentDataPath, "Saves.pack");
+        path = Path.Combine(Application.persistentDataPath, "Saves.enc");
 #else
-        path = Path.Combine(Application.dataPath, "Saves.pack");
+        path = Path.Combine(Application.dataPath, "Saves.enc");
 #endif
 
         CollectDataThere();
@@ -80,9 +125,9 @@ public class GameSaver : MonoBehaviour
     {
         //Load file from dataPath if this game in editor, else read file from persistentDataPath.
 #if UNITY_ANDROID && !UNITY_EDITOR
-        path = Path.Combine(Application.persistentDataPath, "Saves.pack");
+        path = Path.Combine(Application.persistentDataPath, "Saves.enc");
 #else
-        path = Path.Combine(Application.dataPath, "Saves.pack");
+        path = Path.Combine(Application.dataPath, "Saves.enc");
 #endif
         if (File.Exists(path))
         {
@@ -122,9 +167,9 @@ public class GameSaver : MonoBehaviour
     {
         //Load file from dataPath if this game in editor, else read file from persistentDataPath.
 #if UNITY_ANDROID && !UNITY_EDITOR
-        path = Path.Combine(Application.persistentDataPath, "Saves.pack");
+        path = Path.Combine(Application.persistentDataPath, "Saves.enc");
 #else
-        path = Path.Combine(Application.dataPath, "Saves.pack");
+        path = Path.Combine(Application.dataPath, "Saves.enc");
 #endif
         if (File.Exists(path))
         {
@@ -225,8 +270,23 @@ public class GameSaver : MonoBehaviour
     /// </summary>
     private void CollectData()
     {
-        //Regenerate image names in inventory.
+        //Regenerate image names in inventory and computer.
         Inventory.components.ForEach(x => x.RegenerateImage());
+
+        if (ComputerScript.mainCPU != null)
+            ComputerScript.mainCPU.RegenerateImage();
+
+        if (ComputerScript.mainMotherboard != null)
+            ComputerScript.mainMotherboard.RegenerateImage();
+
+        foreach (GPU gpu in ComputerScript.GPUs)
+            if (gpu != null)
+                gpu.RegenerateImage();
+
+        foreach (RAM ram in ComputerScript.RAMs)
+            if (ram != null)
+                ram.RegenerateImage();
+
         //Collect data from game.
         savesPack = new SavesPack
         {
@@ -250,8 +310,8 @@ public class GameSaver : MonoBehaviour
             motherboardsDropped = StatisticsScript.motherboardsDropped,
             componentsSold = StatisticsScript.componentsSold,
             moneyEarnedBySale = StatisticsScript.moneyEarnedBySale,
-            moneyWonInCasino = StatisticsScript.moneyWonInCasino,
-            moneyLostInCasino = StatisticsScript.moneyLostInCasino,
+            moneyWonInMinigames = StatisticsScript.moneyWonInMinigames,
+            moneyLostInMinigames = StatisticsScript.moneyLostInMinigames,
             gameLaunches = StatisticsScript.gameLaunches,
             gameplayTime = StatisticsScript.gameplayTime,
             droppedByRarities = StatisticsScript.droppedByRarities,
@@ -267,7 +327,7 @@ public class GameSaver : MonoBehaviour
             lang = langSetting.Index,
 
             money = MoneySystem.Money.Value,
-            BTCMoney = MoneySystem.BTCMoney.Value
+            BTCMoney = MoneySystem.BTCMoney.Value,
         };
         CollectDataThere();
     }
@@ -326,7 +386,7 @@ public class SavesPack
 
     //Statistics.
     public ulong casesOpened, itemsScrolled, CPUsDropped, GPUsDropped, RAMsDropped, motherboardsDropped, componentsSold, moneyEarnedBySale,
-        moneyWonInCasino, moneyLostInCasino, gameLaunches;
+        moneyWonInMinigames, moneyLostInMinigames, gameLaunches;
     public long gameplayTime;
     public ulong[] droppedByRarities, CPUsDroppedByCases, GPUsDroppedByCases, RAMsDroppedByCases, motherboardsDroppedByCases,
         generalDroppedByCases;
@@ -343,6 +403,11 @@ public class SavesPack
     public string version;
 
     public TimeLog[] timeLogs;
+
+    //Anti cheat bans count.
+    public int bans;
+    public bool banned;
+    public long? banTime;
 
     public static SavesPack Default
     {
@@ -392,10 +457,7 @@ public class SavesPack
 
     public class TimeLog
     {
-        private const string server = "1.ua.pool.ntp.org";
-
         public long sys;
-        public long? net;
 
         /// <summary>
         /// Is player entered (true) or leaved (false) from game?
@@ -410,46 +472,14 @@ public class SavesPack
         public TimeLog(bool entered)
         {
             this.entered = entered;
+            GetTime();
+        }
 
+        private void GetTime()
+        {
             //Get system time.
             //Tick - 100 ns. In 1 s 1 000 ms -> 1 000 000 mcs -> 10 000 000 * 100 ns.
             sys = DateTime.UtcNow.Ticks / 10000000;
-
-            //Get network time.
-            try
-            {
-                byte[] data = new byte[48];
-                //                   |er|ver|mod|
-                //Set first data byte 00 011 011 = 1B (hex).
-                data[0] = 0x1B;
-                IPAddress[] addresses = Dns.GetHostEntry(server).AddressList;
-                IPEndPoint ipEndPoint = new IPEndPoint(addresses[0], 123);
-                using (Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp))
-                {
-                    socket.Connect(ipEndPoint);
-                    socket.ReceiveTimeout = 3000;
-
-                    socket.Send(data);
-                    socket.Receive(data);
-                    socket.Close();
-                }
-                uint seconds = BitConverter.ToUInt32(data, 40);
-                seconds = SwapEndian(seconds);
-
-                net = new DateTime(1900, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(seconds).Ticks / 10000000;
-            }
-            catch
-            {
-                net = null;
-            }
-        }
-
-        private uint SwapEndian(uint input)
-        {
-            return ((input & 0x000000ff) << 24) +  // First byte
-                ((input & 0x0000ff00) << 8) +   // Second byte
-                ((input & 0x00ff0000) >> 8) +   // Third byte
-                ((input & 0xff000000) >> 24);   // Fourth byte
         }
     }
 }

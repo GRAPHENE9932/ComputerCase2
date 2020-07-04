@@ -74,7 +74,7 @@ computer<val>Комп'ютер
 <pair>
 shop<val>Магазин
 <pair>
-casino<val>Казино
+minigames<val>Казино
 <pair>
 statistics<val>Статистика
 <pair>
@@ -132,13 +132,7 @@ dis_comp_first<val>Спочатку розберіть комп'ютер!
 <pair>
 unequip<val>Вийняти
 <pair>
-send_email<val>Виникла помилка! Надсилання повідомлення про це...
-<pair>
-send_email_success<val>Виникла помилка! Надсилання повідомлення про це...
-Успішно!
-<pair>
-send_email_failed<val>Виникла помилка! Надсилання повідомлення про це...
-Не вийшло!
+error_occured<val>Виникла помилка! Відкрийте файл {0}, щоб побачити її.
 <pair>
 page<val>Сторінка
 <pair>
@@ -184,9 +178,9 @@ components_sold:<val>Продано компонентів:
 <pair>
 money_earned_by_sale:<val>Зароблено на продажі:
 <pair>
-money_won_in_casino:<val>Грошей виграно в казино:
+money_won_in_minigames:<val>Грошей виграно в мінііграх:
 <pair>
-money_lost_in_casino:<val>Грошей програно в казино:
+money_lost_in_minigames:<val>Грошей програно в мінііграх:
 <pair>
 game_launches:<val>Запусків гри:
 <pair>
@@ -236,3 +230,20 @@ properties...<val>Властивості...
 no_internet<val>Немає інтернету!
 <pair>
 no_data<val>Немає даних
+5_minutes<val>5 хвилин
+<pair>
+1_hour<val>1 годину
+<pair>
+3_hours<val>3 години
+<pair>
+8_hours<val>8 годин
+<pair>
+24_hours<val>24 години
+<pair>
+48_hours<val>48 годин
+<pair>
+time_left:<val>Залишилось часу:
+<pair>
+ban_content<val>Виявлено чітерство часом! Будь ласка, не робіть так - це погано :(. Після кожної спроби зчітерити час бану буде збільшуватися, зараз ви забанені на {0}. 
+<pair>
+ban_header<val>Виявлені подорожі у часі!

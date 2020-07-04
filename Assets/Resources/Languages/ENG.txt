@@ -74,7 +74,7 @@ computer<val>Computer
 <pair>
 shop<val>Shop
 <pair>
-casino<val>Casino
+minigames<val>minigames
 <pair>
 statistics<val>Statistics
 <pair>
@@ -132,13 +132,7 @@ dis_comp_first<val>Disassemble computer first!
 <pair>
 unequip<val>Unequip
 <pair>
-send_email<val>An error occured! Sending email about it...
-<pair>
-send_email_success<val>An error occured! Sending email about it...
-Success!
-<pair>
-send_email_failed<val>An error occured! Sending email about it...
-Failed!
+error_occured<val>An error occured! Open {0} file to view it.
 <pair>
 page<val>Page
 <pair>
@@ -184,9 +178,9 @@ components_sold:<val>Components sold:
 <pair>
 money_earned_by_sale:<val>Money earned by sale:
 <pair>
-money_won_in_casino:<val>Money won in casino:
+money_won_in_minigames:<val>Money won in minigames:
 <pair>
-money_lost_in_casino:<val>Money lost in casino:
+money_lost_in_minigames:<val>Money lost in minigames:
 <pair>
 game_launches:<val>Game launches:
 <pair>
@@ -236,3 +230,21 @@ properties...<val>Properties...
 no_internet<val>No internet!
 <pair>
 no_data<val>No data
+<pair>
+5_minutes<val>5 minutes
+<pair>
+1_hour<val>1 hour
+<pair>
+3_hours<val>3 hours
+<pair>
+8_hours<val>8 hours
+<pair>
+24_hours<val>24 hours
+<pair>
+48_hours<val>48 hours
+<pair>
+time_left:<val>Time left:
+<pair>
+ban_content<val>Detected time cheating! Please do not cheat in games :(. After every try ban time will increase, now ypu banned for {0}. 
+<pair>
+ban_header<val>Time travels detected!

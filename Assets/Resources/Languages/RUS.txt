@@ -74,7 +74,7 @@ computer<val>Компьютер
 <pair>
 shop<val>Магазин
 <pair>
-casino<val>Казино
+minigames<val>Миниигры
 <pair>
 statistics<val>Статистика
 <pair>
@@ -132,13 +132,7 @@ dis_comp_first<val>Сначала разберите компьютер!
 <pair>
 unequip<val>Вынуть
 <pair>
-send_email<val>Произошла ошибка! Отправка сообщения об этом...
-<pair>
-send_email_success<val>Произошла ошибка! Отправка сообщения об этом...
-Успешно!
-<pair>
-send_email_failed<val>Произошла ошибка! Отправка сообщения об этом...
-Не получилось!
+error_occured<val>Произошла ошибка! Откройте файл {0}, чтобы увидеть её.
 <pair>
 page<val>Страница
 <pair>
@@ -184,9 +178,9 @@ components_sold:<val>Продано компонентов:
 <pair>
 money_earned_by_sale:<val>Заработано денег на продаже:
 <pair>
-money_won_in_casino:<val>Денег выиграно в казино:
+money_won_in_minigames:<val>Денег выиграно в минииграх:
 <pair>
-money_lost_in_casino:<val>Денег проиграно в казино:
+money_lost_in_minigames:<val>Денег проиграно в минииграх:
 <pair>
 game_launches:<val>Запусков игры:
 <pair>
@@ -236,3 +230,20 @@ properties...<val>Свойства...
 no_internet<val>Нет интернета!
 <pair>
 no_data<val>Нет данных
+5_minutes<val>5 минут
+<pair>
+1_hour<val>1 час
+<pair>
+3_hours<val>3 часа
+<pair>
+8_hours<val>8 часов
+<pair>
+24_hours<val>24 часа
+<pair>
+48_hours<val>48 часов
+<pair>
+time_left:<val>Осталось времени:
+<pair>
+ban_content<val>Обнаружено читерство временем! Пожалуйста, не читерьте в играх, это плохо :(. После каждой попытки считерить время бана будет увеличиватся, сейчас вы забанены на {0}. 
+<pair>
+ban_header<val>Обнаружены путешествия во времени!
