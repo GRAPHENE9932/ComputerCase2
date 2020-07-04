@@ -215,7 +215,6 @@ namespace KlimSoft
 
                 fields[i].SetValue(res, DeserializeField(value, fields[i].FieldType));
             }
-
             return res;
         }
 
@@ -411,9 +410,11 @@ namespace KlimSoft
                     prevIndex = i + 1;
                 }
             }
-            //Add the last element if it not alone (else if input = "", output will be [""], but i need []).
-            if (strings.Count > 0)
-                strings.Add(s.Substring(prevIndex));
+            //Add the last element.
+            strings.Add(s.Substring(prevIndex));
+            //If only 1 element : "", clear it.
+            if (strings.Count == 1 && string.IsNullOrEmpty(strings[0]))
+                return new string[0];
             return strings.ToArray();
         }
     }

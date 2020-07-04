@@ -118,7 +118,7 @@ public class GameSaver : MonoBehaviour
         SetDataThere();
     }
 
-    private static void Load()
+    public static void Load()
     {
         //Load file from dataPath if this game in editor, else read file from persistentDataPath.
 #if UNITY_ANDROID && !UNITY_EDITOR
@@ -126,16 +126,15 @@ public class GameSaver : MonoBehaviour
 #else
         path = Path.Combine(Application.dataPath, "Saves.pack");
 #endif
-        SavesPack pack;
         if (File.Exists(path))
         {
             byte[] encryptedData = File.ReadAllBytes(path);
             byte[] decryptedData = Decrypt(encryptedData);
             string packSerialized = Encoding.UTF8.GetString(decryptedData);
-            pack = (SavesPack)KlimSoft.Serializer.Deserialize(packSerialized, typeof(SavesPack));
+            savesPack = (SavesPack)KlimSoft.Serializer.Deserialize(packSerialized, typeof(SavesPack));
         }
         else
-            pack = SavesPack.Default;
+            savesPack = SavesPack.Default;
 
         SetDataThere();
     }

@@ -22,8 +22,7 @@ public class LoadScript : MonoBehaviour
     private void FixedUpdate()
     {
         if (bar.fillAmount < progress)
-            bar.fillAmount += 0.02F;
-        Debug.Log(progress);
+            bar.fillAmount += 0.05F;
     }
 
     private IEnumerator MainCorut()
@@ -37,6 +36,7 @@ public class LoadScript : MonoBehaviour
         if (GameSaver.timeLogs.Count > 500)
             GameSaver.timeLogs.RemoveAt(0);
 
+        
         while (GameSaver.loadProgress < 0.75F)
         {
             progress = GameSaver.loadProgress / 2F;
@@ -51,6 +51,7 @@ public class LoadScript : MonoBehaviour
             progress = 0.5F + sceneLoad.progress / 2F;
             yield return null;
         }
+        progress = 1F;
         //Animation of fade.
         for (float t = 0F; t < 1F; t += Time.deltaTime)
         {
