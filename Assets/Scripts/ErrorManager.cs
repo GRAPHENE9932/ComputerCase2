@@ -8,6 +8,7 @@ using System.Text;
 using System.IO;
 using System.Threading.Tasks;
 using System.Linq;
+using KlimSoft;
 
 public class ErrorManager : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class ErrorManager : MonoBehaviour
     //Фіксація і відображення помилок та виключень
 //#if !UNITY_EDITOR
 
-    private void Start()
+    /*private void Start()
     {
 #if !UNITY_EDITOR && UNITY_ANDROID
         path = Path.Combine(Application.persistentDataPath, "Errors and warnings.log");
@@ -31,14 +32,19 @@ public class ErrorManager : MonoBehaviour
 #endif
         //byte[] bytes = Convert.FromBase64String(Resources.Load<TextAsset>("MailKey").text);
 
-        /*key = bytes.Take(32).ToArray();
+        key = bytes.Take(32).ToArray();
         iv = bytes.Skip(32).Take(16).ToArray();
         pass = bytes.Skip(48).Take(16).ToArray();
-        email = bytes.Skip(64).Take(32).ToArray();*/
-    }
+        email = bytes.Skip(64).Take(32).ToArray();
+    }*/
 
     void OnEnable()
     {
+#if !UNITY_EDITOR && UNITY_ANDROID
+        path = Path.Combine(Application.persistentDataPath, "Errors and warnings.log");
+#else
+        path = Path.Combine(Application.dataPath, "Errors and warnings.log");
+#endif
         Application.logMessageReceived += HandleLog;
     }
 

@@ -18,7 +18,7 @@ public class LangManager : MonoBehaviour
 
     private void Awake()
     {
-        langSetting.Index = GameSaver.savesPack.lang;
+        langSetting.Index = GameSaver.Saves.lang;
         Apply();
     }
 

@@ -21,12 +21,31 @@ public class GameSaver : MonoBehaviour
     public EnumerationSetting langSetting;
     public MoneySystem moneySys;
 
-    public static SavesPack savesPack;
+    private static SavesPack savesPack;
     public static string versionOfSaves;
     public static float loadProgress;
     public static string loadStatus;
     public static List<SavesPack.TimeLog> timeLogs = new List<SavesPack.TimeLog>();
     private static string path;
+    private static bool dataSetted = false;
+
+    public static SavesPack Saves
+    {
+        get
+        {
+            if (savesPack == null)
+            {
+                Debug.Log("savesPack == null.");
+                return SavesPack.Default;
+            }
+            else
+                return savesPack;
+        }
+        set
+        {
+            savesPack = value;
+        }
+    }
 
     public static long? NetworkTime
     {
@@ -72,8 +91,11 @@ public class GameSaver : MonoBehaviour
 
     private void Awake()
     {
-        SetData();
-        timeLogs.Add(new SavesPack.TimeLog(true));
+        if (!dataSetted)
+        {
+            SetData(false);
+            timeLogs.Add(new SavesPack.TimeLog(true));
+        }
     }
 
     private void OnApplicationQuit()
@@ -97,11 +119,14 @@ public class GameSaver : MonoBehaviour
         }
         else
         {
-            Load();
-            timeLogs.Add(new SavesPack.TimeLog(true));
-            if (timeLogs.Count > 500)
-                timeLogs.RemoveAt(0);
-            SetData();
+            if (!dataSetted)
+            {
+                Load();
+                timeLogs.Add(new SavesPack.TimeLog(true));
+                if (timeLogs.Count > 500)
+                    timeLogs.RemoveAt(0);
+                SetData(true);
+            }
         }
     }
 
@@ -115,7 +140,7 @@ public class GameSaver : MonoBehaviour
 #endif
 
         CollectDataThere();
-        string packSerialized = KlimSoft.Serializer.Serialize(savesPack);
+        string packSerialized = KlimSoft.Serializer.Serialize(Saves);
         Debug.Log(packSerialized);
         byte[] dataToSave = Encrypt(Encoding.UTF8.GetBytes(packSerialized));
         File.WriteAllBytes(path, dataToSave);
@@ -151,11 +176,11 @@ public class GameSaver : MonoBehaviour
             loadProgress = 0.75F;
             loadStatus = "Deserializing...";
 
-            savesPack = (SavesPack)KlimSoft.Serializer.Deserialize(packSerialized, typeof(SavesPack));
+            Saves = (SavesPack)KlimSoft.Serializer.Deserialize(packSerialized, typeof(SavesPack));
         }
         else
         {
-            savesPack = SavesPack.Default;
+            Saves = SavesPack.Default;
             loadProgress = 1F;
             loadStatus = "No saves";
         }
@@ -176,10 +201,10 @@ public class GameSaver : MonoBehaviour
             byte[] encryptedData = File.ReadAllBytes(path);
             byte[] decryptedData = Decrypt(encryptedData);
             string packSerialized = Encoding.UTF8.GetString(decryptedData);
-            savesPack = (SavesPack)KlimSoft.Serializer.Deserialize(packSerialized, typeof(SavesPack));
+            Saves = (SavesPack)KlimSoft.Serializer.Deserialize(packSerialized, typeof(SavesPack));
         }
         else
-            savesPack = SavesPack.Default;
+            Saves = SavesPack.Default;
 
         SetDataThere();
     }
@@ -251,9 +276,9 @@ public class GameSaver : MonoBehaviour
     /// </summary>
     private static void CollectDataThere()
     {
-        savesPack.version = Application.version;
-        savesPack.timeLogs = timeLogs.ToArray();
-        savesPack.lastSession = DateTime.Now;
+        Saves.version = Application.version;
+        Saves.timeLogs = timeLogs.ToArray();
+        Saves.lastSession = DateTime.Now;
     }
 
     /// <summary>
@@ -261,8 +286,8 @@ public class GameSaver : MonoBehaviour
     /// </summary>
     private static void SetDataThere()
     {
-        versionOfSaves = savesPack.version;
-        timeLogs = savesPack.timeLogs.ToList();
+        versionOfSaves = Saves.version;
+        timeLogs = Saves.timeLogs.ToList();
     }
 
     /// <summary>
@@ -288,7 +313,7 @@ public class GameSaver : MonoBehaviour
                 ram.RegenerateImage();
 
         //Collect data from game.
-        savesPack = new SavesPack
+        Saves = new SavesPack
         {
             inventoryCPUs = Inventory.components.Where(x => x is CPU).Select(x => (CPU)x).ToArray(),
             inventoryGPUs = Inventory.components.Where(x => x is GPU).Select(x => (GPU)x).ToArray(),
@@ -335,24 +360,25 @@ public class GameSaver : MonoBehaviour
     /// <summary>
     /// Set game data from saves pack.
     /// </summary>
-    private void SetData()
+    private void SetData(bool includingScripts)
     {
-        Inventory.ApplySaves();
+        if (includingScripts)
+        {
+            Inventory.ApplySaves();
+            ComputerScript.ApplySaves();
+            OSScript.ApplySaves();
+            StatisticsScript.ApplySaves();
+            MoneySystem.ApplySaves();
+        }
 
-        ComputerScript.ApplySaves();
-
-        OSScript.ApplySaves();
-
-        StatisticsScript.ApplySaves();
-
-        soundToggle.toggled = savesPack.sound;
-        vibroToggle.toggled = savesPack.vibration;
-        FPSToggle.toggled = savesPack.showFPS;
-        langSetting.Index = savesPack.lang;
-
-        MoneySystem.ApplySaves();
+        soundToggle.toggled = Saves.sound;
+        vibroToggle.toggled = Saves.vibration;
+        FPSToggle.toggled = Saves.showFPS;
+        langSetting.Index = Saves.lang;
 
         SetDataThere();
+
+        dataSetted = true;
     }
 
     private static byte[] HexToBytes(string hex)

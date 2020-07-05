@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using KlimSoft;
 /// <summary>
 /// The type of component (CPU, GPU...).
 /// </summary>
@@ -374,7 +375,7 @@ public class CaseScroller : MonoBehaviour
     /// </summary>
     private IEnumerator CaseScroll()
     {
-        navigation.blocked = true;
+        NavigationScript.blocked = true;
         cellsGroup.localPosition = new Vector2(0, 0);
         while (speed > 0)
         {
@@ -387,7 +388,7 @@ public class CaseScroller : MonoBehaviour
             yield return null;
         }
         CaseStop();
-        navigation.blocked = false;
+        NavigationScript.blocked = false;
     }
     /// <summary>
     /// Case stop event.

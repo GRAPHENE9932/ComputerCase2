@@ -151,20 +151,20 @@ public class ComputerScript : MonoBehaviour
     }
     public static void ApplySaves()
     {
-        mainCPU = GameSaver.savesPack.cpu;
+        mainCPU = GameSaver.Saves.cpu;
         if (mainCPU != null)
             mainCPU.RegenerateImage();
 
-        mainMotherboard = GameSaver.savesPack.motherboard;
+        mainMotherboard = GameSaver.Saves.motherboard;
         if (mainMotherboard != null)
             mainMotherboard.RegenerateImage();
 
-        GPUs = GameSaver.savesPack.gpus.ToList();
+        GPUs = GameSaver.Saves.gpus.ToList();
         foreach (GPU gpu in GPUs)
             if (gpu != null)
                 gpu.RegenerateImage();
 
-        RAMs = GameSaver.savesPack.rams.ToList();
+        RAMs = GameSaver.Saves.rams.ToList();
         foreach (RAM ram in RAMs)
             if (ram != null)
                 ram.RegenerateImage();

@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel.Design;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using KlimSoft;
 
 public enum OSPage
 {
@@ -141,9 +140,9 @@ public class OSScript : MonoBehaviour
 
     public static void ApplySaves()
     {
-        earned = GameSaver.savesPack.mined;
-        if (GameSaver.savesPack.lastSession != DateTime.MinValue && Performance != -1)
-            earned += (decimal)(DateTime.Now - GameSaver.savesPack.lastSession).TotalDays * Performance;
+        earned = GameSaver.Saves.mined;
+        if (GameSaver.Saves.lastSession != DateTime.MinValue && Performance != -1)
+            earned += (decimal)(DateTime.Now - GameSaver.Saves.lastSession).TotalDays * Performance;
         if (earned > Capacity)
             earned = Capacity;
     }

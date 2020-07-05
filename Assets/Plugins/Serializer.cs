@@ -232,7 +232,7 @@ namespace KlimSoft
             if (type.IsArray)
             {
                 //Split, ignoring subarrays.
-                string[] valuesStr = SmartSplit(input, ',', new char[] { '[', '{' }, new char[] { ']', '}' });
+                string[] valuesStr = input.SmartSplit(',', new char[] { '[', '{' }, new char[] { ']', '}' });
 
                 object[] values = new object[valuesStr.Length];
                 for (int i = 0; i < values.Length; i++)
@@ -375,47 +375,6 @@ namespace KlimSoft
             for (int i = 0; i < hex.Length; i += 2)
                 res[i / 2] = Convert.ToByte(new string(new char[] { hex[i], hex[i + 1] }), 16);
             return res;
-        }
-
-        private static string[] SmartSplit(string s, char c, char[] triggersFrom, char[] triggersTo)
-        {
-            List<string> strings = new List<string>();
-            int prevIndex = 0;
-            int rank = 0;
-            char? triggerFromNow = null;
-            char? triggerToNow = null;
-            for (int i = 0; i < s.Length; i++)
-            {
-                //If trigger not assigned and current char contains one of param triggers, assign the trigger.
-                if (triggerFromNow == null && triggersFrom.Contains(s[i]))
-                {
-                    //Set trigger from.
-                    triggerFromNow = s[i];
-                    //Set trigger to base by trigger from.
-                    triggerToNow = triggersTo[Array.IndexOf(triggersFrom, s[i])];
-                }
-
-                if (s[i] == triggerFromNow)
-                    rank++;
-                else if (s[i] == triggerToNow)
-                    rank--;
-
-                if (rank != 0)
-                    continue;
-
-                if (s[i] == c)
-                {
-                    strings.Add(s.Substring(prevIndex, i - prevIndex));
-                    i = s.IndexOf(c, i);
-                    prevIndex = i + 1;
-                }
-            }
-            //Add the last element.
-            strings.Add(s.Substring(prevIndex));
-            //If only 1 element : "", clear it.
-            if (strings.Count == 1 && string.IsNullOrEmpty(strings[0]))
-                return new string[0];
-            return strings.ToArray();
         }
     }
 }

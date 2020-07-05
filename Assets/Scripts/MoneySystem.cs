@@ -69,8 +69,8 @@ public class MoneySystem : MonoBehaviour
 
     public static void ApplySaves()
     {
-        Money = new SecureLong(GameSaver.savesPack.money);
-        BTCMoney = new SecureDecimal(GameSaver.savesPack.BTCMoney);
+        Money = new SecureLong(GameSaver.Saves.money);
+        BTCMoney = new SecureDecimal(GameSaver.Saves.BTCMoney);
     }
 
     private void Start()

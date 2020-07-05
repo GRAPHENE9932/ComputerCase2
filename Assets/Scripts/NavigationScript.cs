@@ -8,7 +8,8 @@ using System;
 
 public enum MenuState
 {
-    CasesMenu, Inventory, Computer, ShopMenu, Minigames, Statistics, Settings, CasesMenu2, Case, Monitor, ComponentsShop, Exchange, CasesStatistics
+    CasesMenu, Inventory, Computer, ShopMenu, Minigames, Statistics, Settings, CasesMenu2, Case, Monitor, ComponentsShop, Exchange,
+    CasesStatistics, CrashMinigame
 }
 
 public class NavigationScript : MonoBehaviour
@@ -24,15 +25,15 @@ public class NavigationScript : MonoBehaviour
     /// <summary>
     ///     Змінна, що показує, чи відкрите зараз меню.
     /// </summary>
-    private bool menuOpened = false;
+    private static bool menuOpened = false;
     /// <summary>
     ///     Змінна, що показує, чи програється зараз анімація закриття або відкриття меню.
     /// </summary>
-    private bool menuAnimating;
+    private static bool menuAnimating;
     /// <summary>
     ///     Змінна, що показує, чи програється зараз анімація зміни відділу меню.
     /// </summary>
-    private bool switchAnimating;
+    private static bool switchAnimating;
     /// <summary>
     ///     Відділ меню, на якому зараз знаходиться гравець.
     /// </summary>
@@ -49,10 +50,10 @@ public class NavigationScript : MonoBehaviour
     /// <summary>
     /// While blocked cannot switch page.
     /// </summary>
-    public bool blocked;
+    public static bool blocked;
 
-    public AudioSource mainSource;
     public AudioClip audioClip;
+    public SoundManager soundMgr;
     /// <summary>
     /// Винятки, при яких звук не буде відтворюватись.
     /// </summary>
@@ -145,7 +146,7 @@ public class NavigationScript : MonoBehaviour
             menus[(int)state].GetComponent<CanvasGroup>().interactable = false;
             //Play sound if it is not in exceptions.
             if (!IsInExceptions(state, currentState))
-                mainSource.PlayOneShot(audioClip);
+                soundMgr.PlaySound(audioClip);
             //Зараз програється анімація.
             switchAnimating = true;
             //Шлях анімації виходу старого відділу.

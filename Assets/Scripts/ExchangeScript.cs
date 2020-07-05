@@ -6,6 +6,7 @@ using System.Net;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
+using KlimSoft;
 
 public class ExchangeScript : MonoBehaviour
 {

@@ -49,24 +49,24 @@ public class StatisticsScript : MonoBehaviour
 
     public static void ApplySaves()
     {
-        casesOpened = savesPack.casesOpened;
-        itemsScrolled = savesPack.itemsScrolled;
-        CPUsDropped = savesPack.CPUsDropped;
-        GPUsDropped = savesPack.GPUsDropped;
-        RAMsDropped = savesPack.RAMsDropped;
-        motherboardsDropped = savesPack.motherboardsDropped;
-        componentsSold = savesPack.componentsSold;
-        moneyEarnedBySale = savesPack.moneyEarnedBySale;
-        moneyWonInMinigames = savesPack.moneyWonInMinigames;
-        moneyLostInMinigames = savesPack.moneyLostInMinigames;
-        gameLaunches = savesPack.gameLaunches;
-        gameplayTime = savesPack.gameplayTime;
-        droppedByRarities = savesPack.droppedByRarities;
-        CPUsDroppedByCases = savesPack.CPUsDroppedByCases;
-        GPUsDroppedByCases = savesPack.GPUsDroppedByCases;
-        RAMsDroppedByCases = savesPack.RAMsDroppedByCases;
-        motherboardsDroppedByCases = savesPack.motherboardsDroppedByCases;
-        generalDroppedByCases = savesPack.generalDroppedByCases;
+        casesOpened = Saves.casesOpened;
+        itemsScrolled = Saves.itemsScrolled;
+        CPUsDropped = Saves.CPUsDropped;
+        GPUsDropped = Saves.GPUsDropped;
+        RAMsDropped = Saves.RAMsDropped;
+        motherboardsDropped = Saves.motherboardsDropped;
+        componentsSold = Saves.componentsSold;
+        moneyEarnedBySale = Saves.moneyEarnedBySale;
+        moneyWonInMinigames = Saves.moneyWonInMinigames;
+        moneyLostInMinigames = Saves.moneyLostInMinigames;
+        gameLaunches = Saves.gameLaunches;
+        gameplayTime = Saves.gameplayTime;
+        droppedByRarities = Saves.droppedByRarities;
+        CPUsDroppedByCases = Saves.CPUsDroppedByCases;
+        GPUsDroppedByCases = Saves.GPUsDroppedByCases;
+        RAMsDroppedByCases = Saves.RAMsDroppedByCases;
+        motherboardsDroppedByCases = Saves.motherboardsDroppedByCases;
+        generalDroppedByCases = Saves.generalDroppedByCases;
     }
 
     private IEnumerator Timer()

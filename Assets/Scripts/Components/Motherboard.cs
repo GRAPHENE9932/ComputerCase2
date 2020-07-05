@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reflection;
 using UnityEngine;
+using KlimSoft;
 
 //Chipsets supported overclock: X370, B350, X300, A300 (AMD) and ... (Intel)
 public enum Chipset

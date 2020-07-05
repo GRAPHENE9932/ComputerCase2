@@ -1,0 +1,544 @@
+Log type: Exception
+Time: 7/5/2020 10:34:05 AM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.7
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: StatisticsScript.UpdateStatistics () (at Assets/Scripts/StatisticsScript.cs:124)
+StatisticsScript.Start () (at Assets/Scripts/StatisticsScript.cs:47)
+
+Log type: Exception
+Time: 7/5/2020 11:14:49 AM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.47
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: StatisticsScript.UpdateStatistics () (at Assets/Scripts/StatisticsScript.cs:134)
+StatisticsScript.Start () (at Assets/Scripts/StatisticsScript.cs:47)
+
+Log type: Exception
+Time: 7/5/2020 11:15:10 AM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.47
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: CrashMinigame+<MainCorut>d__19.MoveNext () (at Assets/Scripts/Minigames/CrashMinigame.cs:60)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <c85ab98a3257443eaa6aaaea77733582>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+CrashMinigame:Start_Clicked() (at Assets/Scripts/Minigames/CrashMinigame.cs:50)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 7/5/2020 11:23:15 AM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.43
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: StatisticsScript.UpdateStatistics () (at Assets/Scripts/StatisticsScript.cs:134)
+StatisticsScript.Start () (at Assets/Scripts/StatisticsScript.cs:47)
+
+Log type: Exception
+Time: 7/5/2020 11:29:56 AM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.41
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: StatisticsScript.UpdateStatistics () (at Assets/Scripts/StatisticsScript.cs:134)
+StatisticsScript.Start () (at Assets/Scripts/StatisticsScript.cs:47)
+
+Log type: Exception
+Time: 7/5/2020 11:31:41 AM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.4
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: StatisticsScript.UpdateStatistics () (at Assets/Scripts/StatisticsScript.cs:134)
+StatisticsScript.Start () (at Assets/Scripts/StatisticsScript.cs:47)
+
+Log type: Exception
+Time: 7/5/2020 11:34:12 AM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.39
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: StatisticsScript.UpdateStatistics () (at Assets/Scripts/StatisticsScript.cs:134)
+StatisticsScript.Start () (at Assets/Scripts/StatisticsScript.cs:47)
+
+Log type: Exception
+Time: 7/5/2020 12:30:07 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.89
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: StatisticsScript.UpdateStatistics () (at Assets/Scripts/StatisticsScript.cs:134)
+StatisticsScript.Start () (at Assets/Scripts/StatisticsScript.cs:47)
+
+Log type: Exception
+Time: 7/5/2020 12:32:55 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.88
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: StatisticsScript.UpdateStatistics () (at Assets/Scripts/StatisticsScript.cs:134)
+StatisticsScript.Start () (at Assets/Scripts/StatisticsScript.cs:47)
+
+Log type: Exception
+Time: 7/5/2020 12:34:30 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.87
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: StatisticsScript.UpdateStatistics () (at Assets/Scripts/StatisticsScript.cs:134)
+StatisticsScript.Start () (at Assets/Scripts/StatisticsScript.cs:47)
+
+Log type: Exception
+Time: 7/5/2020 12:36:59 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.86
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: StatisticsScript.UpdateStatistics () (at Assets/Scripts/StatisticsScript.cs:134)
+StatisticsScript.Start () (at Assets/Scripts/StatisticsScript.cs:47)
+
+Log type: Exception
+Time: 7/5/2020 12:40:19 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.85
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: StatisticsScript.UpdateStatistics () (at Assets/Scripts/StatisticsScript.cs:134)
+StatisticsScript.Start () (at Assets/Scripts/StatisticsScript.cs:47)
+
+Log type: Exception
+Time: 7/5/2020 12:42:49 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.84
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: StatisticsScript.UpdateStatistics () (at Assets/Scripts/StatisticsScript.cs:134)
+StatisticsScript.Start () (at Assets/Scripts/StatisticsScript.cs:47)
+
+Log type: Exception
+Time: 7/5/2020 12:45:29 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.83
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: StatisticsScript.UpdateStatistics () (at Assets/Scripts/StatisticsScript.cs:134)
+StatisticsScript.Start () (at Assets/Scripts/StatisticsScript.cs:47)
+
+Log type: Exception
+Time: 7/5/2020 1:09:11 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.74
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: CrashMinigame.Start_Clicked () (at Assets/Scripts/Minigames/CrashMinigame.cs:49)
+UnityEngine.Events.InvokableCall.Invoke () (at <c85ab98a3257443eaa6aaaea77733582>:0)
+UnityEngine.Events.UnityEvent.Invoke () (at <c85ab98a3257443eaa6aaaea77733582>:0)
+UnityEngine.UI.Button.Press () (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:68)
+UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:110)
+UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:50)
+UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:261)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 7/5/2020 2:46:36 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.26
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: NavigationScript+<SwitchMenu>d__15.MoveNext () (at Assets/Scripts/NavigationScript.cs:149)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <c85ab98a3257443eaa6aaaea77733582>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+NavigationScript:MenuItemClicked(Int32) (at Assets/Scripts/NavigationScript.cs:131)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 7/5/2020 2:46:37 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.26
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: NavigationScript+<SwitchMenu>d__15.MoveNext () (at Assets/Scripts/NavigationScript.cs:149)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <c85ab98a3257443eaa6aaaea77733582>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+NavigationScript:MenuItemClicked(Int32) (at Assets/Scripts/NavigationScript.cs:131)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 7/5/2020 2:46:38 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.26
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: NavigationScript+<SwitchMenu>d__15.MoveNext () (at Assets/Scripts/NavigationScript.cs:149)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <c85ab98a3257443eaa6aaaea77733582>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+NavigationScript:MenuItemClicked(Int32) (at Assets/Scripts/NavigationScript.cs:131)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 7/5/2020 2:46:38 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.26
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: NavigationScript+<SwitchMenu>d__15.MoveNext () (at Assets/Scripts/NavigationScript.cs:149)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <c85ab98a3257443eaa6aaaea77733582>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+NavigationScript:MenuItemClicked(Int32) (at Assets/Scripts/NavigationScript.cs:131)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 7/5/2020 2:46:38 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.26
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: NavigationScript+<SwitchMenu>d__15.MoveNext () (at Assets/Scripts/NavigationScript.cs:149)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <c85ab98a3257443eaa6aaaea77733582>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+NavigationScript:MenuItemClicked(Int32) (at Assets/Scripts/NavigationScript.cs:131)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 7/5/2020 2:46:39 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.26
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: NavigationScript+<SwitchMenu>d__15.MoveNext () (at Assets/Scripts/NavigationScript.cs:149)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <c85ab98a3257443eaa6aaaea77733582>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+NavigationScript:MenuItemClicked(Int32) (at Assets/Scripts/NavigationScript.cs:131)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 7/5/2020 2:46:39 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.26
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: NavigationScript+<SwitchMenu>d__15.MoveNext () (at Assets/Scripts/NavigationScript.cs:149)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <c85ab98a3257443eaa6aaaea77733582>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+NavigationScript:MenuItemClicked(Int32) (at Assets/Scripts/NavigationScript.cs:131)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 7/5/2020 2:46:39 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.26
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: NavigationScript+<SwitchMenu>d__15.MoveNext () (at Assets/Scripts/NavigationScript.cs:149)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <c85ab98a3257443eaa6aaaea77733582>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+NavigationScript:MenuItemClicked(Int32) (at Assets/Scripts/NavigationScript.cs:131)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 7/5/2020 2:46:39 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.26
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: NavigationScript+<SwitchMenu>d__15.MoveNext () (at Assets/Scripts/NavigationScript.cs:149)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <c85ab98a3257443eaa6aaaea77733582>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+NavigationScript:MenuItemClicked(Int32) (at Assets/Scripts/NavigationScript.cs:131)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 7/5/2020 2:46:39 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.26
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: NavigationScript+<SwitchMenu>d__15.MoveNext () (at Assets/Scripts/NavigationScript.cs:149)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <c85ab98a3257443eaa6aaaea77733582>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+NavigationScript:MenuItemClicked(Int32) (at Assets/Scripts/NavigationScript.cs:131)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 7/5/2020 2:46:39 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.26
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: NavigationScript+<SwitchMenu>d__15.MoveNext () (at Assets/Scripts/NavigationScript.cs:149)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <c85ab98a3257443eaa6aaaea77733582>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+NavigationScript:MenuItemClicked(Int32) (at Assets/Scripts/NavigationScript.cs:131)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 7/5/2020 2:46:39 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.26
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: NavigationScript+<SwitchMenu>d__15.MoveNext () (at Assets/Scripts/NavigationScript.cs:149)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <c85ab98a3257443eaa6aaaea77733582>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+NavigationScript:MenuItemClicked(Int32) (at Assets/Scripts/NavigationScript.cs:131)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 7/5/2020 2:46:47 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.26
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: NavigationScript+<SwitchMenu>d__15.MoveNext () (at Assets/Scripts/NavigationScript.cs:149)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <c85ab98a3257443eaa6aaaea77733582>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+NavigationScript:MenuItemClicked(Int32) (at Assets/Scripts/NavigationScript.cs:131)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 7/5/2020 2:47:09 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: e2d21a4c4222d0d0d613fea6d06bb198f21283bd
+Battery level: 0.25
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: NavigationScript+<SwitchMenu>d__15.MoveNext () (at Assets/Scripts/NavigationScript.cs:149)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <c85ab98a3257443eaa6aaaea77733582>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+NavigationScript:MenuItemClicked(Int32) (at Assets/Scripts/NavigationScript.cs:131)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.0b14/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+

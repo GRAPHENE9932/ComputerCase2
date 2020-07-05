@@ -230,20 +230,13 @@ properties...<val>Свойства...
 no_internet<val>Нет интернета!
 <pair>
 no_data<val>Нет данных
-5_minutes<val>5 минут
 <pair>
-1_hour<val>1 час
+crash<val>Crash
 <pair>
-3_hours<val>3 часа
+bet:<val>Ставка:
 <pair>
-8_hours<val>8 часов
+click_to_start<val><b>Нажмите</b>, чтобы начать.
 <pair>
-24_hours<val>24 часа
+click_to_stop<val><b>Нажите</b>, чтобы остановить.
 <pair>
-48_hours<val>48 часов
-<pair>
-time_left:<val>Осталось времени:
-<pair>
-ban_content<val>Обнаружено читерство временем! Пожалуйста, не читерьте в играх, это плохо :(. После каждой попытки считерить время бана будет увеличиватся, сейчас вы забанены на {0}. 
-<pair>
-ban_header<val>Обнаружены путешествия во времени!
+invalid_bet<val>Неправильная ставка.

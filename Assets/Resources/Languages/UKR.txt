@@ -230,20 +230,13 @@ properties...<val>Властивості...
 no_internet<val>Немає інтернету!
 <pair>
 no_data<val>Немає даних
-5_minutes<val>5 хвилин
 <pair>
-1_hour<val>1 годину
+crash<val>Crash
 <pair>
-3_hours<val>3 години
+bet:<val>Ставка:
 <pair>
-8_hours<val>8 годин
+click_to_start<val><b>Натисніть</b>, щоб почати.
 <pair>
-24_hours<val>24 години
+click_to_stop<val><b>Натисніть</b>, щоб зупинити.
 <pair>
-48_hours<val>48 годин
-<pair>
-time_left:<val>Залишилось часу:
-<pair>
-ban_content<val>Виявлено чітерство часом! Будь ласка, не робіть так - це погано :(. Після кожної спроби зчітерити час бану буде збільшуватися, зараз ви забанені на {0}. 
-<pair>
-ban_header<val>Виявлені подорожі у часі!
+invalid_bet<val>Неправильна ставка.

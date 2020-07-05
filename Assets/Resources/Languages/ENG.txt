@@ -74,7 +74,7 @@ computer<val>Computer
 <pair>
 shop<val>Shop
 <pair>
-minigames<val>minigames
+minigames<val>Minigames
 <pair>
 statistics<val>Statistics
 <pair>
@@ -231,20 +231,12 @@ no_internet<val>No internet!
 <pair>
 no_data<val>No data
 <pair>
-5_minutes<val>5 minutes
+crash<val>Crash
 <pair>
-1_hour<val>1 hour
+bet:<val>Bet:
 <pair>
-3_hours<val>3 hours
+click_to_start<val><b>Click</b> to start.
 <pair>
-8_hours<val>8 hours
+click_to_stop<val><b>Click</b> to stop.
 <pair>
-24_hours<val>24 hours
-<pair>
-48_hours<val>48 hours
-<pair>
-time_left:<val>Time left:
-<pair>
-ban_content<val>Detected time cheating! Please do not cheat in games :(. After every try ban time will increase, now ypu banned for {0}. 
-<pair>
-ban_header<val>Time travels detected!
+invalid_bet<val>Invalid bet.
