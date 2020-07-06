@@ -240,3 +240,9 @@ click_to_start<val><b>Нажмите</b>, чтобы начать.
 click_to_stop<val><b>Нажите</b>, чтобы остановить.
 <pair>
 invalid_bet<val>Неправильная ставка.
+<pair>
+really_quit<val>Вы действительно хотите выйти?
+<pair>
+Yes<val>Да
+<pair>
+No<val>Нет
