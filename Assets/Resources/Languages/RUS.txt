@@ -246,3 +246,11 @@ really_quit<val>Вы действительно хотите выйти?
 Yes<val>Да
 <pair>
 No<val>Нет
+<pair>
+cpu<val>Процессор
+<pair>
+motherboard<val>Материнская плата
+<pair>
+gpu<val>Видеокарта
+<pair>
+ram<val>Оперативная память

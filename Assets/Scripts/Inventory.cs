@@ -79,10 +79,10 @@ public class Inventory : MonoBehaviour
     public static void ApplySaves()
     {
         components.Clear();
-        components.AddRange(GameSaver.Saves.inventoryCPUs);
-        components.AddRange(GameSaver.Saves.inventoryGPUs);
-        components.AddRange(GameSaver.Saves.inventoryRAMs);
-        components.AddRange(GameSaver.Saves.inventoryMotherboards);
+        components.AddRange(GameSaver.Saves.invCPUs);
+        components.AddRange(GameSaver.Saves.invGPUs);
+        components.AddRange(GameSaver.Saves.invRAMs);
+        components.AddRange(GameSaver.Saves.invBoards);
         components.ForEach(x => x.RegenerateImage());
     }
 

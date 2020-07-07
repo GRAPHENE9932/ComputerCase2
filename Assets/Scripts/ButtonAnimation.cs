@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ButtonAnimation : MonoBehaviour
+public class ButtonAnimation : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     /// <summary>
     ///     Зображення кнопки, яка буде зазнавати анімації.
@@ -17,14 +18,15 @@ public class ButtonAnimation : MonoBehaviour
     /// <summary>
     ///     При натисненні на кнопку.
     /// </summary>
-    public void OnDown()
+    public void OnPointerDown(PointerEventData data)
     {
         down = true;
     }
+
     /// <summary>
     ///     При відпусканні кнопки.
     /// </summary>
-    public void OnUp()
+    public void OnPointerUp(PointerEventData data)
     {
         down = false;
     }

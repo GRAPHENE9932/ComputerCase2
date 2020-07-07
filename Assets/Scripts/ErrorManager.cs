@@ -58,9 +58,8 @@ public class ErrorManager : MonoBehaviour
         //If log type == error or exception.
         if (type == LogType.Error || type == LogType.Exception)
         {
-            
             //Start message about error.
-            JavaTools.MakeToast(string.Format(LangManager.GetString("error_occured"), path));
+            JavaTools.MakeToast(string.Format(LangManager.GetString("error_occured"), path), 1);
         }
 
         if (type == LogType.Error || type == LogType.Exception || type == LogType.Warning)

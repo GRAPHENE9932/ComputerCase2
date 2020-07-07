@@ -74,7 +74,7 @@ computer<val>Комп'ютер
 <pair>
 shop<val>Магазин
 <pair>
-minigames<val>Казино
+minigames<val>Мініігри
 <pair>
 statistics<val>Статистика
 <pair>
@@ -246,3 +246,11 @@ really_quit<val>Ви дійсно хочете вийти?
 Yes<val>Так
 <pair>
 No<val>Ні
+<pair>
+cpu<val>Процесор
+<pair>
+motherboard<val>Материнська плата
+<pair>
+gpu<val>Відеокарта
+<pair>
+ram<val>Оперативна пам'ять

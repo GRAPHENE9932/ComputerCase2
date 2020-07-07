@@ -98,7 +98,7 @@ public class GameSaver : MonoBehaviour
     private void OnApplicationQuit()
     {
         timeLogs.Add(new SavesPack.TimeLog(false));
-        if (timeLogs.Count > 500)
+        if (timeLogs.Count > 100)
             timeLogs.RemoveAt(0);
         CollectData();
         Save();
@@ -109,7 +109,7 @@ public class GameSaver : MonoBehaviour
         if (pause)
         {
             timeLogs.Add(new SavesPack.TimeLog(false));
-            if (timeLogs.Count > 500)
+            if (timeLogs.Count > 100)
                 timeLogs.RemoveAt(0);
             CollectData();
             Save();
@@ -120,7 +120,7 @@ public class GameSaver : MonoBehaviour
             {
                 Load();
                 timeLogs.Add(new SavesPack.TimeLog(true));
-                if (timeLogs.Count > 500)
+                if (timeLogs.Count > 100)
                     timeLogs.RemoveAt(0);
                 SetData(true);
             }
@@ -135,16 +135,9 @@ public class GameSaver : MonoBehaviour
 #else
         path = Path.Combine(Application.dataPath, "Saves.enc");
 #endif
-        //DEBUG
-        string debugPath = Path.Combine(Application.dataPath, "Saves.txt");
-        //
 
         CollectDataThere();
         string packSerialized = KlimSoft.Serializer.Serialize(Saves);
-
-        //DEBUG
-        File.WriteAllText(debugPath, packSerialized);
-        //
 
         Debug.Log(packSerialized);
         byte[] dataToSave = Encrypt(Encoding.UTF8.GetBytes(packSerialized));
@@ -320,10 +313,10 @@ public class GameSaver : MonoBehaviour
         //Collect data from game.
         Saves = new SavesPack
         {
-            inventoryCPUs = Inventory.components.Where(x => x is CPU).Select(x => (CPU)x).ToArray(),
-            inventoryGPUs = Inventory.components.Where(x => x is GPU).Select(x => (GPU)x).ToArray(),
-            inventoryRAMs = Inventory.components.Where(x => x is RAM).Select(x => (RAM)x).ToArray(),
-            inventoryMotherboards = Inventory.components.Where(x => x is Motherboard).Select(x => (Motherboard)x).ToArray(),
+            invCPUs = Inventory.components.Where(x => x is CPU).Select(x => (CPU)x).ToArray(),
+            invGPUs = Inventory.components.Where(x => x is GPU).Select(x => (GPU)x).ToArray(),
+            invRAMs = Inventory.components.Where(x => x is RAM).Select(x => (RAM)x).ToArray(),
+            invBoards = Inventory.components.Where(x => x is Motherboard).Select(x => (Motherboard)x).ToArray(),
 
             cpu = ComputerScript.mainCPU,
             motherboard = ComputerScript.mainMotherboard,
@@ -352,7 +345,7 @@ public class GameSaver : MonoBehaviour
             generalDroppedByCases = StatisticsScript.generalDroppedByCases,
 
             sound = soundToggle.toggled,
-            vibration = vibroToggle.toggled,
+            vibro = vibroToggle.toggled,
             showFPS = FPSToggle.toggled,
             lang = langSetting.Index,
 
@@ -377,7 +370,7 @@ public class GameSaver : MonoBehaviour
         }
 
         soundToggle.toggled = Saves.sound;
-        vibroToggle.toggled = Saves.vibration;
+        vibroToggle.toggled = Saves.vibro;
         FPSToggle.toggled = Saves.showFPS;
         langSetting.Index = Saves.lang;
 
@@ -402,10 +395,10 @@ public class GameSaver : MonoBehaviour
 public class SavesPack
 {
     //Inventory.
-    public CPU[] inventoryCPUs;
-    public GPU[] inventoryGPUs;
-    public RAM[] inventoryRAMs;
-    public Motherboard[] inventoryMotherboards;
+    public CPU[] invCPUs;
+    public GPU[] invGPUs;
+    public RAM[] invRAMs;
+    public Motherboard[] invBoards;
 
     //Computer.
     public CPU cpu;
@@ -423,7 +416,7 @@ public class SavesPack
         generalDroppedByCases;
 
     //Settings.
-    public bool sound, vibration, showFPS;
+    public bool sound, vibro, showFPS;
     public int lang;
 
     //Balance.
@@ -446,10 +439,10 @@ public class SavesPack
         {
             SavesPack res = new SavesPack
             {
-                inventoryCPUs = new CPU[0],
-                inventoryGPUs = new GPU[0],
-                inventoryMotherboards = new Motherboard[0],
-                inventoryRAMs = new RAM[0],
+                invCPUs = new CPU[0],
+                invGPUs = new GPU[0],
+                invBoards = new Motherboard[0],
+                invRAMs = new RAM[0],
                 gpus = new GPU[0],
                 rams = new RAM[0],
                 droppedByRarities = new ulong[5],
@@ -459,7 +452,7 @@ public class SavesPack
                 motherboardsDroppedByCases = new ulong[4],
                 generalDroppedByCases = new ulong[4],
                 sound = true,
-                vibration = true,
+                vibro = true,
                 showFPS = false,
                 version = Application.version,
                 timeLogs = new TimeLog[0],

@@ -246,3 +246,11 @@ really_quit<val>Do you really want to quit?
 Yes<val>Yes
 <pair>
 No<val>No
+<pair>
+cpu<val>CPU
+<pair>
+motherboard<val>Motherboard
+<pair>
+gpu<val>GPU
+<pair>
+ram<val>RAM
