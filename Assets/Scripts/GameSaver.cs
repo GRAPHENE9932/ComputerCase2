@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Linq;
@@ -9,8 +8,6 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 using UnityEngine;
-using System.Net.NetworkInformation;
-using System.Runtime.Remoting.Channels;
 
 public class GameSaver : MonoBehaviour
 {
@@ -138,9 +135,17 @@ public class GameSaver : MonoBehaviour
 #else
         path = Path.Combine(Application.dataPath, "Saves.enc");
 #endif
+        //DEBUG
+        string debugPath = Path.Combine(Application.dataPath, "Saves.txt");
+        //
 
         CollectDataThere();
         string packSerialized = KlimSoft.Serializer.Serialize(Saves);
+
+        //DEBUG
+        File.WriteAllText(debugPath, packSerialized);
+        //
+
         Debug.Log(packSerialized);
         byte[] dataToSave = Encrypt(Encoding.UTF8.GetBytes(packSerialized));
         File.WriteAllBytes(path, dataToSave);

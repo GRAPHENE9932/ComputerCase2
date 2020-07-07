@@ -35,7 +35,7 @@ public class DropScript : MonoBehaviour
     {
         if (caseScroller.EnoughMoney)
             //Play animation of close if enought money.
-            caseScroller.dropAnim.Play("CloseDroppedComponent");
+            caseScroller.dropAnim.Play("Close dropped component");
         //Start case.
         caseScroller.StartCase();
     }

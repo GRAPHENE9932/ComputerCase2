@@ -25,7 +25,7 @@ public class Toggle : MonoBehaviour
         if (!anim.isPlaying)
         {
             toggled = !toggled;
-            anim.Play(toggled ? "ToggleON" : "ToggleOFF");
+            anim.Play(toggled ? "Toggle ON" : "Toggle OFF");
             toggledEvent.Invoke();
         }
     }

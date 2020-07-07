@@ -444,7 +444,7 @@ public class CaseScroller : MonoBehaviour
         //Set active true of drop component.
         dropAnim.gameObject.SetActive(true);
         //Play animation.
-        dropAnim.Play("OpenDroppedComponent");
+        dropAnim.Play("Open dropped component");
 
         //Sound and vibration.
         switch (currentComponent.rarity)
