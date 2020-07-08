@@ -152,9 +152,9 @@ public class ShopScript : MonoBehaviour
 
 
         //Properties text.
-        infoText.text = currentList[cellsInPage * page + index].FullProperties;
+        infoText.text = currentList[cellsMax * page + index].FullProperties;
         //Set text of buy button.
-        buyText.text = $"{LangManager.GetString("buy")} (-{currentList[cellsInPage * page + index].price}$)";
+        buyText.text = $"{LangManager.GetString("buy")} (-{currentList[cellsMax * page + index].price}$)";
 
         StartCoroutine(InfoAnimation(true));
     }

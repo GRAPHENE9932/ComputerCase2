@@ -126,6 +126,8 @@ no_equippable_ram<val>No equippable RAM!
 <pair>
 no_equippable_gpu<val>No equippable GPU!
 <pair>
+no_equippable_motherboard<val>No equippable motherboard!
+<pair>
 time:<val>Time:
 <pair>
 dis_comp_first<val>Disassemble computer first!

@@ -126,6 +126,8 @@ no_equippable_ram<val>Немає відповідних ОЗП!
 <pair>
 no_equippable_gpu<val>Немає відповідних відеокарт!
 <pair>
+no_equippable_motherboard<val>No equippable motherboard!
+<pair>
 time:<val>Час:
 <pair>
 dis_comp_first<val>Спочатку розберіть комп'ютер!
