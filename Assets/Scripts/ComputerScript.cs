@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ComputerScript : MonoBehaviour
@@ -45,14 +47,11 @@ public class ComputerScript : MonoBehaviour
     /// </summary>
     public Button infoButton;
 
-    [HideInInspector]
     public static CPU mainCPU;
-    [HideInInspector]
     public static Motherboard mainMotherboard;
-    [HideInInspector]
     public static List<GPU> GPUs = new List<GPU>();
-    [HideInInspector]
     public static List<RAM> RAMs = new List<RAM>();
+
     public Sprite emptyPixel;
 
     /// <summary>
@@ -213,6 +212,41 @@ public class ComputerScript : MonoBehaviour
     }
 
     /// <summary>
+    /// Adds component slot with provided parameters.
+    /// </summary>
+    private void AddSlot(UnityAction onClick, Sprite image, Color color, string text)
+    {
+        //Instantiate slot.
+        GameObject slot = Instantiate(slotPrefab, componentsParent);
+        //Button event.
+        slot.transform.GetComponent<Button>().onClick.AddListener(onClick);
+        //Set image.
+        slot.transform.Find("Image").GetComponent<Image>().sprite = image;
+        //Set rarity line color.
+        slot.transform.Find("Rarity line").GetComponent<Image>().color = color;
+        //Set text.
+        slot.GetComponentInChildren<Text>().text = text;
+    }
+
+    /// <summary>
+    /// Adds component slot with provided parameters.
+    /// </summary>
+    private void AddSlot(UnityAction onClick, Sprite image, Rarity rarity, string text)
+    {
+        //Instantiate slot.
+        GameObject slot = Instantiate(slotPrefab, componentsParent);
+        //Button event.
+        slot.transform.GetComponent<Button>().onClick.AddListener(onClick);
+        //Set image.
+        slot.transform.Find("Image").GetComponent<Image>().sprite = image;
+        //Set rarity line color.
+        slot.transform.Find("Rarity line").GetComponent<Image>().color =
+                caseScroller.rarityColors[(int)rarity];
+        //Set text.
+        slot.GetComponentInChildren<Text>().text = text;
+    }
+
+    /// <summary>
     /// Updating slots of computer (CPU, motherboard, GPUs and RAMs).
     /// </summary>
     public void UpdateComputer()
@@ -225,59 +259,35 @@ public class ComputerScript : MonoBehaviour
         //Update CPU.
         if (mainCPU != null && mainMotherboard != null)
         {
-            //Instantiate slot.
-            GameObject CPUSlot = Instantiate(slotPrefab, componentsParent);
-            //Button event.
-            CPUSlot.transform.GetComponent<Button>().onClick.AddListener(delegate { CPU_Clicked(); });
-            //Set image.
-            CPUSlot.transform.Find("Image").GetComponent<Image>().sprite = mainCPU.image;
-            //Set rarity line color.
-            CPUSlot.transform.Find("Rarity line").GetComponent<Image>().color =
-                caseScroller.rarityColors[(int)mainCPU.rarity];
-            //Set text.
-            CPUSlot.GetComponentInChildren<Text>().text = $"<b>{LangManager.GetString("cpu")}, {mainCPU.socket}</b>\n" +
-                mainCPU.fullName;
+            AddSlot(delegate { CPU_Clicked(); },
+                mainCPU.image,
+                mainCPU.rarity,
+                $"<b>{LangManager.GetString("cpu")}, {mainCPU.socket}</b>\n{mainCPU.fullName}");
         }
         else if (mainMotherboard != null)
         {
-            //Instantiate slot.
-            GameObject CPUSlot = Instantiate(slotPrefab, componentsParent);
-            //Button event.
-            CPUSlot.transform.GetComponent<Button>().onClick.AddListener(delegate { CPU_Clicked(); });
-            //Set image.
-            CPUSlot.transform.Find("Image").GetComponent<Image>().sprite = emptyCPU;
-            //Set rarity line color.
-            CPUSlot.transform.Find("Rarity line").GetComponent<Image>().color = Color.white;
-            //Set text.
-            CPUSlot.GetComponentInChildren<Text>().text = $"<b>{LangManager.GetString("no_cpu")}</b>\n" +
-                mainMotherboard.socket;
+            AddSlot(delegate { CPU_Clicked(); },
+                emptyCPU,
+                Color.white,
+                $"<b>{LangManager.GetString("no_cpu")}</b>\n{mainMotherboard.socket}");
         }
 
-        //Instantiate slot.
-        GameObject motherboardSlot = Instantiate(slotPrefab, componentsParent);
-        //Button event.
-        motherboardSlot.transform.GetComponent<Button>().onClick.AddListener(delegate { Motherboard_Clicked(); });
         //Update motherboard.
         if (mainMotherboard != null)
         {
-            //Set image.
-            motherboardSlot.transform.Find("Image").GetComponent<Image>().sprite = mainMotherboard.image;
-            //Set rarity line color.
-            motherboardSlot.transform.Find("Rarity line").GetComponent<Image>().color =
-                caseScroller.rarityColors[(int)mainMotherboard.rarity];
-            //Set text.
-            motherboardSlot.GetComponentInChildren<Text>().text = $"<b>{LangManager.GetString("motherboard")}," +
+            AddSlot(delegate { Motherboard_Clicked(); },
+                mainMotherboard.image,
+                mainMotherboard.rarity,
+                $"<b>{LangManager.GetString("motherboard")}," +
                 $" {mainMotherboard.chipset.ToString().TrimStart('_')}</b>\n" +
-                mainMotherboard.fullName;
+                mainMotherboard.fullName);
         }
         else
         {
-            //Set image.
-            motherboardSlot.transform.Find("Image").GetComponent<Image>().sprite = emptyMotherboard;
-            //Set rarity line color.
-            motherboardSlot.transform.Find("Rarity line").GetComponent<Image>().color = Color.white;
-            //Set text.
-            motherboardSlot.GetComponentInChildren<Text>().text = $"<b>{LangManager.GetString("no_motherboard")}</b>";
+            AddSlot(delegate { Motherboard_Clicked(); },
+                emptyMotherboard,
+                Color.white,
+                $"<b>{LangManager.GetString("no_motherboard")}</b>");
         }
 
         //Update GPUs.
@@ -285,41 +295,29 @@ public class ComputerScript : MonoBehaviour
         {
             for (int i = 0; i < mainMotherboard.busMultipliers.Length; i++)
             {
+                //Fill list od GPUs.
                 if (GPUs.Count <= i)
                     GPUs.Add(null);
 
                 if (GPUs[i] != null)
                 {
-                    //Instantiate slot.
-                    GameObject GPUSlot = Instantiate(slotPrefab, componentsParent);
-                    //Button event.
                     int index = i;
-                    GPUSlot.GetComponent<Button>().onClick.AddListener(delegate { GPU_Clicked(index); });
-                    //Set image.
-                    GPUSlot.transform.Find("Image").GetComponent<Image>().sprite = GPUs[i].image;
-                    //Set rarity line color.
-                    GPUSlot.transform.Find("Rarity line").GetComponent<Image>().color =
-                        caseScroller.rarityColors[(int)GPUs[i].rarity];
-                    //Set text.
-                    GPUSlot.GetComponentInChildren<Text>().text = $"<b>{LangManager.GetString("gpu")}," +
-                        $" PCIe {GPUs[i].busVersion}.0 x{GPUs[i].busMultiplier} in" +
+                    AddSlot(delegate { GPU_Clicked(index); },
+                        GPUs[i].image,
+                        GPUs[i].rarity,
+                        $"<b>{LangManager.GetString("gpu")}," +
+                        $" PCIe {GPUs[i].busVersion}.0 x{GPUs[i].busMultiplier} {LangManager.GetString("in")}" +
                         $" PCIe {mainMotherboard.busVersions[i]}.0 x{mainMotherboard.busMultipliers[i]}</b>\n" +
-                        GPUs[i].fullName;
+                        GPUs[i].fullName);
                 }
                 else
                 {
-                    //Instantiate slot.
-                    GameObject GPUSlot = Instantiate(slotPrefab, componentsParent);
-                    //Button event.
                     int index = i;
-                    GPUSlot.GetComponent<Button>().onClick.AddListener(delegate { GPU_Clicked(index); });
-                    //Set image.
-                    GPUSlot.transform.Find("Image").GetComponent<Image>().sprite = emptyGPU;
-                    //Set rarity line color.
-                    GPUSlot.transform.Find("Rarity line").GetComponent<Image>().color = Color.white;
-                    //Set text.
-                    GPUSlot.GetComponentInChildren<Text>().text = $"<b>{LangManager.GetString("no_gpu")}" +
-                        $" PCIe {mainMotherboard.busVersions[i]}.0 x{mainMotherboard.busMultipliers[i]}</b>";
+                    AddSlot(delegate { GPU_Clicked(index); },
+                        emptyGPU,
+                        Color.white,
+                        $"<b>{LangManager.GetString("no_gpu")}" +
+                        $" PCIe {mainMotherboard.busVersions[i]}.0 x{mainMotherboard.busMultipliers[i]}</b>");
                 }
             }
         }
@@ -334,35 +332,22 @@ public class ComputerScript : MonoBehaviour
 
                 if (RAMs[i] != null)
                 {
-                    //Instantiate slot.
-                    GameObject RAMSlot = Instantiate(slotPrefab, componentsParent);
-                    //Button event.
                     int index = i;
-                    RAMSlot.GetComponent<Button>().onClick.AddListener(delegate { RAM_Clicked(index); });
-                    //Set image.
-                    RAMSlot.transform.Find("Image").GetComponent<Image>().sprite = RAMs[i].image;
-                    //Set rarity line color.
-                    RAMSlot.transform.Find("Rarity line").GetComponent<Image>().color =
-                        caseScroller.rarityColors[(int)RAMs[i].rarity];
-                    //Set text.
-                    RAMSlot.GetComponentInChildren<Text>().text = $"<b>{LangManager.GetString("ram")}," +
-                        $" DDR{(RAMs[i].type == 1 ? null : RAMs[i].type.ToString())} </b>" +
-                        RAMs[i].fullName;
+                    AddSlot(delegate { RAM_Clicked(index); },
+                        RAMs[i].image,
+                        RAMs[i].rarity,
+                        $"<b>{LangManager.GetString("ram")}," +
+                        $" DDR{(RAMs[i].type == 1 ? null : RAMs[i].type.ToString())} </b>\n" +
+                        RAMs[i].fullName);
                 }
                 else
                 {
-                    //Instantiate slot.
-                    GameObject RAMSlot = Instantiate(slotPrefab, componentsParent);
-                    //Button event.
                     int index = i;
-                    RAMSlot.GetComponent<Button>().onClick.AddListener(delegate { RAM_Clicked(index); });
-                    //Set image.
-                    RAMSlot.transform.Find("Image").GetComponent<Image>().sprite = emptyRAM;
-                    //Set rarity line color.
-                    RAMSlot.transform.Find("Rarity line").GetComponent<Image>().color = Color.white;
-                    //Set text.
-                    RAMSlot.GetComponentInChildren<Text>().text = $"<b>{LangManager.GetString("no_ram")}" +
-                        $" DDR{(mainMotherboard.RAMType == 1 ? null : mainMotherboard.RAMType.ToString())}</b>";
+                    AddSlot(delegate { RAM_Clicked(index); },
+                        emptyRAM,
+                        Color.white,
+                        $"<b>{LangManager.GetString("no_ram")}" +
+                        $" DDR{(mainMotherboard.RAMType == 1 ? null : mainMotherboard.RAMType.ToString())}</b>");
                 }
             }
         }
@@ -389,7 +374,6 @@ public class ComputerScript : MonoBehaviour
             currentSlot.transform.Find("Name").GetComponentInChildren<Text>().text = equipComponents[i].shortName;
             //Set button event.
             int index = i;
-            indexOfSelected = -1;
             selectedType = type;
             currentSlot.GetComponent<Button>().onClick.RemoveAllListeners();
             currentSlot.GetComponent<Button>().onClick.AddListener(delegate { EquipClicked(index); });
@@ -466,6 +450,8 @@ public class ComputerScript : MonoBehaviour
         }
 
         ShowImageOf(mainCPU, ComponentType.CPU);
+
+        indexOfSelected = -1;
     }
 
     public void Motherboard_Clicked()
@@ -490,6 +476,8 @@ public class ComputerScript : MonoBehaviour
         }
 
         ShowImageOf(mainMotherboard, ComponentType.Motherboard);
+
+        indexOfSelected = -1;
     }
 
     public void RAM_Clicked(int index)
@@ -513,13 +501,17 @@ public class ComputerScript : MonoBehaviour
         }
 
         ShowImageOf(RAMs[index], ComponentType.RAM, index);
+
+        indexOfSelected = index;
     }
 
     public void GPU_Clicked(int index)
     {
         if (mainMotherboard != null)
         {
-            equipComponents = Inventory.components.Where(x => x is GPU GPU && GPU.busVersion == mainMotherboard.busVersions[index] && GPU.busMultiplier == mainMotherboard.busMultipliers[index]).ToList();
+            equipComponents = Inventory.components
+                .Where(x => x is GPU GPU)
+                .ToList();
             //Destroying all equip slots.
             DestroyEquipSlots();
             //Creating new equip slots.
@@ -536,8 +528,9 @@ public class ComputerScript : MonoBehaviour
         }
 
         ShowImageOf(GPUs[index], ComponentType.GPU, index);
-    }
 
+        indexOfSelected = index;
+    }
     /// <summary>
     /// Destroys equip slots.
     /// </summary>
@@ -924,7 +917,7 @@ public class ComputerScript : MonoBehaviour
     public void Unequip(ComponentType type, int index)
     {
         //Play sound.
-        soundManager.PlaySound(equipClips[Random.Range(0, equipClips.Length)]);
+        soundManager.PlaySound(equipClips[UnityEngine.Random.Range(0, equipClips.Length)]);
         switch (type)
         {
             case ComponentType.CPU:
@@ -970,7 +963,7 @@ public class ComputerScript : MonoBehaviour
     public void EquipClicked(int index)
     {
         //Play sound.
-        soundManager.PlaySound(equipClips[Random.Range(0, equipClips.Length)]);
+        soundManager.PlaySound(equipClips[UnityEngine.Random.Range(0, equipClips.Length)]);
 
         //Remove this component from inventory.
         Inventory.components.Remove(equipComponents[index]);

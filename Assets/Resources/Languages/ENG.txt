@@ -256,3 +256,11 @@ motherboard<val>Motherboard
 gpu<val>GPU
 <pair>
 ram<val>RAM
+<pair>
+no_adapters<val>You haven`t adapters.
+<pair>
+no_more_adapters<val>You haven`t more adapters.
+<pair>
+info<val>Info
+<pair>
+in<val>in

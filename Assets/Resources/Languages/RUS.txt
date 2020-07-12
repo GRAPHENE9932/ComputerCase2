@@ -126,7 +126,7 @@ no_equippable_ram<val>Нет подходящих ОЗУ!
 <pair>
 no_equippable_gpu<val>Нет подходящих видеокарт!
 <pair>
-no_equippable_motherboard<val>No equippable motherboard!
+no_equippable_motherboard<val>Нет подходящей материнской платы!
 <pair>
 time:<val>Время:
 <pair>
@@ -256,3 +256,11 @@ motherboard<val>Материнская плата
 gpu<val>Видеокарта
 <pair>
 ram<val>Оперативная память
+<pair>
+no_adapters<val>У вас нет переходников.
+<pair>
+no_more_adapters<val>У вас больше нет переходников.
+<pair>
+info<val>Инфо
+<pair>
+in<val>в

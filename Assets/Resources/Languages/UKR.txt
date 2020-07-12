@@ -126,7 +126,7 @@ no_equippable_ram<val>Немає відповідних ОЗП!
 <pair>
 no_equippable_gpu<val>Немає відповідних відеокарт!
 <pair>
-no_equippable_motherboard<val>No equippable motherboard!
+no_equippable_motherboard<val>Немає відповідних мат. плат!
 <pair>
 time:<val>Час:
 <pair>
@@ -256,3 +256,11 @@ motherboard<val>Материнська плата
 gpu<val>Відеокарта
 <pair>
 ram<val>Оперативна пам'ять
+<pair>
+no_adapters<val>У вас немає перехідників.
+<pair>
+no_more_adapters<val>У вас більше немає перехідників.
+<pair>
+info<val>Інфо
+<pair>
+in<val>в

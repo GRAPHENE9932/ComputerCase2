@@ -77,7 +77,7 @@ public class ExchangeScript : MonoBehaviour
         CurrencyTextUpdate();
         StartCoroutine(AutoUpdate());
     }
-    private void OnDestroy()
+    private void OnDisable()
     {
         //Because exception can occur at quit.
         client.DownloadStringCompleted -= DownloadCompleted;
@@ -294,7 +294,11 @@ public class ExchangeScript : MonoBehaviour
         try
         {
             //Set bitcoin price in USD.
-            BTC = decimal.Parse(e.Result.RemoveChar(',').Replace('.', ',')) / 1E12m;
+#if !UNITY_ENGINE && UNITY_ANDROID
+            BTC = 1m / (decimal.Parse(e.Result.RemoveChar(',').Replace('.', ',')) / 1E12m);
+#else
+            BTC = 1m / (decimal.Parse(e.Result.RemoveChar(',')) / 1E12m);
+#endif
             CurrencyTextUpdate();
             if (BTC != BTCHistory[0])
                 UpdateGraph();
