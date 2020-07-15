@@ -291,9 +291,9 @@ public class OSScript : MonoBehaviour
         for (int i = 0; i < ComputerScript.RAMs.Count; i++)
             if (ComputerScript.RAMs[i] != null)
                 totalRAM += ComputerScript.RAMs[i].memory;
-        memoryUsedText.text = $"{Math.Round(earned / 0.00001m, 2)}/{totalRAM} MB";
+        memoryUsedText.text = $"{Math.Round(earned / Capacity * totalRAM, 2)}/{totalRAM} MB";
 
-        float progress = (float)earned / 0.00001F / totalRAM;
+        float progress = (float)earned / (float)Capacity;
         miningProgressbar.fillAmount = progress;
         miningProgressbarText0.text = $"{Math.Round(progress, 4) * 100}%";
         miningProgressbarText1.text = $"{Math.Round(progress, 4) * 100}%";
