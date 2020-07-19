@@ -9,11 +9,13 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Linq;
 using KlimSoft;
+using UnityEngine.UI;
 
 public class ErrorManager : MonoBehaviour
 {
-    public MessageBoxManager messageBox;
     public NavigationScript nav;
+    public GameObject readError;
+    public Text readErrorInfo;
 
     /*private static byte[] key, iv;
     private static byte[] pass, email;*/
@@ -21,7 +23,7 @@ public class ErrorManager : MonoBehaviour
     private static string path;
 
     //Фіксація і відображення помилок та виключень
-//#if !UNITY_EDITOR
+    //#if !UNITY_EDITOR
 
     /*private void Start()
     {
@@ -37,6 +39,15 @@ public class ErrorManager : MonoBehaviour
         pass = bytes.Skip(48).Take(16).ToArray();
         email = bytes.Skip(64).Take(32).ToArray();
     }*/
+
+    private void Start()
+    {
+        if (LoadScript.errorInfo != null)
+        {
+            readError.SetActive(true);
+            readErrorInfo.text = LoadScript.errorInfo;
+        }
+    }
 
     void OnEnable()
     {
@@ -58,8 +69,12 @@ public class ErrorManager : MonoBehaviour
         //If log type == error or exception.
         if (type == LogType.Error || type == LogType.Exception)
         {
-            //Start message about error.
-            JavaTools.MakeToast(string.Format(LangManager.GetString("error_occured"), path), 1);
+            try
+            {
+                //Start message about error.
+                JavaTools.MakeToast(string.Format(LangManager.GetString("error_occured"), path), 1);
+            }
+            catch { };
         }
 
         if (type == LogType.Error || type == LogType.Exception || type == LogType.Warning)
@@ -77,7 +92,7 @@ public class ErrorManager : MonoBehaviour
                 "Device type: " + SystemInfo.deviceType + "\n" +
                 "Processor count: " + SystemInfo.processorCount + "\n" +
                 "Processor frequency: " + SystemInfo.processorFrequency + "\n" +
-                "Navigation state: " + nav.currentState + "\n" +
+                "Navigation state: " + (nav != null ? nav.currentState.ToString() : "Loading") + "\n" +
                 "Log string: " + logString + "\n" +
                 "Stack trace: " + stackTrace + "\n";
 

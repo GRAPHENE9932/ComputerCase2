@@ -199,6 +199,11 @@ public class CrashMinigame : MonoBehaviour
         soundMgr.PlaySound(winSound);
         StartCoroutine(ShowBottomPanel());
         moneyCollected = true;
+
+        //If player won, give him ad with chance 30%.
+        float adRand = Random.Range(0F, 1F);
+        if (adRand <= 0.3F)
+            AdManager.ShowInterstitial();
     }
 
     /// <summary>

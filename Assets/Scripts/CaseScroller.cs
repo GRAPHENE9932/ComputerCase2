@@ -475,5 +475,9 @@ public class CaseScroller : MonoBehaviour
                     JavaTools.Vibrate(topVibration);
                 break;
         }
+
+        //Show ad every 10th case scroll.
+        if (StatisticsScript.casesOpened % 10 == 0)
+            AdManager.ShowInterstitial();
     }
 }

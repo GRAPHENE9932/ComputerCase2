@@ -11,14 +11,6 @@ using KlimSoft;
 public class ExchangeScript : MonoBehaviour
 {
     /// <summary>
-    /// Red image in update button. Used for indication of errors.
-    /// </summary>
-    public Image redUpdateImage;
-    /// <summary>
-    /// Rect transform of icon of update button.
-    /// </summary>
-    public RectTransform updateIcon;
-    /// <summary>
     /// Text that indicates the price of BTC in USD or USD in BTC.
     /// </summary>
     public Text priceText;
@@ -42,13 +34,8 @@ public class ExchangeScript : MonoBehaviour
     public SoundManager soundManager;
 
     private decimal BTC = -1;
-    /// <summary>
-    /// Is bitcoin price updating now?
-    /// </summary>
-    private bool updating;
     private bool showCurrencyOfBTC = true;
     private bool exchangeBTCToUSD = true;
-    private bool updateClickedByPlayer = false;
     private string previousFromField;
 
     private Image[] graphColumns;
@@ -81,14 +68,6 @@ public class ExchangeScript : MonoBehaviour
     {
         //Because exception can occur at quit.
         client.DownloadStringCompleted -= DownloadCompleted;
-    }
-    /// <summary>
-    /// Event of clicked update button.
-    /// </summary>
-    public void UpdateClicked()
-    {
-        updateClickedByPlayer = true;
-        StartCoroutine(UpdateBTC());
     }
 
     /// <summary>
@@ -254,8 +233,7 @@ public class ExchangeScript : MonoBehaviour
     {
         while (true)
         {
-            updateClickedByPlayer = false;
-            StartCoroutine(UpdateBTC());
+            UpdateBTC();
             yield return new WaitForSeconds(15);
         }
     }
@@ -263,10 +241,9 @@ public class ExchangeScript : MonoBehaviour
     /// <summary>
     /// Coroutine of updating progress. Rotates the update icon.
     /// </summary>
-    private IEnumerator UpdateBTC()
+    private void UpdateBTC()
     {
         try { 
-            updating = true;
             //Download price of 1E12 USD in bitcoins. This method gives max precision.
             client.DownloadStringAsync(new Uri("https://blockchain.info/tobtc?currency=USD&value=1000000000000"));
         }
@@ -277,13 +254,6 @@ public class ExchangeScript : MonoBehaviour
             Debug.Log("Exc: " + exc.Message);
         }
         FromFieldChanged();
-        while (updating)
-        {
-            //Rotate update icon while updating.
-            updateIcon.Rotate(0, 0, Time.deltaTime * -1000);
-            //1 frame waiting.
-            yield return null;
-        }
     }
 
     /// <summary>
@@ -294,8 +264,8 @@ public class ExchangeScript : MonoBehaviour
         try
         {
             //Set bitcoin price in USD.
-#if !UNITY_ENGINE && UNITY_ANDROID
-            BTC = 1m / (decimal.Parse(e.Result.RemoveChar(',').Replace('.', ',')) / 1E12m);
+#if !UNITY_EDITOR && UNITY_ANDROID
+            BTC = 1m / (decimal.Parse(e.Result.RemoveChar(',')) / 1E12m);
 #else
             BTC = 1m / (decimal.Parse(e.Result.RemoveChar(',')) / 1E12m);
 #endif
@@ -307,11 +277,8 @@ public class ExchangeScript : MonoBehaviour
         {
             //If error, start red indicator on update button.
             StartCoroutine(ErrorUpdateAnim());
-            if (updateClickedByPlayer)
-                JavaTools.MakeToast("No internet!");
             Debug.Log("Exc: " + exc.Message);
         }
-        updating = false;
     }
 
     /// <summary>
@@ -329,14 +296,12 @@ public class ExchangeScript : MonoBehaviour
             time = 0;
             while (time < 0.1F)
             {
-                redUpdateImage.color = new Color(1, 0, 0, time * 10);
                 time += Time.deltaTime;
                 yield return null;
             }
             time = 0.2F;
             while (time > 0)
             {
-                redUpdateImage.color = new Color(1, 0, 0, time * 5);
                 time -= Time.deltaTime;
                 yield return null;
             }

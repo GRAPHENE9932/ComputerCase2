@@ -114,6 +114,7 @@ public class GameSaver : MonoBehaviour
             CollectData();
             Save();
         }
+        /*
         else
         {
             if (!dataSetted)
@@ -124,7 +125,7 @@ public class GameSaver : MonoBehaviour
                     timeLogs.RemoveAt(0);
                 SetData(true);
             }
-        }
+        }*/
     }
 
     private static void Save()
@@ -140,11 +141,12 @@ public class GameSaver : MonoBehaviour
         string packSerialized = KlimSoft.Serializer.Serialize(Saves);
 
         Debug.Log(packSerialized);
-        byte[] dataToSave = Encrypt(Encoding.UTF8.GetBytes(packSerialized));
-        File.WriteAllBytes(path, dataToSave);
+        byte[] dataToSave = Encoding.UTF8.GetBytes(packSerialized);
+        GPGSManager.WriteSaveData(dataToSave);
+        //File.WriteAllBytes(path, dataToSave);
     }
 
-    public static async void LoadAsync()
+    /*public static async void LoadAsync()
     {
         //Load file from dataPath if this game in editor, else read file from persistentDataPath.
 #if UNITY_ANDROID && !UNITY_EDITOR
@@ -182,11 +184,36 @@ public class GameSaver : MonoBehaviour
             loadProgress = 1F;
             loadStatus = "No saves";
         }
+    }*/
 
-        SetDataThere();
+    public static async void LoadAsync(byte[] data)
+    {
+
+        if (data == null || data.Length == 0)
+        {
+            Saves = SavesPack.Default;
+            loadProgress = 1F;
+            loadStatus = "No saves";
+        }
+        else
+        {
+            loadProgress = 0.33F;
+            loadStatus = "Encoding...";
+
+            string packSerialized = null;
+            await Task.Run(() => packSerialized = Encoding.UTF8.GetString(data));
+
+            loadProgress = 0.67F;
+            loadStatus = "Deserializing...";
+
+            Saves = (SavesPack)KlimSoft.Serializer.Deserialize(packSerialized, typeof(SavesPack));
+
+            loadProgress = 1F;
+            loadStatus = "Readed!";
+        }
     }
 
-    public static void Load()
+    /*public static void Load()
     {
         //Load file from dataPath if this game in editor, else read file from persistentDataPath.
 #if UNITY_ANDROID && !UNITY_EDITOR
@@ -196,18 +223,17 @@ public class GameSaver : MonoBehaviour
 #endif
         if (File.Exists(path))
         {
-            byte[] encryptedData = File.ReadAllBytes(path);
-            byte[] decryptedData = Decrypt(encryptedData);
-            string packSerialized = Encoding.UTF8.GetString(decryptedData);
+            byte[] data = File.ReadAllBytes(path);
+            string packSerialized = Encoding.UTF8.GetString(data);
             Saves = (SavesPack)KlimSoft.Serializer.Deserialize(packSerialized, typeof(SavesPack));
         }
         else
             Saves = SavesPack.Default;
 
         SetDataThere();
-    }
+    }*/
 
-    private static byte[] Encrypt(byte[] data)
+    /*private static byte[] Encrypt(byte[] data)
     {
         Aes aes = Aes.Create();
         aes.Mode = CipherMode.CBC;
@@ -267,7 +293,7 @@ public class GameSaver : MonoBehaviour
                 .TransformFinalBlock(data, 0, data.Length);
         });
         return result;
-    }
+    }*/
 
     /// <summary>
     /// Collects static data from this script to saves pack.
