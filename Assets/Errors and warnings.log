@@ -1998,3 +1998,403 @@ Navigation state: CasesMenu
 Log string: Cannot add menu item 'Assets/External Dependency Manager/Version Handler/Uninstall Managed Packages' for method 'PackageUninstallWindow.UninstallPackage' because a menu item with the same name already exists.
 Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
 
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/iOS Resolver/Documentation' for method 'IOSResolver.OpenDocumentation' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/iOS Resolver/Settings' for method 'IOSResolver.SettingsDialog' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/iOS Resolver/Install Cocoapods' for method 'IOSResolver.InstallCocoapodsMenu' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/Android Resolver/Documentation' for method 'PlayServicesResolver.OpenDocumentation' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/Android Resolver/Settings' for method 'PlayServicesResolver.SettingsDialog' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/Android Resolver/Resolve' for method 'PlayServicesResolver.MenuResolve' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/Android Resolver/Force Resolve' for method 'PlayServicesResolver.MenuForceResolve' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/Android Resolver/Delete Resolved Libraries' for method 'PlayServicesResolver.MenuDeleteResolvedLibraries' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/Android Resolver/Display Libraries' for method 'PlayServicesResolver.MenuDisplayLibraries' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/Package Manager Resolver/Migrate Packages' for method 'PackageMigrator.MigratePackages' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/Package Manager Resolver/Documentation' for method 'PackageManagerResolver.ShowDocumentation' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/Package Manager Resolver/Settings' for method 'PackageManagerResolver.ShowSettings' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Window/Google/Game Package Registry/Settings' for method 'PackageManagerResolver.ShowSettingsAlias' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/Package Manager Resolver/Add Registries' for method 'PackageManagerResolver.AddRegistries' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/Package Manager Resolver/Remove Registries' for method 'PackageManagerResolver.RemoveRegistries' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/Package Manager Resolver/Modify Registries' for method 'PackageManagerResolver.ModifyRegistries' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Window/Google/Game Package Registry/Add To Project' for method 'PackageManagerResolver.AddGamePackageManagerRegistries' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Window/Google/Game Package Registry/Remove From Project' for method 'PackageManagerResolver.RemoveGamePackageManagerRegistries' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/Documentation' for method 'VersionHandlerImpl.OpenProjectDocumentation' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/Version Handler/Documentation' for method 'VersionHandlerImpl.OpenDocumentation' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/Version Handler/Settings' for method 'VersionHandlerImpl.ShowSettings' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/Version Handler/Update' for method 'VersionHandlerImpl.UpdateNow' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/Version Handler/Display Managed Packages' for method 'VersionHandlerImpl.DisplayInstalledPackages' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:16 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/Version Handler/Move Files To Install Locations' for method 'VersionHandlerImpl.MoveFilesToInstallLocations' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+Log type: Warning
+Time: 7/20/2020 2:21:17 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Log string: Cannot add menu item 'Assets/External Dependency Manager/Version Handler/Uninstall Managed Packages' for method 'PackageUninstallWindow.UninstallPackage' because a menu item with the same name already exists.
+Stack trace: UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+

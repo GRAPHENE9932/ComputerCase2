@@ -1,5 +1,6 @@
 <dependencies>
   <packages>
+    <package>androidx.multidex:multidex:2.0.1</package>
     <package>com.android.support:customtabs:26.1.0</package>
     <package>com.android.support:recyclerview-v7:28.0.0</package>
     <package>com.android.support:support-annotations:28.0.0</package>
@@ -27,7 +28,6 @@
     <package>com.appodeal.ads.sdk.networks:tapjoy:2.6.5.2@aar</package>
     <package>com.appodeal.ads.sdk.networks:unity_ads:2.6.5.3</package>
     <package>com.appodeal.ads.sdk.networks:vast:2.6.5.1</package>
-    <package>com.appodeal.ads.sdk.networks:yandex:2.6.5.3@aar</package>
     <package>com.appodeal.ads.sdk:core:2.6.5@aar</package>
     <package>com.appodeal.ads:sdk:2.6.5.0@aar</package>
     <package>com.appodeal:protobuf-models:1.0.1</package>

@@ -991,7 +991,7 @@ public class ComputerScript : MonoBehaviour
                 RAM_Clicked(indexOfSelected);
                 break;
             case ComponentType.GPU:
-                if (GPUs.Count > index && GPUs[index] != null)
+                if (GPUs.Count > index && GPUs[indexOfSelected] != null)
                     Inventory.components.Add(GPUs[indexOfSelected]);
                 GPUs[indexOfSelected] = (GPU)equipComponents[index];
                 GPU_Clicked(indexOfSelected);

@@ -23,7 +23,6 @@ public class GameSaver : MonoBehaviour
     public static float loadProgress;
     public static string loadStatus;
     public static List<SavesPack.TimeLog> timeLogs = new List<SavesPack.TimeLog>();
-    private static string path;
     private static bool dataSetted = false;
 
     public static SavesPack Saves
@@ -114,28 +113,14 @@ public class GameSaver : MonoBehaviour
             CollectData();
             Save();
         }
-        /*
         else
         {
-            if (!dataSetted)
-            {
-                Load();
-                timeLogs.Add(new SavesPack.TimeLog(true));
-                if (timeLogs.Count > 100)
-                    timeLogs.RemoveAt(0);
-                SetData(true);
-            }
-        }*/
+            SetData(true);
+        }
     }
 
     private static void Save()
     {
-        //Save file in dataPath if this game in editor, else save file in persistentDataPath.
-#if UNITY_ANDROID && !UNITY_EDITOR
-        path = Path.Combine(Application.persistentDataPath, "Saves.enc");
-#else
-        path = Path.Combine(Application.dataPath, "Saves.enc");
-#endif
 
         CollectDataThere();
         string packSerialized = KlimSoft.Serializer.Serialize(Saves);
@@ -143,48 +128,7 @@ public class GameSaver : MonoBehaviour
         Debug.Log(packSerialized);
         byte[] dataToSave = Encoding.UTF8.GetBytes(packSerialized);
         GPGSManager.WriteSaveData(dataToSave);
-        //File.WriteAllBytes(path, dataToSave);
     }
-
-    /*public static async void LoadAsync()
-    {
-        //Load file from dataPath if this game in editor, else read file from persistentDataPath.
-#if UNITY_ANDROID && !UNITY_EDITOR
-        path = Path.Combine(Application.persistentDataPath, "Saves.enc");
-#else
-        path = Path.Combine(Application.dataPath, "Saves.enc");
-#endif
-        if (File.Exists(path))
-        {
-            loadProgress = 0.01F;
-            loadStatus = "Reading...";
-
-            byte[] encryptedData = null;
-            await Task.Run(() => encryptedData = File.ReadAllBytes(path));
-
-            loadProgress = 0.2F;
-            loadStatus = "Decrypting...";
-
-            byte[] decryptedData = await DecryptAsync(encryptedData);
-
-            loadProgress = 0.5F;
-            loadStatus = "Encoding...";
-
-            string packSerialized = null;
-            await Task.Run(() => packSerialized = Encoding.UTF8.GetString(decryptedData));
-
-            loadProgress = 0.75F;
-            loadStatus = "Deserializing...";
-
-            Saves = (SavesPack)KlimSoft.Serializer.Deserialize(packSerialized, typeof(SavesPack));
-        }
-        else
-        {
-            Saves = SavesPack.Default;
-            loadProgress = 1F;
-            loadStatus = "No saves";
-        }
-    }*/
 
     public static async void LoadAsync(byte[] data)
     {
@@ -212,88 +156,6 @@ public class GameSaver : MonoBehaviour
             loadStatus = "Readed!";
         }
     }
-
-    /*public static void Load()
-    {
-        //Load file from dataPath if this game in editor, else read file from persistentDataPath.
-#if UNITY_ANDROID && !UNITY_EDITOR
-        path = Path.Combine(Application.persistentDataPath, "Saves.enc");
-#else
-        path = Path.Combine(Application.dataPath, "Saves.enc");
-#endif
-        if (File.Exists(path))
-        {
-            byte[] data = File.ReadAllBytes(path);
-            string packSerialized = Encoding.UTF8.GetString(data);
-            Saves = (SavesPack)KlimSoft.Serializer.Deserialize(packSerialized, typeof(SavesPack));
-        }
-        else
-            Saves = SavesPack.Default;
-
-        SetDataThere();
-    }*/
-
-    /*private static byte[] Encrypt(byte[] data)
-    {
-        Aes aes = Aes.Create();
-        aes.Mode = CipherMode.CBC;
-        SHA384 hash = SHA384.Create();
-        //Unique hash - is hash of device unique identifier.
-        byte[] uniqueHash = hash.ComputeHash(HexToBytes(SystemInfo.deviceUniqueIdentifier));
-
-        //  |          256-bit key          |  128-bit IV  |
-        //  00112233445566778899AABBCCDDEEFF0011223344556677
-        //  |              384-bit uniqueHash              |
-        aes.Key = uniqueHash.Take(32).ToArray();
-        aes.IV = uniqueHash.Skip(32).ToArray();
-
-        return aes.CreateEncryptor()
-            .TransformFinalBlock(data, 0, data.Length);
-    }
-
-    private static byte[] Decrypt(byte[] data)
-    {
-        Aes aes = Aes.Create();
-        aes.Mode = CipherMode.CBC;
-        SHA384 hash = SHA384.Create();
-
-        //Unique hash - is hash of device unique identifier.
-        byte[] uniqueHash = hash.ComputeHash(HexToBytes(SystemInfo.deviceUniqueIdentifier));
-
-        //  |          256-bit key          |  128-bit IV  |
-        //  00112233445566778899AABBCCDDEEFF0011223344556677
-        //  |              384-bit uniqueHash              |
-        aes.Key = uniqueHash.Take(32).ToArray();
-        aes.IV = uniqueHash.Skip(32).ToArray();
-
-        return aes.CreateDecryptor()
-            .TransformFinalBlock(data, 0, data.Length);
-    }
-
-    private static async Task<byte[]> DecryptAsync(byte[] data)
-    {
-        //This on main thread, else => EXCEPTION D:
-        string id = SystemInfo.deviceUniqueIdentifier;
-        byte[] result = null;
-        //Async part.
-        await Task.Run(() => {
-            Aes aes = Aes.Create();
-            aes.Mode = CipherMode.CBC;
-            SHA384 hash = SHA384.Create();
-            //Unique hash - is hash of device unique identifier.
-            byte[] uniqueHash = hash.ComputeHash(HexToBytes(id));
-
-            //  |          256-bit key          |  128-bit IV  |
-            //  00112233445566778899AABBCCDDEEFF0011223344556677
-            //  |              384-bit uniqueHash              |
-            aes.Key = uniqueHash.Take(32).ToArray();
-            aes.IV = uniqueHash.Skip(32).ToArray();
-
-            result = aes.CreateDecryptor()
-                .TransformFinalBlock(data, 0, data.Length);
-        });
-        return result;
-    }*/
 
     /// <summary>
     /// Collects static data from this script to saves pack.

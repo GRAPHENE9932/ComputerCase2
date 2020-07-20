@@ -51,9 +51,11 @@
 		<androidPackage spec="com.appodeal.ads.sdk.networks:smaato:2.6.5.2"/>
 		<androidPackage spec="com.appodeal.ads.sdk.networks:startapp:2.6.5.5"/>
 		<androidPackage spec="com.appodeal.ads.sdk.networks:unity_ads:2.6.5.3"/>
-		<androidPackage spec="com.appodeal.ads.sdk.networks:yandex:2.6.5.3@aar"/>
-	   <!--androidPackage spec="com.yandex.android:mobmetricalib:3.13.1"/>
+		<!--androidPackage spec="com.appodeal.ads.sdk.networks:yandex:2.6.5.3@aar"/>
+	    <androidPackage spec="com.yandex.android:mobmetricalib:3.13.1"/>
 		<androidPackage spec="com.yandex.android:mobileads:2.142@aar"/-->
+	    <!--Multidex dependency-->
+	    <androidPackage spec="androidx.multidex:multidex:2.0.1"/>
     </androidPackages>
     <iosPods>
         <iosPod name='Appodeal' version='2.6.5' minTargetSdk='9.0'/>
