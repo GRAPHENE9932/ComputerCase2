@@ -53,7 +53,7 @@ public class LoadScript : MonoBehaviour
 
         if (!authSuccess)
         {
-            JavaTools.MakeToast("Authentication failed! Try to restart the game.", 1);
+            JavaTools.MakeToast("Authentication failed! Try restart the game.", 1);
             try
             {
                 GameSaver.LoadAsync(null);

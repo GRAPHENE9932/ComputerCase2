@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 using UnityEngine;
+using GooglePlayGames.BasicApi.SavedGame;
 
 public class GameSaver : MonoBehaviour
 {
@@ -115,24 +116,26 @@ public class GameSaver : MonoBehaviour
         }
         else
         {
-            SetData(true);
+            void OnRead(SavedGameRequestStatus status, byte[] data)
+            {
+                Load(data);
+                SetData(true);
+            }
+            GPGSManager.ReadSaveData(GPGSManager.DEFAULT_SAVE_NAME, OnRead);
         }
     }
 
     private static void Save()
     {
-
         CollectDataThere();
         string packSerialized = KlimSoft.Serializer.Serialize(Saves);
 
-        Debug.Log(packSerialized);
         byte[] dataToSave = Encoding.UTF8.GetBytes(packSerialized);
         GPGSManager.WriteSaveData(dataToSave);
     }
 
     public static async void LoadAsync(byte[] data)
     {
-
         if (data == null || data.Length == 0)
         {
             Saves = SavesPack.Default;
@@ -157,6 +160,18 @@ public class GameSaver : MonoBehaviour
         }
     }
 
+    private static void Load(byte[] data)
+    {
+        if (data == null || data.Length == 0)
+        {
+            Saves = SavesPack.Default;
+        }
+        else
+        {
+            string packSerialized = Encoding.UTF8.GetString(data);
+            Saves = (SavesPack)KlimSoft.Serializer.Deserialize(packSerialized, typeof(SavesPack));
+        }
+    }
     /// <summary>
     /// Collects static data from this script to saves pack.
     /// </summary>

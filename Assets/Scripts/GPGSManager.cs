@@ -32,8 +32,6 @@ public static class GPGSManager
         PlayGamesPlatform.InitializeInstance(config);
         PlayGamesPlatform.DebugLogEnabled = debug;
         PlayGamesPlatform.Activate();
-
-        startDateTime = DateTime.Now;
     }
 
     public static void Auth(Action<bool, string> onAuth)
@@ -82,6 +80,7 @@ public static class GPGSManager
                 savedGameClient.ReadBinaryData(metadata, onDataRead);
                 currentMetadata = metadata;
             }
+            startDateTime = DateTime.Now;
         });
     }
 
@@ -91,14 +90,14 @@ public static class GPGSManager
         void OnDataWrite()
         {
             TimeSpan totalPlayTime = currentMetadata.TotalTimePlayed + currentSpan;
-            SavedGameMetadataUpdate.Builder builder = new SavedGameMetadataUpdate.Builder()
-            .WithUpdatedDescription("Saved game at " + DateTime.Now)
-            .WithUpdatedPlayedTime(totalPlayTime);
-            SavedGameMetadataUpdate updatedMetadata = builder.Build();
-            savedGameClient.CommitUpdate(currentMetadata,
+
+            SavedGameMetadataUpdate updatedMetadata = new SavedGameMetadataUpdate.Builder().Build();
+
+            ((PlayGamesPlatform)Social.Active).SavedGame.CommitUpdate(currentMetadata,
                 updatedMetadata,
                 data,
                 (status, metadata) => currentMetadata = metadata);
+
             startDateTime = DateTime.Now;
         }
         if (currentMetadata == null)
@@ -112,8 +111,10 @@ public static class GPGSManager
                     OnDataWrite();
                 }
             });
-            return;
         }
-        OnDataWrite();
+        else
+        {
+            OnDataWrite();
+        }
     }
 }
