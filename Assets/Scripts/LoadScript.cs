@@ -53,7 +53,7 @@ public class LoadScript : MonoBehaviour
 
         if (!authSuccess)
         {
-            AndroidFeatures.MakeToast("Authentication failed! Try restart the game.", 1);
+            AndroidFeatures.MakeToast("Authentication failed! Try restart the game and check your internet connection.", 1);
             try
             {
                 GameSaver.LoadAsync(null);

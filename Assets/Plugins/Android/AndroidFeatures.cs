@@ -9,17 +9,31 @@ namespace KlimSoft
         private static AndroidJavaClass featuresClass;
         private static bool initialized = false;
 
+        public static int DialogButtonId
+        {
+            get
+            {
+                if (!initialized)
+                    Initialize();
+
+                int id = featuresClass.GetStatic<int>("dialogButtonId");
+                featuresClass.SetStatic<int>("dialogButtonId", -1);
+                return id;
+            }
+        }
+
         private static void Initialize()
         {
             featuresClass = new AndroidJavaClass("KlimSoft.AndroidFeatures");
 
-            //Get context.
+            //Get context and activity.
             AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
             AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
             AndroidJavaObject context = activity.Call<AndroidJavaObject>("getApplicationContext");
 
-            //Set context.
+            //Set context and activity.
             featuresClass.CallStatic("setContext", context);
+            featuresClass.CallStatic("setActivity", activity);
 
             initialized = true;
         }
@@ -46,6 +60,38 @@ namespace KlimSoft
                 Initialize();
 
             featuresClass.CallStatic("makeToast", text, length);
+        }
+
+        public static void KillProcess()
+        {
+            if (!initialized)
+                Initialize();
+
+            featuresClass.CallStatic("killProcess");
+        }
+
+        public static string GetSignature()
+        {
+            if (!initialized)
+                Initialize();
+
+            return featuresClass.CallStatic<string>("getSignature");
+        }
+
+        public static void CheckSignature(string trueSignature)
+        {
+            if (!initialized)
+                Initialize();
+
+            featuresClass.CallStatic("checkSignature", trueSignature);
+        }
+
+        public static void CreateDialogWithOneButton(string text, string buttonText)
+        {
+            if (!initialized)
+                Initialize();
+
+            featuresClass.CallStatic("createDialogWithOneButton", text, buttonText);
         }
     }
 }

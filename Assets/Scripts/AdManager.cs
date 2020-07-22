@@ -18,6 +18,7 @@ public class AdManager : MonoBehaviour, IRewardedVideoAdListener
     private static void Initialize(bool testing)
     {
         Appodeal.setTesting(testing);
+        Appodeal.disableLocationPermissionCheck();
         Appodeal.muteVideosIfCallsMuted(true);
         foreach (string network in DISABLED_NETWORKS)
             Appodeal.disableNetwork(network);
