@@ -53,7 +53,7 @@ public class LoadScript : MonoBehaviour
 
         if (!authSuccess)
         {
-            JavaTools.MakeToast("Authentication failed! Try restart the game.", 1);
+            AndroidFeatures.MakeToast("Authentication failed! Try restart the game.", 1);
             try
             {
                 GameSaver.LoadAsync(null);
@@ -74,13 +74,13 @@ public class LoadScript : MonoBehaviour
                 switch (readStatus)
                 {
                     case SavedGameRequestStatus.AuthenticationError:
-                        JavaTools.MakeToast("Authentication error!", 1);
+                        AndroidFeatures.MakeToast("Authentication error!", 1);
                         break;
                     case SavedGameRequestStatus.BadInputError:
-                        JavaTools.MakeToast("Bad input error!", 1);
+                        AndroidFeatures.MakeToast("Bad input error!", 1);
                         break;
                     case SavedGameRequestStatus.InternalError:
-                        JavaTools.MakeToast("Internal error!", 1);
+                        AndroidFeatures.MakeToast("Internal error!", 1);
                         break;
                     default:
                         //Ignore TimeoutError because it keep working with it.

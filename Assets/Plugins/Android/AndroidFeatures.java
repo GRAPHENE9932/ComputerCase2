@@ -1,4 +1,4 @@
-package KlimSoft.AndroidFeatures;
+package KlimSoft;
 
 import android.content.Context;
 import android.os.Vibrator;
@@ -9,19 +9,19 @@ class AndroidFeatures
 {
 	private static Context context;
 
-	private static Vibrator vibrator
+	private static Vibrator vibrator;
 
-	public static void setContext(Context context)
+	public static void setContext(Context contextParam)
 	{
-		this.context = context;
+		context = contextParam;
 	}
 
 	public static int getApiLevel()
 	{
-		return android.os.Build$VERSION.SDK_INT;
+		return android.os.Build.VERSION.SDK_INT;
 	}
 
-	public static void Vibrate(long milliseconds)
+	public static void vibrate(long milliseconds)
 	{
 		if (context == null)
 			throw new NullPointerException("Context is not assigned.");
@@ -29,11 +29,11 @@ class AndroidFeatures
 		try
 		{
 			if (vibrator == null)
-				vibrator = context.getSystemService("vibrator");
+				vibrator = (Vibrator)context.getSystemService("vibrator");
 
 			if (getApiLevel() >= 26)
 			{
-				VibrationEffect effect = new VibrationEffect.createOneShot(milliseconds, -1);
+				VibrationEffect effect = VibrationEffect.createOneShot(milliseconds, -1);
 				vibrator.vibrate(effect);
 			}
 			else
@@ -41,10 +41,10 @@ class AndroidFeatures
 				vibrator.vibrate(milliseconds);
 			}
 		}
-		catch { };
+		catch(Exception e) { };
 	}
 
-	public static void Vibrate(long[] intervals, int repeat)
+	public static void vibrate(long[] intervals, int repeat)
 	{
 		if (context == null)
 			throw new NullPointerException("Context is not assigned.");
@@ -52,11 +52,11 @@ class AndroidFeatures
 		try
 		{
 			if (vibrator == null)
-				vibrator = context.getSystemService("vibrator");
+				vibrator = (Vibrator)context.getSystemService("vibrator");
 
 			if (getApiLevel() >= 26)
 			{
-				VibrationEffect effect = new VibrationEffect.createOneShot(intervals, repeat);
+				VibrationEffect effect = VibrationEffect.createWaveform(intervals, repeat);
 				vibrator.vibrate(effect);
 			}
 			else
@@ -64,10 +64,10 @@ class AndroidFeatures
 				vibrator.vibrate(intervals, repeat);
 			}
 		}
-		catch { };
+		catch(Exception e) { };
 	}
 
-	public static void MakeToast(string text, int length)
+	public static void makeToast(String text, int length)
 	{
 		if (context == null)
 			throw new NullPointerException("Context is not assigned.");

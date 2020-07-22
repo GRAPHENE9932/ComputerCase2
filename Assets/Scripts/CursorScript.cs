@@ -28,6 +28,6 @@ public class CursorScript : MonoBehaviour
         mainSource.PlayOneShot(scrollClips[Random.Range(0, scrollClips.Length)]);
         //Vibrate.
         if (vibrationToggle.toggled)
-            JavaTools.Vibrate(50);
+            AndroidFeatures.Vibrate(50);
     }
 }

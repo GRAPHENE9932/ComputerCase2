@@ -51,7 +51,7 @@ public class ErrorManager : MonoBehaviour
             try
             {
                 //Start message about error.
-                JavaTools.MakeToast(string.Format(LangManager.GetString("error_occured"), path), 1);
+                AndroidFeatures.MakeToast(string.Format(LangManager.GetString("error_occured"), path), 1);
             }
             catch { };
 
