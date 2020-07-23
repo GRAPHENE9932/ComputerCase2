@@ -81,5 +81,24 @@ namespace KlimSoft
                 return new string[0];
             return strings.ToArray();
         }
+
+        public static byte[] HexToBytes(this string hex)
+        {
+            if (hex.Length % 2 != 0)
+                throw new ArgumentException("Hexadecimal string has invalid length.");
+
+            try
+            {
+                byte[] result = new byte[hex.Length / 2];
+                for (int i = 0; i < hex.Length / 2; i++)
+                    result[i] = Convert.ToByte(hex.Substring(i * 2, 2), 16);
+
+                return result;
+            }
+            catch
+            {
+                throw new ArgumentException("String has not hexadecimal format.");
+            }
+        }
     }
 }

@@ -172,6 +172,7 @@ public class GameSaver : MonoBehaviour
             Saves = (SavesPack)KlimSoft.Serializer.Deserialize(packSerialized, typeof(SavesPack));
         }
     }
+
     /// <summary>
     /// Collects static data from this script to saves pack.
     /// </summary>
@@ -280,18 +281,6 @@ public class GameSaver : MonoBehaviour
         SetDataThere();
 
         dataSetted = true;
-    }
-
-    private static byte[] HexToBytes(string hex)
-    {
-        if (hex.Length % 2 != 0)
-            throw new ArgumentException("Hexadecimal string has invalid length.");
-
-        byte[] result = new byte[hex.Length / 2];
-        for (int i = 0; i < hex.Length / 2; i++)
-            result[i] = Convert.ToByte(hex.Substring(i * 2, 2), 16);
-
-        return result;
     }
 }
 

@@ -30,7 +30,7 @@ public class LoadScript : MonoBehaviour
     private void FixedUpdate()
     {
         if (bar.fillAmount < progress)
-            bar.fillAmount += 0.05F;
+            bar.fillAmount += 0.02F;
     }
 
     private IEnumerator MainCorut()
@@ -54,51 +54,38 @@ public class LoadScript : MonoBehaviour
         if (!authSuccess)
         {
             AndroidFeatures.MakeToast("Authentication failed! Try restart the game and check your internet connection.", 1);
-            try
-            {
-                GameSaver.LoadAsync(null);
-            }
-            catch (Exception e)
-            {
-                errorInfo = $"Message: {e.Message}\nStack trace: {e.StackTrace}";
-            }
         }
-        else
-        {
-            progress = 0.1F;
-            statusText.text = "Reading saves...";
+        progress = 0.1F;
+        statusText.text = "Reading saves...";
 
-            SavedGameRequestStatus readStatus = SavedGameRequestStatus.TimeoutError;
-            void OnRead(SavedGameRequestStatus status, byte[] data)
+        SavedGameRequestStatus readStatus = SavedGameRequestStatus.TimeoutError;
+        void OnRead(SavedGameRequestStatus status, byte[] data)
+        {
+            switch (readStatus)
             {
-                switch (readStatus)
-                {
-                    case SavedGameRequestStatus.AuthenticationError:
-                        AndroidFeatures.MakeToast("Authentication error!", 1);
-                        break;
-                    case SavedGameRequestStatus.BadInputError:
-                        AndroidFeatures.MakeToast("Bad input error!", 1);
-                        break;
-                    case SavedGameRequestStatus.InternalError:
-                        AndroidFeatures.MakeToast("Internal error!", 1);
-                        break;
-                    default:
-                        //Ignore TimeoutError because it keep working with it.
-                        try
-                        {
-                            GameSaver.LoadAsync(data);
-                        }
-                        catch (Exception e)
-                        {
-                            errorInfo = $"Message: {e.Message}\nStack trace: {e.StackTrace}";
-                        }
-                        break;
-                }
-                readStatus = status;
-                progress = 0.25F;
+                case SavedGameRequestStatus.BadInputError:
+                    AndroidFeatures.MakeToast("Bad input error!", 1);
+                    break;
+                case SavedGameRequestStatus.InternalError:
+                    AndroidFeatures.MakeToast("Internal error!", 1);
+                    break;
+                default:
+                    //Ignore TimeoutError because it keep working with it.
+                    //Ignore AuthenticationError because caching will used.
+                    try
+                    {
+                        GameSaver.LoadAsync(data);
+                    }
+                    catch (Exception e)
+                    {
+                        errorInfo = $"Message: {e.Message}\nStack trace: {e.StackTrace}";
+                    }
+                    break;
             }
-            GPGSManager.ReadSaveData(GPGSManager.DEFAULT_SAVE_NAME, OnRead);
+            readStatus = status;
+            progress = 0.25F;
         }
+        GPGSManager.ReadSaveData(GPGSManager.DEFAULT_SAVE_NAME, OnRead);
 
 
         while (GameSaver.loadProgress < 1F)

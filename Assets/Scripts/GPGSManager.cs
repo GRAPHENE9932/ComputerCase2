@@ -4,10 +4,18 @@ using UnityEngine;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 using GooglePlayGames.BasicApi.SavedGame;
+using System.IO;
+using System.Security.Cryptography;
+using System.Linq;
+using System.Threading.Tasks;
+using KlimSoft;
+using System.Text;
 
 public static class GPGSManager
 {
     public const string DEFAULT_SAVE_NAME = "MainSave";
+    public const string CACHE_SAVE_NAME = "CachedSaves.enc";
+    public static string cachePath;
 
     private static ISavedGameClient savedGameClient;
     private static ISavedGameMetadata currentMetadata;
@@ -20,7 +28,8 @@ public static class GPGSManager
         {
             if (PlayGamesPlatform.Instance != null)
                 return PlayGamesPlatform.Instance.IsAuthenticated();
-            return false;
+            else
+                return false;
         }
     }
 
@@ -32,6 +41,8 @@ public static class GPGSManager
         PlayGamesPlatform.InitializeInstance(config);
         PlayGamesPlatform.DebugLogEnabled = debug;
         PlayGamesPlatform.Activate();
+
+        cachePath = Path.Combine(Application.persistentDataPath, CACHE_SAVE_NAME);
     }
 
     public static void Auth(Action<bool, string> onAuth)
@@ -58,30 +69,77 @@ public static class GPGSManager
         if (!IsAuthenticated)
         {
             onDataOpen(SavedGameRequestStatus.AuthenticationError, null);
-            return;
         }
-        savedGameClient.OpenWithAutomaticConflictResolution(fileName,
-            DataSource.ReadCacheOrNetwork,
-            ConflictResolutionStrategy.UseLongestPlaytime,
-            onDataOpen);
+        else
+        {
+            savedGameClient.OpenWithAutomaticConflictResolution(fileName,
+                DataSource.ReadCacheOrNetwork,
+                ConflictResolutionStrategy.UseLongestPlaytime,
+                onDataOpen);
+        }
     }
 
     public static void ReadSaveData(string fileName, Action<SavedGameRequestStatus, byte[]> onDataRead)
     {
         if (!IsAuthenticated)
         {
-            onDataRead(SavedGameRequestStatus.AuthenticationError, null);
-            return;
-        }
-        OpenSaveData(fileName, (status, metadata) =>
-        {
-            if (status == SavedGameRequestStatus.Success)
+            if (File.Exists(cachePath))
             {
-                savedGameClient.ReadBinaryData(metadata, onDataRead);
-                currentMetadata = metadata;
+                byte[] encrypted = File.ReadAllBytes(cachePath);
+                onDataRead(SavedGameRequestStatus.AuthenticationError, Decrypt(encrypted));
             }
-            startDateTime = DateTime.Now;
-        });
+            else
+            {
+                onDataRead(SavedGameRequestStatus.AuthenticationError, null);
+            }
+        }
+        else
+        {
+            OpenSaveData(fileName, (status, metadata) =>
+            {
+                if (status == SavedGameRequestStatus.Success)
+                {
+                    currentMetadata = metadata;
+
+                    //If cache exists.
+                    if (File.Exists(cachePath))
+                    {
+                        void DataRead(SavedGameRequestStatus stat, byte[] data)
+                        {
+                            //Get cached.
+                            byte[] encrypted = File.ReadAllBytes(cachePath);
+                            byte[] cachedData = Decrypt(encrypted);
+                            SavesPack cached = (SavesPack)Serializer
+                            .Deserialize(Encoding.UTF8.GetString(cachedData), typeof(SavesPack));
+
+                            //Get common.
+                            SavesPack common = (SavesPack)Serializer
+                            .Deserialize(Encoding.UTF8.GetString(data), typeof(SavesPack));
+
+                            //If cached has more bigger gameplay time, use cached saves.
+                            if (cached.gameplayTime > common.gameplayTime)
+                            {
+                                WriteSaveData(cachedData);
+                                onDataRead(SavedGameRequestStatus.Success, cachedData);
+                            }
+                            //Else, use common data.
+                            else
+                            {
+                                onDataRead(stat, data);
+                            }
+                        }
+                        //Read common data.
+                        savedGameClient.ReadBinaryData(metadata, DataRead);
+                    }
+                    //If cache not exists.
+                    else
+                    {
+                        savedGameClient.ReadBinaryData(metadata, onDataRead);
+                    }
+                }
+                startDateTime = DateTime.Now;
+            });
+        }
     }
 
     public static void WriteSaveData(byte[] data)
@@ -104,11 +162,16 @@ public static class GPGSManager
         {
             OpenSaveData(DEFAULT_SAVE_NAME, (status, metadata) =>
             {
-                Debug.Log("Cloud data write status: " + status.ToString());
+                currentMetadata = metadata;
+                //If can write normally.
                 if (status == SavedGameRequestStatus.Success)
                 {
-                    currentMetadata = metadata;
                     OnDataWrite();
+                }
+                //Else write to cache.
+                else
+                {
+                    File.WriteAllBytes(cachePath, Encrypt(data));
                 }
             });
         }
@@ -116,5 +179,70 @@ public static class GPGSManager
         {
             OnDataWrite();
         }
+    }
+
+    private static byte[] Encrypt(byte[] data)
+    {
+        Aes aes = Aes.Create();
+        aes.Mode = CipherMode.CBC;
+        aes.Padding = PaddingMode.PKCS7;
+        SHA384 hash = SHA384.Create();
+        //Unique hash - is hash of device unique identifier.
+        byte[] uniqueHash = hash.ComputeHash(SystemInfo.deviceUniqueIdentifier.HexToBytes());
+
+        //  |          256-bit key          |  128-bit IV  |
+        //  00112233445566778899AABBCCDDEEFF0011223344556677
+        //  |              384-bit uniqueHash              |
+        aes.Key = uniqueHash.Take(32).ToArray();
+        aes.IV = uniqueHash.Skip(32).ToArray();
+
+        return aes.CreateEncryptor()
+            .TransformFinalBlock(data, 0, data.Length);
+    }
+
+    private static byte[] Decrypt(byte[] data)
+    {
+        Aes aes = Aes.Create();
+        aes.Mode = CipherMode.CBC;
+        aes.Padding = PaddingMode.PKCS7;
+        SHA384 hash = SHA384.Create();
+
+        //Unique hash - is hash of device unique identifier.
+        byte[] uniqueHash = hash.ComputeHash(SystemInfo.deviceUniqueIdentifier.HexToBytes());
+
+        //  |          256-bit key          |  128-bit IV  |
+        //  00112233445566778899AABBCCDDEEFF0011223344556677
+        //  |              384-bit uniqueHash              |
+        aes.Key = uniqueHash.Take(32).ToArray();
+        aes.IV = uniqueHash.Skip(32).ToArray();
+
+        return aes.CreateDecryptor()
+            .TransformFinalBlock(data, 0, data.Length);
+    }
+
+    private static async Task<byte[]> DecryptAsync(byte[] data)
+    {
+        //This on main thread, else => EXCEPTION D:
+        string id = SystemInfo.deviceUniqueIdentifier;
+        byte[] result = null;
+        //Async part.
+        await Task.Run(() => {
+            Aes aes = Aes.Create();
+            aes.Mode = CipherMode.CBC;
+            aes.Padding = PaddingMode.PKCS7;
+            SHA384 hash = SHA384.Create();
+            //Unique hash - is hash of device unique identifier.
+            byte[] uniqueHash = hash.ComputeHash(id.HexToBytes());
+
+            //  |          256-bit key          |  128-bit IV  |
+            //  00112233445566778899AABBCCDDEEFF0011223344556677
+            //  |              384-bit uniqueHash              |
+            aes.Key = uniqueHash.Take(32).ToArray();
+            aes.IV = uniqueHash.Skip(32).ToArray();
+
+            result = aes.CreateDecryptor()
+                .TransformFinalBlock(data, 0, data.Length);
+        });
+        return result;
     }
 }

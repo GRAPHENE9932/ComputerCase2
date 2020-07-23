@@ -9,6 +9,8 @@ import android.content.pm.Signature;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.app.Activity;
+import android.content.pm.ApplicationInfo;
+import java.util.List;
 
 class AndroidFeatures
 {
@@ -123,13 +125,16 @@ class AndroidFeatures
 			killProcess();
 	}
 
-	public static void createDialogWithOneButton(String text, String buttonText)
+	public static void showDialogWithOneButton(String message, String title, String buttonText, boolean cancelable)
 	{
 		if (activity == null)
 			throw new NullPointerException("Activity is not assigned.");
 
 		AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-		builder.setMessage(text)
+
+		builder.setMessage(message)
+		.setTitle(title)
+		.setCancelable(cancelable)
 		.setNeutralButton(buttonText, new DialogInterface.OnClickListener()
 		{
 			public void onClick(DialogInterface dialog, int id)
@@ -139,5 +144,32 @@ class AndroidFeatures
 		});
 
 		builder.create().show();
+	}
+
+	public static String[] getPackageNames()
+	{
+		if (context == null)
+			throw new NullPointerException("Context is not assigned.");
+
+		PackageManager packageManager = context.getPackageManager();
+		List<ApplicationInfo> packages = packageManager.getInstalledApplications(PackageManager.GET_META_DATA);
+		String[] result = new String[packages.size()];
+
+		for (int i = 0; i < packages.size(); i++)
+			result[i] = packages.get(i).packageName;
+
+		return result;
+	}
+
+	public static boolean isAppInstalled(String[] triggers)
+	{
+		String[] packageNames = getPackageNames();
+
+		for (int i = 0; i < triggers.length; i++)
+			for (int j = 0; j < packageNames.length; j++)
+				if (packageNames[j] == triggers[i])
+					return true;
+		
+		return false;
 	}
 }

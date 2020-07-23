@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -86,12 +87,37 @@ namespace KlimSoft
             featuresClass.CallStatic("checkSignature", trueSignature);
         }
 
-        public static void CreateDialogWithOneButton(string text, string buttonText)
+        public static void ShowDialogWithOneButton(string message, string title, string buttonText = "Ok", bool cancelable = true)
         {
             if (!initialized)
                 Initialize();
 
-            featuresClass.CallStatic("createDialogWithOneButton", text, buttonText);
+            featuresClass.CallStatic("showDialogWithOneButton", message, title, buttonText, cancelable);
+        }
+
+        public static string[] GetPackageNames()
+        {
+            if (!initialized)
+                Initialize();
+
+            return featuresClass.CallStatic<string[]>("getPackageNames");
+        }
+
+        public static bool IsAppInstalled(string[] triggers)
+        {
+            if (!initialized)
+                Initialize();
+
+            bool res = false;
+            try
+            {
+                res = featuresClass.CallStatic<bool>("isAppInstalled", new object[] { triggers });
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+            }
+            return res;
         }
     }
 }
