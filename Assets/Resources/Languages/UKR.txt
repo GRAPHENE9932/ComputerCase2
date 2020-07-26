@@ -196,7 +196,7 @@ cpu_cases:<val>Кейсів з процесором:
 <pair>
 gpu_cases:<val>Кейсів з відеокартою:
 <pair>
-ram_cases:<val>Кейсів з ОЗУ:
+ram_cases:<val>Кейсів з ОЗП:
 <pair>
 motherboard_cases:<val>Кейсів з мат. платами:
 <pair>
