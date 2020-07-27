@@ -18,6 +18,7 @@ public class PCComponent : ScriptableObject, ICloneable
     public Rarity rarity;
     [KlimSoft.Serializer.Ignore]
     public Sprite image;
+    [HideInInspector]
     public string imageName;
 
     public PCComponent()

@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullName: Intel Core i9-9820X
   shortName: i9-9820X
-  price: 0
+  price: 1000
   rarity: 4
   image: {fileID: 21300000, guid: fee49f8843d3a3d4c851e07aa584c465, type: 3}
+  imageName: 
   frequency: 3300
   cores: 10
   TDP: 165

@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25f6be8e8c6a5fd448aae9f73241abc6, type: 3}
-  m_Name: AMD FX-8350
+  m_Name: AMD FX-8370
   m_EditorClassIdentifier: 
-  fullName: AMD FX-8350
-  shortName: FX-8350
-  price: 229
+  fullName: AMD FX-8370
+  shortName: FX-8370
+  price: 242
   rarity: 0
-  image: {fileID: 21300000, guid: 89cff7b5b013d284789e43c2e01f4e5d, type: 3}
+  image: {fileID: 21300000, guid: 928e3ab19adc8a14cb23bdf6f63baa07, type: 3}
   imageName: 
   frequency: 4000
   cores: 8
   TDP: 125
-  power: 100
+  power: 105
   additionalRAMTypes: 
   maxRAMChannels: 2
   RAMType: 3
