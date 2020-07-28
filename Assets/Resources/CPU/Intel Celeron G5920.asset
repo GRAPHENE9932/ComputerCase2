@@ -10,21 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25f6be8e8c6a5fd448aae9f73241abc6, type: 3}
-  m_Name: Dual Intel Xeon E5-2670
+  m_Name: Intel Celeron G5920
   m_EditorClassIdentifier: 
-  fullName: Dual Intel Xeon E5-2670
-  shortName: Dual Xeon E5-2670
-  price: 160
-  rarity: 1
-  image: {fileID: 21300000, guid: 9c9dc745bb58a4e4ca92fef1c22ff56e, type: 3}
-  frequency: 2600
-  cores: 16
-  TDP: 230
-  power: 186
+  fullName: Intel Celeron G5920
+  shortName: Celeron G5920
+  price: 62
+  rarity: 0
+  image: {fileID: 21300000, guid: 1719a76d6d8f63e4e88fdb56c5441361, type: 3}
+  imageName: 
+  id: 0
+  frequency: 3500
+  cores: 2
+  TDP: 58
+  architecture: 8
+  socket: LGA 1200
   additionalRAMTypes: 
-  maxRAMChannels: 4
-  RAMType: 3
+  maxRAMChannels: 2
+  RAMType: 4
   unlocked: 0
   _64bit: 1
-  integratedGraphics: 0
-  socket: LGA 2011
+  integratedGraphics: 1

@@ -5,10 +5,11 @@ using UnityEditor;
 using System.Linq;
 
 [CustomEditor(typeof(PCComponent), true)]
+[CanEditMultipleObjects]
 public class PCComponentEditor : Editor
 {
     private static ushort maxId = ushort.MinValue;
-    private static List<SerializedProperty> ids = new List<SerializedProperty>();
+    private static readonly List<SerializedProperty> ids = new List<SerializedProperty>();
 
     private void OnEnable()
     {
@@ -24,6 +25,16 @@ public class PCComponentEditor : Editor
             if (id.intValue > maxId)
                 maxId = (ushort)id.intValue;
 
+        //Help box about max id.
         EditorGUILayout.HelpBox($"Max id: {maxId}", MessageType.Info);
+
+        //Help box about price.
+        if (serializedObject.FindProperty("price").intValue == 0)
+            EditorGUILayout.HelpBox("Price is undefined.", MessageType.Warning);
+
+        //Help box about CPU architecture.
+        if (serializedObject.targetObject.GetType() == typeof(CPU))
+            if (serializedObject.FindProperty("architecture").intValue == 0)
+                EditorGUILayout.HelpBox("Architecture undefined", MessageType.Warning);
     }
 }

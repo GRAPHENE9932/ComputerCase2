@@ -10,21 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25f6be8e8c6a5fd448aae9f73241abc6, type: 3}
-  m_Name: Quad Intel Xeon E7-8895 v2
+  m_Name: Intel Xeon Phi 7295
   m_EditorClassIdentifier: 
-  fullName: Quad Intel Xeon E7-8895 v2
-  shortName: Quad Xeon E7-8895 v2
-  price: 350
-  rarity: 3
-  image: {fileID: 21300000, guid: b9ac8eb6214746946902280f5b028e95, type: 3}
-  frequency: 2800
-  cores: 60
-  TDP: 620
-  power: 962
+  fullName: Intel Xeon Phi 7295
+  shortName: Xeon Phi 7295
+  price: 6294
+  rarity: 0
+  image: {fileID: 21300000, guid: 592fcc7e02399f8469b17faa621e2e79, type: 3}
+  imageName: 
+  id: 0
+  frequency: 1500
+  cores: 72
+  TDP: 320
+  architecture: 13
+  socket: LGA 3647
   additionalRAMTypes: 
-  maxRAMChannels: 0
-  RAMType: 0
+  maxRAMChannels: 1
+  RAMType: 4
   unlocked: 0
   _64bit: 1
   integratedGraphics: 0
-  socket: LGA 2011-1

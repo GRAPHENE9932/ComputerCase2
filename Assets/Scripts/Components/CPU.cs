@@ -8,14 +8,51 @@ public class CPU : PCComponent
 {
     public enum Architecture
     {
-        K8, Zen, ZenPlus, Zen2
+        Undefined, K8, Zen, ZenPlus, Zen2, Bulldozer, SandyBridge, Core, Skylake, Haswell, Skylake_X, Penryn, XeonPhi, XeonPhi_Landing_Mill
     }
 
     [Space]
     public int frequency;
     public int cores;
     public int TDP;
-    public byte IPC;
+    [HideInInspector]
+    public byte IPC
+    {
+        get
+        {
+            switch (architecture)
+            {
+                case Architecture.K8:
+                    return 3;
+                case Architecture.Zen:
+                    return 16;
+                case Architecture.ZenPlus:
+                    return 16;
+                case Architecture.Zen2:
+                    return 32;
+                case Architecture.Bulldozer:
+                    return 8;
+                case Architecture.SandyBridge:
+                    return 16;
+                case Architecture.Core:
+                    return 8;
+                case Architecture.Skylake:
+                    return 32;
+                case Architecture.Haswell:
+                    return 32;
+                case Architecture.Skylake_X:
+                    return 64;
+                case Architecture.Penryn:
+                    return 8;
+                case Architecture.XeonPhi:
+                    return 32;
+                case Architecture.XeonPhi_Landing_Mill:
+                    return 64;
+                default:
+                    throw new ArgumentOutOfRangeException("architecture", $"Architecture of processor is undefined or unknown ({(int)architecture})");
+            }
+        }
+    }
     public Architecture architecture;
     public string socket;
     [Space]

@@ -17,14 +17,16 @@ MonoBehaviour:
   price: 635
   rarity: 1
   image: {fileID: 21300000, guid: 143d9a18926a5274188aef6194b84280, type: 3}
+  imageName: 
+  id: 0
   frequency: 3200
   cores: 6
   TDP: 30
-  power: 153
+  architecture: 6
+  socket: LGA 2011
   additionalRAMTypes: 
-  maxRAMChannels: 0
-  RAMType: 0
+  maxRAMChannels: 4
+  RAMType: 3
   unlocked: 0
   _64bit: 1
   integratedGraphics: 0
-  socket: LGA 2011

@@ -17,14 +17,16 @@ MonoBehaviour:
   price: 200
   rarity: 2
   image: {fileID: 21300000, guid: ddeee90894be15148a8bd72c3b54ea4c, type: 3}
+  imageName: 
+  id: 0
   frequency: 2900
   cores: 6
   TDP: 65
-  power: 423
+  architecture: 8
+  socket: LGA 1200
   additionalRAMTypes: 
   maxRAMChannels: 0
   RAMType: 0
   unlocked: 0
   _64bit: 1
   integratedGraphics: 1
-  socket: LGA 1200

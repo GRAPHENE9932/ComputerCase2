@@ -17,14 +17,16 @@ MonoBehaviour:
   price: 1400
   rarity: 4
   image: {fileID: 21300000, guid: 9521d6b8567366343b0540bab54add62, type: 3}
+  imageName: 
+  id: 0
   frequency: 3100
   cores: 14
   TDP: 165
-  power: 1472
+  architecture: 10
+  socket: LGA 2066
   additionalRAMTypes: 
   maxRAMChannels: 0
   RAMType: 0
   unlocked: 1
   _64bit: 1
   integratedGraphics: 0
-  socket: LGA 2066

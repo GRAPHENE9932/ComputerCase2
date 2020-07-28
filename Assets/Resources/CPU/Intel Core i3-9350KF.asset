@@ -17,14 +17,16 @@ MonoBehaviour:
   price: 200
   rarity: 2
   image: {fileID: 21300000, guid: 009f0617cf9979a41b642b0023290712, type: 3}
+  imageName: 
+  id: 0
   frequency: 4000
   cores: 4
   TDP: 91
-  power: 397
+  architecture: 8
+  socket: LGA 1151
   additionalRAMTypes: 
   maxRAMChannels: 0
   RAMType: 0
   unlocked: 1
   _64bit: 1
   integratedGraphics: 0
-  socket: LGA 1151

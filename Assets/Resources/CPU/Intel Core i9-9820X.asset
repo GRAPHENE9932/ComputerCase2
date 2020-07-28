@@ -18,14 +18,15 @@ MonoBehaviour:
   rarity: 4
   image: {fileID: 21300000, guid: fee49f8843d3a3d4c851e07aa584c465, type: 3}
   imageName: 
+  id: 0
   frequency: 3300
   cores: 10
   TDP: 165
-  power: 970
+  architecture: 10
+  socket: LGA 2066
   additionalRAMTypes: 
   maxRAMChannels: 0
   RAMType: 0
   unlocked: 1
   _64bit: 1
   integratedGraphics: 0
-  socket: LGA 2066

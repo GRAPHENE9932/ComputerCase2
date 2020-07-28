@@ -10,21 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25f6be8e8c6a5fd448aae9f73241abc6, type: 3}
-  m_Name: Intel Xeon E3-1270 v6
+  m_Name: Intel Celeron G5900
   m_EditorClassIdentifier: 
-  fullName: Intel Xeon E3-1270 v6
-  shortName: Xeon E3-1270 v6
-  price: 400
-  rarity: 2
-  image: {fileID: 21300000, guid: 51c60da157f705646a726c99efefa5ca, type: 3}
-  frequency: 3800
-  cores: 4
-  TDP: 72
-  power: 380
+  fullName: Intel Celeron G5900
+  shortName: Celeron G5900
+  price: 54
+  rarity: 0
+  image: {fileID: 21300000, guid: 2d47c7bbe44cf7446aae6650ccd70d1b, type: 3}
+  imageName: 
+  id: 0
+  frequency: 3400
+  cores: 2
+  TDP: 58
+  architecture: 8
+  socket: LGA 1200
   additionalRAMTypes: 
-  maxRAMChannels: 0
-  RAMType: 0
+  maxRAMChannels: 2
+  RAMType: 4
   unlocked: 0
   _64bit: 1
-  integratedGraphics: 0
-  socket: LGA 1151
+  integratedGraphics: 1

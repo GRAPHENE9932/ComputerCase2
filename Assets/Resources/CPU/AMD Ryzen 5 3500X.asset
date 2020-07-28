@@ -17,14 +17,16 @@ MonoBehaviour:
   price: 151
   rarity: 3
   image: {fileID: 21300000, guid: fde644fc92fd10749a1de8fc40bda1fe, type: 3}
+  imageName: 
+  id: 0
   frequency: 3600
   cores: 6
   TDP: 65
-  power: 516
+  architecture: 4
+  socket: AM4
   additionalRAMTypes: 
   maxRAMChannels: 2
   RAMType: 4
   unlocked: 1
   _64bit: 1
   integratedGraphics: 0
-  socket: AM4

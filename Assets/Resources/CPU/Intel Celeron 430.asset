@@ -17,14 +17,16 @@ MonoBehaviour:
   price: 60
   rarity: 0
   image: {fileID: 21300000, guid: 6b1819764e969504a98cb4c8397d84d2, type: 3}
+  imageName: 
+  id: 0
   frequency: 1800
   cores: 1
   TDP: 66
-  power: 7
+  architecture: 7
+  socket: Socket 478
   additionalRAMTypes: 0102
   maxRAMChannels: 2
   RAMType: 3
   unlocked: 0
   _64bit: 1
   integratedGraphics: 0
-  socket: Socket 478

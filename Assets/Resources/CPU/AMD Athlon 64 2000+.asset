@@ -17,14 +17,16 @@ MonoBehaviour:
   price: 47
   rarity: 0
   image: {fileID: 21300000, guid: 45b0a70bacef5ce46b4bd43120969dfb, type: 3}
+  imageName: 
+  id: 0
   frequency: 1000
   cores: 1
   TDP: 8
-  power: 3
+  architecture: 1
+  socket: AM2
   additionalRAMTypes: 
   maxRAMChannels: 1
   RAMType: 2
   unlocked: 0
   _64bit: 1
   integratedGraphics: 0
-  socket: AM2

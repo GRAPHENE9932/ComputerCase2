@@ -22,11 +22,11 @@ MonoBehaviour:
   frequency: 3800
   cores: 6
   TDP: 95
-  power: 461
+  architecture: 4
+  socket: AM4
   additionalRAMTypes: 
   maxRAMChannels: 2
   RAMType: 4
   unlocked: 1
   _64bit: 1
   integratedGraphics: 0
-  socket: AM4

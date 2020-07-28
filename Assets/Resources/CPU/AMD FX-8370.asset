@@ -18,14 +18,15 @@ MonoBehaviour:
   rarity: 0
   image: {fileID: 21300000, guid: 928e3ab19adc8a14cb23bdf6f63baa07, type: 3}
   imageName: 
+  id: 0
   frequency: 4000
   cores: 8
   TDP: 125
-  power: 105
+  architecture: 5
+  socket: AM3+
   additionalRAMTypes: 
   maxRAMChannels: 2
   RAMType: 3
   unlocked: 1
   _64bit: 1
   integratedGraphics: 0
-  socket: AM3+
