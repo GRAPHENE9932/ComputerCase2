@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullName: AMD Ryzen 7 3800X
   shortName: Ryzen 7 3800X
-  price: 400
+  price: 330
   rarity: 3
   image: {fileID: 21300000, guid: 96b803ff3beb86d43a218a6e933c8846, type: 3}
+  imageName: 
   frequency: 3900
   cores: 8
   TDP: 105

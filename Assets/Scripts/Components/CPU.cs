@@ -6,11 +6,25 @@ using UnityEngine;
 [Serializable]
 public class CPU : PCComponent
 {
-    public int frequency, cores, TDP, power;
+    public enum Architecture
+    {
+        K8, Zen, ZenPlus, Zen2
+    }
+
+    [Space]
+    public int frequency;
+    public int cores;
+    public int TDP;
+    public byte IPC;
+    public Architecture architecture;
+    public string socket;
+    [Space]
     public byte[] additionalRAMTypes;
     public byte maxRAMChannels, RAMType;
-    public bool unlocked, _64bit, integratedGraphics;
-    public string socket;
+    [Space]
+    public bool unlocked;
+    public bool _64bit;
+    public bool integratedGraphics;
 
     public override string FullProperties
     {
@@ -39,7 +53,6 @@ public class CPU : PCComponent
             }
 
             result += $"TDP: {TDP} W;\n";
-            result += $"{LangManager.GetString("performance:")} {power} GFlops;\n";
             result += $"{LangManager.GetString("unlocked:")} {(LangManager.GetString(unlocked ? "yes" : "no"))};\n";
             result += $"{LangManager.GetString("instruction_set:")} {(_64bit ? "64 bit" : "32 bit")};\n";
             result += $"{LangManager.GetString("integrated_graphics:")} {(LangManager.GetString(integratedGraphics ? "yes" : "no"))};\n";
@@ -76,7 +89,6 @@ public class CPU : PCComponent
             }
 
             result += $"TDP: {TDP} W;\n";
-            result += $"{LangManager.GetString("performance:")} {power} GFlops;\n";
             result += $"{LangManager.GetString("price:")} {price}$.";
 
             return result;
