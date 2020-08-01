@@ -41,70 +41,92 @@ namespace KlimSoft
 
         public static void Vibrate(long milliseconds)
         {
+#if !UNITY_EDITOR && UNITY_ANDROID
             if (!initialized)
                 Initialize();
 
             featuresClass.CallStatic("vibrate", milliseconds);
+#endif
         }
 
         public static void Vibrate(long[] intervals, int repeat = -1)
         {
+#if !UNITY_EDITOR && UNITY_ANDROID
             if (!initialized)
                 Initialize();
 
             featuresClass.CallStatic("vibrate", intervals, repeat);
+#endif
         }
 
         public static void MakeToast(string text, int length = 0)
         {
+#if !UNITY_EDITOR && UNITY_ANDROID
             if (!initialized)
                 Initialize();
 
             featuresClass.CallStatic("makeToast", text, length);
+#endif
+            Debug.Log("Computer case 2 toast: " + text);
         }
 
         public static void KillProcess()
         {
+#if !UNITY_EDITOR && UNITY_ANDROID
             if (!initialized)
                 Initialize();
 
             featuresClass.CallStatic("killProcess");
+#endif
         }
 
         public static string GetSignature()
         {
+#if !UNITY_EDITOR && UNITY_ANDROID
             if (!initialized)
                 Initialize();
 
             return featuresClass.CallStatic<string>("getSignature");
+#else
+            return null;
+#endif
         }
 
         public static void CheckSignature(string trueSignature)
         {
+#if !UNITY_EDITOR && UNITY_ANDROID
             if (!initialized)
                 Initialize();
 
             featuresClass.CallStatic("checkSignature", trueSignature);
+#endif
         }
 
         public static void ShowDialogWithOneButton(string message, string title, string buttonText = "Ok", bool cancelable = true)
         {
+#if !UNITY_EDITOR && UNITY_ANDROID
             if (!initialized)
                 Initialize();
 
             featuresClass.CallStatic("showDialogWithOneButton", message, title, buttonText, cancelable);
+#endif
         }
 
         public static string[] GetPackageNames()
         {
+#if !UNITY_EDITOR && UNITY_ANDROID
             if (!initialized)
                 Initialize();
 
             return featuresClass.CallStatic<string[]>("getPackageNames");
+#else
+            return null;
+#endif
         }
 
         public static bool IsAppInstalled(string[] triggers)
         {
+#if !UNITY_EDITOR && UNITY_ANDROID
             if (!initialized)
                 Initialize();
 
@@ -118,6 +140,9 @@ namespace KlimSoft
                 e.ToString();
             }
             return res;
+#else
+            return false;
+#endif
         }
     }
 }

@@ -15,3 +15,2534 @@ Game version: Alpha 9
 Log string: NullReferenceException: Object reference not set to an instance of an object
 Stack trace: WhatIsNewManager.Start () (at Assets/Scripts/WhatIsNewManager.cs:18)
 
+Log type: Exception
+Time: 8/1/2020 1:22:24 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:24 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:24 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:24 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:24 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:24 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:24 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:24 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:24 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:24 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:24 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:24 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:24 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:24 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:24 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:25 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:25 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:25 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:25 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:25 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:25 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:25 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:25 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:25 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:25 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:25 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:26 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:26 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:26 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:26 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:26 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:26 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:26 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:26 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:27 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:27 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:27 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:27 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:27 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:27 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:28 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:28 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:29 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64[] intervals, System.Int32 repeat) (at Assets/Plugins/Android/AndroidFeatures.cs:53)
+CaseScroller.CaseStop () (at Assets/Scripts/CaseScroller.cs:455)
+CaseScroller+<CaseScroll>d__50.MoveNext () (at Assets/Scripts/CaseScroller.cs:390)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <4cc8ec075538416496e5db5d391208ac>:0)
+
+Log type: Exception
+Time: 8/1/2020 1:22:31 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:31 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:31 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:31 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:31 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:31 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:31 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:31 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:31 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:31 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:31 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:32 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:32 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:32 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:32 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:32 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:32 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:32 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:32 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:32 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:33 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:33 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:33 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:33 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:33 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:33 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:34 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:34 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:34 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:34 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:35 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64[] intervals, System.Int32 repeat) (at Assets/Plugins/Android/AndroidFeatures.cs:53)
+CaseScroller.CaseStop () (at Assets/Scripts/CaseScroller.cs:470)
+CaseScroller+<CaseScroll>d__50.MoveNext () (at Assets/Scripts/CaseScroller.cs:390)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <4cc8ec075538416496e5db5d391208ac>:0)
+
+Log type: Exception
+Time: 8/1/2020 1:22:37 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:37 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:37 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:37 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:37 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:37 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:37 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:38 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:38 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:38 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:38 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:38 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:38 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:38 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:38 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:38 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:39 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:39 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:39 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:39 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:39 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:39 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:40 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:40 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:40 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:41 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64 milliseconds) (at Assets/Plugins/Android/AndroidFeatures.cs:45)
+CursorScript.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/CursorScript.cs:31)
+
+Log type: Exception
+Time: 8/1/2020 1:22:41 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: 0.6
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Case
+Game version: Alpha 10
+Log string: Exception: Field currentActivity or type signature  not found
+Stack trace: UnityEngine._AndroidJNIHelper.GetFieldID (System.IntPtr jclass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID (System.IntPtr javaClass, System.String fieldName, System.String signature, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine._AndroidJNIHelper.GetFieldID[ReturnType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJNIHelper.GetFieldID[FieldType] (System.IntPtr jclass, System.String fieldName, System.Boolean isStatic) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject._GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+UnityEngine.AndroidJavaObject.GetStatic[FieldType] (System.String fieldName) (at <e2fcf4f110424f58ac607d4fd98ed223>:0)
+KlimSoft.AndroidFeatures.Initialize () (at Assets/Plugins/Android/AndroidFeatures.cs:32)
+KlimSoft.AndroidFeatures.Vibrate (System.Int64[] intervals, System.Int32 repeat) (at Assets/Plugins/Android/AndroidFeatures.cs:53)
+CaseScroller.CaseStop () (at Assets/Scripts/CaseScroller.cs:455)
+CaseScroller+<CaseScroll>d__50.MoveNext () (at Assets/Scripts/CaseScroller.cs:390)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <4cc8ec075538416496e5db5d391208ac>:0)
+

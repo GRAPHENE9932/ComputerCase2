@@ -53,9 +53,7 @@ public class LoadScript : MonoBehaviour
 
         if (!authSuccess)
         {
-#if !UNITY_EDITOR && UNITY_ANDROID
             AndroidFeatures.MakeToast("Authentication failed! Try restart the game and check your internet connection.", 1);
-#endif
         }
         progress = 0.1F;
         statusText.text = "Reading saves...";
