@@ -267,4 +267,6 @@ in<val>in
 <pair>
 close<val>Close
 <pair>
-read_error_body<val>An error occured on reading your saves, so it will be deleted. I`m so sorry about it and I`ll fix this problem as fast as it possible, just screenshot me(klimsoftdev@gmail.com) this data:
+read_error_body<val>An error occured while reading your saves, so it will be deleted. I`m so sorry about it and I`ll fix this problem as fast as it possible, just screenshot me(klimsoftdev@gmail.com) this data:
+<pair>
+what_is_new:<val>What is new:

@@ -7,6 +7,7 @@ using System.Net.NetworkInformation;
 public class LangManager : MonoBehaviour
 {
     public static Dictionary<string, string> currentDictionary = new Dictionary<string, string>();
+    public static string lang;
     public EnumerationSetting langSetting;
 
     public static string GetString(string key)
@@ -24,7 +25,6 @@ public class LangManager : MonoBehaviour
 
     public void Apply()
     {
-        string lang = null;
         switch (langSetting.Index)
         {
             case 0:

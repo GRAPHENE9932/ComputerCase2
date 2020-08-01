@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<WhatIsNewContainer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <news>
+    <WhatIsNew bold="true">
+      <ENG>Added "What is new" message.</ENG>
+      <RUS>Добавлено сообщение "Чего нового".</RUS>
+      <UKR>Додано повідомлення "Чого нового".</UKR>
+    </WhatIsNew>
+  </news>
+</WhatIsNewContainer>

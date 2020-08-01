@@ -11,3 +11,4 @@
 10: MainCanvas, Computer, Monitor, text. Текст мініатюрного монітору не змінився.
 11: CaseScroller, SpawnCell, default в конструкції switch для типу кейсу.
 12: PCComponent, constructor, Tried to instantiate clear PCComponent.
+13: HighCanvas, What is new window, Scroll View, Viewport, Content, Text. Text not changed.

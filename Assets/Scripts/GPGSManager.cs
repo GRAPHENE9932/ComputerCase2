@@ -15,7 +15,7 @@ public static class GPGSManager
 {
     public const string DEFAULT_SAVE_NAME = "MainSave";
     public const string CACHE_SAVE_NAME = "CachedSaves.enc";
-    public static string cachePath;
+    public static string cachePath = Path.Combine(Application.persistentDataPath, CACHE_SAVE_NAME);
 
     private static ISavedGameClient savedGameClient;
     private static ISavedGameMetadata currentMetadata;
@@ -41,8 +41,6 @@ public static class GPGSManager
         PlayGamesPlatform.InitializeInstance(config);
         PlayGamesPlatform.DebugLogEnabled = debug;
         PlayGamesPlatform.Activate();
-
-        cachePath = Path.Combine(Application.persistentDataPath, CACHE_SAVE_NAME);
     }
 
     public static void Auth(Action<bool, string> onAuth)
