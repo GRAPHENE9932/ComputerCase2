@@ -2546,3 +2546,37 @@ CaseScroller.CaseStop () (at Assets/Scripts/CaseScroller.cs:455)
 CaseScroller+<CaseScroll>d__50.MoveNext () (at Assets/Scripts/CaseScroller.cs:390)
 UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <4cc8ec075538416496e5db5d391208ac>:0)
 
+Log type: Exception
+Time: 8/24/2020 6:44:01 PM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: -1
+Battery status: Charging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 10.1
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: WhatIsNewManager.Start () (at C:/UnityProjects/ComputerCase2/Assets/Scripts/WhatIsNewManager.cs:18)
+
+Log type: Exception
+Time: 8/25/2020 8:23:14 AM
+Device name: DESKTOP-719H17I
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: bd55f97b3c3274562584b1557ccf0b8b7f6690b7
+Battery level: -1
+Battery status: Charging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: alpha 10.1
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: WhatIsNewManager.Start () (at Assets/Scripts/WhatIsNewManager.cs:18)
+

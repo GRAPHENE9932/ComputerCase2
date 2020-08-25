@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Security.Principal;
 using System.Xml;
 using System.Xml.Serialization;
 using UnityEngine;
@@ -48,6 +49,24 @@ public class WhatIsNewManager : MonoBehaviour
             window.SetActive(true);
             text.text = toShow;
         }
+    }
+
+    public void Close()
+    {
+        StartCoroutine(CloseCorutine());
+    }
+
+    private IEnumerator CloseCorutine()
+    {
+        CanvasGroup windowGroup = window.GetComponent<CanvasGroup>();
+        float alpha = 1F;
+        while (alpha > 0F)
+        {
+            alpha -= Time.deltaTime * 3;
+            windowGroup.alpha = alpha;
+            yield return null;
+        }
+        window.SetActive(false);
     }
 
     /// <summary>
