@@ -265,7 +265,7 @@ public class ExchangeScript : MonoBehaviour
         {
             //Set bitcoin price in USD.
 #if !UNITY_EDITOR && UNITY_ANDROID
-            BTC = 1m / (decimal.Parse(e.Result.RemoveChar(',')) / 1E12m);
+            BTC = 1m / (decimal.Parse(e.Result.RemoveChar(',').Replace('.', ',')) / 1E12m);
 #else
             BTC = 1m / (decimal.Parse(e.Result.RemoveChar(',')) / 1E12m);
 #endif

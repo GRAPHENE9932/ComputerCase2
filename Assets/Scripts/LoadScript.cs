@@ -1,12 +1,9 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
 using KlimSoft;
-using System.IO;
 using GooglePlayGames.BasicApi.SavedGame;
 
 public class LoadScript : MonoBehaviour
@@ -22,7 +19,7 @@ public class LoadScript : MonoBehaviour
     private void Start()
     {
         Application.targetFrameRate = 60;
-        headerText.text = "ComputerCase " + Application.version;
+        headerText.text = "ComputerCase 2 " + Application.version;
         GPGSManager.Initialize(true);
         StartCoroutine(MainCorut());
     }
@@ -111,31 +108,5 @@ public class LoadScript : MonoBehaviour
         }
         //Unload this scene.
         SceneManager.UnloadSceneAsync(0);
-
-        /*
-        while (GameSaver.loadProgress < 0.75F)
-        {
-            progress = GameSaver.loadProgress / 2F;
-            statusText.text = GameSaver.loadStatus;
-            yield return null;
-        }
-        //Load scene.
-        statusText.text = "Loading game...";
-        AsyncOperation sceneLoad = SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
-        while (!sceneLoad.isDone)
-        {
-            progress = 0.5F + sceneLoad.progress / 2F;
-            yield return null;
-        }
-        progress = 1F;
-        //Animation of fade.
-        for (float t = 0F; t < 1F; t += Time.deltaTime)
-        {
-            group.alpha = 1F - t;
-            yield return null;
-        }
-        //Unload this scene.
-        SceneManager.UnloadSceneAsync(0);
-        */
     }
 }

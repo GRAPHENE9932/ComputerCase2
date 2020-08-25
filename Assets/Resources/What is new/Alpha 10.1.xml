@@ -2,9 +2,9 @@
 <WhatIsNewContainer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <news>
     <WhatIsNew bold="true">
-      <ENG>Added "What is new" message.</ENG>
-      <RUS>Добавлено сообщение "Чего нового".</RUS>
-      <UKR>Додано повідомлення "Чого нового".</UKR>
+      <ENG>Computer case 2 in beta now!</ENG>
+      <RUS>Computer case 2 уже в бете!</RUS>
+      <UKR>Computer case 2 вже в беті!</UKR>
     </WhatIsNew>
   </news>
 </WhatIsNewContainer>
