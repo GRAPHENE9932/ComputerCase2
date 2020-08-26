@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
-using System.Linq;
-using System;
 
 public enum MenuState
 {
@@ -15,77 +13,77 @@ public enum MenuState
 public class NavigationScript : MonoBehaviour
 {
     /// <summary>
-    ///     Масив відділів меню.
+    ///     Menu sections array.
     /// </summary>
     public GameObject[] menus;
     /// <summary>
-    ///     Основне заднє зобракження меню навігації, на ній маска.
+    ///     Main background image for navigation menu, it has mask.
     /// </summary>
     public RectTransform mainMenuTransform;
     /// <summary>
-    ///     Змінна, що показує, чи відкрите зараз меню.
+    ///     Veriable which means is opened menu now.
     /// </summary>
     private static bool menuOpened = false;
     /// <summary>
-    ///     Змінна, що показує, чи програється зараз анімація закриття або відкриття меню.
+    ///     Variable which means is playing animation of opening or closing now.
     /// </summary>
     private static bool menuAnimating;
     /// <summary>
-    ///     Змінна, що показує, чи програється зараз анімація зміни відділу меню.
+    ///     Variable which means is playing animation of canvas changing now.
     /// </summary>
     private static bool switchAnimating;
     /// <summary>
-    ///     Відділ меню, на якому зараз знаходиться гравець.
+    ///     Menu section, which showed now.
     /// </summary>
     [HideInInspector]
     public MenuState currentState;
     /// <summary>
-    /// Подія зміни відділу меню.
+    ///     Menu section changing event.
     /// </summary>
     public UnityEvent onToggle;
     /// <summary>
-    /// Object of drop in case page.
+    ///     Object of drop in case page.
     /// </summary>
     public GameObject dropObj;
     /// <summary>
-    /// While blocked cannot switch page.
+    ///     While blocked cannot switch page.
     /// </summary>
     public static bool blocked;
 
     public AudioClip audioClip;
     public SoundManager soundMgr;
     /// <summary>
-    /// Винятки, при яких звук не буде відтворюватись.
+    ///     Exceptions, on which sound will not be played.
     /// </summary>
     public MenuState[] soundExceptions;
 
     /// <summary>
-    ///     Подія натиснення на кнопку меню. Запускає корутину анімації, якщо зараз не програється анімація відкриття або закриття.
+    ///     Event of clicking on menu buttton. Starts animation coroutine
+    ///     if animation of opening or closing not playing now.
     /// </summary>
     public void MenuButtonClicked()
     {
-        //Якщо зараз не йде анімація відкриття/закриття меню.
         if (!menuAnimating)
             StartCoroutine(MenuChangeState());
     }
     /// <summary>
-    ///     Відкрити меню, якщо воно закрите, або закрити меню, якщо воно відкрите.
+    ///     Open menu if it closed or close menu if it opened.
     /// </summary>
     private IEnumerator MenuChangeState()
     {
-        //Виклик події.
+        //Event invoking.
         onToggle.Invoke();
         menuAnimating = true;
-        //Змінення стану відкритості меню навігації.
+        //Changing menu state.
         menuOpened = !menuOpened;
-        //Ініціалізація шляху.
+        //Path initialization.
         float fill = 1;
-        //Ширина зображення меню
+        //Menu image width.
         float width;
-        //Поки шлях більше нуля...
+        //While path < 0...
         while (fill > 0)
         {
-            //Зменшення шляху так, щоб від почав дорівнювати нуль на 0.5-ій секунді.
+            //0.5 s
             fill -= Time.deltaTime * 2;
             //Якщо йде відкриття меню...
             if (menuOpened)

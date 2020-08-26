@@ -27,23 +27,47 @@ public class WhatIsNewManager : MonoBehaviour
                 container = (WhatIsNewContainer)serializer.Deserialize(reader);
             }
 
-            string toShow = LangManager.GetString("what_is_new:") + "\n";
-            foreach (WhatIsNewContainer.WhatIsNew w in container.news)
+            //What is new.
+            string toShow = "<i>" + LangManager.GetString("what_is_new:") + "</i>\n";
+            foreach (WhatIsNewContainer.WhatIsNew n in container.news)
             {
-                toShow += $"► {(w.bold ? "<b>" : null)} ";
+                toShow += $"► {(n.bold ? "<b>" : null)} ";
                 switch (LangManager.lang)
                 {
                     case "ENG":
-                        toShow += w.ENG;
+                        toShow += n.ENG;
                         break;
                     case "RUS":
-                        toShow += w.RUS;
+                        toShow += n.RUS;
                         break;
                     case "UKR":
-                        toShow += w.UKR;
+                        toShow += n.UKR;
                         break;
                 }
-                toShow += $"{(w.bold ? "</b>" : null)}\n";
+                toShow += $"{(n.bold ? "</b>" : null)}\n";
+            }
+
+            //In next update.
+            if (container.planned != null && container.planned.Length != 0)
+            {
+                toShow += "\n<i>" + LangManager.GetString("planned_next_upd:") + "</i>\n";
+                foreach (WhatIsNewContainer.WhatIsNew f in container.planned)
+                {
+                    toShow += $"► {(f.bold ? "<b>" : null)} ";
+                    switch (LangManager.lang)
+                    {
+                        case "ENG":
+                            toShow += f.ENG;
+                            break;
+                        case "RUS":
+                            toShow += f.RUS;
+                            break;
+                        case "UKR":
+                            toShow += f.UKR;
+                            break;
+                    }
+                    toShow += $"{(f.bold ? "</b>" : null)}\n";
+                }
             }
 
             window.SetActive(true);
@@ -79,6 +103,7 @@ public class WhatIsNewManager : MonoBehaviour
         /// What is new.
         /// </summary>
         public WhatIsNew[] news;
+        public WhatIsNew[] planned;
 
         [Serializable]
         public class WhatIsNew

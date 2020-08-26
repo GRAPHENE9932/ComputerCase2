@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<WhatIsNewContainer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <news>
+    <WhatIsNew bold="true">
+      <ENG>Optimized for phone notches.</ENG>
+      <RUS>Оптимизировано для выступов на дисплеях смартфонов.</RUS>
+      <UKR>Оптимізовано для виступів на дисплеях смартфонів.</UKR>
+    </WhatIsNew>
+    <WhatIsNew bold="false">
+      <ENG>Added "Planned in next update" section.</ENG>
+      <RUS>Добавлен раздел "Запланировано на следующее обновление".</RUS>
+      <UKR>Додано розділ "Запалановано на наступне оновлення".</UKR>
+    </WhatIsNew>
+  </news>
+  <planned>
+    <WhatIsNew bold="false">
+      <ENG>Release Computer case 2 to beta.</ENG>
+      <RUS>Выпустить Computer case 2 в бэту.</RUS>
+      <UKR>Випустити Computer case 2 в бету.</UKR>
+    </WhatIsNew>
+  </planned>
+</WhatIsNewContainer>
