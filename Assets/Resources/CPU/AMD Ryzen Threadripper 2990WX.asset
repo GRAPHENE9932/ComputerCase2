@@ -15,10 +15,10 @@ MonoBehaviour:
   fullName: AMD Ryzen Threadripper 2990WX
   shortName: Threadripper 2990WX
   price: 1900
-  rarity: 2
+  rarity: 4
   image: {fileID: 21300000, guid: db5598982a0c46b44b4f93bf0dcfe5ff, type: 3}
   imageName: 
-  id: 0
+  id: 40
   frequency: 3000
   cores: 32
   TDP: 250

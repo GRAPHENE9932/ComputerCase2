@@ -15,8 +15,9 @@ MonoBehaviour:
   fullName: Asus TUF B360-Plus Gaming
   shortName: Asus TUF B360-Plus
   price: 130
-  rarity: 1
+  rarity: 2
   image: {fileID: 21300000, guid: a20989d70fc461447b0bc1c623618828, type: 3}
+  imageName: 
   socket: LGA 1151
   RAMType: 4
   RAMCount: 4

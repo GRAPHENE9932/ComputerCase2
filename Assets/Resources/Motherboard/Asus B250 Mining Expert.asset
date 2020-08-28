@@ -15,8 +15,9 @@ MonoBehaviour:
   fullName: Asus B250 Mining Expert
   shortName: Asus B250 Mining Expert
   price: 120
-  rarity: 0
+  rarity: 4
   image: {fileID: 21300000, guid: fc380213dc4b8d44f8aa70875e323e52, type: 3}
+  imageName: 
   socket: LGA 1151
   RAMType: 4
   RAMCount: 2

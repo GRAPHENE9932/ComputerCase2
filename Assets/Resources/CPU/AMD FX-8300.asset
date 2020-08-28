@@ -15,10 +15,10 @@ MonoBehaviour:
   fullName: AMD FX-8300
   shortName: FX-8300
   price: 155
-  rarity: 0
+  rarity: 1
   image: {fileID: 21300000, guid: 8a7ea502447028d438ef26a5cbda6fbd, type: 3}
   imageName: 
-  id: 0
+  id: 7
   frequency: 3300
   cores: 8
   TDP: 95

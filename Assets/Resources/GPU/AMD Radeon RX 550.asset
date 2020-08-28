@@ -18,7 +18,6 @@ MonoBehaviour:
   rarity: 0
   image: {fileID: 21300000, guid: d233e675a8777144a9520d44385caa06, type: 3}
   imageName: 
-  id: 0
   memory: 2048
   TDP: 50
   power: 1211

@@ -15,10 +15,10 @@ MonoBehaviour:
   fullName: AMD Ryzen 3 PRO 4350GE
   shortName: Ryzen 3 PRO 4350GE
   price: 150
-  rarity: 0
+  rarity: 1
   image: {fileID: 21300000, guid: 9a0249b480ba71d458676ac2108bdfa3, type: 3}
   imageName: 
-  id: 0
+  id: 17
   frequency: 3500
   cores: 4
   TDP: 35

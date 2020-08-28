@@ -15,10 +15,9 @@ MonoBehaviour:
   fullName: AMD Radeon RX 580
   shortName: RX 580
   price: 230
-  rarity: 0
+  rarity: 2
   image: {fileID: 21300000, guid: d233e675a8777144a9520d44385caa06, type: 3}
   imageName: 
-  id: 0
   memory: 8192
   TDP: 185
   power: 6175

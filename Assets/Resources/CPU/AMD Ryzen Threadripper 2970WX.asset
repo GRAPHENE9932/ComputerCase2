@@ -15,10 +15,10 @@ MonoBehaviour:
   fullName: AMD Ryzen Threadripper 2970WX
   shortName: Threadripper 2970WX
   price: 1450
-  rarity: 2
+  rarity: 4
   image: {fileID: 21300000, guid: bcbd6940d9d0a464a836728396880c24, type: 3}
   imageName: 
-  id: 0
+  id: 39
   frequency: 3000
   cores: 24
   TDP: 250

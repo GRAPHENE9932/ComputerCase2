@@ -17,9 +17,9 @@ MonoBehaviour:
   price: 600
   rarity: 4
   image: {fileID: 21300000, guid: e4e505fc92c821e47aec2c204a60ea1c, type: 3}
+  imageName: 
   memory: 8192
   TDP: 180
   power: 8873
   busVersion: 3
   busMultiplier: 16
-  motherboardInterface: 0

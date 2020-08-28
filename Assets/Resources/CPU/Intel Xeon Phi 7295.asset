@@ -15,10 +15,9 @@ MonoBehaviour:
   fullName: Intel Xeon Phi 7295
   shortName: Xeon Phi 7295
   price: 6294
-  rarity: 0
+  rarity: 4
   image: {fileID: 21300000, guid: 592fcc7e02399f8469b17faa621e2e79, type: 3}
   imageName: 
-  id: 0
   frequency: 1500
   cores: 72
   TDP: 320

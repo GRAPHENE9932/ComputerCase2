@@ -17,6 +17,7 @@ MonoBehaviour:
   price: 250
   rarity: 2
   image: {fileID: 21300000, guid: 5b6c8dfa6467dcc47bed9af747db7491, type: 3}
+  imageName: 
   socket: LGA 1151
   RAMType: 4
   RAMCount: 4

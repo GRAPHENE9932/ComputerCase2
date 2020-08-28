@@ -15,10 +15,9 @@ MonoBehaviour:
   fullName: Intel Core i9-10980XE
   shortName: i9-10980XE
   price: 979
-  rarity: 3
+  rarity: 4
   image: {fileID: 21300000, guid: c44eabf828a2f3e4a8b5e1c3ec1814ab, type: 3}
   imageName: 
-  id: 0
   frequency: 3000
   cores: 18
   TDP: 165

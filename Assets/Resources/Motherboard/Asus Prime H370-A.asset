@@ -15,8 +15,9 @@ MonoBehaviour:
   fullName: Asus Prime H370-A
   shortName: Asus Prime H370-A
   price: 136
-  rarity: 1
+  rarity: 2
   image: {fileID: 21300000, guid: 12277813771211b4887f53d458cbf48e, type: 3}
+  imageName: 
   socket: LGA 1151
   RAMType: 4
   RAMCount: 4

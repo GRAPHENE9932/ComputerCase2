@@ -15,10 +15,10 @@ MonoBehaviour:
   fullName: AMD Ryzen Threadripper 1920X
   shortName: Threadripper 1920X
   price: 375
-  rarity: 2
+  rarity: 3
   image: {fileID: 21300000, guid: a83005ac3a3198f43bf07038c1782036, type: 3}
   imageName: 
-  id: 0
+  id: 35
   frequency: 3500
   cores: 12
   TDP: 180

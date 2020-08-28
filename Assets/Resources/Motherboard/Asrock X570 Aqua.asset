@@ -17,6 +17,7 @@ MonoBehaviour:
   price: 900
   rarity: 4
   image: {fileID: 21300000, guid: a539c1618a8193646b20fbf094b0988d, type: 3}
+  imageName: 
   socket: AM4
   RAMType: 4
   RAMCount: 4

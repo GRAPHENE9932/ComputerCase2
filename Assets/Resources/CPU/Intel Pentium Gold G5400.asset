@@ -15,10 +15,9 @@ MonoBehaviour:
   fullName: Intel Pentium Gold G5400
   shortName: Pentium Gold G5400
   price: 85
-  rarity: 0
+  rarity: 1
   image: {fileID: 21300000, guid: dd15b102fb2e43242938f43975e3bd1f, type: 3}
   imageName: 
-  id: 0
   frequency: 3700
   cores: 2
   TDP: 58

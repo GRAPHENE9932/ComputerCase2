@@ -15,10 +15,9 @@ MonoBehaviour:
   fullName: AMD Radeon RX 5300 XT
   shortName: RX 5300 XT
   price: 135
-  rarity: 0
+  rarity: 1
   image: {fileID: 21300000, guid: 734fb094160e8ae46af9829242c08bdf, type: 3}
   imageName: 
-  id: 0
   memory: 4096
   TDP: 150
   power: 3779

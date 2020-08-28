@@ -18,7 +18,7 @@ MonoBehaviour:
   rarity: 1
   image: {fileID: 21300000, guid: 028e3d93231bed44687429de9ccca1bf, type: 3}
   imageName: 
-  id: 0
+  id: 53
   frequency: 3700
   cores: 2
   TDP: 51

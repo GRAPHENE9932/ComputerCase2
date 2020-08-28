@@ -15,10 +15,10 @@ MonoBehaviour:
   fullName: AMD Ryzen Threadripper 1900X
   shortName: Threadripper 1900X
   price: 230
-  rarity: 1
+  rarity: 2
   image: {fileID: 21300000, guid: 21bb484e92db37244894b2eff098ad2d, type: 3}
   imageName: 
-  id: 0
+  id: 34
   frequency: 3800
   cores: 8
   TDP: 180

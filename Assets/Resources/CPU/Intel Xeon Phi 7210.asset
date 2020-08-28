@@ -15,10 +15,9 @@ MonoBehaviour:
   fullName: Intel Xeon Phi 7210
   shortName: Xeon Phi 7210
   price: 2438
-  rarity: 0
+  rarity: 4
   image: {fileID: 21300000, guid: 592fcc7e02399f8469b17faa621e2e79, type: 3}
   imageName: 
-  id: 0
   frequency: 1300
   cores: 64
   TDP: 215

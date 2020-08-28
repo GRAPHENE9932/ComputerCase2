@@ -15,8 +15,9 @@ MonoBehaviour:
   fullName: Asus Prime Z390-A
   shortName: Asus Prime Z390-A
   price: 175
-  rarity: 2
+  rarity: 3
   image: {fileID: 21300000, guid: 9067c065b81d76a468995a1b40534a4c, type: 3}
+  imageName: 
   socket: LGA 1151
   RAMType: 4
   RAMCount: 4

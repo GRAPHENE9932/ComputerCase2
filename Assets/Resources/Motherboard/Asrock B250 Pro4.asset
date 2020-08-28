@@ -15,8 +15,9 @@ MonoBehaviour:
   fullName: Asrock B250 Pro4
   shortName: Asrock B250 Pro4
   price: 100
-  rarity: 1
+  rarity: 0
   image: {fileID: 21300000, guid: c518f9124e0827548b225a0485f64deb, type: 3}
+  imageName: 
   socket: LGA 1151
   RAMType: 4
   RAMCount: 4

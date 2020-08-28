@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullName: AMD Radeon HD 6290
   shortName: Radeon HD 6290
-  price: 0
+  price: 50
   rarity: 0
   image: {fileID: 21300000, guid: f88c40fd1c8fcd64fbeecb5b772740b5, type: 3}
   imageName: 
-  id: 0
   memory: 1024
   TDP: 19
   power: 104

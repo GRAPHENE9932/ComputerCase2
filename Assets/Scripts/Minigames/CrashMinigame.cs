@@ -104,7 +104,8 @@ public class CrashMinigame : MonoBehaviour
             increaseMultiplier += increaseMultiplier2 * Time.deltaTime;
             increaseMultiplier2 += 0.00005F;
             yield return null;
-            mainText.text = string.Format("x{0:0.00}", finishValue);
+            //In main text replace because in android it shows "1,00" but not "1.00".
+            mainText.text = string.Format("x{0:0.00}", finishValue).Replace(',', '.');
 
             //Animate squares.
             for (int i = 0; i < squares.Length; i++)

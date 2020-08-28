@@ -15,11 +15,11 @@ MonoBehaviour:
   fullName: NVIDIA GeForce GTX 1660 SUPER
   shortName: GTX 1660 SUPER
   price: 230
-  rarity: 3
+  rarity: 2
   image: {fileID: 21300000, guid: 7c92538baccae914ca90ad1cbe698e41, type: 3}
+  imageName: 
   memory: 6144
   TDP: 125
   power: 5027
   busVersion: 3
   busMultiplier: 16
-  motherboardInterface: 0

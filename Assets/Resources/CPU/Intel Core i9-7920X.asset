@@ -15,10 +15,9 @@ MonoBehaviour:
   fullName: Intel Core i9-7920X
   shortName: i9-7920X
   price: 800
-  rarity: 4
+  rarity: 3
   image: {fileID: 21300000, guid: d322a9f94e8ff5b48a672c94c4382396, type: 3}
   imageName: 
-  id: 0
   frequency: 2900
   cores: 12
   TDP: 140

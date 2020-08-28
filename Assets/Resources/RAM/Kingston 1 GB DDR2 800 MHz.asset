@@ -17,6 +17,7 @@ MonoBehaviour:
   price: 8
   rarity: 0
   image: {fileID: 21300000, guid: 5566d946991d19d439dc4283a6263f53, type: 3}
+  imageName: 
   memory: 1024
   frequency: 800
   type: 2

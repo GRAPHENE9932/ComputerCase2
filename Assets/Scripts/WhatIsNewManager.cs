@@ -16,9 +16,14 @@ public class WhatIsNewManager : MonoBehaviour
     {
         if (GameSaver.Saves.version != Application.version)
         {
-            string xmlData = Resources.Load<TextAsset>(
+            TextAsset asset = Resources.Load<TextAsset>(
                 Path.Combine("What is new", Application.version)
-                ).text;
+                );
+
+            if (asset == null)
+                return;
+
+            string xmlData = asset.text;
 
             XmlSerializer serializer = new XmlSerializer(typeof(WhatIsNewContainer));
             WhatIsNewContainer container;

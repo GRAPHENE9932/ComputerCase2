@@ -20,7 +20,6 @@ public class PCComponent : ScriptableObject, ICloneable
     public Sprite image;
     [HideInInspector]
     public string imageName;
-    public ushort id;
 
     public PCComponent()
     {

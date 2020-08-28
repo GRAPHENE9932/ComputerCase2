@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<WhatIsNewContainer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <news>
+    <WhatIsNew bold="true">
+      <ENG>Computer case 2 in beta now!</ENG>
+      <RUS>Computer case 2 уже в бета версии!</RUS>
+      <UKR>Computer case 2 вже в бета версії!</UKR>
+    </WhatIsNew>
+    <WhatIsNew bold="false">
+      <ENG>Fixed mistakes in translations and components database.</ENG>
+      <RUS>Исправлены ошибки в переводах и базе данных компонентов.</RUS>
+      <UKR>Виправлені помилки в переводах і базі даних компонентів.</UKR>
+    </WhatIsNew>
+  </news>
+  <planned>
+    <WhatIsNew bold="true">
+      <ENG>Fix bugs and release Computer case 2.</ENG>
+      <RUS>Исправить баги и выпустить Computer case 2 в релиз.</RUS>
+      <UKR>Виправити баги і випустити Computer case 2 в реліз.</UKR>
+    </WhatIsNew>
+    <WhatIsNew bold="false">
+      <ENG>Add more components.</ENG>
+      <RUS>Добавить больше комплектующих.</RUS>
+      <UKR>Додати більше комплектуючих.</UKR>
+    </WhatIsNew>
+  </planned>
+</WhatIsNewContainer>

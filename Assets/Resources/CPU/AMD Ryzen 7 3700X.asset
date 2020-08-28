@@ -15,10 +15,10 @@ MonoBehaviour:
   fullName: AMD Ryzen 7 3700X
   shortName: Ryzen 7 3700X
   price: 330
-  rarity: 3
+  rarity: 2
   image: {fileID: 21300000, guid: 9e1bcab931b64e8429b4c9d4f017a4ba, type: 3}
   imageName: 
-  id: 0
+  id: 29
   frequency: 3600
   cores: 8
   TDP: 65

@@ -15,11 +15,11 @@ MonoBehaviour:
   fullName: NVIDIA GeForce GTX 980 Ti
   shortName: GTX 980 Ti
   price: 650
-  rarity: 3
+  rarity: 2
   image: {fileID: 21300000, guid: bef7b1349f308cf4baa46707b1136772, type: 3}
+  imageName: 
   memory: 6144
   TDP: 250
   power: 6060
   busVersion: 3
   busMultiplier: 16
-  motherboardInterface: 0

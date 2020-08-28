@@ -15,10 +15,10 @@ MonoBehaviour:
   fullName: AMD Ryzen 3 1200
   shortName: Ryzen 3 1200
   price: 150
-  rarity: 1
+  rarity: 0
   image: {fileID: 21300000, guid: 64ced76c5be112141b09a5f0054733b3, type: 3}
   imageName: 
-  id: 0
+  id: 11
   frequency: 3100
   cores: 4
   TDP: 65
