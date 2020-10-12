@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<WhatIsNewContainer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <news>
+    <WhatIsNew bold="false">
+      <ENG>Added a few components.</ENG>
+      <RUS>Добавлено несколько компонентов.</RUS>
+      <UKR>Додано кілька компонентів.</UKR>
+    </WhatIsNew>
+  </news>
+</WhatIsNewContainer>

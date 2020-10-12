@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f515449632945564f9f1b717a0720ca3, type: 3}
-  m_Name: AMD Radeon RX 570X
+  m_Name: NVIDIA GeForce RTX 3090
   m_EditorClassIdentifier: 
-  fullName: AMD Radeon RX 570X
-  shortName: RX 570X
-  price: 170
-  rarity: 2
-  image: {fileID: 21300000, guid: d233e675a8777144a9520d44385caa06, type: 3}
+  fullName: 'NVIDIA GeForce RTX 3090 '
+  shortName: 'RTX 3090 '
+  price: 1500
+  rarity: 4
+  image: {fileID: 21300000, guid: aa0fa9066bfd4774c9743f8e8a73b4a4, type: 3}
   imageName: 
-  memory: 8192
-  TDP: 120
-  power: 5095
-  busVersion: 3
+  memory: 24576
+  TDP: 350
+  power: 32767
+  busVersion: 4
   busMultiplier: 16

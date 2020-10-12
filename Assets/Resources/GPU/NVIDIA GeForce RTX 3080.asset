@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f515449632945564f9f1b717a0720ca3, type: 3}
-  m_Name: AMD Radeon RX 570X
+  m_Name: NVIDIA GeForce RTX 3080
   m_EditorClassIdentifier: 
-  fullName: AMD Radeon RX 570X
-  shortName: RX 570X
-  price: 170
-  rarity: 2
-  image: {fileID: 21300000, guid: d233e675a8777144a9520d44385caa06, type: 3}
+  fullName: NVIDIA GeForce RTX 3080
+  shortName: RTX 3080
+  price: 700
+  rarity: 4
+  image: {fileID: 21300000, guid: 4cf074752e15c234482d4c112ed48bba, type: 3}
   imageName: 
-  memory: 8192
-  TDP: 120
-  power: 5095
-  busVersion: 3
+  memory: 10240
+  TDP: 320
+  power: 29770
+  busVersion: 4
   busMultiplier: 16

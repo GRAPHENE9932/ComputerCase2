@@ -8,25 +8,9 @@ using System.Linq;
 [CanEditMultipleObjects]
 public class PCComponentEditor : Editor
 {
-    private static ushort maxId = ushort.MinValue;
-    private static readonly List<SerializedProperty> ids = new List<SerializedProperty>();
-
-    private void OnEnable()
-    {
-        ids.Clear();
-        ids.Add(serializedObject.FindProperty("id"));
-    }
-
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
-
-        foreach (SerializedProperty id in ids)
-            if (id.intValue > maxId)
-                maxId = (ushort)id.intValue;
-
-        //Help box about max id.
-        EditorGUILayout.HelpBox($"Max id: {maxId}", MessageType.Info);
 
         //Help box about price.
         if (serializedObject.FindProperty("price").intValue == 0)
