@@ -74,7 +74,7 @@ computer<val>Computer
 <pair>
 shop<val>Shop
 <pair>
-minigames<val>Minigames
+other<val>Other
 <pair>
 statistics<val>Statistics
 <pair>
@@ -156,7 +156,7 @@ buy<val>Buy
 <pair>
 sort_by_time<val>Sort by time
 <pair>
-overclock_coming_soon<val>Overclock (Coming soon...)
+overclock_coming_soon<val>Overclock (Coming not soon...)
 <pair>
 coming_soon<val>Coming soon...
 <pair>
@@ -272,3 +272,41 @@ read_error_body<val>An error occured while reading your saves, so it will be del
 what_is_new:<val>What is new:
 <pair>
 planned_next_upd:<val>Planned in next update:
+<pair>
+the_richest<val>The richest players
+<pair>
+show_leaderboard_error<val>An error occured during show the leaderboard
+<pair>
+cpu_cooler<val>CPU cooler
+<pair>
+cpu_cooler_level<val>{0} (level {1})
+<pair>
+cpu_cooler_0<val>Nothing
+<pair>
+cpu_cooler_1<val>Micro fan
+<pair>
+cpu_cooler_2<val>Aluminium brick
+<pair>
+cpu_cooler_3<val>Small box cooler
+<pair>
+cpu_cooler_4<val>Big box cooler
+<pair>
+cpu_cooler_5<val>Low profile cooler
+<pair>
+cpu_cooler_6<val>Common cooler
+<pair>
+cpu_cooler_7<val>Tower cooler
+<pair>
+cpu_cooler_8<val>Big tower cooler
+<pair>
+cpu_cooler_9<val>Dual tower cooler
+<pair>
+cpu_cooler_10<val>Single fan water cooler
+<pair>
+cpu_cooler_11<val>Dual fan water cooler
+<pair>
+cpu_cooler_12<val>Triple fan water cooler
+<pair>
+upgrade<val>Upgrade
+<pair>
+watt<val>W

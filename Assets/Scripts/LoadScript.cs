@@ -20,7 +20,7 @@ public class LoadScript : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         headerText.text = "ComputerCase 2 " + Application.version;
-        GPGSManager.Initialize(true);
+        GPGSManager.Initialize(false);
         StartCoroutine(MainCorut());
     }
 
@@ -36,6 +36,7 @@ public class LoadScript : MonoBehaviour
         yield return new WaitForSeconds(0.25F);
         statusText.text = "Authenticating...";
 
+#if UNITY_ANDROID
         //Auth.
         bool authFinished = false, authSuccess = false;
         void OnAuth(bool success)
@@ -52,6 +53,7 @@ public class LoadScript : MonoBehaviour
         {
             AndroidFeatures.MakeToast("Authentication failed! Try restart the game and check your internet connection.", 1);
         }
+#endif
         progress = 0.1F;
         statusText.text = "Reading saves...";
 

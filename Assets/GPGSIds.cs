@@ -24,7 +24,7 @@
 
 public static class GPGSIds
 {
-        public const string leaderboard_computer_case_2_leaderboard = "CgkIwoSOgYodEAIQAQ"; // <GPGSID>
+        public const string leaderboard_the_richest_players = "CgkIwoSOgYodEAIQAg"; // <GPGSID>
 
 }
 

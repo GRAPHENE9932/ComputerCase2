@@ -74,7 +74,7 @@ computer<val>Комп'ютер
 <pair>
 shop<val>Магазин
 <pair>
-minigames<val>Мініігри
+other<val>Інше
 <pair>
 statistics<val>Статистика
 <pair>
@@ -156,7 +156,7 @@ buy<val>Купити
 <pair>
 sort_by_time<val>Сортувати за часом
 <pair>
-overclock_coming_soon<val>Розгін (Скоро...)
+overclock_coming_soon<val>Розгін (Не скоро...)
 <pair>
 coming_soon<val>Скоро...
 <pair>
@@ -272,3 +272,41 @@ read_error_body<val>Виникла помилка при читанні ваши
 what_is_new:<val>Що нового:
 <pair>
 planned_next_upd:<val>Заплановано на наступне оновлення:
+<pair>
+the_richest<val>Найбагатші гравці
+<pair>
+show_leaderboard_error<val>Виникла помилка при спробі показати таблицю лідерів
+<pair>
+cpu_cooler<val>Процесорний кулер
+<pair>
+cpu_cooler_level<val>{0} (рівень {1})
+<pair>
+cpu_cooler_0<val>Нічого
+<pair>
+cpu_cooler_1<val>Мікро вентилятор
+<pair>
+cpu_cooler_2<val>Шматок алюмінію
+<pair>
+cpu_cooler_3<val>Маленький боксовий кулер
+<pair>
+cpu_cooler_4<val>Великий боксовий кулер
+<pair>
+cpu_cooler_5<val>Низький кулер
+<pair>
+cpu_cooler_6<val>Звичайний кулер
+<pair>
+cpu_cooler_7<val>Кулер-вежа
+<pair>
+cpu_cooler_8<val>Великий кулер-вежа
+<pair>
+cpu_cooler_9<val>Подвійний кулер-вежа
+<pair>
+cpu_cooler_10<val>Водяне охолодження з одним вентилятором
+<pair>
+cpu_cooler_11<val>Водяне охолодження з двома вентиляторами
+<pair>
+cpu_cooler_12<val>Водяне охолодження з трьома вентиляторами
+<pair>
+upgrade<val>Покращити
+<pair>
+watt<val>Вт

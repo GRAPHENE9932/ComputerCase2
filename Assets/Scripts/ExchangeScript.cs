@@ -126,19 +126,31 @@ public class ExchangeScript : MonoBehaviour
         {
             if (exchangeBTCToUSD)
             {
-                if (decimal.TryParse(fromField.text, out decimal num) && num <= MoneySystem.BTCMoney.Value)
+                if ((decimal.TryParse(fromField.text, out decimal num)
+                    || decimal.TryParse(fromField.text.Replace('.', ','), out num))
+                    && num <= MoneySystem.BTCMoney.Value)
+                {
                     //Floor the value of dollars.
                     toText.text = $"{Math.Floor(num * BTC)}$";
+                }
                 else
+                {
                     fromField.text = previousFromField;
+                }
             }
             else
             {
-                if (long.TryParse(fromField.text, out long num) && num <= MoneySystem.Money.Value)
+                if ((long.TryParse(fromField.text, out long num)
+                    || long.TryParse(fromField.text.Replace('.', ','), out num))
+                    && num <= MoneySystem.Money.Value)
+                {
                     //Take only 20 first symbols in the number of bitcoins to fit in the text component.
                     toText.text = (num * (1m / BTC)).ToString().TakeChars(20) + "₿";
+                }
                 else
+                {
                     fromField.text = previousFromField;
+                }
             }
         }
         else

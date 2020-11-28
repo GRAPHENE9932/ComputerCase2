@@ -105,6 +105,9 @@ public class OSScript : MonoBehaviour
                 //Add performance from RAM.
                 performance += minRAMFreq * 0.0000125m;
 
+                if (ComputerScript.RAMs.All(x => x == null))
+                    return -1;
+
                 return performance;
             }
             catch

@@ -42,6 +42,9 @@ public class MoneySystem : MonoBehaviour
             else if (value < money)
                 singletone.StartCoroutine(singletone.MoneyColor(false, true));
             money = value;
+
+            //Update leaderboard.
+            GPGSManager.AddValueToLeaderboard(money.Value);
         }
     }
     public static SecureDecimal BTCMoney

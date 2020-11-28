@@ -12,3 +12,4 @@
 11: CaseScroller, SpawnCell, default в конструкції switch для типу кейсу.
 12: PCComponent, constructor, Tried to instantiate clear PCComponent.
 13: HighCanvas, What is new window, Scroll View, Viewport, Content, Text. Text not changed.
+14: MainCanvas, Computer, Column 2, TDP text, Text. Text not changed.
