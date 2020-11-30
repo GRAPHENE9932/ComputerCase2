@@ -357,3 +357,1412 @@ Log string: IndexOutOfRangeException: Index was outside the bounds of the array.
 Stack trace: ComputerScript.UpdateComputer () (at Assets/Scripts/ComputerScript.cs:377)
 ComputerScript.Start () (at Assets/Scripts/ComputerScript.cs:146)
 
+Log type: Exception
+Time: 11/29/2020 8:21:19 AM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.94
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: ComputerScript.CPUCooler_Clicked () (at Assets/Scripts/ComputerScript.cs:616)
+ComputerScript.<UpdateComputer>b__57_6 () (at Assets/Scripts/ComputerScript.cs:381)
+UnityEngine.Events.InvokableCall.Invoke () (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.Events.UnityEvent.Invoke () (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.UI.Button.Press () (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:68)
+UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:110)
+UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:50)
+UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:261)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Error
+Time: 11/29/2020 8:39:07 AM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.88
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "not_enough_moeny"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+ComputerScript:Upgrade_Clicked() (at Assets/Scripts/ComputerScript.cs:644)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 11/29/2020 8:39:07 AM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.88
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: KeyNotFoundException: The given key was not present in the dictionary.
+Stack trace: System.Collections.Generic.Dictionary`2[TKey,TValue].get_Item (TKey key) (at <9577ac7a62ef43179789031239ba8798>:0)
+LangManager.GetString (System.String key) (at Assets/Scripts/LangManager.cs:17)
+ComputerScript.Upgrade_Clicked () (at Assets/Scripts/ComputerScript.cs:644)
+UnityEngine.Events.InvokableCall.Invoke () (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.Events.UnityEvent.Invoke () (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.UI.Button.Press () (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:68)
+UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:110)
+UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:50)
+UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:261)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Error
+Time: 11/29/2020 11:38:28 AM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 1
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "new_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 11:38:28 AM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 1
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "new_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 11:38:28 AM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 1
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "current_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 11:38:28 AM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 1
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "current_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 11:38:28 AM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 1
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "normal_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 11:38:28 AM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 1
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "normal_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 12:23:51 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.88
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "reset"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 12:23:51 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.88
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "reset"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 12:23:51 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.88
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "cancel"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 12:23:51 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.88
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "cancel"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 12:23:51 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.88
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "new_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 12:23:51 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.88
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "new_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 12:23:51 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.88
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "current_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 12:23:51 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.88
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "current_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 12:23:51 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.88
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "normal_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 12:23:51 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.88
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "normal_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:37:52 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "reset"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:37:52 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "reset"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:37:52 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "cancel"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:37:52 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "cancel"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:37:52 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "new_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:37:52 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "new_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:37:52 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "current_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:37:52 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "current_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:37:52 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "normal_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:37:52 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "normal_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Exception
+Time: 11/29/2020 2:37:56 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: IndexOutOfRangeException: Index was outside the bounds of the array.
+Stack trace: OSScript.Navigate (System.Int32 page) (at Assets/Scripts/OSScript.cs:193)
+UnityEngine.Events.InvokableCall`1[T1].Invoke (T1 args0) (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.Events.CachedInvokableCall`1[T].Invoke (System.Object[] args) (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.Events.UnityEvent.Invoke () (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.UI.Button.Press () (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:68)
+UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:110)
+UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:50)
+UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:261)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 11/29/2020 2:37:59 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: IndexOutOfRangeException: Index was outside the bounds of the array.
+Stack trace: OSScript.Navigate (System.Int32 page) (at Assets/Scripts/OSScript.cs:193)
+UnityEngine.Events.InvokableCall`1[T1].Invoke (T1 args0) (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.Events.CachedInvokableCall`1[T].Invoke (System.Object[] args) (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.Events.UnityEvent.Invoke () (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.UI.Button.Press () (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:68)
+UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:110)
+UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:50)
+UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:261)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Error
+Time: 11/29/2020 2:38:06 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "reset"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:38:06 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "reset"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:38:06 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "cancel"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:38:06 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "cancel"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:38:06 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "new_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:38:06 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "new_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:38:06 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "current_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:38:06 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "current_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:38:06 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "normal_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:38:06 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "normal_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Exception
+Time: 11/29/2020 2:38:17 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: IndexOutOfRangeException: Index was outside the bounds of the array.
+Stack trace: OSScript.Navigate (System.Int32 page) (at Assets/Scripts/OSScript.cs:193)
+UnityEngine.Events.InvokableCall`1[T1].Invoke (T1 args0) (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.Events.CachedInvokableCall`1[T].Invoke (System.Object[] args) (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.Events.UnityEvent.Invoke () (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.UI.Button.Press () (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:68)
+UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:110)
+UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:50)
+UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:261)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 11/29/2020 2:38:50 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: IndexOutOfRangeException: Index was outside the bounds of the array.
+Stack trace: OSScript.Navigate (System.Int32 page) (at Assets/Scripts/OSScript.cs:193)
+UnityEngine.Events.InvokableCall`1[T1].Invoke (T1 args0) (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.Events.CachedInvokableCall`1[T].Invoke (System.Object[] args) (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.Events.UnityEvent.Invoke () (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.UI.Button.Press () (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:68)
+UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:110)
+UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:50)
+UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:261)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Error
+Time: 11/29/2020 2:39:49 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "normal_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:39:49 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "normal_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:39:49 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "current_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:39:49 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "current_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:39:49 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "new_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:39:49 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "new_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:39:49 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "cancel"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:39:49 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "cancel"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:39:49 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "reset"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:39:49 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.71
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "reset"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:48:30 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.68
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "normal_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:48:30 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.68
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "normal_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:48:30 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.68
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "current_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:48:30 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.68
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "current_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:48:30 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.68
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "new_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:48:30 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.68
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "new_clock:"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:48:30 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.68
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "cancel"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:48:30 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.68
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "cancel"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:48:30 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.68
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find key "reset"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:26)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 11/29/2020 2:48:30 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.68
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: Cannot find "reset"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:30)
+LangLabel:Start() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Exception
+Time: 11/29/2020 3:09:45 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.59
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: GameSaver.CollectData () (at Assets/Scripts/GameSaver.cs:216)
+GameSaver.OnApplicationQuit () (at Assets/Scripts/GameSaver.cs:101)
+
+Log type: Exception
+Time: 11/30/2020 6:05:56 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.73
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: OSScript+<UpdateTemperature>d__68.MoveNext () (at Assets/Scripts/OSScript.cs:382)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+OSScript:Start() (at Assets/Scripts/OSScript.cs:181)
+
+Log type: Exception
+Time: 11/30/2020 6:12:26 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.7
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: GameSaver.CollectData () (at Assets/Scripts/GameSaver.cs:216)
+GameSaver.OnApplicationQuit () (at Assets/Scripts/GameSaver.cs:101)
+
+Log type: Exception
+Time: 11/30/2020 6:14:28 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.69
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: GameSaver.CollectData () (at Assets/Scripts/GameSaver.cs:216)
+GameSaver.OnApplicationQuit () (at Assets/Scripts/GameSaver.cs:101)
+
+Log type: Exception
+Time: 11/30/2020 6:18:04 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.68
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: GameSaver.CollectData () (at Assets/Scripts/GameSaver.cs:216)
+GameSaver.OnApplicationQuit () (at Assets/Scripts/GameSaver.cs:101)
+
+Log type: Exception
+Time: 11/30/2020 6:19:13 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.67
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: GameSaver.CollectData () (at Assets/Scripts/GameSaver.cs:216)
+GameSaver.OnApplicationQuit () (at Assets/Scripts/GameSaver.cs:101)
+
+Log type: Exception
+Time: 11/30/2020 6:26:24 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.63
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: GameSaver.CollectData () (at Assets/Scripts/GameSaver.cs:216)
+GameSaver.OnApplicationQuit () (at Assets/Scripts/GameSaver.cs:101)
+
+Log type: Exception
+Time: 11/30/2020 6:36:19 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.59
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Monitor
+Game version: Alpha 1.1.0_0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: GameSaver.CollectData () (at Assets/Scripts/GameSaver.cs:216)
+GameSaver.OnApplicationQuit () (at Assets/Scripts/GameSaver.cs:101)
+

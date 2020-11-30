@@ -310,3 +310,17 @@ cpu_cooler_12<val>Triple fan water cooler
 upgrade<val>Upgrade
 <pair>
 watt<val>W
+<pair>
+overclocking<val>Overclocking
+<pair>
+cpu:<val>CPU:
+<pair>
+normal_clock:<val>Normal clock:
+<pair>
+current_clock:<val>Current clock:
+<pair>
+new_clock:<val>New clock:
+<pair>
+cancel<val>Cancel
+<pair>
+reset<val>Reset

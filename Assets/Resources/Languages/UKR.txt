@@ -310,3 +310,17 @@ cpu_cooler_12<val>Водяне охолодження з трьома венти
 upgrade<val>Покращити
 <pair>
 watt<val>Вт
+<pair>
+overclocking<val>Розгін
+<pair>
+cpu:<val>Процесор:
+<pair>
+normal_clock:<val>Нормальна частота:
+<pair>
+current_clock:<val>Поточна частота:
+<pair>
+new_clock:<val>Нова частота:
+<pair>
+cancel<val>Скасувати
+<pair>
+reset<val>Скинути

@@ -225,7 +225,9 @@ public class GameSaver : MonoBehaviour
 			gpus = ComputerScript.GPUs.ToArray(),
 			rams = ComputerScript.RAMs.ToArray(),
 			cpuCooler = ComputerScript.cpuCooler.level,
+			cpuClock = OSScript.cpuClock,
 			mined = OSScript.earned,
+
 			lastSession = DateTime.Now,
 
 			casesOpened = StatisticsScript.casesOpened,
@@ -298,6 +300,7 @@ public class SavesPack
 	public RAM[] rams;
 	public byte cpuCooler;
 	public decimal mined;
+	public uint cpuClock;
 	public DateTime lastSession;
 
 	//Statistics.

@@ -47,6 +47,7 @@ public class ComputerScript : MonoBehaviour
 	/// </summary>
 	public Button infoButton;
 	public Button upgradeButton;
+	public Text upgradeButtonText;
 	public GameObject tdpInfo;
 	public Text tdpInfoText;
 
@@ -55,6 +56,7 @@ public class ComputerScript : MonoBehaviour
 	public static List<GPU> GPUs = new List<GPU>();
 	public static List<RAM> RAMs = new List<RAM>();
 	public static CPUCooler cpuCooler;
+	private CPUCooler nextCpuCooler;
 
 	public Color[] coolerColors;
 
@@ -110,6 +112,7 @@ public class ComputerScript : MonoBehaviour
 	/// <summary>
 	/// OS script (monitor).
 	/// </summary>
+	public MessageBoxManager messageBox;
 	public OSScript osscript;
 	public SoundManager soundManager;
 	public AudioClip[] equipClips;
@@ -360,22 +363,6 @@ public class ComputerScript : MonoBehaviour
 			}
 		}
 
-		//Update CPU.
-		if (mainCPU != null && mainMotherboard != null)
-		{
-			AddSlot(delegate { CPU_Clicked(); },
-				mainCPU.image,
-				mainCPU.rarity,
-				$"<b>{LangManager.GetString("cpu")}, {mainCPU.socket}</b>\n{mainCPU.fullName}");
-		}
-		else if (mainMotherboard != null)
-		{
-			AddSlot(delegate { CPU_Clicked(); },
-				emptyCPU,
-				Color.white,
-				$"<b>{LangManager.GetString("no_cpu")}</b>\n{mainMotherboard.socket}");
-		}
-
 		//Update CPU cooler.
 		AddSlot(delegate { CPUCooler_Clicked(); },
 			cpuCooler.image,
@@ -607,16 +594,60 @@ public class ComputerScript : MonoBehaviour
 
 	public void CPUCooler_Clicked()
 	{
+		//Check price of next cooler
+		GetNextCpuCooler();
+		if (nextCpuCooler != null)
+		{
+			//Show in upgrade button "Upgrade 512$"
+			upgradeButtonText.text = $"<b>{LangManager.GetString("upgrade")}</b>\n" +
+				$"{nextCpuCooler.price}$";
+			//Enable upgrade button
+			upgradeButton.gameObject.SetActive(true);
+		}
+		else
+		{
+			//Disable upgrade button
+			upgradeButton.gameObject.SetActive(false);
+		}
 		//Disable info button
 		infoButton.gameObject.SetActive(false);
-		//Enable upgrade button and tdp info cuz it is upgradable
-		upgradeButton.gameObject.SetActive(true);
-		tdpInfo.SetActive(true);
 
 		//Show image
 		ShowImage(cpuCooler.image);
+		//Enable tdp info
+		tdpInfo.SetActive(true);
 		//Show TDP
 		tdpInfoText.text = $"{cpuCooler.power} {LangManager.GetString("watt")}";
+
+		//Destroy equip slots
+		DestroyEquipSlots();
+	}
+
+	public void Upgrade_Clicked()
+	{
+		//Check is enough money to next cooler
+		if (nextCpuCooler.price <= MoneySystem.Money.Value)
+		{
+			//Pay money
+			MoneySystem.Money -= nextCpuCooler.price;
+			//Upgrade cooler
+			cpuCooler = nextCpuCooler;
+			//Update next cpu cooler
+			GetNextCpuCooler();
+
+			//Update
+			UpdateComputer();
+			CPUCooler_Clicked();
+		}
+		else
+		{
+			messageBox.StartMessage(LangManager.GetString("not_enough_money"), 2);
+		}
+	}
+
+	private void GetNextCpuCooler()
+	{
+		nextCpuCooler = Resources.Load<CPUCooler>($"CPU cooler/{cpuCooler.level + 1}");
 	}
 
 	/// <summary>
@@ -627,6 +658,9 @@ public class ComputerScript : MonoBehaviour
 		int childCount = equipParent.childCount;
 		for (int i = 0; i < childCount; i++)
 			Destroy(equipParent.GetChild(i).gameObject);
+
+		//Disable text
+		equipText.text = null;
 	}
 	/// <summary>
 	/// Shows info window of component.
@@ -1013,12 +1047,18 @@ public class ComputerScript : MonoBehaviour
 				mainCPU = null;
 				CPU_Clicked();
 				Back();
+
+				//Zero out clock
+				OSScript.cpuClock = 0;
 				break;
 			case ComponentType.Motherboard:
 				Inventory.components.Add((PCComponent)mainMotherboard.Clone());
 				mainMotherboard = null;
 				Motherboard_Clicked();
 				Back();
+
+				//Zero out clock
+				OSScript.cpuClock = 0;
 				break;
 			case ComponentType.GPU:
 				Inventory.components.Add((PCComponent)GPUs[index].Clone());

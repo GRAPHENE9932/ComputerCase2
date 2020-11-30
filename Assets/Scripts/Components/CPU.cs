@@ -12,9 +12,9 @@ public class CPU : PCComponent
     }
 
     [Space]
-    public int frequency;
-    public int cores;
-    public int TDP;
+    public uint frequency;
+    public uint cores;
+    public uint TDP;
     [HideInInspector]
     public byte IPC
     {
