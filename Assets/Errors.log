@@ -1766,3 +1766,71 @@ Log string: NullReferenceException: Object reference not set to an instance of a
 Stack trace: GameSaver.CollectData () (at Assets/Scripts/GameSaver.cs:216)
 GameSaver.OnApplicationQuit () (at Assets/Scripts/GameSaver.cs:101)
 
+Log type: Exception
+Time: 12/1/2020 6:27:41 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.69
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: OSScript.Start () (at Assets/Scripts/OSScript.cs:187)
+
+Log type: Exception
+Time: 12/1/2020 6:34:15 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.66
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: OSScript.Start () (at Assets/Scripts/OSScript.cs:187)
+
+Log type: Exception
+Time: 12/1/2020 6:39:52 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.64
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: OSScript.Start () (at Assets/Scripts/OSScript.cs:187)
+
+Log type: Exception
+Time: 12/1/2020 6:40:07 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.64
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: OSScript.Start () (at Assets/Scripts/OSScript.cs:187)
+

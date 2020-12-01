@@ -77,8 +77,10 @@ public class OSScript : MonoBehaviour
 	public Text cpuNewClockText;
 	public Text tempText;
 	public Slider cpuOverclockSlider;
+	public ButtonColorToggler powerToggler;
 
 	public static uint cpuClock;
+	public static bool powerOn;
 
 	public static float temperature, deltaTemperature;
 
@@ -175,16 +177,21 @@ public class OSScript : MonoBehaviour
 
 	private void Start()
 	{
-		//Set saves in start instead of awake because mining need begin with mining coroutine and saves of computer in awake.
+		//Set saves in start instead of awake because mining need begin with
+		//mining coroutine and saves of computer in awake.
 		ApplySaves();
 		StartCoroutine(MiningCoroutine());
 		StartCoroutine(UpdateTemperature());
+
+		//Power button color
+		powerToggler.Toggled = powerOn;
 	}
 
 	public static void ApplySaves()
 	{
 		earned = GameSaver.Saves.mined;
 		cpuClock = GameSaver.Saves.cpuClock;
+		powerOn = GameSaver.Saves.powerOn;
 		if (GameSaver.Saves.lastSession != DateTime.MinValue && Performance != -1)
 			earned += (decimal)(DateTime.Now - GameSaver.Saves.lastSession).TotalDays * Performance;
 		if (earned > Capacity)
@@ -395,11 +402,11 @@ public class OSScript : MonoBehaviour
 			//Calculate delta temperature
 			float delta = CpuTDP - (float)ComputerScript.cpuCooler.power;
 
-			float targetTemp = delta * WATT_TO_DEG + MAIN_TEMP;
+			float targetTemp = powerOn ? delta * WATT_TO_DEG + MAIN_TEMP : 0;
 			if (targetTemp < 0)
 				targetTemp = 0;
 
-			deltaTemperature = (targetTemp - temperature) / TEMP_SMOOTHNESS
+			deltaTemperature = (targetTemp - temperature) / (TEMP_SMOOTHNESS * (powerOn ? 1F : 4F))
 				+ UnityEngine.Random.Range(-1F, 1F);
 
 
@@ -445,6 +452,11 @@ public class OSScript : MonoBehaviour
 	}
 
     #endregion
+
+    public void PowerButton_Clicked()
+    {
+		powerOn = !powerOn;
+    }
 
     public IEnumerator MiningCoroutine()
 	{
