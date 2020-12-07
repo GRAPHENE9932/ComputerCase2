@@ -222,6 +222,38 @@ public class ComputerScript : MonoBehaviour
 		}
 	}
 
+	public bool ComputerOK
+    {
+        get
+        {
+			//Check of availability of CPU
+			if (mainCPU == null)
+				return false;
+			//Check of availability of motherboard
+			if (mainMotherboard == null)
+				return false;
+
+			//Does computer contains graphics?
+			bool containsGPUs = false;
+			for (int i = 0; i < GPUs.Count; i++)
+				containsGPUs = containsGPUs || GPUs[i] != null;
+			//If CPU contains graphics, containsGPUs = true.
+			if (mainCPU != null)
+				containsGPUs |= mainCPU.integratedGraphics;
+			if (!containsGPUs)
+				return false;
+
+			//Does computer contains RAM?
+			bool containsRAMs = false;
+			for (int i = 0; i < RAMs.Count; i++)
+				containsRAMs = containsRAMs || RAMs[i] != null;
+			if (!containsRAMs)
+				return false;
+
+			return true;
+		}
+    }
+
 	/// <summary>
 	/// Adds component slot with provided parameters.
 	/// </summary>
@@ -599,8 +631,7 @@ public class ComputerScript : MonoBehaviour
 		if (nextCpuCooler != null)
 		{
 			//Show in upgrade button "Upgrade 512$"
-			upgradeButtonText.text = $"<b>{LangManager.GetString("upgrade")}</b>\n" +
-				$"{nextCpuCooler.price}$";
+			upgradeButtonText.text = $"<b>{LangManager.GetString("upgrade")}</b>\n{nextCpuCooler.price}$";
 			//Enable upgrade button
 			upgradeButton.gameObject.SetActive(true);
 		}

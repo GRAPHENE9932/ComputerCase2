@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<WhatIsNewContainer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <news>
+    <WhatIsNew bold="true">
+      <ENG>Added OVERCLOCKING! (Only CPU now).</ENG>
+      <RUS>Добавлен РАЗГОН! (Пока только процессора).</RUS>
+      <UKR>Додано РОЗГІН! (Поки тільки процесорів).</UKR>
+    </WhatIsNew>
+    <WhatIsNew bold="true">
+      <ENG>Coolers added.</ENG>
+      <RUS>Добавлены куллеры.</RUS>
+      <UKR>Додані кулери.</UKR>
+    </WhatIsNew>
+    <WhatIsNew bold="false">
+      <ENG>Case OS interface changed.</ENG>
+      <RUS>Изменён интерфейс Case OS.</RUS>
+      <UKR>Змінений інтерфейс Case OS.</UKR>
+    </WhatIsNew>
+    <WhatIsNew bold="false">
+      <ENG>Added a few new old motherboards.</ENG>
+      <RUS>Добавлено немного новых старых материнских плат.</RUS>
+      <UKR>Додано кілька нових старих материнських плат.</UKR>
+    </WhatIsNew>
+  </news>
+</WhatIsNewContainer>

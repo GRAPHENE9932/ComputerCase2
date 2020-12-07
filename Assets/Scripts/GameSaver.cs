@@ -30,7 +30,7 @@ public class GameSaver : MonoBehaviour
 		{
 			if (savesPack == null)
 			{
-				Debug.Log("savesPack == null.");
+				//Debug.Log("savesPack == null.");
 				return SavesPack.Default;
 			}
 			else
@@ -226,7 +226,7 @@ public class GameSaver : MonoBehaviour
 			rams = ComputerScript.RAMs.ToArray(),
 			cpuCooler = ComputerScript.cpuCooler.level,
 			cpuClock = OSScript.cpuClock,
-			powerOn = OSScript.powerOn,
+			powerOn = OSScript.instance.powerToggler.Toggled,
 			mined = OSScript.earned,
 
 			lastSession = DateTime.Now,

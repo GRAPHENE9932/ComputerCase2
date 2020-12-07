@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class ButtonColorToggler : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class ButtonColorToggler : MonoBehaviour
     [Space]
     public Image img;
     public Button button;
+
+    public UnityEvent toggleEvent;
 
     public bool Toggled
     {
@@ -26,6 +29,8 @@ public class ButtonColorToggler : MonoBehaviour
     {
         toggled = !toggled;
         img.color = toggled ? powerOnColor : powerOffColor;
+
+        toggleEvent.Invoke();
 
         StartCoroutine(Delay());
     }

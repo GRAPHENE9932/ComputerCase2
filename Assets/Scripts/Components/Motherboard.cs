@@ -3,11 +3,10 @@ using System.Reflection;
 using UnityEngine;
 using KlimSoft;
 
-//Chipsets supported overclock: X370, B350, X300, A300 (AMD) and ... (Intel)
 public enum Chipset
 {
     Z390, Z370, Z270, Z170, X570, X99, X470, H110, H270, B150, B250, B360, B365, H370, _990X, Z490, X299,
-    X399
+    X399, P35, VIA_P4M800
 }
 
 [CreateAssetMenu(menuName = "Components/Motherboard", fileName = "Motherboard")]

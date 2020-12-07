@@ -1834,3 +1834,337 @@ Game version: Alpha 1.1.0_0
 Log string: NullReferenceException: Object reference not set to an instance of an object
 Stack trace: OSScript.Start () (at Assets/Scripts/OSScript.cs:187)
 
+Log type: Exception
+Time: 12/4/2020 4:37:13 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.88
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: Alpha 1.1.0_2
+Log string: UnassignedReferenceException: The variable powerScreenAnim of OSScript has not been assigned.
+You probably need to assign the powerScreenAnim variable of the OSScript script in the inspector.
+Stack trace: UnityEngine.Animation.Play (UnityEngine.PlayMode mode) (at <7f90ed7b2cd34bc595f5e9d084f29fe3>:0)
+UnityEngine.Animation.Play () (at <7f90ed7b2cd34bc595f5e9d084f29fe3>:0)
+OSScript+<PowerOnCoroutine>d__84.MoveNext () (at Assets/Scripts/OSScript.cs:484)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+OSScript:PowerButton_Clicked() (at Assets/Scripts/OSScript.cs:476)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Error
+Time: 12/4/2020 5:17:52 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.69
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Monitor
+Game version: Alpha 1.1.0_2
+Log string: Cannot find key "critical_temp"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+<UpdateTemperature>d__80:MoveNext() (at Assets/Scripts/OSScript.cs:478)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+
+Log type: Exception
+Time: 12/4/2020 5:17:52 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.69
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Monitor
+Game version: Alpha 1.1.0_2
+Log string: KeyNotFoundException: The given key was not present in the dictionary.
+Stack trace: System.Collections.Generic.Dictionary`2[TKey,TValue].get_Item (TKey key) (at <9577ac7a62ef43179789031239ba8798>:0)
+LangManager.GetString (System.String key) (at Assets/Scripts/LangManager.cs:17)
+OSScript+<UpdateTemperature>d__80.MoveNext () (at Assets/Scripts/OSScript.cs:478)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+
+Log type: Exception
+Time: 12/4/2020 5:53:06 PM
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.51
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Monitor
+Game version: Alpha 1.1.0_2
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: GameSaver.CollectData () (at Assets/Scripts/GameSaver.cs:216)
+GameSaver.OnApplicationQuit () (at Assets/Scripts/GameSaver.cs:101)
+
+Log type: Error
+Time: 07/12/2020 21:27:45
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.46
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: Cannot find key "cases"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:27)
+LangLabel:OnEnable() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 07/12/2020 21:27:45
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.46
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: Cannot find "cases"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:31)
+LangLabel:OnEnable() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 07/12/2020 21:27:45
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.46
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: Cannot find key "open_50"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:27)
+LangLabel:OnEnable() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 07/12/2020 21:27:45
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.46
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: Cannot find "open_50"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:31)
+LangLabel:OnEnable() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 07/12/2020 21:27:45
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.46
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: Cannot find key "computer"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:27)
+LangLabel:OnEnable() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 07/12/2020 21:27:45
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.46
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: Cannot find "computer"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:31)
+LangLabel:OnEnable() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 07/12/2020 21:27:45
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.46
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: Cannot find key "open"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:27)
+LangLabel:OnEnable() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 07/12/2020 21:27:45
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.46
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: Cannot find "open"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:31)
+LangLabel:OnEnable() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 07/12/2020 21:27:45
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.46
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: Cannot find key "open_50"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:27)
+LangLabel:OnEnable() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 07/12/2020 21:27:45
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.46
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: Cannot find "open_50"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:31)
+LangLabel:OnEnable() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 07/12/2020 21:27:45
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.46
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: Cannot find key "exchange"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangManager:GetString(String) (at Assets/Scripts/LangManager.cs:16)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:27)
+LangLabel:OnEnable() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Error
+Time: 07/12/2020 21:27:45
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.46
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: Cannot find "exchange"
+Stack trace: UnityEngine.Debug:LogError(Object)
+LangLabel:UpdateLabel() (at Assets/Scripts/LangLabel.cs:31)
+LangLabel:OnEnable() (at Assets/Scripts/LangLabel.cs:19)
+
+Log type: Exception
+Time: 07/12/2020 21:27:59
+Device name: DESKTOP-9E3NFFM
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.46
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: GameSaver.CollectData () (at Assets/Scripts/GameSaver.cs:216)
+GameSaver.OnApplicationQuit () (at Assets/Scripts/GameSaver.cs:101)
+

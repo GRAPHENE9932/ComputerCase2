@@ -8,7 +8,8 @@ public class CPU : PCComponent
 {
     public enum Architecture
     {
-        Undefined, K8, Zen, ZenPlus, Zen2, Bulldozer, SandyBridge, Core, Skylake, Haswell, Skylake_X, Penryn, XeonPhi, XeonPhi_Landing_Mill
+        Undefined, K8, Zen, ZenPlus, Zen2, Bulldozer, SandyBridge, Core, Skylake, Haswell,
+        Skylake_X, Penryn, XeonPhi, XeonPhi_Landing_Mill
     }
 
     [Space]

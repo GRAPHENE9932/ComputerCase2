@@ -324,3 +324,5 @@ new_clock:<val>New clock:
 cancel<val>Cancel
 <pair>
 reset<val>Reset
+<pair>
+critical_temp<val>Critical temperature ({0:0}°C)

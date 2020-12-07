@@ -9,21 +9,30 @@ public class LangLabel : MonoBehaviour
 
     public string key;
 
-    private void Awake()
+    public bool alreadyUpdated;
+
+    public LangLabel()
     {
         labels.Add(this);
     }
 
-    private void Start()
+    /*private void Awake()
     {
-        UpdateLabel();
-    }
+        labels.Add(this);
+    }*/
+
+    /*private void Start()
+    {
+        if (!alreadyUpdated)
+            UpdateLabel();
+    }*/
 
     public void UpdateLabel()
     {
         try
         {
             GetComponent<Text>().text = LangManager.GetString(key);
+            alreadyUpdated = true;
         }
         catch (KeyNotFoundException)
         {

@@ -324,3 +324,5 @@ new_clock:<val>Новая частота:
 cancel<val>Отмена
 <pair>
 reset<val>Сброс
+<pair>
+critical_temp<val>Критическая температура ({0:0}°C)
