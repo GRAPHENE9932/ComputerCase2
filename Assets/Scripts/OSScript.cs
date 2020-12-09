@@ -82,6 +82,8 @@ public class OSScript : MonoBehaviour
 	public Text tempText;
 	public Slider cpuOverclockSlider;
 	public ButtonColorToggler powerToggler;
+	public GameObject overclockErrorObj;
+	public Text overclockErrorText;
 
 	public static uint cpuClock;
 	public Animation powerScreenAnim;
@@ -126,7 +128,7 @@ public class OSScript : MonoBehaviour
 
 				//Add performance from CPU.
 				performance += ComputerScript.mainCPU.IPC *
-					(ComputerScript.mainCPU.frequency / 1000m)
+					(instance.CpuClock / 1000m)
 					* ComputerScript.mainCPU.cores * 0.0002m;
 
 				//Find minimum RAM frequency.
@@ -245,8 +247,44 @@ public class OSScript : MonoBehaviour
 			pages[(int)currentPage].SetActive(false);
 		//Change page variable.
 		currentPage = (OSPage)page;
-		//Enable new page.
-		pages[page].SetActive(true);
+
+		if (currentPage == OSPage.Overclocking)
+		{
+			//If overclocking supported
+			if (ComputerScript.mainCPU.unlocked &&
+                ComputerScript.mainMotherboard.SupportsCPUOverclocking)
+            {
+				//Enable overclocking page.
+				pages[page].SetActive(true);
+				overclockErrorObj.SetActive(false);
+			}
+            else
+            {
+				overclockErrorObj.SetActive(true);
+
+				string errText = null;
+
+				if (!ComputerScript.mainCPU.unlocked)
+					LangManager.GetString("mul_is_locked");
+
+				if (!ComputerScript.mainMotherboard.SupportsCPUOverclocking)
+                {
+					if (errText != null)
+						errText += ' ' + LangManager.GetString("and") + ' ';
+					errText += LangManager.GetString("chipset_doesnt_support_overclocking");
+                }
+
+				errText = LangManager.GetString("can_not_overclock_cpu_due") +
+					' ' + errText + '.';
+
+				overclockErrorText.text = errText;
+            }
+		}
+        else
+        {
+			//Enable new page.
+			pages[page].SetActive(true);
+		}
 		//If current page == system configuration, update system configuration.
 		if (currentPage == OSPage.SystemConfiguration)
 			UpdateSystemConfiguration();

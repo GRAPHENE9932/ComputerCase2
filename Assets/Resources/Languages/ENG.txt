@@ -326,3 +326,13 @@ cancel<val>Cancel
 reset<val>Reset
 <pair>
 critical_temp<val>Critical temperature ({0:0}°C)
+<pair>
+can_not_overclock_cpu<val>Can not overclock CPU!
+<pair>
+can_not_overclock_cpu_due<val>Can not overclock CPU due to 
+<pair>
+mul_is_locked<val>multiplier is locked
+<pair>
+chipset_doesnt_support_overclocking<val>clipset doesn't support overclocking
+<pair>
+and<val>and

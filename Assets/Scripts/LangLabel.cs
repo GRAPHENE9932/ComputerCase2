@@ -16,17 +16,6 @@ public class LangLabel : MonoBehaviour
         labels.Add(this);
     }
 
-    /*private void Awake()
-    {
-        labels.Add(this);
-    }*/
-
-    /*private void Start()
-    {
-        if (!alreadyUpdated)
-            UpdateLabel();
-    }*/
-
     public void UpdateLabel()
     {
         try

@@ -326,3 +326,13 @@ cancel<val>Скасувати
 reset<val>Скинути
 <pair>
 critical_temp<val>Критична температура ({0:0}°C)
+<pair>
+can_not_overclock_cpu<val>Не можна розігнати процесор
+<pair>
+can_not_overclock_cpu_due<val>Не можна розігнати процесор, бо
+<pair>
+mul_is_locked<val>множник заблокований
+<pair>
+chipset_doesnt_support_overclocking<val>чіпсет не підтримує розгін
+<pair>
+and<val>і

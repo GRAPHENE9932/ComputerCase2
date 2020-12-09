@@ -326,3 +326,13 @@ cancel<val>Отмена
 reset<val>Сброс
 <pair>
 critical_temp<val>Критическая температура ({0:0}°C)
+<pair>
+can_not_overclock_cpu<val>Нельзя разогнать процессор!
+<pair>
+can_not_overclock_cpu_due<val>Нельзя разогнать процессор, ведь
+<pair>
+mul_is_locked<val>множитель заблокирован
+<pair>
+chipset_doesnt_support_overclocking<val>чипсет не поддерживает разгон
+<pair>
+and<val>и

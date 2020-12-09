@@ -2168,3 +2168,31 @@ Log string: NullReferenceException: Object reference not set to an instance of a
 Stack trace: GameSaver.CollectData () (at Assets/Scripts/GameSaver.cs:216)
 GameSaver.OnApplicationQuit () (at Assets/Scripts/GameSaver.cs:101)
 
+Log type: Exception
+Time: 08/12/2020 18:48:43
+Device name: KLIMLAPTOP
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.9
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Settings
+Game version: 1.1.0
+Log string: MissingReferenceException: The object of type 'LangLabel' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+Stack trace: UnityEngine.Component.GetComponent[T] () (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+LangLabel.UpdateLabel () (at Assets/Scripts/LangLabel.cs:34)
+LangManager.UpdateLabels () (at Assets/Scripts/LangManager.cs:54)
+LangManager.Apply () (at Assets/Scripts/LangManager.cs:48)
+UnityEngine.Events.InvokableCall.Invoke () (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.Events.UnityEvent.Invoke () (at <fe84f4a754da4a6bb64fca409d40938a>:0)
+UnityEngine.UI.Button.Press () (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:68)
+UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:110)
+UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:50)
+UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:261)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+

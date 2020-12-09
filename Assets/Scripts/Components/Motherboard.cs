@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Reflection;
 using UnityEngine;
 using KlimSoft;
@@ -83,6 +84,18 @@ public class Motherboard : PCComponent
             result += $"{LangManager.GetString("price:")} {price}$.";
 
             return result;
+        }
+    }
+
+    public bool SupportsCPUOverclocking
+    {
+        get
+        {
+            Chipset[] supChipsets = new Chipset[] {Chipset.Z490, Chipset.Z390, Chipset.Z370,
+            Chipset.Z270, Chipset.Z170, Chipset.X299, Chipset.X399, Chipset.X470,
+            Chipset.X570, Chipset.X99, Chipset.B365, Chipset.B360};
+
+            return supChipsets.Contains(chipset);
         }
     }
 }
