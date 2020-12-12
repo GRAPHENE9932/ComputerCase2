@@ -257,6 +257,8 @@ public class GameSaver : MonoBehaviour
 
 			money = MoneySystem.Money.Value,
 			BTCMoney = MoneySystem.BTCMoney.Value,
+
+			usedCodes = EnterCode.usedHashes.ToArray()
 		};
 		CollectDataThere();
 	}
@@ -273,6 +275,7 @@ public class GameSaver : MonoBehaviour
 			OSScript.ApplySaves();
 			StatisticsScript.ApplySaves();
 			MoneySystem.ApplySaves();
+			EnterCode.ApplySaves();
 		}
 
 		soundToggle.toggled = Saves.sound;
@@ -320,6 +323,9 @@ public class SavesPack
 	//Balance.
 	public long money;
 	public decimal BTCMoney;
+
+	//Codes
+	public byte[][] usedCodes;
 
 	//Version of game which saved this pack.
 	public string version;

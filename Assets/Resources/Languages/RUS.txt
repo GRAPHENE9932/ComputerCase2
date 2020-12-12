@@ -336,3 +336,7 @@ mul_is_locked<val>множитель заблокирован
 chipset_doesnt_support_overclocking<val>чипсет не поддерживает разгон
 <pair>
 and<val>и
+<pair>
+incorrect_code<val>Код неправильный, или уже использован.
+<pair>
+enter_code<val>Ввести код

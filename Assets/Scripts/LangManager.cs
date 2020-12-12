@@ -51,6 +51,7 @@ public class LangManager : MonoBehaviour
     private void UpdateLabels()
     {
         for (int i = 0; i < LangLabel.labels.Count; i++)
-            LangLabel.labels[i].UpdateLabel();
+            if (LangLabel.labels[i] != null)
+                LangLabel.labels[i].UpdateLabel();
     }
 }

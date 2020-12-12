@@ -2196,3 +2196,237 @@ UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointe
 UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:261)
 UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.15f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
 
+Log type: Exception
+Time: 12/12/2020 13:49:07
+Device name: KLIMLAPTOP
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.83
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: EnterCode.Activate () (at Assets/Scripts/Other/EnterCode.cs:19)
+UnityEngine.Events.InvokableCall.Invoke () (at <bad59441812943c7b8d5a5ba85795810>:0)
+UnityEngine.Events.UnityEvent.Invoke () (at <bad59441812943c7b8d5a5ba85795810>:0)
+UnityEngine.UI.Button.Press () (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:68)
+UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:110)
+UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:50)
+UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:261)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Error
+Time: 12/12/2020 14:25:17
+Device name: KLIMLAPTOP
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.86
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: Assets\Scripts\Other\EnterCode.cs(23,51): error CS1503: Argument 1: cannot convert from 'string[]' to 'char'
+Stack trace: 
+Log type: Exception
+Time: 12/12/2020 14:30:27
+Device name: KLIMLAPTOP
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.81
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: GameSaver.CollectData () (at Assets/Scripts/GameSaver.cs:216)
+GameSaver.OnApplicationQuit () (at Assets/Scripts/GameSaver.cs:101)
+
+Log type: Exception
+Time: 12/12/2020 14:33:46
+Device name: KLIMLAPTOP
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.79
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: GameSaver.CollectData () (at Assets/Scripts/GameSaver.cs:216)
+GameSaver.OnApplicationQuit () (at Assets/Scripts/GameSaver.cs:101)
+
+Log type: Exception
+Time: 12/12/2020 14:35:52
+Device name: KLIMLAPTOP
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.77
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: GameSaver.CollectData () (at Assets/Scripts/GameSaver.cs:216)
+GameSaver.OnApplicationQuit () (at Assets/Scripts/GameSaver.cs:101)
+
+Log type: Exception
+Time: 12/12/2020 14:38:58
+Device name: KLIMLAPTOP
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.76
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: NullReferenceException: routine is null
+Stack trace: UnityEngine.MonoBehaviour.StopCoroutine (UnityEngine.Coroutine routine) (at <bad59441812943c7b8d5a5ba85795810>:0)
+EnterCode.Activate () (at Assets/Scripts/Other/EnterCode.cs:42)
+UnityEngine.Events.InvokableCall.Invoke () (at <bad59441812943c7b8d5a5ba85795810>:0)
+UnityEngine.Events.UnityEvent.Invoke () (at <bad59441812943c7b8d5a5ba85795810>:0)
+UnityEngine.UI.Button.Press () (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:68)
+UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:110)
+UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:50)
+UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:261)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 12/12/2020 14:46:16
+Device name: KLIMLAPTOP
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.72
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: EnterCode.Activate () (at Assets/Scripts/Other/EnterCode.cs:38)
+UnityEngine.Events.InvokableCall.Invoke () (at <bad59441812943c7b8d5a5ba85795810>:0)
+UnityEngine.Events.UnityEvent.Invoke () (at <bad59441812943c7b8d5a5ba85795810>:0)
+UnityEngine.UI.Button.Press () (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:68)
+UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:110)
+UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:50)
+UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:261)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 12/12/2020 14:52:41
+Device name: KLIMLAPTOP
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.69
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: EnterCode.Activate () (at Assets/Scripts/Other/EnterCode.cs:46)
+UnityEngine.Events.InvokableCall.Invoke () (at <bad59441812943c7b8d5a5ba85795810>:0)
+UnityEngine.Events.UnityEvent.Invoke () (at <bad59441812943c7b8d5a5ba85795810>:0)
+UnityEngine.UI.Button.Press () (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:68)
+UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:110)
+UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:50)
+UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:261)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 12/12/2020 15:08:35
+Device name: KLIMLAPTOP
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.63
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: MissingComponentException: There is no 'CanvasGroup' attached to the "Enter code" game object, but a script is trying to access it.
+You probably need to add a CanvasGroup to the game object "Enter code". Or your script needs to check if the component is attached before using it.
+Stack trace: NavigationScript+<SwitchMenu>d__15.MoveNext () (at Assets/Scripts/NavigationScript.cs:145)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <bad59441812943c7b8d5a5ba85795810>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+NavigationScript:MenuItemClicked(Int32) (at Assets/Scripts/NavigationScript.cs:130)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 12/12/2020 15:11:12
+Device name: KLIMLAPTOP
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.62
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: MissingComponentException: There is no 'CanvasGroup' attached to the "Enter code" game object, but a script is trying to access it.
+You probably need to add a CanvasGroup to the game object "Enter code". Or your script needs to check if the component is attached before using it.
+Stack trace: NavigationScript+<SwitchMenu>d__15.MoveNext () (at Assets/Scripts/NavigationScript.cs:145)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <bad59441812943c7b8d5a5ba85795810>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+NavigationScript:MenuItemClicked(Int32) (at Assets/Scripts/NavigationScript.cs:130)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 12/12/2020 15:28:50
+Device name: KLIMLAPTOP
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.55
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: ArgumentNullException: Value cannot be null.
+Parameter name: source
+Stack trace: System.Linq.Enumerable.ToList[TSource] (System.Collections.Generic.IEnumerable`1[T] source) (at <351e49e2a5bf4fd6beabb458ce2255f3>:0)
+EnterCode.ApplySaves () (at Assets/Scripts/Other/EnterCode.cs:24)
+GameSaver.SetData (System.Boolean includingScripts) (at Assets/Scripts/GameSaver.cs:278)
+GameSaver.<OnApplicationPause>g__OnRead|22_0 (GooglePlayGames.BasicApi.SavedGame.SavedGameRequestStatus status, System.Byte[] data) (at Assets/Scripts/GameSaver.cs:120)
+GPGSManager.ReadSaveData (System.String fileName, System.Action`2[T1,T2] onDataRead) (at Assets/Scripts/GPGSManager.cs:136)
+GameSaver.OnApplicationPause (System.Boolean pause) (at Assets/Scripts/GameSaver.cs:122)
+

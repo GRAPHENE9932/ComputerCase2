@@ -336,3 +336,7 @@ mul_is_locked<val>multiplier is locked
 chipset_doesnt_support_overclocking<val>clipset doesn't support overclocking
 <pair>
 and<val>and
+<pair>
+incorrect_code<val>Code is incorrect or already used.
+<pair>
+enter_code<val>Enter code
