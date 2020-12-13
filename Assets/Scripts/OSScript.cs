@@ -82,13 +82,13 @@ public class OSScript : MonoBehaviour
 	public Text tempText;
 	public Slider cpuOverclockSlider;
 	public ButtonColorToggler powerToggler;
-	public GameObject overclockErrorObj;
+	public GameObject overclockErrorObj, overclockWindow;
 	public Text overclockErrorText;
 
 	public static uint cpuClock;
-	public Animation powerScreenAnim;
 	public Text errorsText;
 	public GameObject errorsObj;
+	public CanvasGroup startObjGroup;
 
 	public static float temperature, deltaTemperature;
 
@@ -254,13 +254,13 @@ public class OSScript : MonoBehaviour
 			if (ComputerScript.mainCPU.unlocked &&
                 ComputerScript.mainMotherboard.SupportsCPUOverclocking)
             {
-				//Enable overclocking page.
-				pages[page].SetActive(true);
+				overclockWindow.SetActive(true);
 				overclockErrorObj.SetActive(false);
 			}
             else
             {
 				overclockErrorObj.SetActive(true);
+				overclockWindow.SetActive(false);
 
 				string errText = null;
 
@@ -280,11 +280,8 @@ public class OSScript : MonoBehaviour
 				overclockErrorText.text = errText;
             }
 		}
-        else
-        {
-			//Enable new page.
-			pages[page].SetActive(true);
-		}
+		//Enable new page.
+		pages[page].SetActive(true);
 		//If current page == system configuration, update system configuration.
 		if (currentPage == OSPage.SystemConfiguration)
 			UpdateSystemConfiguration();
@@ -578,7 +575,7 @@ public class OSScript : MonoBehaviour
 		startObj.SetActive(false);
 		powerToggler.Toggled = false;
 
-		powerScreenAnim.Stop();
+		startObjGroup.alpha = 0;
 	}
 
 	private const float transition = 0.5F;
@@ -587,12 +584,22 @@ public class OSScript : MonoBehaviour
 		if (powerToggler.Toggled)
 		{
 			startObj.SetActive(true);
-			powerScreenAnim.Play();
 
-			yield return new WaitForSeconds(powerScreenAnim.clip.length - transition);
+			//Animate
+			while (startObjGroup.alpha < 1F)
+			{
+				startObjGroup.alpha += Time.deltaTime / 4F;
+				yield return null;
+			}
 
+			yield return new WaitForSeconds(6);
 			pagesObj.SetActive(true);
-			yield return new WaitForSeconds(transition);
+			while (startObjGroup.alpha > 0F)
+			{
+				startObjGroup.alpha -= Time.deltaTime * 2F;
+				yield return null;
+			}
+
 			startObj.SetActive(false);
 		}
         else

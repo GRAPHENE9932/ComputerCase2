@@ -2430,3 +2430,50 @@ GameSaver.<OnApplicationPause>g__OnRead|22_0 (GooglePlayGames.BasicApi.SavedGame
 GPGSManager.ReadSaveData (System.String fileName, System.Action`2[T1,T2] onDataRead) (at Assets/Scripts/GPGSManager.cs:136)
 GameSaver.OnApplicationPause (System.Boolean pause) (at Assets/Scripts/GameSaver.cs:122)
 
+Log type: Exception
+Time: 13/12/2020 12:51:10
+Device name: KLIMLAPTOP
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.77
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: UnassignedReferenceException: The variable powerScreenAnim of OSScript has not been assigned.
+You probably need to assign the powerScreenAnim variable of the OSScript script in the inspector.
+Stack trace: OSScript.TurnOff () (at Assets/Scripts/OSScript.cs:578)
+OSScript+<PowerOnCoroutine>d__93.MoveNext () (at Assets/Scripts/OSScript.cs:597)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <bad59441812943c7b8d5a5ba85795810>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+OSScript:PowerButton_Clicked() (at Assets/Scripts/OSScript.cs:568)
+UnityEngine.Events.UnityEvent:Invoke()
+ButtonColorToggler:Trigger() (at Assets/Scripts/ButtonColorToggler.cs:33)
+
+Log type: Exception
+Time: 13/12/2020 12:55:46
+Device name: KLIMLAPTOP
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0.76
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: CasesMenu
+Game version: 1.1.0
+Log string: UnassignedReferenceException: The variable powerScreenAnim of OSScript has not been assigned.
+You probably need to assign the powerScreenAnim variable of the OSScript script in the inspector.
+Stack trace: OSScript+<PowerOnCoroutine>d__94.MoveNext () (at Assets/Scripts/OSScript.cs:588)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at <bad59441812943c7b8d5a5ba85795810>:0)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+OSScript:PowerButton_Clicked() (at Assets/Scripts/OSScript.cs:569)
+UnityEngine.Events.UnityEvent:Invoke()
+ButtonColorToggler:Trigger() (at Assets/Scripts/ButtonColorToggler.cs:33)
+
