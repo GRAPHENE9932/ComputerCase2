@@ -58,6 +58,9 @@ public class NavigationScript : MonoBehaviour
     /// </summary>
     public MenuState[] soundExceptions;
 
+    public delegate void MenuSwitched(byte idx);
+    public static event MenuSwitched onMenuSwitched;
+
     /// <summary>
     ///     Event of clicking on menu buttton. Starts animation coroutine
     ///     if animation of opening or closing not playing now.
@@ -140,6 +143,8 @@ public class NavigationScript : MonoBehaviour
         //Якщо відділ, на який треба перейти, не увімкнений зараз...
         if (state != currentState)
         {
+            //Invoke event
+            onMenuSwitched.Invoke((byte)state);
             //Make both canvases uninteractable.
             menus[(int)currentState].GetComponent<CanvasGroup>().interactable = false;
             menus[(int)state].GetComponent<CanvasGroup>().interactable = false;

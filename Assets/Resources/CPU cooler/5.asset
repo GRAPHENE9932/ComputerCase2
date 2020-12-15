@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 5
   m_EditorClassIdentifier: 
   power: 85
-  price: 80
+  price: 300
   image: {fileID: 21300000, guid: f398a6dfbd072494297eaa73e8c6bc23, type: 3}
   level: 5

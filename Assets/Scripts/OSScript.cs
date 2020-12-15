@@ -124,12 +124,12 @@ public class OSScript : MonoBehaviour
 				//Add performance from GPUs.
 				for (int i = 0; i < ComputerScript.GPUs.Count; i++)
 					if (ComputerScript.GPUs[i] != null)
-						performance += 0.00005m * ComputerScript.GPUs[i].power;
+						performance += 0.00001m * ComputerScript.GPUs[i].power;
 
 				//Add performance from CPU.
 				performance += ComputerScript.mainCPU.IPC *
 					(instance.CpuClock / 1000m)
-					* ComputerScript.mainCPU.cores * 0.0002m;
+					* ComputerScript.mainCPU.cores * 0.0001m;
 
 				//Find minimum RAM frequency.
 				int minRAMFreq = int.MaxValue;

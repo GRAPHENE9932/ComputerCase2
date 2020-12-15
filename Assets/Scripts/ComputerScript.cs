@@ -150,8 +150,16 @@ public class ComputerScript : MonoBehaviour
 	{
 		//Update computer at start.
 		UpdateComputer();
+		//Add event
+		NavigationScript.onMenuSwitched += OnPageEnable;
 	}
-	public static void ApplySaves()
+    private void OnPageEnable(byte idx)
+    {
+		if ((MenuState)idx == MenuState.Computer)
+			//Destroying all equip slots.
+			DestroyEquipSlots();
+	}
+    public static void ApplySaves()
 	{
 		mainCPU = GameSaver.Saves.cpu;
 		if (mainCPU != null)

@@ -254,8 +254,8 @@ PlayerSettings:
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: "C:/Users/artem/OneDrive/\u0420\u043E\u0431\u043E\u0447\u0438\u0439
-    \u0441\u0442\u0456\u043B/.keystore/KlimSoft.keystore"
-  AndroidKeyaliasName: klimsoft
+    \u0441\u0442\u0456\u043B/.keystore/user.keystore"
+  AndroidKeyaliasName: klimsoftkey
   AndroidBuildApkPerCpuArchitecture: 1
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
