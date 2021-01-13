@@ -88,10 +88,8 @@ public class ComputerScript : MonoBehaviour
 	/// Errors text of monitor.
 	/// </summary>
 	public Text errorsText;
-	/// <summary>
-	/// Wallpaper or pages group of monitor
-	/// </summary>
-	public GameObject wallpaper, pages;
+	public GameObject monitorPages;
+	public ButtonColorToggler powerToggler;
 	/// <summary>
 	/// Case scroller script.
 	/// </summary>
@@ -217,20 +215,19 @@ public class ComputerScript : MonoBehaviour
 		//If no errors, show default monitor.
 		if (errors == null)
 		{
-			wallpaper.SetActive(true);
-			pages.SetActive(true);
+			monitorPages.SetActive(true);
 			errorsText.gameObject.SetActive(false);
 		}
 		else
 		{
-			wallpaper.SetActive(false);
-			pages.SetActive(false);
+			monitorPages.SetActive(false);
+			powerToggler.Toggled = false;
 			errorsText.gameObject.SetActive(true);
 			errorsText.text = errors;
 		}
 	}
 
-	public bool ComputerOK
+	public static bool ComputerOK
     {
         get
         {
@@ -488,6 +485,11 @@ public class ComputerScript : MonoBehaviour
 	/// </summary>
 	public void CPU_Clicked()
 	{
+		if (osscript.powerToggler.Toggled)
+        {
+			messageBox.StartMessage(LangManager.GetString("toggle_computer_off_first"), 3);
+			return;
+        }
 		//If computer contains motherboard.
 		if (mainMotherboard != null)
 		{
@@ -526,6 +528,11 @@ public class ComputerScript : MonoBehaviour
 
 	public void Motherboard_Clicked()
 	{
+		if (osscript.powerToggler.Toggled)
+		{
+			messageBox.StartMessage(LangManager.GetString("toggle_computer_off_first"), 3);
+			return;
+		}
 		//If no components on computer.
 		if (!ComputerHasComponents)
 		{
@@ -562,6 +569,11 @@ public class ComputerScript : MonoBehaviour
 
 	public void RAM_Clicked(int index)
 	{
+		if (osscript.powerToggler.Toggled)
+		{
+			messageBox.StartMessage(LangManager.GetString("toggle_computer_off_first"), 3);
+			return;
+		}
 		if (mainMotherboard != null)
 		{
 			equipComponents = Inventory.components.Where(x => x is RAM RAM && RAM.type == mainMotherboard.RAMType).ToList();
@@ -597,6 +609,11 @@ public class ComputerScript : MonoBehaviour
 
 	public void GPU_Clicked(int index)
 	{
+		if (osscript.powerToggler.Toggled)
+		{
+			messageBox.StartMessage(LangManager.GetString("toggle_computer_off_first"), 3);
+			return;
+		}
 		if (mainMotherboard != null)
 		{
 			equipComponents = Inventory.components
@@ -634,6 +651,11 @@ public class ComputerScript : MonoBehaviour
 
 	public void CPUCooler_Clicked()
 	{
+		if (osscript.powerToggler.Toggled)
+		{
+			messageBox.StartMessage(LangManager.GetString("toggle_computer_off_first"), 3);
+			return;
+		}
 		//Check price of next cooler
 		GetNextCpuCooler();
 		if (nextCpuCooler != null)

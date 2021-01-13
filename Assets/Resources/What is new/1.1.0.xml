@@ -21,5 +21,10 @@
       <RUS>Добавлено немного новых старых материнских плат.</RUS>
       <UKR>Додано кілька нових старих материнських плат.</UKR>
     </WhatIsNew>
+    <WhatIsNew bold="false">
+      <ENG>A few bugs fixed.</ENG>
+      <RUS>Исправлено несколько багов.</RUS>
+      <UKR>Виправлено кілька багів.</UKR>
+    </WhatIsNew>
   </news>
 </WhatIsNewContainer>

@@ -15,6 +15,8 @@ public class ButtonColorToggler : MonoBehaviour
 
     public UnityEvent toggleEvent;
 
+    private System.DateTime lastClick;
+
     public bool Toggled
     {
         get { return toggled; }
@@ -27,18 +29,14 @@ public class ButtonColorToggler : MonoBehaviour
 
     public void Trigger()
     {
+        if ((System.DateTime.Now - lastClick).TotalSeconds < delay)
+            return;
+
         toggled = !toggled;
         img.color = toggled ? powerOnColor : powerOffColor;
 
         toggleEvent.Invoke();
 
-        StartCoroutine(Delay());
-    }
-
-    private IEnumerator Delay()
-    {
-        button.interactable = false;
-        yield return new WaitForSeconds(delay);
-        button.interactable = true;
+        lastClick = System.DateTime.Now;
     }
 }

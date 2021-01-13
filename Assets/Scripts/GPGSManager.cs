@@ -110,10 +110,7 @@ public static class GPGSManager
 #if UNITY_ANDROID
             PlayGamesPlatform.Instance.ReportScore(value, LEADERBOARD, (success) => 
             {
-                if (success)
-                    AndroidFeatures.MakeToast("Leaderboard success!");
-                else
-                    AndroidFeatures.MakeToast("Leaderboard failure!");
+                
             });
             //Social.ReportScore(value, LEADERBOARD, (bool success) =>
             //{

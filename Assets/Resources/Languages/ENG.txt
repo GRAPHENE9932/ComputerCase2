@@ -340,3 +340,5 @@ and<val>and
 incorrect_code<val>Code is incorrect or already used.
 <pair>
 enter_code<val>Enter code
+<pair>
+toggle_computer_off_first<val>Toggle computer off first

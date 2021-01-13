@@ -340,3 +340,5 @@ and<val>і
 incorrect_code<val>Код неправильний, або вже використаний.
 <pair>
 enter_code<val>Увести код
+<pair>
+toggle_computer_off_first<val>Спочатку вимкніть комп'ютер

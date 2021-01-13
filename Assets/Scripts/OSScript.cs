@@ -265,7 +265,7 @@ public class OSScript : MonoBehaviour
 				string errText = null;
 
 				if (!ComputerScript.mainCPU.unlocked)
-					LangManager.GetString("mul_is_locked");
+					errText += LangManager.GetString("mul_is_locked");
 
 				if (!ComputerScript.mainMotherboard.SupportsCPUOverclocking)
                 {
@@ -479,7 +479,7 @@ public class OSScript : MonoBehaviour
 		WaitForSeconds wait = new WaitForSeconds(1);
 		while (true)
         {
-			if (comp.ComputerOK)
+			if (ComputerScript.ComputerOK)
 			{
 				//Calculate delta temperature
 				float delta = CpuTDP - (float)ComputerScript.cpuCooler.power;
@@ -561,12 +561,19 @@ public class OSScript : MonoBehaviour
 	Coroutine powerCoroutine;
     public void PowerButton_Clicked()
     {
-		if (temperature < CRITICAL_TEMP)
+		if (ComputerScript.ComputerOK)
 		{
-			if (powerCoroutine != null)
-				StopCoroutine(powerCoroutine);
-			powerCoroutine = StartCoroutine(PowerOnCoroutine());
+			if (temperature < CRITICAL_TEMP)
+			{
+				if (powerCoroutine != null)
+					StopCoroutine(powerCoroutine);
+				powerCoroutine = StartCoroutine(PowerOnCoroutine());
+			}
 		}
+        else
+        {
+			powerToggler.Toggled = false;
+        }
     }
 
 	public void TurnOff()
@@ -578,7 +585,6 @@ public class OSScript : MonoBehaviour
 		startObjGroup.alpha = 0;
 	}
 
-	private const float transition = 0.5F;
 	private IEnumerator PowerOnCoroutine()
     {
 		if (powerToggler.Toggled)

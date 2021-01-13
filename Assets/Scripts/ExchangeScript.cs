@@ -169,7 +169,7 @@ public class ExchangeScript : MonoBehaviour
         {
             if (exchangeBTCToUSD)
             {
-                if (decimal.TryParse(fromField.text, out decimal num) && num <= MoneySystem.BTCMoney.Value)
+                if (decimal.TryParse(fromField.text.Replace('.', ','), out decimal num) && num <= MoneySystem.BTCMoney.Value)
                 {
                     MoneySystem.BTCMoney -= num;
                     MoneySystem.Money += Convert.ToInt64(Math.Floor(num * BTC));
@@ -276,11 +276,11 @@ public class ExchangeScript : MonoBehaviour
         try
         {
             //Set bitcoin price in USD.
-#if !UNITY_EDITOR && UNITY_ANDROID
+//#if !UNITY_EDITOR && UNITY_ANDROID
             BTC = 1m / (decimal.Parse(e.Result.RemoveChar(',').Replace('.', ',')) / 1E12m);
-#else
-            BTC = 1m / (decimal.Parse(e.Result.RemoveChar(',')) / 1E12m);
-#endif
+//#else
+//            BTC = 1m / (decimal.Parse(e.Result.RemoveChar(',')) / 1E12m);
+//#endif
             CurrencyTextUpdate();
             if (BTC != BTCHistory[0])
                 UpdateGraph();

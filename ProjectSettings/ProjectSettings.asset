@@ -128,7 +128,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: Alpha 1.1.0_06
+  bundleVersion: 1.1.0
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -177,7 +177,7 @@ PlayerSettings:
   buildNumber: {}
   AndroidBundleVersionCode: 31
   AndroidMinSdkVersion: 21
-  AndroidTargetSdkVersion: 29
+  AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 
   stripEngineCode: 1
@@ -250,11 +250,10 @@ PlayerSettings:
   clonedFromGUID: 5f34be1353de5cf4398729fda238591b
   templatePackageId: com.unity.template.2d@3.2.5
   templateDefaultScene: Assets/Scenes/SampleScene.unity
-  AndroidTargetArchitectures: 1
+  AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: "C:/Users/artem/OneDrive/\u0420\u043E\u0431\u043E\u0447\u0438\u0439
-    \u0441\u0442\u0456\u043B/.keystore/user.keystore"
+  AndroidKeystoreName: C:/Users/artem/Desktop/.keystore/user.keystore
   AndroidKeyaliasName: klimsoftkey
   AndroidBuildApkPerCpuArchitecture: 1
   AndroidTVCompatibility: 0
@@ -660,7 +659,7 @@ PlayerSettings:
   scriptingDefineSymbols: {}
   platformArchitecture: {}
   scriptingBackend:
-    Android: 0
+    Android: 1
   il2cppCompilerConfiguration:
     Android: 1
   managedStrippingLevel: {}

@@ -2477,3 +2477,54 @@ OSScript:PowerButton_Clicked() (at Assets/Scripts/OSScript.cs:569)
 UnityEngine.Events.UnityEvent:Invoke()
 ButtonColorToggler:Trigger() (at Assets/Scripts/ButtonColorToggler.cs:33)
 
+Log type: Exception
+Time: 16.12.2020 8:07:17
+Device name: KLIMLAPTOP
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0,95
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Computer
+Game version: Alpha 1.1.0_06
+Log string: UnassignedReferenceException: The variable monitorPages of ComputerScript has not been assigned.
+You probably need to assign the monitorPages variable of the ComputerScript script in the inspector.
+Stack trace: ComputerScript.FindErrors () (at Assets/Scripts/ComputerScript.cs:225)
+ComputerScript.MonitorClicked () (at Assets/Scripts/ComputerScript.cs:1174)
+UnityEngine.Events.InvokableCall.Invoke () (at <bad59441812943c7b8d5a5ba85795810>:0)
+UnityEngine.Events.UnityEvent.Invoke () (at <bad59441812943c7b8d5a5ba85795810>:0)
+UnityEngine.UI.Button.Press () (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:68)
+UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:110)
+UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:50)
+UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:261)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
+Log type: Exception
+Time: 16.12.2020 8:14:45
+Device name: KLIMLAPTOP
+Device model: TM1703 (Timi)
+Operating system: Windows 10  (10.0.0) 64bit
+System memory size: 8101
+Device unique identifier: 25d6c76b5f18a6a6fd5cfc918205dadd453983c7
+Battery level: 0,92
+Battery status: Discharging
+Device type: Desktop
+Processor count: 8
+Processor frequency: 1992
+Navigation state: Computer
+Game version: Alpha 1.1.0_06
+Log string: NullReferenceException: Object reference not set to an instance of an object
+Stack trace: ComputerScript.FindErrors () (at Assets/Scripts/ComputerScript.cs:224)
+ComputerScript.MonitorClicked () (at Assets/Scripts/ComputerScript.cs:1173)
+UnityEngine.Events.InvokableCall.Invoke () (at <bad59441812943c7b8d5a5ba85795810>:0)
+UnityEngine.Events.UnityEvent.Invoke () (at <bad59441812943c7b8d5a5ba85795810>:0)
+UnityEngine.UI.Button.Press () (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:68)
+UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs:110)
+UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:50)
+UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs:261)
+UnityEngine.EventSystems.EventSystem:Update() (at C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs:376)
+
